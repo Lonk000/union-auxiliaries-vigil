@@ -2,7 +2,7 @@
   "initialSlug": "001",
   "planetPath": "/planet.webm",
   "animate": true,
-  "defaultTitle": "SWAN |",
+  "defaultTitle": "VIGIL |",
   "icon": "/faction-logos/msmc.svg",
   "header": {
     "planet": "Heiligtum-6 'Deep Blue'",
@@ -10,10 +10,10 @@
     "system": "Heiligtum",
     "gate": "Rào Cỏ",
     "ring": "Annamite",
-    "headerTitle": "SWAN",
-    "headerSubtitle": "Lancer Initiative",
+    "headerTitle": "VIGIL",
+    "headerSubtitle": "Vanguard Initiative for Galactic Intervention and Logistics",
     "subheaderTitle": "Academy",
-    "subheaderSubtitle": "Sierra-Whiskey-Alpha-November"
+    "subheaderSubtitle": "1412"
   },
   "pilotSpecialInfo": {}
 }
