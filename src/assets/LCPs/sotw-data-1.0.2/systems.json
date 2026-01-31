@@ -1,0 +1,48 @@
+[
+  {
+    "id": "ms_champions_favor",
+    "name": "Champion's Favor",
+    "sp": 1,
+    "source": "EXOTIC",
+    "effect": "At the start of your turn, gain 1 Overshield.",
+    "description": "These mech-scale golden laurels granted to pankration mechani champions house a small but sophisticated shield generator. The shield provides both protection and a distinctively colored visual shimmer, referred to as a champion's “aura” or “halo”.",
+	"license_id": "",
+    "tags": [
+      {
+        "id": "tg_exotic"
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_entangled_co-consciousness_rig",
+    "name": "Entangled Co-Consciousness Rig",
+    "sp": 3,
+    "source": "EXOTIC",
+	"type": "AI",
+    "effect": "<p>Your mech gains the AI tag and Champions, Guide My Hands. This system is not an NHP and cannot enter cascade.</p><p>Additionally, if a hostile character or a structure damage check would cause you to become Stunned, you may instead turn control of your mech over to its Entangled Co-Consciousness Rig. If you do, you do not become Stunned, but you cannot pick the controls back up or turn over control to any other AI on your next turn.</p>",
+    "description": "<p>House Montmorency carried one of the most impressive win streaks ever seen under the glittering skies of Ispahsalar into the Kreoss, and scored victory after victory until an elite team of Sand-men gave their lives to extract the secret of their exceptional performance.</p><p>Neurolink interfaces fitted with custom paracausal entanglement systems connected each of House Montmorency's pilots together, allowing them to draw on each other’s expertise and even subconscious reactions to gain an edge in combat. Once the mystery was revealed, rules committees were encouraged to find against the use of these systems in the House Games. Other competitions followed suit, and the minor house’s dominance finally came to an end.</p>",
+    "tags": [
+      {
+        "id": "tg_exotic"
+      },
+      {
+        "id": "tg_ai"
+      },
+      {
+        "id": "tg_unique"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Champions, Guide My Hands",
+        "activation": "Other",
+        "frequency": "1/scene",
+        "detail": "1/scene, when you make an attack, you may choose not to roll, instead treating your attack as if you had rolled a 10 on the d20. If this attack hits, it automatically becomes a critical hit.",
+		"description": "<p>“Sometimes I see them when I dream. Don’t tell anyone, will you? It’s like they’re with me somehow, even after I jack out. I know it’s not how the link works. It’s more like... echoes, memories, only they’re of things you never did, places you never were, battles you never fought.”</p><p>“Maybe somewhere out there, one of them dreams of the golden fields – running through them and dancing and laughing like we used to, back before we were called to fight.”</p><p>–Lady Karida, to her sister Zuleika</p>"
+      }
+    ]
+  }
+]

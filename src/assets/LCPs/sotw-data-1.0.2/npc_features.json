@@ -1,0 +1,18 @@
+[
+  {
+    "id": "npcf_void_rend",
+    "name": "VOID REND",
+    "origin": {
+      "type": "",
+      "name": "",
+      "base": false
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "This system creates a tear in reality in an adjacent free space that lasts until the end of the scene. The tear is not an object or character, does not provide obstruction, and cannot be interacted with in any way.<br><br>Characters that enter a space occupied by a tear may choose to leave realspace and enter a strange, gray, interstitial realm in which they can no longer see or interact with the real world. Characters that leave realspace in this way are removed from the battlefield entirely and cannot return for the remainder of the scene.",
+    "tags": [
+	  {"id": "tg_full_action"},
+	  {"id": "tg_recharge", "val": 6}
+	]
+  }
+]

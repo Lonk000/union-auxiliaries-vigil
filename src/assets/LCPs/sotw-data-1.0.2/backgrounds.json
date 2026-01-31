@@ -1,0 +1,57 @@
+[
+  {
+    "id": "pbg_noble_heir",
+    "name": "Noble Heir",
+    "description": "Through an accident of birth or the result of political cunning you are set to inherit, and bear the weight of great expectations. <i>What relationship do you have with your noble house? What do the people around you expect of you? How does that constrain you?</i><br>Karrakin noble houses are hotbeds of political infighting. <i>Who did you have to step over to gain or retain your position? Who supports you? Who seeks to usurp you? Why?</i>",
+	"skills": [
+		"sk_lead_or_inspire",
+		"sk_pull_rank",
+		"sk_read_a_situation",
+		"sk_take_control"
+	]
+  },
+  {
+    "id": "pbg_second_choice",
+    "name": "Second Choice",
+    "description": "An entire industry exists to salve the existential ennui of young Karrakin nobility through travel and exchange programs with Earth, Ras Shamra, and beyond. <i>Where else in the galaxy have you been? What strange sights have you seen? Who have you met? How has this affected your relationship with Karrakin society?</i><br>You benefit from great privilege, but have comparatively little responsibility. <i>What is your relationship with your fellow nobles? With power? With your own privilege?</i>",
+	"skills": [
+		"sk_charm",
+		"sk_invent_or_create",
+		"sk_survive",
+		"sk_word_on_the_street"
+	]
+  },
+  {
+    "id": "pbg_company_squire",
+    "name": "Company Squire",
+    "description": "The traditional path to becoming a kavaliere is to learn from more experienced pilots as part of their support staff. <i>Who did you squire for? How did they treat you? What were your responsibilities?  What did you learn from them?</i><br>The Great Companies system is a political structure unto itself. <i>Did you squire for a noble house company or mercenary Free Company? Have you seen combat with them? How has your company influenced you?</i>",
+	"skills": [
+		"sk_assault",
+		"sk_get_a_hold_of_something",
+		"sk_hack_or_fix",
+		"sk_spot"
+	]
+  },
+  {
+    "id": "pbg_pankrati",
+    "name": "Pankrati",
+    "description": "The mech combat sport of pankration mekani produces a great number of the BUC’s most talented pilots. <i>What is your record in competitive matches? Which formats were your specialty? What motivated you to train for real combat? What did you find difficult about the transition?</i><br>Talented pankrati frequently achieve great renown across the Concern and beyond. <i>Do you have fans? How do they see you? Do you indulge your celebrity status?</i>",
+	"skills": [
+		"sk_apply_fists_to_faces",
+		"sk_charm",
+		"sk_get_somewhere_quickly",
+		"sk_show_off"
+	]
+  },
+  {
+    "id": "pbg_young_buck",
+    "name": "Young Buck",
+    "description": "The BUC celebrates its “young bucks”, the talented soldiers who rise through the ranks as a result of skill and dedication. <i>How did you join the BUC, and what was your role? What led to your meteoric rise? What obstacles have you faced, and how did you overcome them?</i><br>Tours with the BUC range from quiet peacekeeping missions, through to hot wars on distant planets. <i>Where were you deployed, and what did you do there? How has that experience shaped you? What is your relationship with war? With your fellow soldiers? With the people you helped, or hurt?</i>",
+	"skills": [
+		"sk_assault",
+		"sk_blow_something_up",
+		"sk_patch",
+		"sk_stay_cool"
+	]
+  }
+]

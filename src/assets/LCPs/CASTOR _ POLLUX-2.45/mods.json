@@ -1,0 +1,53 @@
+[
+{
+    "id": "cap_parvati_class_nhp",
+    "name": "PARVATI-CLASS NHP",
+    "sp": 3,
+    "allowed_types": [
+      "CQB",
+      "Rifle",
+      "Launcher",
+      "Cannon",
+      "Nexus"
+    ],
+    "source": "PI-OF",
+    "license": "FENNEL",
+    "license_level": 3,
+    "effect": "Your mech gains the <b>AI</b> tag and you must choose a <b>Ranged</b> weapon. That weapon gains the <b>Nexus</b> typing in addition to other weapon types as well as <b>Smart</b> and <b>Seeking</b>.<br>Additionally, 1/Round on a hit you may expend a charge to infect your target with one of the following toxic nanite hive options:<ul><li><b>Plague:</b> They treat all spaces as difficult terrain and take <b>1 AP kinetic damage</b> for each space they voluntarily move (max 5/round). If your target is destroyed while the hive is active, they create a <b>Burst 1</b> area of dangerous terrain (kinetic).</li><li><b>Miasma:</b> Your target is surrounded by a <b>Burst 1</b> cloud of nanites. Hostile characters at least partially in the area treat targets outside as being <b>Invisible</b>, and it counts as soft cover for allied characters. If your target is destroyed while it is active the area remains around their wreck.</li><li><b>Venom:</b> Your target takes all bonus damage as <b>Burn</b>, and has <b>+1 Difficulty</b> on all checks and saves except to clear this hive. If they are destroyed while this hive is active, the last character that hit them with a ranged or melee attack gains <b>Overshield</b> equal to <b>4 + your Grit</b></li><br> A character can remove a hive from themselves by passing an Engineering save as a quick action.",
+    "description": "PARVATI clones excel at path optimization and resource efficiency – many PI offices employ PARVATI clones transiently to plan and enforce seasonal right-sizing. This same tendency to micromanage has proven exceptionally useful in high-stress situations, where PARVATI’s ‘mothering’ instinct and improvement doctrine create high-yield results with autonomous systems. They take great pride in cultivating drone hives, and exhibit (within acceptable parameters) extreme vindictiveness at any interference.<br><br>Hives monitored by a PARVATI persona operate with sufficient oversight as to not mandate ‘wash nomenclature - each individual nanite is directed by microshards of the NHP, such that their gestalt behavior is entirely dependent on the intact existence of the casket mother-node. Anomalous behavior is easily rectified by severing the source and equipment reissue.",
+    "tags": [
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_ai"
+      },
+      {
+          "id": "tg_limited",
+          "val": 3
+      }
+    ]
+  },
+  {
+    "id": "cap_splinter_ammo",
+    "name": "SPLINTER AMMO",
+    "sp": 3,
+    "allowed_types": [
+      "CQB",
+      "Rifle",
+      "Launcher",
+      "Cannon",
+      "Nexus"
+    ],
+    "source": "PI-OF",
+    "license": "CORIANDER",
+    "license_level": 3,
+    "effect": "Choose a ranged weapon. <b>1/Turn</b> it deals <b>+X bonus Kinetic damage</b> on hit, where X is the number of characters adjacent to your target (max +4), and gains <b>On Crit:</b> adjacent hostile characters take <b>X Kinetic damage</b>.",
+    "description": "TT.7 ‘Devil Thistle’ fragmentation rounds were designed to splinter harmlessly after impact to avoid overpenetration, ensuring a minimum of collateral damage. After several statistically unlikely test results, modifications were made to guarantee a fully elastic return vector for fragments above a certain weight.",
+    "tags": [
+      {
+        "id": "tg_unique"
+      }]
+  }
+
+]

@@ -1,0 +1,78 @@
+[
+    {
+        "id": "pi_of_built_to_last",
+        "name": "BUILT TO LAST",
+        "source": "PI-OF",
+        "effect": "Your Drones and Deployables have resistance to all damage originating outside Range 5.",
+        "description": "Pinnacle Industries takes pride in their work; they build homes, grow food, expand the dream of humanity to distant stars. Pinnacle hardware must withstand every test the universe can offer, as life itself rests on their shoulders. Against the everpresent demons of time and disaster, Pinnacle only has this to say: Give No Ground.",
+        "synergies": [{
+            "locations": ["drone", "deployable"],
+            "detail": "Your Drones and Deployables have resistance to all damage originating outside Range 5."
+        }]
+      },
+      {
+          "id": "pi_of_curveball_brachial_tuning",
+          "name": "'CURVEBALL' BRACHIAL TUNING",
+          "source": "PI-OF",
+          "effect": "Your systems that grant grenades gain 2 additional charges and the Range of all your grenades increases by 3. Additionally, you gain the Curveball action.",
+          "actions": [{
+              "name": "Curveball",
+              "activation": "Free",
+              "frequency": "1/Round",
+              "detail": "1/round when you throw a grenade you may throw one additional grenade from the same or a separate system as a free action. They may not target the same character, and their areas may not overlap."
+          }],
+          "description": "Wide-vector microexplosives are Pinnacle Industries first tactic for clearing rough terrain in order to begin construction - and when time is money, the faster you throw, the more you get paid. Many legacy PI frames contain belt-fed seeder modules, with a variable random-scatter nozzle, for greater efficiency and terrain saturation, which the Orion Faction easily adapted to accept military grade munitions."
+      },
+      {
+          "id": "pi_of_exploration_excavation_ruggedizing",
+          "name": "EXPLORATION/EXCAVATION RUGGEDIZING",
+          "source": "PI-OF",
+          "effect": "You have +1 Accuracy on all checks or saves to avoid the effects of dangerous terrain, harsh climates, or other environmental effects. While you are in difficult or dangerous terrain, you are Immune to all forced movement and gain +1 accuracy on all Hull checks and saves. If you start your turn in it, you may move 2 spaces as a protocol, ignoring the effects of the terrain.",
+          "description": "Scouting expeditions on pre-colonial planets can sometimes last for months, or even years, with prospector teams living off of only minimal resupplies from an automated orbital platform. To obviate wear-and-tear on prospecting frames, Pinnacle outfits long-cycle teams with treated and reinforced plating to resist extreme heat, cold, pH, and abrasion, as well as sub-sentient predictive algorithms attached to mobility and balance systems.",
+          "synergies": [{
+              "locations": ["skill_check"],
+              "detail": "You have +1 Accuracy on all checks or saves to avoid the effects of dangerous terrain, harsh climates, or other environmental effects."
+          }]
+      },
+      {
+          "id": "pi_of_impact_amplifiers",
+          "name": "IMPACT AMPLIFIERS",
+          "source": "PI-OF",
+          "effect": "1/round when you hit with an attack and deal damage you may deal 10 AP kinetic damage to an object, terrain, or drone within Range 3 of your target as a free action. If you destroy something this way, adjacent objects/terrain/drones take 5 AP explosive damage, and adjacent characters must pass a Hull save or be knocked Prone.",
+          "actions": [{
+              "name": "Amplify",
+              "activation": "Free",
+              "frequency": "1/Round",
+              "detail": "When you hit with an attack and deal damage you may deal 10 AP kinetic damage to an object, terrain, or drone within Range 3 of your target as a free action. If you destroy something this way, adjacent objects/terrain/drones take 5 AP explosive damage, and adjacent characters must pass a Hull save or be knocked Prone."
+          }],
+          "description": "Through a combination of underslung launchers, shaped charges on brachial plating, and hydraulic armature, Pinnacle frames are capable of clearing mountain ranges in a matter of days. PI-OF has also seen great success in marketing these adaptations as siege-breaker gear, without any significant alterations."
+      },
+      {
+          "id": "pi_of_slow_cycle_shield_canopy",
+          "name": "SLOW-CYCLE SHIELD CANOPY",
+          "source": "PI-OF",
+          "effect": "Whenever you Stabilize, gain 4 Overshield.  As long as you have this Overshield you have immunity to Shredded and damage you take can’t ignore your armor.",
+          "description": "Pinnacle Industries’ mechanized construction crews regularly employ a proprietary high-flux shielding system guaranteed to obliterate incoming micro-meteoroids and other debris in construction environments. This technology has been easily adapted to intercept and disintegrate live fire and shrapnel.",
+          "synergies": [{
+              "locations": ["stabilize"],
+              "detail": "Whenever you Stabilize, gain 4 Overshield.  As long as you have this Overshield you have immunity to Shredded and damage you take can’t ignore your armor."
+          }]
+      },
+      {
+          "id": "pi_of_woodsman_foragin_unit",
+          "name": "'WOODSMAN' FORAGING UNIT",
+          "source": "PI-OF",
+          "effect": "You gain +1 Repair Cap. At the end of any rest during which you spent at least 1 repair, regain 1 repair.",
+          "description": "While it is not fiscally practical to outfit every Pinnacle expeditionary force with a scheduled printer, concessions have been made to instead provide industrial-grade recycling and refurbishment units, capable of stripping any damaged parts at a negligible loss rate.",
+          "bonuses": [{
+              "id": "repcap",
+              "val": 1
+          }],
+          "synergies": [{
+              "locations": ["repair", "rest"],
+              "detail": "You gain +1 Repair Cap and at the end of any rest during which you spent at least 1 repair you regain 1 repair."
+          }]
+      }
+
+
+]

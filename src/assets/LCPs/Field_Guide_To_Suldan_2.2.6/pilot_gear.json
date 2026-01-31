@@ -1,0 +1,143 @@
+[{
+    "id": "fgtspg_breach_cutter",
+    "name": "Breach Cutter",
+    "type": "Weapon",
+    "description": "Modified man-portable laser cutting tools are often employed by pirates, gladiators, and the desperate as a highly effective, if crude and cumbersome, weapon. Inspired by this, C&H offers a refined weaponized adaptation designed from the ground up as a combateffective system boasting a high-capacity power pack and streamlined design. Though the beam remains effective at range, it excels in close-quarters high-risk hull breaching operations. Users are advised to wear suitable eye protection when employing this weapon.",
+    "tags": [
+        {"id": "tg_sidearm"}
+    ],
+    "range" : [
+        {"type": "Range", "val": 3}
+    ],
+    "damage": [
+        {"type": "Energy", "val": 1}
+    ],
+    "effect": "This weapon also takes up 1 gear slot. While equipped with this weapon, when you use the Damage action while jockeying you may deal 4 AP energy damage instead."
+},
+{
+    "id": "fgtspg_vishpala_augmetic",
+    "name": "Vishpala Augmetic",
+    "type": "Weapon",
+    "description": "Between industrial accidents and arena injuries, cybernetic limb replacement is a familiar procedure throughout Suldan, with local styles proudly embracing obvious, undisguised models as a form of self-expression. Chandrasekhar & Herschel's Vishpala line of better-than-human performance prosthetics are no mere second-rate substitutes but rather bespoke augmetics personally tailored to each user's needs and designed for form as well as function, complete with total force/sensory feedback and integrated skeletomuscular reinforcement for optimum comfort and performance even during strenuous use, and demand has only increased alongside the rise in loyalist insurgent attacks.", 
+    "tags": [
+        {"id": "tg_sidearm"}
+    ],
+    "range" : [
+        {"type": "Threat", "val": 1}
+    ],
+    "damage": [
+        {"type": "Kinetic", "val": 1}
+    ],
+    "effect": "This weapon also takes up 1 gear slot. This full-function cybernetic arm replacement (single or paired) counts as a light alloy/composite pilot weapon and gives +1 Accuracy to all Apply Fists to Faces checks (or other similar triggers). This effect does not stack."
+},
+{
+    "id": "fgtspg_emirs_bargain",
+    "name": "Emir's Bargain",
+    "type": "Weapon",
+    "description": "To \"take the Emir's bargain\" is a Suldani saying as literal as it is metaphorical, derived from a practice instituted during the 37th year of the Emir's reign wherein he would offer condemned prisoners the opportunity to participate in gladiatorial combat with the possibility of earning their freedom should they survive. Of course these bouts were weighed heavily against the condemned and few who took the offer earned more than a brutal death. Those who agreed to partake in the contest would often be equipped with this weapon, a reinforced polearm whose weighted, power-assisted head is capable of inflicting substantial damage if given time to build momentum.",
+    "range" : [
+        {"type": "Threat", "val": 1}
+    ],
+    "damage": [
+        {"type": "Kinetic", "val": 2}
+    ],
+    "effect": "This weapon also takes up 1 gear slot. If you attack with this weapon without moving or taking any other actions on your turn you may increase its damage to 4 kinetic damage for that attack, and on hit Size 1 or smaller characters must pass a Hull save or be knocked Prone."
+},
+{
+    "id": "fgtspg_sear",
+    "name": "SEAR",
+    "type": "Weapon",
+    "description": "The signature armament of the Emir's elite Jannissaries, the Suldani Emirate Advanced Rifle is a sophisticated multi-mode select-fire weapon featuring integrated comp/con ballistic targeting assistance along with a attached secondary launcher designed to fire proprietary plasma warhead \"Executioner\" micromissiles. Jannissary SEARs were biometrically encoded to their individual users, triggering an explosive failsafe upon detecting an unauthorized user or indications of tampering, but after the Emir was deposed C&H managed to obtain several \"blank\" rifles and successfully reverse-engineer the design for mass production and licensing.",
+    "tags": [
+        {"id": "tg_limited", "val": 2}
+    ],
+    "range" : [
+        {"type": "Range", "val": 5}
+    ],
+    "damage": [
+        {"type": "Kinetic", "val": 2}
+    ],
+    "effect": "This weapon also takes up 1 gear slot. This advanced combat rifle has an integrated underbarrel launcher that can be fired with the following profile: [Ordnance, Limited 2, Range 10, Blast 1, 2 burn.]"
+},
+{
+    "id": "fgtspg_champion_pilots_jacket",
+    "name": "\"Champion\" Pilot's Jacket",
+    "type": "Armor",
+    "description": "This jacket provides no significant protection, but is available in a variety of styles and colors and can be worn comfortably even in hot weather.<br><br>A rugged and stylish accessory for any pilot, Chandrasekhar & Herschel's \"Champion\" line of leather jackets is perfectly suited for any climate courtesy of an interior layer of thermoregulation material and a waterproof coating, creating a jacket guaranteed to wear and age beautifully no matter where your travels take you. While printer-fabricated copies are always available to qualified C&H license holders, handcrafted jackets made from 100% genuine Suldani goatskin leather are available at select retailers.",
+    "bonuses":[
+        {"id": "pilot_evasion", "val": 10, "replace": true},
+        {"id": "pilot_edef", "val": 10, "replace": true},
+        {"id": "pilot_speed", "val": 4, "replace": true}
+    ],
+    "effect": "This jacket provides no significant protection, but is available in a variety of styles and colors and can be worn comfortably even in hot weather."
+},
+{
+    "id": "fgtspg_crash_suit",
+    "name": "Crash Suit",
+    "type": "Armor",
+    "description": "This fireproofed and chemically treated hardsuit grants Immunity to burn and Resistance to energy damage.<br><br>A mainstay of chassis racers everywhere, only the most daring or foolhardy jockey would race without suitable protection in the event of a crash. This lightweight, flexible hardsuit not only safeguards against collision trauma, but layers of flame-retardant polymer triweave help insulate the wearer in the event of a cockpit fire. This C&H licensed model is also fully rated for combat theater operations.",
+    "bonuses":[
+        {"id": "pilot_evasion", "val": 10, "replace": true},
+        {"id": "pilot_edef", "val": 10, "replace": true},
+        {"id": "pilot_speed", "val": 4, "replace": true}
+    ],
+    "effect": "This fireproofed and chemically treated hardsuit grants Immunity to burn and Resistance to energy damage."
+},
+{
+    "id": "fgtspg_hardjack_survival_hardsuit",
+    "name": "HARDJACK Survival Hardsuit",
+    "type": "Armor",
+    "description": "This survival hardsuit is designed for use in hazardous environments and wearers can operate for extended periods in such conditions without discomfort. While wearing this armor, you gain Immunity to all damage, heat, and burn from hostile environmental sources including dangerous terrain, and you automatically pass all checks and saves imposed by hostile environmental sources. You may also reroll all Survive checks (or other similar triggers), taking the better result.<br><br>Billions of HARDJACK model PPE hardsuits have been printed across numerous worlds since the design's inception for use by workers performing dangerous jobs in hazardous environments. This particular variant, a C&H exclusive design, is further enhanced with their proprietary thermoregulation mesh, anti-abrasion glazing, an onboard medkit, and extended life support systems for emergency survival situations when immediate aid may not be forthcoming.",
+    "bonuses":[
+        {"id": "pilot_hp", "val": 3},
+        {"id": "pilot_evasion", "val": 8, "replace": true},
+        {"id": "pilot_edef", "val": 8, "replace": true},
+        {"id": "pilot_speed", "val": 4, "replace": true}
+    ],
+    "effect": "This survival hardsuit is designed for use in hazardous environments and wearers can operate for extended periods in such conditions without discomfort. While wearing this armor, you gain Immunity to all damage, heat, and burn from hostile environmental sources including dangerous terrain, and you automatically pass all checks and saves imposed by hostile environmental sources. You may also reroll all Survive checks (or other similar triggers), taking the better result."
+},
+{
+    "id": "fgtspg_tarantula_climb_assist_hardsuit",
+    "name": "Tarantula Climb-Assist Hardsuit",
+    "type": "Armor",
+    "description": "This specialized mobility hardsuit allows you to move freely along vertical and overhanging surfaces as if they were normal terrain, but you cannot Boost while doing so. You can freely use weapons while climbing and cannot be knocked Prone while on a vertical or overhanging surface. You also gain +1 Accuracy to all contested rolls made to jockey a mech or avoid being thrown off of a mech you are jockeying.<br><br>The ultimate in safe and reliable personal powered climbing equipment, the Tarantula's array of articulated all-surface pitons and integrated comp/con expert system allows for effortless mobility across even the most challenging surfaces, while also providing peerless hands-free stability which virtually eliminates the need for a human climbing partner.",
+    "bonuses":[
+        {"id": "pilot_evasion", "val": 10, "replace": true},
+        {"id": "pilot_edef", "val": 10, "replace": true},
+        {"id": "pilot_speed", "val": 5, "replace": true}
+    ],
+    "effect": "This specialized mobility hardsuit allows you to move freely along vertical and overhanging surfaces as if they were normal terrain, but you cannot Boost while doing so. You can freely use weapons while climbing and cannot be knocked Prone while on a vertical or overhanging surface. You also gain +1 Accuracy to all contested rolls made to jockey a mech or avoid being thrown off of a mech you are jockeying."
+},
+{
+    "id": "fgtspg_devil_black",
+    "name": "Devil! Black",
+    "type": "Gear",
+    "description": "Formerly only available to members of Suldan's armed forces as well as certain sponsored gladiators, C&H now has a license to distribute this black cherry flavored energy drink containing more than twice the caffeine of the next leading brand along with specially formulated performance-enhancing combat stims. Consuming a can of Devil! Black allows you to reroll all pilot skill checks involving physical exertion or violence, such as Applying Fists to Faces, Assault, or Get Somewhere Quickly for the rest of the scene, though you must always take the second result. Afterwards, for the rest of the mission the GM may invoke the subsequent harsh comedown to apply +1 Difficulty to any skill checks which might be negatively impacted by aftereffects such as fatigue, jitteriness, irritability, and so on. Drinking more than one can between full repairs causes intense nausea, headaches, heart palpitations, and vomiting, without any further beneficial effects. Chandrasekhar & Herschel reminds all license holders to please consume responsibly.",
+    "tags": [
+        {"id": "tg_limited", "val": 1}
+    ]
+},
+{
+    "id": "fgtspg_emergency_field_kit",
+    "name": "Emergency Field Kit",
+    "type": "Gear",
+    "description": "Sometimes referred to as a SERE kit, this lightweight pilot's kit is designed to be easily portable even in plainclothes, with a slim profile and non-metallic construction for ease of concealment. A variety of makes and models exist with various specialized tools designed to help pilots trapped behind enemy lines, stranded in the wilderness, or on covert assignment. Each time you print one of these kits, choose three different triggers. You may may spend one of this kit's charges and cross off one of the triggers to add +1 Accuracy to your next check using that particular trigger.",
+    "tags": [
+        {"id": "tg_limited", "val": 3}
+    ]
+},
+{
+    "id": "fgtspg_portable_cabin",
+    "name": "Portable Cabin",
+    "type": "Gear",
+    "description": "This collapsable emergency shelter compacts enough to be portable by a single person. When activated, an electric charge runs through the advanced smart material construction which turns rigid and unfolds to full size within moments. The material is thermally insulated but not airtight, provides interior glow-panel illumination, has a built-in water filtration system and ration heater, and can house up to six people if somewhat snugly."
+},
+{
+    "id": "fgtspg_triage_stim",
+    "name": "Triage Stim",
+    "type": "Gear",
+    "description": "Often integrated into personal armor or hardsuits, a triage stim unit monitors the user's vital signs and activates upon detecting critical physical trauma. Automatic injectors administer a potent cocktail of painkillers, stimulants, quick-clotting agents, and pharmastabilizers, which can be further supplemented with broad-spectrum antitoxins, tailored chemical agent antidotes, or anti-radiation doseages based on theater-specific threat assessments. While this is no substitute for proper medical attention, the window of opportunity it provides in the field is sufficient to stabilize patients long enough for further aid to be administered. Whenever you are reduced to 0 HP or less, you may expend a charge to automatically become Down and Out instead of rolling.",
+    "tags": [
+        {"id": "tg_limited", "val": 1}
+    ]
+}]

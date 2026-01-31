@@ -1,0 +1,9 @@
+{
+    "name": "Field Guide to Suldan",
+    "author": "Kai Tave",
+	"description": "The LCP for Kai Tave's Field Guide to Suldan. Credits: Kai Tave (Content), Devi__8 (Systems, Mods, Worden, Agrippa, Specialties, Talents, Pilot Gear), Enkufka (Weapons, Frames, Manufacturers), Nasajin (Comet), CYAN (Efreet) DOGFRIEND_68 (Specialties), ClashDB (Updates), Crixler (Fixes & enhancements), Ceebees (Fixes & enhancements)",
+    "item_prefix": "SULDAN",
+    "version": "2.2.6",
+	"image_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/The_astrologer_of_the_nineteenth_century_%281825%29_%2814763662425%29.jpg",
+    "website": "https://kaitave.itch.io/field-guide-to-suldan"
+}
