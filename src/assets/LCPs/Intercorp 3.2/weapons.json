@@ -1,0 +1,518 @@
+[
+  {
+    "id": "interpoint_stratus_high_penetration_rifle",
+    "name": "STRATUS HIGH PENETRATION RIFLE",
+    "mount": "Main",
+    "type": "Rifle",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d3+1"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 15
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_ap"
+      }
+    ],
+    "source": "IC",
+    "license": "ARGUS",
+    "license_level": 1,
+    "description": "When Intercorp™ first acquired the world of Stratus-3 and subsequently settled there, the first prospectors, colonists and would-be hunters that set foot on the world saw themselves confronted with hostile megafauna so ferocious that any serious attempt of claiming the world seemed ill-advised at best. <br>Intercorp™, determined not to let the investment go bad, tasked their Research and Development teams with finding a solution to the problem at hand. <br>The Stratus High Penetration Rifle is the fruit of their labours, a long barrelled precision weapon that fires hardened tungsten shells over considerable distance at incredibly high velocity. <br>The introduction of the hunting rifle alleviated the local wildlife problem on site and corporate sponsored Lancers were quick to find out that the \"Stratus\" proved equally devastating against heavily armored targets in other environments and contexts."
+  },
+  {
+    "id": "interpoint_marker_spike",
+    "name": "MARKER SPIKE",
+    "mount": "Auxiliary",
+    "type": "Melee",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d3+1"
+      }
+    ],
+    "range": [
+      {
+        "type": "Threat",
+        "val": 1
+      }
+    ],
+    "tags": [],
+    "source": "IC",
+    "license": "ARGUS",
+    "license_level": 3,
+    "on_crit": "Your target gains the Lock On condition.",
+    "description": "The Marker Spike isn't a weapon in the traditional sense, rather a land surveying implement. <br>A beacon that once driven into a surface, sends out a strong homing signal. Despite that fact, some of the more creative Lancers in Intercorp™'s employ were quick to find out that Marker Spikes could double as potent weapons systems. <br>Once a mech's targeting is calibrated to lock on to the homing signal of the beacon, the Marker Spike becomes a potent weapon that after impaling a target, makes continued attacks much more accurate on account of the sensor flare the spike represents. <br>While Intercorp™, mainly for legal and marketing reasons, maintains that the Marker Spike is a peaceful implement for measuring topography, the company has nevertheless sold Marker Spikes to buyers whose need to measure out a landscape is dubious at best."
+  },
+  {
+    "id": "\"Ripjaw\" Particle Cannon",
+    "name": "\"RIPJAW\" PARTICLE CANNON",
+    "mount": "Heavy",
+    "type": "Cannon",
+    "effect": "Choose to fire in either dispersed mode or concentrated mode.",
+    "profiles": [
+      {
+        "name": "Dispersed Mode",
+        "range": [
+          {
+            "type": "Range",
+            "val": 10
+          }
+        ],
+        "damage": [
+          {
+            "type": "Kinetic",
+            "val": "1d6+4"
+          }
+        ],
+        "tags": [
+          {
+            "id": "tg_reliable",
+            "val": 3
+          }
+        ]
+      },
+      {
+        "name": "Concentrated Mode",
+        "range": [
+          {
+            "type": "Line",
+            "val": 15
+          }
+        ],
+        "damage": [
+          {
+            "type": "Kinetic",
+            "val": "1d6+4"
+          }
+        ],
+        "tags": [
+          {
+            "id": "tg_ap"
+          },
+          {
+            "id": "tg_loading"
+          },
+          {
+            "id": "tg_ordnance"
+          },
+          {
+            "id": "tg_reliable",
+            "val": 3
+          }
+        ]
+      }
+    ],
+    "source": "IC",
+    "license": "NESTOR",
+    "license_level": 2,
+    "description": "The Type-2 Particle Accelerator Cannon \"Ripjaw\" is the pinnacle of Intercorp™'s pragmatic engineering. Using a sophisticated rail mechanism to fire microscopic particles at near lightspeed the Ripjaw is able to cause catastrophic amounts of pinpoint concentrated damage. Designed to, in a pinch, utilise almost anything metallic as Ammunition, the Ripjaw is ensured to almost never run dry, regardless of battlefield conditions or supply lines. <br>Virtually the only drawback to the Ripjaw is its immense power draw, requiring oversized grade-3 powercells which need to be changed frequently. When fired at full power the Ripjaw is known to directly punch through any matter, often penetrating mechs, buildings and terrain with a needle-thin stream of hyper-accelerated particles."
+  },
+  {
+    "id": "mw_surgical_implements",
+    "name": "SURGICAL IMPLEMENTS",
+    "mount": "Auxiliary",
+    "type": "Melee",
+    "range": [
+      {
+        "type": "Threat",
+        "val": 1
+      }
+    ],
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d3"
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_ap"
+      }
+    ],
+    "source": "IC",
+    "license": "ORPHEUS",
+    "license_level": 1,
+    "on_attack": "This weapon automatically hits allied characters. When this weapon hits an allied character they may clear either Impaired, Jammed or Stunned so long as the Condition was not self inflicted.",
+    "description": "The tools routinely used by mechanical crews in Intercorp™'s employ are colloquially known as Surgical Implements by the workers that use them. While strange to many outside the company, it underlines the fact that Intercorp™ takes care of its mechs with a level of care that rivals that of human patients. ",
+    "sp": 1
+  },
+  {
+    "id": "mw_apollon_converter_cannon",
+    "name": "APOLLON CONVERTER CANNON",
+    "mount": "Superheavy",
+    "type": "Cannon",
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "1d6+4"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 8
+      }
+    ],
+    "tags": [],
+    "source": "IC",
+    "license": "POLLUX",
+    "license_level": 3,
+    "effect": "This weapon has different profiles based on your current Heat level.",
+    "profiles": [
+      {
+        "name": "Below Danger Zone",
+        "damage": [
+          {
+            "type": "Energy",
+            "val": "2d6+4"
+          }
+        ],
+        "range": [
+          {
+            "type": "Range",
+            "val": 8
+          }
+        ],
+        "on_attack": "Clear 1 Heat."
+      },
+      {
+        "name": "In Danger Zone",
+        "damage": [
+          {
+            "type": "Energy",
+            "val": "3d6+4"
+          }
+        ],
+        "range": [
+          {
+            "type": "Range",
+            "val": 8
+          }
+        ],
+        "on_attack": "Clear 2 Heat."
+      },
+      {
+        "name": "At Maximum Heat Capacity",
+        "damage": [
+          {
+            "type": "Energy",
+            "val": "4d6+4"
+          }
+        ],
+        "range": [
+          {
+            "type": "Range",
+            "val": 8
+          }
+        ],
+        "on_attack": "Clear 4 Heat."
+      }
+    ],
+    "description": "Connected directly to a frame's reactor the Apollon Converter Cannon draws on excess heat to transform stored gasses into a superheated stream of plasma, capable of turning almost anything it so much as glances at to slag or evaporating matter instantly on a direct hit. <br>While short ranged for a weapon it's size, the Apollon has the distinct advantage of cooling the mech's systems with every shot expelled by the weapon."
+  },
+  {
+    "id": "mw_serrated_machete",
+    "name": "SERRATED MACHETE",
+    "mount": "Main",
+    "type": "Melee",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d3+3"
+      }
+    ],
+    "range": [
+      {
+        "type": "Threat",
+        "val": 1
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_thrown",
+        "val": 3
+      },
+      {
+        "id": "tg_reliable",
+        "val": 2
+      }
+    ],
+    "source": "IC",
+    "license": "NESTOR",
+    "license_level": 1,
+    "description": "Hardened titanium alloy machetes are often a favorite among those in special operations or undertaking stealth missions. Less unwieldy than more traditional mech-sized melee weapons, the serrated teeth located along the blade can make even glancing blows potentially devastating. When wielded in the right hands most machetes can even be used as thrown weapons, potentially catching an enemy off guard. These aspects give this weapon a distinct tactical edge over its larger cousins."
+  },
+  {
+    "id": "mw_norn_emitter",
+    "name": "NORN EMITTER",
+    "mount": "Main",
+    "type": "CQB",
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "1d3+2"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 5
+      }
+    ],
+    "tags": [],
+    "source": "IC",
+    "license": "ATALANTA",
+    "license_level": 1,
+    "on_attack": "This weapon deals +2 damage for each time it was previously used to attack this turn.",
+    "description": "The Norn Emitter is a heavy-energy weapon capable of showering a target in a hail of densified light. By multiplying the photon-mass-differential, the weapon's shots increase in raw output each time it’s  fired. While theoretically scaling infinitely, current hardware limitations hardcap output at 3.1 c/kg. "
+  },
+  {
+    "id": "mw_aether_slug_charger",
+    "name": "AETHER SLUG CHARGER",
+    "mount": "Auxiliary",
+    "type": "CQB",
+    "damage": [
+      {
+        "type": "Explosive",
+        "val": "1d3+2"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 3
+      },
+      {
+        "type": "Threat",
+        "val": 3
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_loading"
+      }
+    ],
+    "source": "IC",
+    "license": "ATALANTA",
+    "license_level": 3,
+    "effect": "If you Teleported this turn this weapon does not unload after making an attack.",
+    "description": "\"They appear to shoot spheres of darkness, stars blinking in the distance. Never have I seen weapons like this. It's the same stuff *that place* is made of. When I go there, they take a piece of it with them.\" - Report of Test Pilot #27 B"
+  },
+  {
+    "id": "mw_acastus_integrated",
+    "name": "Blade Sending",
+    "mount": "Main",
+    "type": "Nexus",
+    "range": [
+      {
+        "type": "Range",
+        "val": 5
+      }
+    ],
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": 3
+      }
+    ],
+    "effect": "Once this attack resolves place a Blade Marker in a free and valid space adjacent to your target."
+  },
+  {
+    "id": "mw_quantum_superposition_rifle",
+    "name": "QUANTUM SUPERPOSITION RIFLE",
+    "mount": "Main",
+    "type": "Rifle",
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "1d6+4"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 10
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_loading"
+      }
+    ],
+    "source": "IC",
+    "license": "CORONUS",
+    "license_level": 3,
+    "on_attack": "You know your target's current HP. Hit or miss, if your target's HP is an odd number after the attack is resolved this weapon does not unload. It also unloads whenever it destroys a target.",
+    "description": "\"Schrödinger's Rifle\" as it is more colloquially known by the Lancers that use it, is a marvel of applied Quantum Mechanics and energy transformation. Appearing as a heavy energy rifle on the surface, the QSR is special in that it is able to carry a theoretically infinite amount of charges within its specialized Quantum Reactor. While this theory may not hold up in reality, opponents staring down a sustained onslaught of fire from this weapon eventually have to ask themselves \"Do I feel lucky?\" as each squeeze of the trigger may or may not unload the weapon entirely, an outcome which is only observable following the engagement of the next firing cycle."
+  },
+  {
+    "id": "mw_probability_flayer",
+    "name": "PROBABILITY FLAYER",
+    "mount": "Main",
+    "type": "Cannon",
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "1d6"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 8
+      }
+    ],
+    "tags": [],
+    "source": "IC",
+    "license": "CORONUS",
+    "license_level": 1,
+    "on_attack": "This weapon's base damage increases by +2 for every Difficulty affecting its final attack roll up to a maximum of +6.",
+    "description": "\"Never tell me the odds.\" - Unknown Coronus Pilot"
+  },
+  {
+    "id": "mw_null_matter_blade",
+    "name": "NULL MATTER BLADE",
+    "mount": "Main",
+    "type": "Melee",
+    "damage": [
+      {
+        "type": "Variable",
+        "val": "1d6+1"
+      }
+    ],
+    "range": [
+      {
+        "type": "Threat",
+        "val": 1
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_accurate"
+      },
+      {
+        "id": "tg_ai"
+      },
+      {
+        "id": "tg_unique"
+      }
+    ],
+    "effect": "Your mech gains the AI tag. 1/Round when you destroy a hostile character with an attack, not necessarily using this weapon, you may choose to roll a Cascade check. If you do, the Null Matter Blade gains one of the bonuses below until the end of the scene. You may not pick the same bonus twice. <br>- Armor Piercing <br>- +1 Threat <br>- Reliable 3 <br>- +2 Damage <br>- Smart",
+    "sp": 2,
+    "source": "IC",
+    "license": "ACASTUS",
+    "license_level": 3,
+    "on_attack": "Choose this weapon's damage type.",
+    "description": "\"When I awoke, eventually. <br>I held in hand, impossibly. <br>A bloodstained blade, that shouldn't be. <br>Dreams of carnage haunting me.\" <br> - Unknown Lancer"
+  },
+  {
+    "id": "mw_shard_launcher",
+    "name": "SHRAPNEL SPIKER",
+    "mount": "Main",
+    "type": "Launcher",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d3+1"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 10
+      },
+      {
+        "type": "Blast",
+        "val": 1
+      }
+    ],
+    "on_attack": "This weapon automatically deals 10 AP Kinetic damage to Objects and Terrain. The Blast of this attack becomes Difficult Terrain for the rest of the Scene.",
+    "source": "IC",
+    "license": "THESEUS",
+    "license_level": 1,
+    "description": "Shrapnel charge launchers were originally used in mining and demolition jobs. Used to flatten and tear open large areas of ground Shrapnel Spikers have become a staple in surface level mining operations. Despite its civilian use, its unique properties made it a potent battlefield weapon for creating choke points, slowing hostiles, and tearing down cover.",
+    "sp": 1
+  },
+  {
+    "id": "mw_thermite_harpoon_cannon",
+    "name": "THERMITE HARPOON CANNON",
+    "mount": "Heavy",
+    "type": "Cannon",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "3d3"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 8
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_overkill"
+      }
+    ],
+    "on_hit": "Any Heat generated by Overkill is instead taken by the target. If the resulting Heat exceeds the targets Heat capacity any results occur before damage is inflicted.",
+    "source": "IC",
+    "license": "HERACLES",
+    "license_level": 2,
+    "description": "Thermite Harpoons are old and archaic weapons, having originally been created for use in gladiatorial bouts on backwater worlds, this barbaric but easily manufactured weapon finds itself banned on many worlds throughout Union. Brutal and simple in its design, it shoots a hardened titanium bolt with a mass-reactive thermite payload in its tip. Igniting upon embedding itself into a target, the resulting heat has been known to melt steel frames, overheat reactors and cook pilots alive. Despite its legal status, the Thermite Harpoon Cannon remains an attractive choice for particularly callous pilots."
+  },
+  {
+    "id": "mw_heavy_chain_mace",
+    "name": "HEAVY CHAIN MACE",
+    "mount": "Heavy",
+    "type": "Melee",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "2d6+5"
+      }
+    ],
+    "range": [
+      {
+        "type": "Threat",
+        "val": 1
+      }
+    ],
+    "on_hit": "You and your target roll a contested Hull check. If the target wins it gains Resistance against all damage from this attack. If you win, the target becomes Shredded for the duration of the attack.",
+    "source": "IC",
+    "license": "HERACLES",
+    "license_level": 3,
+    "description": "The Heavy Chain Mace takes the shape of a huge great club, imposing in its size, its head is equipped with whirling tungsten teeth that scream as they rotate radially along its orbit. Sometimes called \"Undertaker\" this weapon is as much a psychological weapon as a physical one and dreaded by most pilots forced to face it on the battlefield. Despite its reputation, the mace suffers a critical design flaw, allowing opponents to divert its biting chainsaw teeth off their own chassis, turning deadly hits into glancing blows. This desperate gambit turns each strike into a fierce contest, pitting the attacker’s strength against the targets frame integrity. A dangerous game, for should the teeth ever bite, the outcome is guaranteed to be devastating, burying the defender under the mace's bulk, and exposing them to an onslaught of screaming teeth."
+  },
+  {
+    "id": "interpoint_duelist_blade",
+    "name": "DUELIST'S BLADE",
+    "mount": "Main",
+    "type": "Melee",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d6+1"
+      }
+    ],
+    "range": [
+      {
+        "type": "Threat",
+        "val": 1
+      }
+    ],
+    "source": "IC",
+    "license": "ACASTUS",
+    "license_level": 1,
+    "effect": "1/Round, after being missed by a melee attack you may immediately perform your Overwatch using this weapon.",
+    "on_crit": "Your target is unable to take Reactions until the end of the current turn.",
+    "description": "Masterfully crafted and finely balanced, these swords have become a staple for pilots that prefer a swift and elegant approach to close quarters combat. While Intercorp™ isn't usually known for their artisan craftsmanship in the equipment they make, the Duelist's Blade nevertheless sets a precedent for the type of quality one usually expects out of higher class manufacturers such as Smith Shimano."
+  }
+]

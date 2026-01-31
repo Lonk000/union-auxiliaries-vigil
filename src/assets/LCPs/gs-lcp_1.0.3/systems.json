@@ -1,0 +1,1024 @@
+[
+  {
+    "id": "ms_gs_myomuscular_reinforcement",
+    "name": "Myomuscular Reinforcement",
+    "source": "G&S",
+    "license": "John Henry",
+    "license_level": 1,
+    "effect": "Instead of the normal effects of Ram you can perform one of the following options:<ul><li><b>Wrench Limb:</b> On hit, the target is Impaired and Slowed until they pass an Engineering Save as a Quick Action.</li><li><b>Stomp Leg:</b> On hit, the Target reduces their Speed to 2 until they pass an Engineering Save as a Quick Action; unless their speed is naturally 2 or lower.</li></ul>",
+    "type": "System",
+    "sp": 2,
+    "description": "The basis of a mech’s strength is in its body. Bones of cast cermite and adamant. Muscles woven from steel that coil and spring with the earth’s weight. A mech is a thing, built from parts and from steel, with the promethean fire caged in its fusion-heart. You can just build it stronger, following the logic of rigs, of bone-analog hardpoints for muscle attachment. You can change how its body moves, and bring the full strength of a giant to bear against the world.",
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_impact_harness",
+    "name": "Impact Harness",
+    "source": "G&S",
+    "license": "John Henry",
+    "license_level": 1,
+    "effect": "When you Brace, your mech creates a Burst 2 magnetic field that inflicts Knockback 2 on all characters. If this Knockback would cause an enemy character to collide with a piece of terrain, object, or other enemy character they immediately fall Prone.",
+    "type": "System",
+    "sp": 1,
+    "description": "In the Dark, where the Clans labor to build everything from simple Habitats to the panels of Dyson spheres, there is the ever-present worry of micrometeor impacts. Point-defense lasers and nets of woven light can only keep out so much space junk as the hammers swing and saws cut. A simple answer then, is the Impact Harness, a magnetic field system linked to a piezoelectric drive. The more the mech works, the more battery it stores, so that in case of the worst it may release a massive burst of magnetic force. It turns away micrometeors as well as it does other mechs- sending up an invisible force in response to C/C damage estimates.",
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_hyperimpact_brachial_mods",
+    "name": "Hyperimpact Brachial Mods",
+    "source": "G&S",
+    "license": "John Henry",
+    "license_level": 2,
+    "actions": [
+      {
+        "activation": "Quick",
+        "detail": "Draw a Line 5 from your mech, all Enemy characters in the Line must make a Hull Save or be knocked Prone. Objects and Terrain caught in this line take 10 AP Kinetic damage."
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "Developed for demolition work first, the icon Brachial Mods of G&S’ licensing schema are usually restricted in their power draw and magnetic acceleration. Under the Emergency Schedule Printing Requirements of the John Henry license, they become more suited to drawing trenchlines and breaking up mountainsides than anything else.",
+    "tags": [
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_heat_self",
+        "val": 2
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_dynamite_drive_system",
+    "name": "Dynamite Drive System",
+    "source": "G&S",
+    "license": "John Henry",
+    "license_level": 3,
+    "actions": [
+      {
+        "activation": "Protocol",
+        "detail": "Until the start of your next turn, your mech is Slowed and your Main or larger Melee weapons gain the following effect:<br><b>On Attack:</b> Place a Blast 1 with at least 1 Space adjacent to your mech- all characters in the Blast must make a Hull save or be knocked prone. All Objects in the Blast suffer 20 AP Kinetic Damage."
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "Force can be everything, when you put your whole back into it. A mech and a man both got a spine- so you get them both reinforced in the Grimm Clan’s signature style, iron core and heavyweight tendons, anchor points meant to help the body lift and swing. Then you put your back into it, and crack open anything but in front of you. It’s a simple, if demanding piece of tech. But full licensing for the Johnny Henry MilGrade line comes with it standard. A gift from Old Master Grimm is the company’s reasoning. He was born a steel-driver, with iron in his spine.",
+    "tags": [
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_heat_self",
+        "val": 1
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_utility_saws",
+    "name": "Utility Saws",
+    "source": "G&S",
+    "license": "Volk",
+    "license_level": 1,
+    "effect": "When you successfully initiate a grapple you may deal 2 Kinetic Damage to the grappled target. Additionally you may use a Quick Action to rev up your saws and deal 10 AP Kinetic Damage to adjacent objects or terrain.",
+    "type": "System",
+    "sp": 2,
+    "description": "You know, you can just strap chainsaws to a mech? I love bein an engineer, cause that’s how you learn the difference between a combat saw and a utility saw is a legal one and not a mechanical one. So the Volk license comes pre-loaded with a set of of hullbreaker saws, originally meant for cutting down hyperflora trees in logging operations. They do a doozy on mechs too.",
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_burst_coat",
+    "name": "Burst Coat",
+    "source": "G&S",
+    "license": "Volk",
+    "license_level": 2,
+    "actions": [
+      {
+        "name": "Burst!",
+        "activation": "Reaction",
+        "frequency": "1/Round",
+        "trigger": "An attack targets you but is not yet rolled.",
+        "detail": "You become Invisible until the end of your next turn. If the attack misses you, you may also Slide 1."
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "Using a specialized layer of adamant compound in the underlayers of a mech’s armor allows a pilot to take advantage of a strange property of G&S’ trademark metamaterial- its ability to generate legionspace interference when subjected to strong electrical charges. By releasing a held piezoelectrical charge into the “nerves” of adamant compound woven throughout the armor, a burst of interference is generated- breaking locks and allowing a canny pilot to escape enemy fire.",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 2
+      },
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_gs_slide"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_boarkiller_reflex_module",
+    "name": "“Boarkiller” Reflex Module",
+    "source": "G&S",
+    "license": "Volk",
+    "license_level": 3,
+    "effect": "This system charges as Quick Action, while charged when you are hit by a melee attack you may expend the charge to force the attacker to suffer Knockback 2 and make a Hull save or be knocked Prone. Charges last until the next time your mech takes damage or the end of the scene, whichever occurs first.",
+    "type": "System",
+    "sp": 2,
+    "description": "Reflex module are a technology employed by clanners, in which a mute-drive is implanted into a worker’s rig and allowed to observe and inhabit the movements of the body to create a “recording” of muscle memory. The same technology is easily applied to mechs, creating simple, ready-to-learn techniques that G&S can use to quicken the training of colonial militiamen.",
+    "tags": [
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_shield"
+      },
+      {
+        "id": "tg_quick_action"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_short-life_shielder_systems",
+    "name": "Short-Life Shielder Systems",
+    "source": "G&S",
+    "license": "Bunyan",
+    "license_level": 1,
+    "effect": "When you Bolster an ally, you may pick one of the two effects listed below in addition to the normal effects of Bolster.<ul><li><b>Shield Pop:</b> All actors adjacent to your bolstered target are knocked back 1 space away from your target</li><li><b>Shield Brace:</b> Until the start of their next turn, the Bolstered target reduces all involuntary movement by 1 to a minimum of 0</li></ul>",
+    "type": "System",
+    "sp": 2,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_shield"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_pontchartrain_entrenchment_tool",
+    "name": "“Pontchartrain” Entrenchment Tool",
+    "source": "G&S",
+    "license": "Bunyan",
+    "license_level": 2,
+    "actions": [
+      {
+        "activation": "Quick",
+        "detail": "Draw a Line 4 of Difficult Terrain adjacent to your mech. If any of the spaces of the line intersect with Difficult Terrain already present on the map, it becomes Dangerous Terrain (Kinetic) as well."
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_bulk_plating",
+    "name": "Bulk Plating",
+    "source": "G&S",
+    "license": "Bunyan",
+    "license_level": 2,
+    "effect": "When you Brace, you ignore all involuntary movement caused by the triggering attack, and you may continue to make reactions as normal after Bracing.",
+    "type": "System",
+    "sp": 1,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_rocky_mountain_defense_drone",
+    "name": "Rocky Mountain Defense Drone",
+    "source": "G&S",
+    "license": "Bunyan",
+    "license_level": 3,
+    "type": "Drone",
+    "sp": 2,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 2
+      },
+      {
+        "id": "tg_shield"
+      }
+    ],
+    "deployables": [
+      {
+        "name": "Rocky Mountain Defense Drone",
+        "type": "Drone",
+        "detail": "Deploy this drone adjacent to your mech, it creates a Line 5, 3 high bunker-shield that blocks line of sight for enemy actors, but not allied actors. The Line is centered on the drone who may be attacked, though it benefits at all times from Hard Cover. The shield lasts until the drone is destroyed or the scene ends.",
+        "activation": "Quick",
+        "size": 1,
+        "hp": 10,
+        "evasion": 5,
+        "edef": 5
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_full_mobility_rig",
+    "name": "Full Mobility Rig",
+    "source": "G&S",
+    "license": "Jack",
+    "license_level": 1,
+    "actions": [
+      {
+        "activation": "Protocol",
+        "detail": "1/turn you may expend a charge from this system to Fly whenever you would Move or Boost, though you must land at the end of the movement."
+      }
+    ],
+    "type": "System",
+    "sp": 1,
+    "description": "Using excess heat from a mech’s coldcore and a series of atmospheric hypercompressors/hydrogen intakes, the Full Mobility Rig allows any mech to take to the skies. The sheer heat of the cooking gasses is enough to send even the largest mechanized frame skyward- though the wear and tear on the parts require regular replacement and maintenance.",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 6
+      },
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_danger_zone"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_landspinner_secondary_mobility_modifications",
+    "name": "“Landspinner” Secondary Mobility Modifications",
+    "source": "G&S",
+    "license": "Jack",
+    "license_level": 1,
+    "actions": [
+      {
+        "activation": "Reaction",
+        "frequency": "1/Round",
+        "trigger": "An attack is declared targeting you.",
+        "detail": "You gain Hard Cover against the triggering attack. If the triggering attack Misses, you may Boost."
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "An all-terrain modification to the feet of a mechanized frame, the landspinners allow for greater speed in scenarios where last-second jukes and zags mean the difference between a completed mission and a lost one. Mobile Infantry, for all its advantages compared to more archaic forms of fighting-men, requires a great deal of support. In the form of tech like the landspeeders, or from Mechanized Cavalry Units. The goal of Clan Rockstansky’s JACK licensing seeks to bleed the two combat roles together and ensure ready militancy among the frontier worlds under G&S control.",
+    "tags": [
+      {
+        "id": "tg_heat_self",
+        "val": 1
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_predictive_hunting_beacon",
+    "name": "Predictive Hunting Beacon",
+    "source": "G&S",
+    "license": "Jack",
+    "license_level": 3,
+    "actions": [
+      {
+        "activation": "Quick",
+        "detail": "A target within 5 Spaces must make an AGILITY save or gain a Blip marker, you may only apply a single Blip marker at a time, removing your previous one when you use this system again. All of your attacks against a character with a Blip marker gain SEEKING and +1 Accuracy. A character may make another Agility save to remove the Blip marker by using the Boost action."
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "A two-part system, composed of a magnetic projectile that subverts and feeds information from a target to an inbuilt and incredibly powerful predictive C/C unit. The stolen information is enough to create a “Super Lock-On”, as test-pilots have termed the effect . Projectiles are fired where the target will be, not where they are. Escape becomes impossible without taking severe evasive maneuvers. ",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 3
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_scathach_class_demi-intellect",
+    "name": "SCATHACH Class Demi-Intellect",
+    "source": "G&S",
+    "license": "Jack",
+    "license_level": 3,
+    "effect": "Your mech gains the AI property and the SCATHACH protocol. SCATHACH isn’t a full NHP and thus cannot Cascade.",
+    "actions": [
+      {
+        "name": "SCATHACH Protocol",
+        "activation": "Protocol",
+        "detail": "Until the start of your next turn, you gain the NO ESCAPE reaction."
+      },
+      {
+        "name": "NO ESCAPE",
+        "activation": "Reaction",
+        "frequency": "1/Round",
+        "trigger": "An enemy within 5 Spaces of you Moves or Boosts.",
+        "detail": "You Boost directly towards the triggering character by the most direct route possible."
+      }
+    ],
+    "type": "AI",
+    "sp": 3,
+    "description": "The Demi-Intellect machine-minds crafted by Clan Vediovis have their roots in pre-fall technologies, technologies that have so far avoided the censure of Union due to the ways Clanner Datasmiths have used them as a basis for several unique advances in the crafting of NHP Shackles. These Intellects rival the most powerful of Comp/Con units, but in some ways still fall short of true NHPs in terms of ability.<br><br>Scathach is an old engram, her codecore used as the basis for a thousand others. She is the first engram a codesmith learns, and the last he is to master. She is the Tutor of Heroes, whose red song is layered with old memetics to aid in concentration, hunting, the old ways of war.",
+    "tags": [
+      {
+        "id": "tg_heat_self",
+        "val": 4
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_jump_drone",
+    "name": "Jump Drone",
+    "source": "G&S",
+    "license": "Dorothy",
+    "license_level": 1,
+    "deployables": [
+      {
+        "name": "Jump Drone",
+        "type": "Drone",
+        "detail": "An allied character who moves through or adjacent to this Drone for the first time in a Round may Fly for the rest of their movement, but must land at the end of their movement or begin falling. Additionally, if an allied character would take Falling Damage while adjacent to this Drone, they instead land safely and take no damage.",
+        "activation": "Quick",
+        "size": 0.5,
+        "hp": 5,
+        "evasion": 10
+      }
+    ],
+    "type": "Drone",
+    "sp": 2,
+    "description": "PLACEHOLDER"
+  },
+  {
+    "id": "ms_gs_armorer_drone",
+    "name": "Armorer Drone",
+    "source": "G&S",
+    "license": "Dorothy",
+    "license_level": 1,
+    "deployables": [
+      {
+        "name": "Armorer Drone",
+        "type": "Drone",
+        "detail": "While adjacent to this drone, allied characters can activate it as a quick action- gaining 2+GRIT Overshield and clearing one condition that is not self-inflicted. The drone immediately disintegrates after activation.",
+        "activation": "Quick",
+        "size": 0.5,
+        "hp": 5,
+        "evasion": 10
+      }
+    ],
+    "type": "Drone",
+    "sp": 2,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 2
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_nanite_bolt",
+    "name": "Nanite Bolt",
+    "source": "G&S",
+    "license": "Dorothy",
+    "license_level": 3,
+    "effect": "This system charges as a quick action, readying a bundle of whitewash nanites. While it is charged, you gain the Golden Arrow reaction. It can only hold one charge at a time, but charges last for the rest of the scene or until used.",
+    "actions": [
+      {
+        "name": "Charge Nanite Bolt",
+        "activation": "Quick",
+        "detail": "Charge the Nanite Bolt, gaining the Golden Arrow reaction."
+      },
+      {
+        "name": "Interdiction Point",
+        "activation": "Reaction",
+        "frequency": "1/round",
+        "trigger": "You or an allied character within range 5 are hit by a ranged attack.",
+        "detail": "The target gains 1d6+1 Overshield before they take damage. The Nanite Bolt loses its charge."
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_shield"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_ardent_charges",
+    "name": "Ardent Charges",
+    "source": "G&S",
+    "license": "Dorothy",
+    "license_level": 3,
+    "actions": [
+      {
+        "name": "Stripper-Swarm Charge",
+        "range": [
+          {
+            "type": "Range",
+            "val": 8
+          }
+        ],
+        "detail": "Target character gains a Nanite Mark, the Nanite Mark remains until they take a Quick Action to make an Engineering Save to remove it. An ally who hits a target with a Nanite Mark may consume the mark to gain 2+Your GRIT Overshield."
+      }
+    ],
+    "deployables": [
+      {
+        "name": "Armor-Swarm Charge",
+        "type": "Mine",
+        "range": [
+          {
+            "type": "Burst",
+            "val": 1
+          }
+        ],
+        "detail": "This mine primes at the end of your turn, and may be detonated as a Quick Action by you or an allied character. You and any allied character in the Blast may clear one condition that is not self-inflicted and gain 1d6+1 Overshield."
+      }
+    ],
+    "type": "Deployable",
+    "sp": 3,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 3
+      },
+      {
+        "id": "tg_grenade"
+      },
+      {
+        "id": "tg_overshield"
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_armorcladding_foundry",
+    "name": "Armorcladding Foundry",
+    "source": "G&S",
+    "license": "Noel",
+    "license_level": 1,
+    "actions": [
+      {
+        "activation": "Quick",
+        "detail": "An allied character adjacent to you gains d3+1 Overshield, and may choose one of the following-<ul><li>Clear one Condition that was not self-inflicted.</li><li>Cool d3+1 Heat.</li></ul>"
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "Mechanized frames define our conflicts, they are the weapons of our era.",
+    "tags": [
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_limited",
+        "val": 3
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_overboost_drone",
+    "name": "Overboost Drone",
+    "source": "G&S",
+    "license": "Noel",
+    "license_level": 2,
+    "deployables": [
+      {
+        "name": "Overboost Drone",
+        "type": "Drone",
+        "detail": "An ally adjacent to the Overboost Drone may use a Quick Action on their turn to equip it, while equipped with an Overboost Drone, the Drone shares their space and moves when they move. 1/Round when an equipped character would Boost <b>OR</b> you would move Drone (through Traits or Talents), you may increase the Boost by +3 Spaces <b>OR</b> you may Slide the equipped mech the same amount of spaces you would move the Overboost Drone. ",
+        "activation": "Quick"
+      }
+    ],
+    "type": "Drone",
+    "sp": 2,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 3
+      },
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_gs_slide"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_iron_will",
+    "name": "Iron Will",
+    "source": "G&S",
+    "license": "Noel",
+    "license_level": 3,
+    "effect": "When you Stabilize, you may expend a charge from this system, when you do adjacent allies gain 2+GRIT Overshield.",
+    "type": "System",
+    "sp": 3,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 3
+      },
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_overshield"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_overdress_drone",
+    "name": "Overdress Drone",
+    "source": "G&S",
+    "license": "Noel",
+    "license_level": 3,
+    "deployables": [
+      {
+        "name": "Overdress Drone",
+        "type": "Drone",
+        "detail": "An ally adjacent to the Overdress Drone may use a Quick Action on their turn to equip it, while equipped with an Overdress Drone, the Drone shares their space and moves when they move. Additionally a character equipped with the Overdress Drone gains Resistance to all damage; however, the Drone takes half of the damage the equipped character would take before calculating Armor and Resistance. This effect lasts until the Overdress Drone is reduced to 0 HP, at which point it is rendered inert, falling off the mech.",
+        "activation": "Quick"
+      }
+    ],
+    "type": "Drone",
+    "sp": 2,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 3
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_octocamo_ghillie",
+    "name": "Octocamo Ghillie",
+    "source": "G&S",
+    "license": "Anansi",
+    "license_level": 1,
+    "actions": [
+      {
+        "activation": "Quick",
+        "detail": "As a quick action, you don this cloak of color-shifting octocamo until you remove it as a protocol, overheat, or suffer structure damage. While the cloak is active your mech is Slowed, but gains Soft Cover from Difficult Terrain and treats other Soft Cover as Hard Cover."
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "Octocamo is the bog-standard in human-scale stealth-tech, a smart fabric that mimics the property of Old Cradle monsters called “Octos'' that could change their color, texture, and pattern to blend into their environment. We at G&S believe that if it was good enough for grandad, it's good enough for you- and so we present a mech-frame scaled ghillie cloak made from octocamo. Capable of all the color-changing expected, the ghillie also includes heat-masking systems that makes actually targeting your mech hard as hell! ...as long as you’re actually using something to hide with.",
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_trick_charges",
+    "name": "Trick Charges",
+    "source": "G&S",
+    "license": "Anansi",
+    "license_level": 2,
+    "actions": [
+      {
+        "name": "Holoterrain",
+        "range": [
+          {
+            "type": "Range",
+            "val": 5
+          },
+          {
+            "type": "Blast",
+            "val": 1
+          }
+        ],
+        "detail": "All actors in the Blast must make a Systems save or become Impaired and Slowed. On a successful save they become Impaired. The Blast lingers as a piece of Soft Cover until the end of the scene."
+      }
+    ],
+    "deployables": [
+      {
+        "name": "Tripwire",
+        "type": "Mine",
+        "range": [
+          {
+            "type": "Burst",
+            "val": 1
+          }
+        ],
+        "detail": "When this Mine arms at the end of your turn, it creates a Line 5 in a direction of your choice. The mine is triggered when a character moves through this line; create a Burst 1 area centered on the triggering character, all characters in this area must succeed on an Agility save or take 1d6+2 Explosive damage. On a success, they take half damage."
+      }
+    ],
+    "type": "Deployable",
+    "sp": 2,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 3
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_gumdoll-class_holocaster",
+    "name": "Gumdoll-Class Holocaster",
+    "source": "G&S",
+    "license": "Anansi",
+    "license_level": 3,
+    "actions": [
+      {
+        "name": "Fakeout",
+        "activation": "Reaction",
+        "frequency": "1/Round",
+        "trigger": "You are targeted by an attack from 3 spaces or beyond.",
+        "detail": "Teleport 4 spaces before the attack is rolled, if this would place you outside the attack’s range or attacker's LoS, it automatically misses."
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_ascalon_engines",
+    "name": "Ascalon Engines",
+    "source": "G&S",
+    "license": "Orlando",
+    "license_level": 1,
+    "actions": [
+      {
+        "activation": "Reaction",
+        "frequency": "1/Round",
+        "trigger": "A ranged attack misses your mech.",
+        "detail": "Slide 3 towards the triggering character by the most direct path possible. If this movement ends with your mech adjacent to an enemy character, they must make a HULL save or suffer 2 AP Kinetic damage and Slowed until the end of their next turn."
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_furioso_myomusculature",
+    "name": "“Furioso” Myomusculature",
+    "source": "G&S",
+    "license": "Orlando",
+    "license_level": 2,
+    "effect": "When you Boost, obstructions and objects in your path take 10 Kinetic AP. Your mech passes through any obstructions destroyed this way and continues moving until you have moved your maximum distance or fail to destroy an obstruction.",
+    "type": "System",
+    "sp": 2,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_dogfighting_beacon",
+    "name": "Dogfighting Beacon",
+    "source": "G&S",
+    "license": "Orlando",
+    "license_level": 2,
+    "actions": [
+      {
+        "activation": "Quick Tech",
+        "detail": "You and an enemy character within 8 both gain a Dogfighter Mark, which can only be removed by taking a Quick Action to make an Engineering Save or being destroyed. While two characters have Dogfighter Marks, they may Boost as a free action 1/round, moving by the most direct path possible towards the other Marked character."
+      }
+    ],
+    "type": "System",
+    "sp": 3,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 3
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_wild_bronco_reflex_module",
+    "name": "“Wild Bronco” Reflex Module",
+    "source": "G&S",
+    "license": "Max",
+    "license_level": 1,
+    "actions": [
+      {
+        "name": "Rowdy Kick",
+        "activation": "Reaction",
+        "trigger": "A character attempts to Grapple you.",
+        "detail": "They have +1 Difficulty on the grapple attempt. If they fail, they take 3 Kinetic damage and are knocked 2 spaces directly away from you. This reaction resolves before they roll for the grapple."
+      }
+    ],
+    "type": "System",
+    "sp": 1,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_heat_self",
+        "val": 1
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_brawler_caging",
+    "name": "Brawler Caging",
+    "source": "G&S",
+    "license": "Max",
+    "license_level": 1,
+    "effect": "When a target triggers your Overwatch, you may use your action to Ram rather than Skirmish.",
+    "type": "System",
+    "sp": 1,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_wild_child_reflex_booster",
+    "name": "“Wild Child” Reflex Recorder",
+    "source": "G&S",
+    "license": "Max",
+    "license_level": 2,
+    "actions": [
+      {
+        "name": "Backhand",
+        "activation": "Reaction",
+        "trigger": "You are hit by an attack made as a Reaction.",
+        "detail": "You may attempt to Ram your attacker."
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_nitro_charger",
+    "name": "Nitro Charger",
+    "source": "G&S",
+    "license": "Max",
+    "license_level": 3,
+    "effect": "1/round, when you Overcharge, you may consume a charge from this system and then Boost as a free action.",
+    "type": "System",
+    "sp": 2,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_heat_self",
+        "val": 2
+      },
+      {
+        "id": "tg_limited",
+        "val": 2
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_foundational_mirror_logic",
+    "name": "Foundational Mirror Logic",
+    "source": "G&S",
+    "license": "Scheherazade",
+    "license_level": 1,
+    "actions": [
+      {
+        "activation": "Quick Tech",
+        "detail": "Choose up to 2 characters within Sensors. Make a Tech Attack roll against each hostile character chosen this way. For each successful Tech Attack, Slide that character 3 spaces, then Slide all chosen friendly characters 3 spaces."
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "I look upon the mirror and for a moment it fills my entire gaze, I am looking upon a reflective silver wasteland. I am multitudes, all staring into the mirror. And the mirror stares back at me, and it slithers, and I am no longer infinite. I am me. But not the same me that looked into the mirror. I am not where I stood before. The world has moved underneath me. I was always here.",
+    "tags": [
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_gs_slide"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_sandstorm_charges",
+    "name": "Sandstorm Charges",
+    "source": "G&S",
+    "license": "Scheherazade",
+    "license_level": 2,
+    "actions": [
+      {
+        "name": "Sandstorm Grenade",
+        "range": [
+          {
+            "type": "Range",
+            "val": 5
+          },
+          {
+            "type": "Blast",
+            "val": 1
+          }
+        ],
+        "detail": "This blast lasts until the end of your next turn. All characters in the blast are consumed by a whirling sandstorm, Blocking Line of Sight in, out, or through the raging winds."
+      }
+    ],
+    "deployables": [
+      {
+        "name": "Sandstorm Mine",
+        "type": "Mine",
+        "range": [
+          {
+            "type": "Burst",
+            "val": 2
+          }
+        ],
+        "detail": "This mine deploys and primes at the end of your turn, when primed it can be detonated with a Quick Action on your turn or automatically when an actor moves adjacent to it. The Blast creates a whirling sandstorm that acts as Dangerous Terrain (Kinetic) and Soft Cover and lasts until the mine is destroyed by any attack action hitting it (Evasion 5, HP 1). Any checks provoked by the Dangerous Terrain are instead replaced by saves against your Save Target."
+      }
+    ],
+    "type": "Deployable",
+    "sp": 2,
+    "description": "The Mirror told the Clanners a story, a story they found in their vaults, a story about Homeland, about Cradle, about the Djinn who lived in the cold deserts of Mars. Sons of the War God, who turned from War and sought a life of their own, whipping the dust into great storms of roaring sand and flashing lightning. A King of Mars came upon a Djinn’s Heart, and used its power to protect his kingdom with an eternal storm. The Clanners learned how to make Djinn Hearts then, to keep things safe and hidden.",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 3
+      },
+      {
+        "id": "tg_grenade"
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_displacement_mirrors",
+    "name": "Displacement Mirrors",
+    "source": "G&S",
+    "license": "Scheherazade",
+    "license_level": 2,
+    "actions": [
+      {
+        "activation": "Reaction",
+        "frequency": "1/Round",
+        "trigger": "An attack that did not consume Lock On misses you.",
+        "detail": "Teleport 3 in any direction."
+      }
+    ],
+    "type": "System",
+    "sp": 2,
+    "description": "<code>Look, the Mirror gives up its gifts to us. We shall be a ghost, a figment, a dream, a mirage. If they strike at you, they strike only a reflection. They are already within the Dream, they have done this before and shall do so again. Such is the nature of Mirror-Logic.</code>",
+    "tags": [
+      {
+        "id": "tg_heat_self",
+        "val": 1
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_mirror-logic_charges",
+    "name": "Mirror-Logic Charges",
+    "source": "G&S",
+    "license": "Scheherazade",
+    "license_level": 3,
+    "actions": [
+      {
+        "name": "Twist Causality",
+        "range": [
+          {
+            "type": "Range",
+            "val": 5
+          },
+          {
+            "type": "Blast",
+            "val": 1
+          }
+        ],
+        "detail": "Create an area of warped causality until the end of your next turn. All characters within this area reverse the effects of Accuracy and Difficulty (Accuracy penalizes rolls it applies to, while Difficulty improves those rolls). Accuracy and Difficulty still cancel each other out as normal."
+      }
+    ],
+    "deployables": [
+      {
+        "name": "Twist Logics",
+        "type": "Mine",
+        "range": [
+          {
+            "type": "Burst",
+            "val": 2
+          }
+        ],
+        "detail": "This mine primes at the end of your turn. It can be detonated with a Quick Action, and detonates automatically when any character moves adjacent to it. When it detonates it creates an area of warped time within this mine's Blast that lasts until the end of your next turn. Any character starting their turn within this area must succeed at a Systems save or attempt the same actions they took on their previous turn. They make the same choices for those actions (such as distance moved, or targets attacked). If, for any reason, an affected character cannot make the same action or the same choices, such as if a target is out of range or a system with Recharge has not yet recharged, they take all repeat actions they are capable of taking, then end their turn."
+      }
+    ],
+    "type": "Deployable",
+    "sp": 2,
+    "description": "<code>The Foundation of Mirror-Logic is showing them where they stand. The Advances of Mirror Logic are to show them how they must act. They were never to fire, they were never to walk, they were never to <b>be.</b><br>And yet in this dream they are.<br>Correct it.</code>",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 2
+      },
+      {
+        "id": "tg_grenade"
+      },
+      {
+        "id": "tg_unique"
+      }
+    ]
+  },
+  {
+    "id": "ms_gs_dinazade_class_nhp",
+    "name": "DINAZADE Class NHP",
+    "source": "G&S",
+    "license": "Scheherazade",
+    "license_level": 3,
+    "effect": "Your mech gains the AI property and the DINAZADE Gambit.",
+    "actions": [
+      {
+        "name": "DINAZADE Gambit",
+        "activation": "Quick",
+        "frequency": "1/Scene",
+        "detail": "With a sound from beyond space and time, your NHP harnesses the raw force of Mirror Logic and hastily edits the flow of destiny around you. Place a Blast 4 within range 8 of your mech: all characters within the blast must pass a Systems Save or Slide 6 spaces in a direction of your choice, Sliding 3 on a successful save as their minds partially reject the new history you’ve created. Any objects, drones, or terrain caught in this Blast is considered to have automatically failed the save- you may Slide them 6 spaces in a direction of your choice. "
+      }
+    ],
+    "type": "AI",
+    "sp": 3,
+    "description": "PLACEHOLDER",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 1
+      },
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_gs_slide"
+      }
+    ]
+  }
+]

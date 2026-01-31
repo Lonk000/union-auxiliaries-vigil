@@ -1,0 +1,51 @@
+[
+  {
+    "id": "cb_gs_clanner's_pride",
+    "name": "Clanner's Pride",
+    "source": "G&S",
+    "effect": "Your mech is Immune to the Slowed Condition (unless inflicted by systems, traits, talents, zero-G or etc) and ignores Difficult Terrain and Engagement when it moves.",
+    "description": "How many hands touch a mech before it’s deployed? A hundred thousand mine the ores, ten thousand work the materials into RawMat, a thousand hands machine the parts, a dozen hands plate the frame, a single hand pulls the trigger. But your hand alone doesn’t grasp the gun. All those hands are with you, at every moment."
+  },
+  {
+    "id": "cb_gs_reactor_reinforcement_rebuild",
+    "name": "Reactor Reinforcement Rebuild",
+    "source": "G&S",
+    "effect": "The first time in a scene your mech Stabilizes, you gain a [Mark]. This [Mark] is consumed when your mech would suffer heat, reducing the suffered Heat by d3 to a minimum of 1.",
+    "description": "PLACEHOLDER"
+  },
+  {
+    "id": "cb_gs_rockstansky_bulk",
+    "name": "Rockstansky Bulk",
+    "source": "G&S",
+    "effect": "When you have cover, your mech is treated as having +1 Armor. Additionally any mech you print has +2 HP. This does not stack with other core bonuses.",
+    "description": "PLACEHOLDER",
+    "bonuses": [
+      {
+        "id": "hp",
+        "val": 2
+      }
+    ]
+  },
+  {
+    "id": "cb_gs_david_gianthunter_rig",
+    "name": "DAVID Gianthunter Rig",
+    "source": "G&S",
+    "effect": "Your mech may ignore engagement and move through the spaces of larger mechs. When your mech is adjacent to a larger mech, they gain +1 Difficulty on all ranged and melee attacks that do not target you.",
+    "description": "PLACEHOLDER"
+  },
+  {
+    "id": "cb_gs_bigfoot_impact_bracing",
+    "name": "BIGFOOT Impact Bracing",
+    "source": "G&S",
+    "effect": "Your mech gains the “Earthquake Step” Action.",
+    "description": "PLACEHOLDER",
+    "actions": [
+      {
+        "name": "Earthquake Step",
+        "activation": "Protocol",
+        "frequency": "1/Scene",
+        "detail": "Until the end of your turn, your mech is truly moving, and nothing can stop it. Your movement ignores Engagement, any terrain you pass through suffers 20 AP Kinetic damage, and any characters you move adjacent to must make a HULL save or fall prone. A character can only be forced to make this save 1/scene."
+      }
+    ]
+  }
+]

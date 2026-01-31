@@ -1,0 +1,571 @@
+[
+  {
+    "id": "ic_acastus",
+    "license_level": 2,
+    "source": "IC",
+    "name": "ACASTUS",
+    "mechtype": [
+      "Striker"
+    ],
+    "y_pos": 22,
+    "description": "Connected to Meta Vault Sigma - 12, codename \"The Forge\", the Acastus is able to tap into a seemingly endless arsenal of archaic close-combat Weaponry. While the blade constructs pulled from the vault prove less sturdy than conventionally produced ones, their unique shattering property can cause catastrophic damage against a target if  wielded with enough force. In the field the Acastus swings its blades with reckless abandon, becoming a whirlwind of shattering blades. Witnesses of the frame's engagements  describe the sight as ‘disturbingly beautiful’ as it engages in a cycle of destruction and creation, striking down foes in turn.",
+    "mounts": [
+      "Main",
+      "Main"
+    ],
+    "stats": {
+      "size": 1,
+      "armor": 1,
+      "hp": 8,
+      "evasion": 10,
+      "edef": 8,
+      "heatcap": 5,
+      "repcap": 3,
+      "sensor_range": 5,
+      "tech_attack": -2,
+      "save": 10,
+      "speed": 5,
+      "sp": 6,
+      "stress": 4,
+      "structure": 4
+    },
+    "traits": [
+      {
+        "name": "Break Them",
+        "description": "After hitting an attack with a non integrated melee weapon you may destroy that weapon to deal +1d6 bonus damage."
+      },
+      {
+        "name": "Lost but not Forgotten",
+        "description": "Destroyed weapons on the Acastus may not be used to attack but are otherwise unaffected."
+      },
+      {
+        "name": "Field of Ruin",
+        "description": "Whenever one or more of your melee weapons are destroyed you may immediately place a Blade Marker on a Free and Valid space within Sensors. "
+      },
+      {
+        "name": "Tireless Smithing",
+        "description": "When resting, the Acastus repairs all destroyed melee Weapons without spending Repair Points."
+      }
+    ],
+    "core_system": {
+      "name": "Forge Vault Connection",
+      "description": "Sigma - 12 is a peculiar meta-vault, appearing as an endless wasteland to all those that perceive it. The landscape is littered with blades of every make imaginable. By tapping into that conceptual space, though not truly entering it, the Acastus is able to unleash a staggering barrage of blades at its enemies seemingly out of nowhere.",
+      "active_name": "Infinite Blades",
+      "active_effect": "Make a Blade Sending attack against any number of hostile characters within Range. Repair all melee weapons without spending Repair Points. You may draw a straight Line between yourself and any number of Blade Markers on the Battlefield, removing them. Hostile characters take 3 Kinetic damage for each Line intersecting them.",
+      "use": "Encounter",
+      "activation": "Quick",
+      "passive_name": "Recall",
+      "passive_effect": "Gain the Recall Protocol.",
+      "passive_actions": [
+        {
+          "name": "Recall",
+          "activation": "Protocol",
+          "detail": "Draw a straight Line between yourself and a Blade Marker within your Sensors, removing it. Characters in the path take 3 Kinetic damage. You may then repair one destroyed melee weapon without spending any Repair Points."
+        }
+      ],
+      "integrated": [
+        "mw_acastus_integrated"
+      ]
+    },
+    "image_url": "https://i.imgur.com/LnzVtVv.png"
+  },
+  {
+    "id": "ic_argus",
+    "license_level": 2,
+    "source": "IC",
+    "name": "ARGUS",
+    "mechtype": [
+      "Artillery",
+      "Controller"
+    ],
+    "y_pos": 26,
+    "description": "<p>The Argus represents one of Intercorp's oldest frames. First put into service surveying the frozen wastelands of Stratus-3, the Argus comes stock with a sophisticated drone companion to aid it when operating in isolation.</p>  <p>Equipped with a powerful classification-6 sensor suite, the Argus is designed to directly interface with drones under its control, utilizing them to scan for potential weak points in its prey and to exploit them with pinpoint accuracy.</p> <p> Despite its age and original intent as a mech used for hunting mega fauna and surveying wild, overgrown and dangerous places, the Intercorp™ Model 01 \"Argus\" has become a welcome, if rare, addition to mercenary groups looking for fire support and less reputable groups or individuals who use the Argus' maneuverability and versatility in more urban theaters to hunt for whatever \"prey\" the environment has to offer.</p>",
+    "mounts": [
+      "Main",
+      "Flex"
+    ],
+    "stats": {
+      "size": 1,
+      "armor": 0,
+      "hp": 10,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 5,
+      "repcap": 3,
+      "sensor_range": 15,
+      "tech_attack": 0,
+      "save": 11,
+      "speed": 5,
+      "sp": 6,
+      "stress": 4,
+      "structure": 4
+    },
+    "traits": [
+      {
+        "name": "Steel Teeth",
+        "description": "The Argus may attack with any of its melee weapons that are currently destroyed as long as it uses the Bloodhound Drone to measure line of sight and range for the attack."
+      },
+      {
+        "name": "Tally-Ho",
+        "description": "1/Round the Argus may deal +1d6 bonus damage on hit with a ranged attack if its target is adjacent to a Drone it controls."
+      },
+      {
+        "name": "Baba Yaga",
+        "description": "When the Argus hits a character that destroyed one of it's Drones this scene the attack is considered a critical hit."
+      }
+    ],
+    "core_system": {
+      "name": "BLOODHOUND SYSTEMS",
+      "description": "<p>The Bloodhound Drone represents one of the most sophisticated pieces of Intercorp™ drone technology, integrating an extant homunculus - an AI copy of the pilots personality - into the drone. This ensures that the Bloodhound is, at any given time, taking a course of action that is based on what the pilot would do in a similar circumstance. This leads to maximum independence during recon and combat scenarios while still ensuring that the pilot remains in control at all times (albeit implicitly and indirectly).</p> <p>Many pilots have taken to treating their Bloodhounds as real pets and have further modified their rugged exteriors with modifications both cosmetic and practical in nature.</p>",
+      "active_name": "Let Slip the Dogs of War",
+      "active_effect": "For the rest of this scene, you gain the Seek and Destroy action.",
+      "active_actions": [
+        {
+          "name": "Seek and Destroy",
+          "activation": "Quick",
+          "detail": "Mark a hostile character within Sensors and Line of Sight. For the rest of the scene any attacks you make that hit the marked character while it is Engaged by your Bloodhound Drone become a critical hit. <br>Only one character may be marked at a time. Once the marked character is destroyed or no longer part of the scene you can mark a new character within Sensors and Line of Sight as a Quick Action."
+        }
+      ],
+      "tags": [
+        {
+          "id": "tg_drone"
+        }
+      ],
+      "activation": "Protocol",
+      "passive_name": "Bloodhound Drone",
+      "passive_effect": "You are accompanied by a Bloodhound Drone, a powerful companion on the Battlefield. The Bloodhound Drone is a Size 1/2 Drone with (10+Grit) HP, and it has the following properties:<br>The Bloodhound Drone shares your Evasion, E-Defense and Speed. It ignores Engagement, Overwatch and Difficult Terrain. It can move independently on your turn, but can’t take any other actions. <br>While the Bloodhound Drone is within your Sensor Range and Line of Sight:<br>• You can use your Bloodhound Drone to measure Threat and Line of Sight when making attacks with melee weapons. If you do so, the weapon’s Threat becomes 1 and it loses the “Thrown” property.<br>• You can consider Spaces adjacent to the Bloodhound Drone as within your Threat for the purposes of Overwatch, and if you overwatch this way you can only make attacks with melee weapons. <br>Attacks made via the drone originate from your mech for the purposes of Talents and effects.<br>When you rest or perform a Full Repair your drone regains all HP and is automatically repaired if it was destroyed."
+    },
+    "image_url": "https://i.imgur.com/Ftt0RS0.png"
+  },
+  {
+    "id": "ic_atalanta",
+    "license_level": 2,
+    "source": "IC",
+    "name": "ATALANTA",
+    "mechtype": [
+      "Striker",
+      "Controller"
+    ],
+    "y_pos": 40,
+    "description": "+++Memo Regarding Recently Released Files+++ <br>Okay listen up. <br>I know that we're behind on new frame development after the Perpetual Gearbox incident. With the Heracles on ice and corporate breathing down our necks, stress is running high. <br>What I as project manager absolutely cannot abide by is the way project Atalanta has now been released. <br>We all know that Atalanta isn't ready. In fact it's not even in the planning stages, we barely secured funding last week. <br>Research into the technology required was estimated to keep us busy for the next 50 years. <br>And now this. <br>All schematics, theorems, research notes, weapons testing reports. All sent to us in the file that's apparently dated from 80 years in the future. <br>Everyone realizes what that means right? <br>To spell it out for those that still aren't following. I hereby forbid under penalty of permanent termination anyone on this project team from looking at the data we received. <br>In fact, we will all now have to carry on doing our research and work on the project for the next 80 years despite all of our results already sitting right here. <br>If we do not, I'm afraid that the resulting paradox could rip the company and perhaps a sizable chunk of space time apart. So here we are, enjoy spending a lifetime researching something that already exists and will soon be available on the open market. <br>At least we can take solace in the fact that we will be successful. <br>If I ever find out who will be responsible for this... <br>Prof. Filcher, head of Project Atalanta <br>+++ End of Memo +++",
+    "mounts": [
+      "Flex",
+      "Flex"
+    ],
+    "stats": {
+      "size": 0.5,
+      "armor": 1,
+      "hp": 6,
+      "evasion": 10,
+      "edef": 8,
+      "heatcap": 4,
+      "repcap": 3,
+      "sensor_range": 8,
+      "tech_attack": 0,
+      "save": 11,
+      "speed": 6,
+      "sp": 8,
+      "stress": 4,
+      "structure": 4
+    },
+    "traits": [
+      {
+        "name": "Mark Timestream",
+        "description": "At the end of your turn you may place a single Temporal Phantom within Sensors in a Free and Valid space. If you have performed a Quick Action on your turn the Phantom stores a Quick Action. Alternatively, if you have performed a Full Action on your turn the Phantom stores a Full Action. Temporal Phantoms are Size 1/2, Characters may occupy the same space as a Phantom."
+      },
+      {
+        "name": "Abandon Timeline",
+        "description": "1/Round as a Reaction to being hit by an attack the Atalanta may swap places with a Temporal Phantom, active or inactive, in Sensors after the attack is resolved. This counts as Teleporting and does not prevent any damage or effects of the attack."
+      },
+      {
+        "name": "Exposed Reactor",
+        "description": "The Atalanta gains +1 Difficulty on Engineering saves and checks."
+      }
+    ],
+    "core_system": {
+      "name": "Temporal Divergence Mapper",
+      "description": "What would have happened if you hadn't taken that job? Had kissed that person at that party? Kept that hand instead of folding? The Temporal Divergence Mapper may very well hold the answers to these questions. By marking and anchoring specific points in time, the Atalanta can travel to those moments, venture down alternate paths and rewrite the future.",
+      "active_name": "Infinite Possibilities",
+      "active_effect": "All Temporal Phantoms on the Battlefield become active. Until the end of this turn Explore Divergence becomes a Free Action which can be used any number of times per turn. Any Temporal Phantoms you Teleport to during this turn vanish. This action can never create a Temporal Phantom.",
+      "activation": "Full Action",
+      "passive_name": "Explore Divergence",
+      "passive_effect": "As a Quick Action you may Teleport to a space occupied by an active Temporal Phantom within Sensors or as close as possible. If you do you may immediately perform either a Quick Action or a Full Action as a Free Action depending on the Phantom. You do not have to repeat the specific action used to create the Phantom and may use any Quick or Full Action. Once \"Explore Divergence\" is resolved, the Temporal Phantom becomes inactive for the rest of the Scene. This action can never create a Temporal Phantom."
+    },
+    "image_url": "https://i.imgur.com/QNe3eIN.png"
+  },
+  {
+    "id": "ic_coronus",
+    "license_level": 2,
+    "source": "IC",
+    "name": "CORONUS",
+    "mechtype": [
+      "Striker"
+    ],
+    "y_pos": 23,
+    "description": "Designed based on data acquired during the incident involving Anton Industries’ Experimental Paracausal Anti-Probability Matrix, the Coronus is an extravagant and strange frame. To facilitate ease of use, the Coronus and its highly experimental systems have been modelled after various forms of gambling, as the average Lancer is more familiar with concepts of casino games than field theoretical cohesive probability manipulation. The Coronus remains a prototype frame, a proof of concept to gather research data rather than a mainline mech, similar to the other frames produced by Intercorp's experimental material division. As such, pilots greenlit to sortie in the Coronus must regularly transfer their combat data to Intercorp as part of their licensing agreement. Lastly, the Intercorp Model 06 \"Coronus\" is banned from operating within a 100 mile radius of any gambling establishment, its sheer presence distorting their games' projected outcomes to an unacceptable degree.",
+    "mounts": [
+      "Main",
+      "Flex"
+    ],
+    "stats": {
+      "size": 1,
+      "armor": 0,
+      "hp": 12,
+      "evasion": 9,
+      "edef": 9,
+      "heatcap": 5,
+      "repcap": 5,
+      "sensor_range": 10,
+      "tech_attack": 1,
+      "save": 10,
+      "speed": 4,
+      "sp": 6,
+      "stress": 4,
+      "structure": 4
+    },
+    "traits": [
+      {
+        "name": "Casino Dice",
+        "description": "The Coronus may not re-roll any dice. The Coronus may not perform a roll twice to pick either result. The Coronus may not substitute a die for a predetermined result."
+      },
+      {
+        "name": "Slot Machine",
+        "description": "Whenever the Coronus rolls doubles on a Structure or Stress check it may ignore any outcome of that check. If it rolls triples it additionally regains the Structure or Stress lost, regains all HP and clears all Heat. The Coronus may not modify Structure or Stress rolls."
+      },
+      {
+        "name": "Roulette",
+        "description": "1/Round before making a melee or ranged attack that only targets a single character the Coronus may call even or uneven and a number. Compare the d20 in the Attack Roll to the call. <br>If even or uneven was called correctly the attack gains Reliable 3 and deals an additional 1d6 bonus damage on a hit. <br>Instead, if the correct number was called the attack is considered a hit and deals an additional 3d6 bonus damage."
+      }
+    ],
+    "core_system": {
+      "name": "Unhinge Probability",
+      "description": "Probability manipulation is a complex and not well understood field. Despite that, Intercorp's researchers were able to tap into the raw power of probability, equipping the Coronus with a host of abilities that to the casual observer appear like feats of insane, dumb luck – from shells meant to destroy the frame turning out to be duds to \"lucky hits\" that catastrophically damage enemy combatants. Wherever the Coronus operates in the field, the improbable becomes probable. This power comes with a price however, for engaging these systems and failing to achieve the desired result will result in a feedback loop of charged energetics, always threatening to burn out the frame`s delicate systems.",
+      "active_name": "The House Always Wins",
+      "active_effect": "Until the end of the Scene, whenever you roll a d20 you may modify the result by 1.",
+      "activation": "Protocol",
+      "passive_name": "Blackjack Barrier",
+      "passive_effect": "1/Round as a reaction to being hit by an attack you may roll d20s, one by one, until you either exceed 21, causing you to lose the contest, or decide to stop. <br>Unless you exceeded 21 the attacker then does the same. They must roll d20s until they tie or surpass your result, if they do, you lose the contest. If they exceed 21 you win the contest, the attack misses and you gain immunity to all damage and effects of the attack. <br>If you lose, you take 3 irreducible Energy damage. "
+    },
+    "image_url": "https://i.imgur.com/z6cFq11.png"
+  },
+  {
+    "id": "ic_heracles",
+    "license_level": 2,
+    "source": "IC",
+    "name": "HERACLES",
+    "mechtype": [
+      "Striker"
+    ],
+    "y_pos": 32,
+    "description": "Following the disastrous Perpetual Gearbox incident of the Heracles MK1, Intercorp™'s design team, those that had survived the event, found themselves with the staggering task of designing the company’s flagship mech to-be from the ground up. While they succeeded in creating a frame that integrates the bleeding edge of what Intercorp™'s various subsidiaries have to offer, a different glaring problem began to manifest itself. Power consumption. The Heracles simply did not have the reactor output to sufficiently power all of its advanced systems, NanoFerroSmartArmor™, FrostfangServos™, CopernicusTargetingArray™ to name only a few. Simultaneous operation of these systems would cut the frame's operating time down to unacceptable levels. With the board of directors being unwilling to accept yet another setback on project Heracles, corners had to be cut. While the Intercorp™ Model 09 Heracles is still equipped with all its systems, they now must be activated by the pilot on an individual basis, fueling them only if needed to ensure continuous reactor integrity.",
+    "mounts": [
+      "Flex",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 2,
+      "armor": 1,
+      "hp": 8,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 6,
+      "repcap": 5,
+      "sensor_range": 5,
+      "tech_attack": 1,
+      "save": 10,
+      "speed": 3,
+      "sp": 6,
+      "stress": 4,
+      "structure": 4
+    },
+    "traits": [
+      {
+        "name": "Fragile",
+        "description": "The Heracles receives +1 Difficulty on HULL checks and saves."
+      },
+      {
+        "name": "Slow",
+        "description": "The Heracles receives +1 Difficulty on AGILITY checks and saves."
+      },
+      {
+        "name": "Weak Computer",
+        "description": "The Heracles receives +1 Difficulty on SYSTEMS checks and saves."
+      },
+      {
+        "name": "Exposed Reactor",
+        "description": "The Heracles receives +1 Difficulty on ENGINEERING checks and saves."
+      }
+    ],
+    "core_system": {
+      "name": "Reactive Powerplant",
+      "description": "The beating heart of the Heracles, for better or worse, is its Reactive Powerplant. This system allows its pilot to switch the Heracles' operational focus on demand, not only shoring up its weaknesses but also adapting it to most eventualities. While it leaves the Heracles vulnerable in different areas it allows it a tactical flexibility unrivaled by most other mechs. Should the need arise, the Heracles' auxiliary batteries are ready to fuel the frame, burning themselves out on the pyre of what the Heracles was always meant to be and giving a glimpse of its true potential, if only for a brief duration.",
+      "active_effect": "All your Divert Energy Protocols gain 1/Scene and last for the rest of the scene.",
+      "active_name": "Cascading Core Surge",
+      "activation": "Protocol",
+      "passive_name": "Divert Energy",
+      "passive_effect": "1/Round you may take one of the following Divert Energy Protocols, they last until the start of your next turn.",
+      "passive_actions": [
+        {
+          "name": "Divert Energy to Hull",
+          "activation": "Protocol",
+          "detail": "• +2 Accuracy on Hull checks and saves.<br>• Clear and gain Immunity to the Shredded Condition as long as it wasn't caused by your own Talents, Weapons or Systems.<br>• Gain +2 Armor (Up to the usual maximum of 4)"
+        },
+        {
+          "name": "Divert Energy to Agility",
+          "activation": "Protocol",
+          "detail": "• +2 Accuracy on Agility checks and saves<br>• Clear and gain Immunity to the Slowed and Immobilized Conditions as long as they weren't caused by your own Talents, Weapons, Systems or Prone. <br>• Gain +2 Speed."
+        },
+        {
+          "name": "Divert Energy to Systems",
+          "activation": "Protocol",
+          "detail": "• +2 Accuracy on Systems checks and saves. <br>• Clear and gain Immunity to the Impaired and Jammed Conditions as long as they weren't caused by your own Talents, Weapons or Systems. <br>• Your Sensors become 10, 1/Round you may Invade as a Free Action using Fragment Signal."
+        },
+        {
+          "name": "Divert Energy to Engineering",
+          "activation": "Protocol",
+          "detail": "• +2 Accuracy on Engineering checks and saves. <br>• Clear and gain Immunity to Burn as long as it wasn't caused by your own Talents, Weapons or Systems.<br>• While Exposed, damage against you is not doubled."
+        }
+      ]
+    },
+    "image_url": "https://i.imgur.com/bGlS6Un.png"
+  },
+  {
+    "id": "ic_nestor",
+    "license_level": 2,
+    "source": "IC",
+    "name": "NESTOR",
+    "mechtype": [
+      "Striker"
+    ],
+    "y_pos": 26,
+    "description": "<p>Every company needs a poster child and every product line (especially when it comes to mechs) needs a workhorse. The Intercorp™ Model-03 \"Nestor\" is the quintessence of that philosophy. Conceived as a reliable front-line mech with optional commander configuration, the Nestor was designed to rival GMS' Everest or HA's Sherman. Despite dubious success in the face of such lofty goals, the Nestor has nevertheless made its mark over the years.<br> Primarily employed by smaller fringe systems to bolster their defense-force, the Nestor is a robust platform suitable for many battlefield roles. It is equipped to withstand withering firepower while adapting to almost every tactical situation. Cheap to produce and easy to maintain, the frames' advantages are obvious to most buyers.</p> <p>While the Nestor has not yet beat the Everest and Sherman on the battlefield that is the free market, it is not unheard of for it to come out on top when going toe-to-toe on an actual battlefield.</p>",
+    "mounts": [
+      "Main",
+      "Flex",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 1,
+      "armor": 1,
+      "hp": 10,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 6,
+      "repcap": 5,
+      "sensor_range": 10,
+      "tech_attack": 0,
+      "save": 10,
+      "speed": 4,
+      "sp": 6,
+      "stress": 4,
+      "structure": 4
+    },
+    "traits": [
+      {
+        "name": "Tactical Reload",
+        "description": "1/Scene the Nestor may reload all Loading weapons as a Free Action."
+      },
+      {
+        "name": "Combat Maneuvers",
+        "description": "The Nestor may drop Prone as a Free Action. If it does it cannot clear Prone until the start of its next turn. <br> While Prone the Nestor benefits from Hard Cover and may, 1/Round, gain +1 Accuracy on a single ranged attack."
+      }
+    ],
+    "core_system": {
+      "name": "Universal Soldier",
+      "description": "The Nestor was built to conquer the open market, if not the galaxy. An ambitious goal of which the product line ultimately fell short. In the heat of battle it almost seems as if the frame itself is yearning for recognition, fighting on at peak capacity beyond anything that would appear reasonable. Shrugging off both loss of structural integrity and system failure alike the Nestor advances with a stoic relentlessness that has inspired terror in many opponents that were careless enough not to take the mech seriously.",
+      "active_name": "Defiant Supremacy",
+      "active_effect": "Until the end of the scene, all of your weapons lose Ordnance and you gain Immunity to Immobilized, Impaired, Jammed, Shredded and Stunned, as long as these Conditions weren't caused by one of your own Talents, Systems, Weapons or Actions. Additionally you ignore the results of both your next Structure and Overheating checks.",
+      "activation": "Protocol"
+    },
+    "image_url": "https://i.imgur.com/ee3A8Bd.png"
+  },
+  {
+    "id": "ic_orpheus",
+    "license_level": 2,
+    "source": "IC",
+    "name": "ORPHEUS",
+    "mechtype": [
+      "Controller",
+      "Support"
+    ],
+    "y_pos": 38,
+    "description": "<p>Innovation can come from unexpected places and the Intercorp™ Model 04  \"Orpheus\" is a prime example. Based on the Intercorp™ Magna class heavy engineering exoskeleton, the Orpheus has little in common with the heavy rig worn by Intercorp™ mechanics. Over time it has been transformed into one of the most potent Hacking and Sabotage platforms that are available on the open market.</p> <p>Using its four oversized actuators to traverse any terrain at alarming speeds, the Orpheus is able to swiftly close the distance between it and any hostiles.</p> <p>Once in reach, the Orpheus engages in a deadly dance with its target, scuttling over its frame while both dismantling the mech as well as injecting malicious code directly into its victim using physical routes to access vulnerable systems.</p> <p>While a seemingly robust strategy, the Orpheus is always just one lucky blow away from certain destruction and Orpheus pilots often display the kind of bravado that one rarely encounters in pilots of more traditional Hacking frames.",
+    "mounts": [
+      "Flex"
+    ],
+    "stats": {
+      "size": 0.5,
+      "armor": 0,
+      "hp": 6,
+      "evasion": 12,
+      "edef": 10,
+      "heatcap": 4,
+      "repcap": 2,
+      "sensor_range": 3,
+      "tech_attack": 2,
+      "save": 12,
+      "speed": 6,
+      "sp": 7,
+      "stress": 4,
+      "structure": 4
+    },
+    "traits": [
+      {
+        "name": "Technophage",
+        "description": "The Orpheus may take the Jockey Pilot Action as long as the target is larger than it. It does so as a Quick Action. When it continues to Jockey its target on subsequent turns, it may 1/Round, choose a Jockey Option as a Quick Action instead of as a Full Action. <br>It gains +1 Accuracy to contested checks relating to Jockeying and uses Agility instead of Grit when making these checks. While Jockeying the Orpheus is unable to use Overwatch."
+      },
+      {
+        "name": "Local Bypass",
+        "description": "The Orpheus gains +1 Accuracy to tech attacks when targeting characters it is currently Jockeying."
+      }
+    ],
+    "core_system": {
+      "name": "FIELD REPAIR SUITE",
+      "description": "Pertaining to its root as an engineering Exoskeleton, the Orpheus is capable of quickly performing field repairs on its allies, welding armour plating, clearing vents and reaching internal systems usually needing a fully stocked hangar to be accessed. When utilised in tandem with its considerable Hacking suite, the Orpheus is additionally able to override a mech's inputs, assuming direct control over its actions. ",
+      "active_name": "Subvert Systems",
+      "active_effect": "For the rest of the scene the Orpheus gains the \"Full Override\" Jockey option.",
+      "active_actions": [
+        {
+          "name": "Full Override",
+          "activation": "Quick",
+          "detail": "1/Round You may move the mech up to its speed in a direction of your choice. You may then have it attack a character or object of your choice with a single weapon as a reaction.<br>Although you choose their target and weapon, they count as attacking and taking a reaction."
+        }
+      ],
+      "activation": "Protocol",
+      "passive_name": "Combat Repair Implements",
+      "passive_effect": "In addition to the regular Jockey options, the Orpheus can use Mend: “The Jockeyed mech immediately gains Overshield equal to your Grit and clears 2 Heat“."
+    },
+    "image_url": "https://i.imgur.com/T8N7Brh.png"
+  },
+  {
+    "id": "ic_pollux",
+    "license_level": 2,
+    "source": "IC",
+    "name": "POLLUX",
+    "mechtype": [
+      "Defender",
+      "Striker"
+    ],
+    "y_pos": 26,
+    "description": "<p>The Intercorp™ Model 02 \"Pollux\" is a defensive weapons platform based on the novel \"Nova\"-class of reactors. The Nova lines hallmarks to date are an excessive output of energy, capable of powering whole cities, and is only rivaled by the amount of heat the reactor produces as a side effect.</p> <p>Once engaged, the Nova reactor will, at its core, create a miniaturized sun infinitesimal in scale. While relatively safe (albeit horrendously expensive) in civilian and commercial context, it took considerable time until the first mech utilizing the technology made its debut. The Pollux is that mech, and while some pilots still remain skeptical about sitting atop a literal star, the Pollux is considerably less prone to reactor malfunctions than most other frames on the market. Besides carrying copious amounts of coolant liquid in heavy reinforced tanks, the Pollux comes equipped with huge dispersal coils in order to expel the maximum possible amount of heat.</p> <p>As an intended side effect, these coils create passive heat based shielding that is able to melt or disperse most projectiles or beams by simply evaporating them before they can so much as reach the Pollux' hull. In the unlikely event that the Pollux enters a state of reactor meltdown, it is equipped with a rail-based ejection mechanism that is able to expel the collapsing star at its core, thus saving both frame and pilot.</p> <p>Some of the more daring Pollux pilots have since found that, if a situation seems dire, ejecting the fury of a collapsing sun at the enemy is a good way to turn around any hostile encounter. Intercorp™ does not condone such actions and licensed pilots are always required to submit a full report after each core ejection.</p>",
+    "mounts": [
+      "Main",
+      "Main",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 2,
+      "armor": 0,
+      "hp": 8,
+      "evasion": 6,
+      "edef": 10,
+      "heatcap": 8,
+      "repcap": 4,
+      "sensor_range": 8,
+      "tech_attack": -2,
+      "save": 10,
+      "speed": 3,
+      "sp": 6,
+      "stress": 4,
+      "structure": 4
+    },
+    "traits": [
+      {
+        "name": "Nova Dispersal Coils",
+        "description": "At the end of the Pollux’ turn it gains Overshield in the same amount as its current Heat."
+      },
+      {
+        "name": "Emergency Core Ejector",
+        "description": "When the Pollux would suffer a Reactor Meltdown (including self-destruct) it may instead use its reaction to become destroyed. You may then target a Blast 2 area within Range 5 and Line of Sight. All characters within the affected area must succeed on an Agility save or suffer 4d6 Explosive damage, half as much on a successful save."
+      },
+      {
+        "name": "Slow",
+        "description": "The Pollux receives +1 Difficulty on all Agility Checks and Saves."
+      }
+    ],
+    "core_system": {
+      "name": "Nova-Drive",
+      "description": "Artificial stars, no matter how small, are very dangerous if not handled correctly. The Nova Drive pushes the envelope of what the Nova Reactor's failsaves can handle. By increasing reactor mass injection, the super-heated plasma generated at the event horizon can be syphoned off by a specially designed system of vents and fed to the Pollux' armaments. There, it can improve the frames destructive potential considerably.",
+      "active_name": "Flush Plasma Vents",
+      "active_effect": "Until the end of the scene, the Pollux may, 1/Round, when it hits a target with a ranged or melee attack, deal bonus Energy damage equal to half its current Overshield.",
+      "activation": "Protocol"
+    },
+    "image_url": "https://i.imgur.com/7k7NS31.png"
+  },
+  {
+    "id": "ic_theseus",
+    "license_level": 2,
+    "source": "IC",
+    "name": "THESEUS",
+    "mechtype": [
+      "Defender"
+    ],
+    "y_pos": 26,
+    "description": "Constructed around a massive shard of Cavorite crystal the Theseus' mechanical parts that enable locomotion of the strange mineral seem like a surreal afterthought. Despite that, the Theseus should not be underestimated, for the Cavorite shard that gives the frame its distinct shape is also the source of its power. Supplied by the Theseus' reactors the Cavorite crystal is sent into a perpetual state of activity, causing it to expand and grow at a continuous rate. Shards of energized Cavorite fall off the frame at regular intervals, littering the landscape and providing cover for allies. Towering and glowing over all but the largest mechs on the field, the Theseus slowly transforms the battlefield into a veritable fortress with each shard it sheds.",
+    "mounts": [
+      "Flex"
+    ],
+    "stats": {
+      "size": 3,
+      "armor": 0,
+      "hp": 12,
+      "evasion": 6,
+      "edef": 6,
+      "heatcap": 8,
+      "repcap": 4,
+      "sensor_range": 5,
+      "tech_attack": 0,
+      "save": 11,
+      "speed": 4,
+      "sp": 8,
+      "stress": 4,
+      "structure": 4
+    },
+    "traits": [
+      {
+        "name": "Crystalline Matrix",
+        "description": "1/round, as a Quick Action, the Theseus may create a SIZE 1 Shard in a Free space within Sensors and line of sight. This terrain has 5 HP, EVASION 5, and grants hard cover. Destroyed Shards shatter in a Burst 1 explosion.<br>You and allied characters in the burst take 5 Overshield. <br>Hostile characters inside the Burst must perform a Hull save or take the same amount as Energy damage or half as much on a successful save.",
+        "deployables": [
+          {
+            "name": "Shard",
+            "type": "Deployable",
+            "size": 1,
+            "hp": 5,
+            "evasion": 5,
+            "activation": "Quick",
+            "detail": "Shards grant Hard Cover. Destroyed Shards shatter in a Burst 1 explosion. You may also shatter any number of shards within sensors as a Quick action. You and allied characters in the burst take 5 Overshield. Hostile characters inside the Burst must perform an Hull save or take the same amount as Energy damage or half as much on a successful save."
+          }
+        ]
+      },
+      {
+        "name": "Heavy Frame",
+        "description": "The Theseus can’t be pushed, pulled, knocked Prone, or knocked back by smaller characters."
+      },
+      {
+        "name": "Fragile",
+        "description": "The Theseus receives +1 Difficulty on Hull checks and saves."
+      },
+      {
+        "name": "Detonate Shard",
+        "description": "As a Quick Action, you may destroy any number of Shards within Sensors."
+      }
+    ],
+    "core_system": {
+      "name": "Infinite Renewal",
+      "description": "Energized Cavorite is a strange and volatile substance. Smaller shards explode violently at the smallest disturbance. While those lacking a special resonance converter suffer the devastating effects of a Cavorite explosion, the Theseus and its allies not only remain protected, but benefit from an energy based shielding unique to the Cavorite. By increasing power supplied to the Crystalline Structure making up the Theseus' lumbering form, it is sent into overdrive. With the Cavorite cancerously growing at such an alarming rate, even so much as the smallest splinter can grow to prodigious size within mere moments.",
+      "active_name": "Crystalline Wasteland",
+      "active_effect": "Until the end of the scene you may use \"Parts of the Whole\" any number of times per round. You gain access to the \"Saturate Landscape\" Protocol, useable 1/Scene.",
+      "activation": "Protocol",
+      "active_actions": [
+        {
+          "name": "Saturate Landscape",
+          "activation": "Protocol",
+          "detail": "Immediately place 5 Shards on Free and Valid spaces in Sensors."
+        }
+      ],
+      "passive_name": "Parts of the Whole",
+      "passive_effect": "1/Round as a reaction to being hit by an attack you may deploy a Shard in a Free space within Sensors."
+    },
+    "image_url": "https://i.imgur.com/HeUcxR0.png"
+  }
+]

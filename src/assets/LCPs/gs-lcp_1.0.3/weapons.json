@@ -1,0 +1,633 @@
+[
+  {
+    "id": "mw_gs_integrated_rail-driver",
+    "name": "Rail-Driver",
+    "source": "G&S",
+    "license_level": 1,
+    "mount": "Heavy",
+    "type": "Melee",
+    "cost": 1,
+    "profiles": [
+      {
+        "name": "Rail-Driver",
+        "range": [
+          {
+            "type": "threat",
+            "val": 1
+          }
+        ],
+        "damage": [
+          {
+            "type": "Kinetic",
+            "val": "2d6"
+          }
+        ],
+        "tags": [
+          {
+            "id": "tg_heat_self",
+            "val": 1
+          },
+          {
+            "id": "tg_knockback",
+            "val": 2
+          }
+        ]
+      },
+      {
+        "name": "Overclocked Rail-Driver",
+        "range": [
+          {
+            "type": "threat",
+            "val": 1
+          }
+        ],
+        "damage": [
+          {
+            "type": "Kinetic",
+            "val": "2d6+6"
+          }
+        ],
+        "tags": [
+          {
+            "id": "tg_heat_self",
+            "val": 4
+          }
+        ],
+        "on_hit": "Place a Blast 1 with at least one space adjacent to you, all characters in this blast must make a Hull save or be Immobilized until the end of your next turn and knocked prone. The original target makes this save at +1 Difficulty, even if they are not in the Blast. All objects in the blast take 30 AP kinetic damage from the shockwaves of your mighty hammer.",
+        "effect": "During the Mountain-Powdering Blows core power, this profile replaces the default Rail-Driver profile; this profile cannot be used outside of Mountain-Powdering Blows."
+      }
+    ]
+  },
+  {
+    "id": "mw_gs_molten_driver",
+    "name": "Molten Driver",
+    "mount": "Main",
+    "type": "Cannon",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d3+1"
+      }
+    ],
+    "range": [
+      {
+        "type": "Line",
+        "val": 5
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_inaccurate"
+      },
+      {
+        "id": "tg_gs_exceed",
+        "val": 1
+      }
+    ],
+    "source": "G&S",
+    "license": "John Henry",
+    "license_level": 2,
+    "on_attack": "Exceed (1): This weapon’s damage becomes ENERGY and it gains the following property:<br><b>On Hit:</b> If the target is in the last space of the Line, they are knocked Prone.",
+    "description": "A repurposed industrial railgun promulgated by Clan Grimm through the Emergency Schedule program, the Molten Driver is only a few changes away from the tools normal workmen use in the construction of Blink Gates and other orbital megastructures. What transforms the railgun meant for pinning together hulls into a real weapon is achieved by linking the ammo-printer directly to the mech’s coldcore. With a small engine dump, the magnetic rail-array will overclock, superheating the steel stake and giving it that extra <b>oomph</b> when the projectile hits home and its steel-adamant compound finally decomposes with the kinetic shockwave of its sudden transition from plasma to solid."
+  },
+  {
+    "id": "mw_gs_big_bend_pilebunker",
+    "name": "Big Bend Pilebunker",
+    "mount": "Superheavy",
+    "type": "Melee",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "3d6+6"
+      }
+    ],
+    "range": [
+      {
+        "type": "Cone",
+        "val": 3
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_loading"
+      }
+    ],
+    "on_attack": "If the target is adjacent to you and has  7 HP or less, only 1 structure remaining, and aren’t immune to damage they are immediately destroyed.",
+    "source": "G&S",
+    "license": "John Henry",
+    "license_level": 3,
+    "description": "Derived from the Warlord Era “JUDGMENT” Class Pilebunker, the Big Bend replaces most of the installed mechs weapon mounts with an explosive spike launcher originally for use in asteroid mining. The effect on anything smaller than an asteroid is… remarkable, to say the least. A core of adamant, coated in lunatitanium and accelerated by the raw power of a mech’s reactor to fire the spike at speeds exceeding 343 meters per second, causing explosive shockwaves at the terminus point of the weapon. It is thanks to the rugged engineering of G&S that keeps the Big Bend from destroying itself after each firing- anything less than the massively overbuilt and overengineered skeletal systems would be torn apart under the force of firing."
+  },
+  {
+    "id": "mw_gs_shotspear",
+    "name": "Shotspear",
+    "mount": "Main",
+    "type": "Melee",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d6+4"
+      }
+    ],
+    "range": [
+      {
+        "type": "Threat",
+        "val": 2
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_inaccurate"
+      }
+    ],
+    "source": "G&S",
+    "license": "Volk",
+    "license_level": 2,
+    "effect": "You may continue to use this weapon without reloading it, dealing 1d6 Kinetic damage on hit.",
+    "description": "Dya ever hunt Berserkers? I was with a Rockstansky militia during the Arete Revolution. Hunting Berserkers is like hunting boars. They always come right atcha. So you use the spear, you brace it against the dirt, against the holy earth, and you let it run right at you. It’ll still try to eat your face, mind. That’s why there’s a shotgun underslung. Blow a hole in the skull before the speartip sings through. That’s how you hunt boar. Works for Berserkers too."
+  },
+  {
+    "id": "mw_gs_askr_hypersaw",
+    "name": "Askr Hypersaw",
+    "mount": "Main",
+    "type": "Melee",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d6+2"
+      }
+    ],
+    "range": [
+      {
+        "type": "Threat",
+        "val": 1
+      }
+    ],
+    "source": "G&S",
+    "license": "Volk",
+    "license_level": 3,
+    "description": "There are trees out there, trees that tower over the mountains, trees with such life in them that the reaper would have to come with a scythe the length of the horizon to take them. We aren’t the reaper, not for Paradise. Old growth is good for a planet’s health. But old growth builds cities. So we need saws, like this one. We didn’t have to change it much, to be fit for militant uses. A worker’s tools will always take care of him, yes they will. An axe capable of chewing up all the life of an old-growth tree can chew up monsters and bosses just as easy.",
+    "on_crit": "The target must make a Hull save or be knocked prone and become Shredded until the end of their next turn; only becoming Prone on a successful save."
+  },
+  {
+    "id": "mw_gs_jet_axe",
+    "name": "Jet Axe",
+    "mount": "Heavy",
+    "type": "Melee",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "3d3+3"
+      }
+    ],
+    "range": [
+      {
+        "type": "Threat",
+        "val": 2
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_overkill"
+      },
+      {
+        "id": "tg_knockback",
+        "val": "X"
+      }
+    ],
+    "source": "G&S",
+    "license": "Bunyan",
+    "license_level": 1,
+    "description": "An axe is the best sorta tool you can ask for out on the frontier. Chop wood, help you climb, get through brush, self-defense. So why don’t we give you somethin worthy of taming the frontier? You can run a lot off a coldcore, and you can get all kindsa power! Just choke up on it and let the air run through the turbines, you’ll send ‘em flyin champ! ",
+    "effect": "The Knockback of this weapon is equal to the amount of times Overkill is triggered while rolling damage."
+  },
+  {
+    "id": "mw_gs_flash-ammo_mortar",
+    "name": "Flash-Ammo Mortar",
+    "mount": "Heavy",
+    "type": "Cannon",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d6+3"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 10
+      },
+      {
+        "type": "Blast",
+        "val": 2
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_arcing"
+      },
+      {
+        "id": "tg_loading"
+      }
+    ],
+    "source": "G&S",
+    "license": "Bunyan",
+    "license_level": 3,
+    "description": "PLACEHOLDER",
+    "on_hit": "Draw a line 3 wall of rapid-curing ferrocrete within this weapon's Blast, the wall is an object that is Size 1, 3 spaces long with Evasion 5 and 30 HP. Characters within the wall's space are pushed out in a direction of their choice."
+  },
+  {
+    "id": "mw_gs_squad-portable_plasmacaster",
+    "name": "Squad-Portable Plasmacaster",
+    "mount": "Heavy",
+    "type": "Launcher",
+    "damage": [
+      {
+        "type": "Explosive",
+        "val": "1d6+3"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 8
+      },
+      {
+        "type": "Blast",
+        "val": 1
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_heat_self",
+        "val": 3
+      }
+    ],
+    "source": "G&S",
+    "license": "Jack",
+    "license_level": 2,
+    "description": "Originally developed for the infantry of Interstellar Revolutionary Brigades, the power requirements for the Plasmacaster limited its deployment by how many batteries G&S felt like shipping out with their boys. So, it was reworked into the JACK license to save development time and costs, while also providing heavy enough armament to face down the worst anyone on the development committee could think of.",
+    "on_hit": "If the target is in the center space of the Blast, it cannot reduce this damage by any means."
+  },
+  {
+    "id": "mw_gs_railcannon",
+    "name": "Railcannon",
+    "mount": "Heavy",
+    "type": "Cannon",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d6+3"
+      }
+    ],
+    "range": [
+      {
+        "type": "Line",
+        "val": 5
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_accurate"
+      },
+      {
+        "id": "tg_heat_self",
+        "val": 3
+      }
+    ],
+    "source": "G&S",
+    "license": "Jack",
+    "license_level": 2,
+    "description": "PLACEHOLDER",
+    "on_hit": "If the target is in the last space of the Line, they are knocked Prone."
+  },
+  {
+    "id": "mw_gs_rubble_buster",
+    "name": "Rubble Buster",
+    "mount": "Main",
+    "type": "Cannon",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d6+2"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 8
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_inaccurate"
+      }
+    ],
+    "source": "G&S",
+    "license": "Dorothy",
+    "license_level": 2,
+    "description": "PLACEHOLDER",
+    "effect": "While equipped with this weapon, you may make the Jackhammer action even if you lack the talent for it. If you would otherwise have Jackhammer, that action deals double damage."
+  },
+  {
+    "id": "mw_gs_water_cannon",
+    "name": "Water Cannon",
+    "mount": "Main",
+    "type": "Cannon",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d3"
+      }
+    ],
+    "range": [
+      {
+        "type": "Cone",
+        "val": 5
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_knockback",
+        "val": 2
+      }
+    ],
+    "source": "G&S",
+    "license": "Dorothy",
+    "license_level": 2,
+    "description": "PLACEHOLDER",
+    "on_attack": "Allies within the Cone do not take damage or Knockback, instead they Clear all Burn."
+  },
+  {
+    "id": "mw_gs_hr47_mechanized_main_battle_rifle",
+    "name": "HR47 Mechanized Main Battle Rifle",
+    "mount": "Main",
+    "type": "Rifle",
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "1d3+2"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 8
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_loading"
+      },
+      {
+        "id": "tg_accurate"
+      }
+    ],
+    "source": "G&S",
+    "license": "Noel",
+    "license_level": 1,
+    "description": "The Haywood-Rockstansky ‘47 Mechanized Main Battle Rifle is an energized weapon designed for the Revolutionary Interstellar Brigades raised by Grimm & Sons. In the days of Seccom, the RevInt Brigades served a similar purpose to current DoJ/HR Intercession Squads. These days, the RevInt Brigades and their HR47s serve as volunteer arms for DoJ/HR Liberation Fleets, bringing the Revolution to the stars by the unfortunate necessity of laserfire.",
+    "effect": "You may fire this weapon while it is Unloaded, when Loaded this weapon gains the Reliable (3) tag."
+  },
+  {
+    "id": "mw_gs_sawed_off",
+    "name": "Sawed Off",
+    "mount": "Auxiliary",
+    "type": "CQB",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d3"
+      }
+    ],
+    "range": [
+      {
+        "type": "Cone",
+        "val": 3
+      },
+      {
+        "type": "Threat",
+        "val": 3
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_loading"
+      }
+    ],
+    "source": "G&S",
+    "license": "Noel",
+    "license_level": 2,
+    "description": "PLACEHOLDER"
+  },
+  {
+    "id": "mw_gs_anti-hyperfauna_rifle",
+    "name": "Anti-Hyperfauna Rifle",
+    "mount": "Heavy",
+    "type": "Rifle",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "2d6+2"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 20
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_loading"
+      },
+      {
+        "id": "tg_ordnance"
+      }
+    ],
+    "sp": 1,
+    "source": "G&S",
+    "license": "Anansi",
+    "license_level": 3,
+    "description": "PLACEHOLDER",
+    "effect": "At the start of a mission and whenever you take a Short or Long Repair, pick a mode to assemble the AHR in-<ul><li><b>SKYGOD:</b> If you consumed Lock-On as part of the attack, this weapon’s damage becomes AP.</li><li><b>LEOPARD:</b> This weapon gains On Crit: Reload this weapon as a free action.</li></ul>"
+  },
+  {
+    "id": "mw_gs_astolfo_reactive_lance",
+    "name": "ASTOLFO Reactive Lance",
+    "mount": "Heavy",
+    "type": "Melee",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d6+4"
+      }
+    ],
+    "range": [
+      {
+        "type": "Threat",
+        "val": 2
+      }
+    ],
+    "source": "G&S",
+    "license": "Orlando",
+    "license_level": 3,
+    "description": "PLACEHOLDER",
+    "effect": "Whenever you Boost, this weapon gains the AP tag until the end of your turn. If you boost at least 4 spaces in a straight line, this weapon deals +1d6 Bonus Explosive Damage on its next attack that turn."
+  },
+  {
+    "id": "mw_gs_shot-saber",
+    "name": "Shot-Saber",
+    "mount": "Main",
+    "type": "CQB",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d6+1"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 5
+      },
+      {
+        "type": "Threat",
+        "val": 2
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_gs_exceed",
+        "val": 2
+      }
+    ],
+    "source": "G&S",
+    "license": "Max",
+    "license_level": 2,
+    "description": "PLACEHOLDER",
+    "on_attack": "Exceed (2): Make a Melee attack with this weapon targeting a different target within this weapon’s Threat."
+  },
+  {
+    "id": "mw_gs_troublemaker_break_action",
+    "name": "“Troublemaker” Break Action",
+    "mount": "Main",
+    "type": "CQB",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "2d6"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 5
+      },
+      {
+        "type": "Threat",
+        "val": 3
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_loading"
+      },
+      {
+        "id": "tg_inaccurate"
+      },
+      {
+        "id": "tg_knockback",
+        "val": 3
+      }
+    ],
+    "source": "G&S",
+    "license": "Max",
+    "license_level": 3,
+    "description": "PLACEHOLDER",
+    "on_crit": "The target is knocked Prone. If the target was already Prone they must pass a Hull Save or become Shredded until they stand up."
+  },
+  {
+    "id": "mw_gs_morgiana_revolver",
+    "name": "Morgiana Revolver",
+    "source": "G&S",
+    "license": "Scheherazade",
+    "license_id": "mf_gs_scheherazade",
+    "license_level": 1,
+    "description": "In one of the Mirror’s forevers, it recounted to the Clan Grimm a story of a wasteland of rust and gunslingers. The Clan’s smiths set to work, and they made the gun for the Mirror to hold- simple, honest, true. Everything it wanted to be, chambered in depleted uranium and utilizing caseless magnetic acceleration systems. It's a beautiful gun, born from an awful tale that should never come to pass.",
+    "mount": "Auxiliary",
+    "type": "CQB",
+    "effect": "<div>This weapon has three chambers, all of which are reloaded at once. Each attack spends one chamber normally.</div>",
+    "on_attack": "<div>Expend 3 Chambers to change the Range of this weapon to Cone 3</div>",
+    "on_hit": "<div></div>",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d3+1"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 8
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_loading",
+        "name": "LOADING",
+        "description": "This weapon must be reloaded after each use. Mechs can reload with Stabilize and some systems.",
+        "val": 3
+      },
+      {
+        "id": "tg_reliable",
+        "name": "RELIABLE {VAL}",
+        "description": "This weapon has some degree of self-correction or is simply powerful enough to cause damage even with a glancing blow. It always does {VAL} damage, even if it misses its target or rolls less damage. Reliable damage inherits other tags (such as AP) and base damage type but not tags that require a hit, such as Knockback.",
+        "val": 2
+      }
+    ]
+  },
+  {
+    "id": "breacher_nexus",
+    "name": "Maurgleis Breacher Nexus",
+    "source": "G&S",
+    "license": "Orlando",
+    "license_id": "mf_gs_orlando",
+    "license_level": 1,
+    "description": "<div><em>Designed originally for use by the shipbreakers of Clan Zahedi, the Maurgleis adapted well to a combat role with few changes. The nexus hive clings gently to the dorsal region of the equipped frame, and releases its flat, scale-like weapon-bodies alongside prompted commands from the pilot- the breacher-scales flit on microjets and bury themselves in a target before flash cooking their own powersource to trigger an explosion. In shipbreaking and mechbreaking both, a line of microexplosions tears armor free and clean.</em></div>",
+    "mount": "Main",
+    "type": "Nexus",
+    "sp": 0,
+    "effect": "<div>This weapon suffers no Difficulty for being used while Engaged</div>",
+    "barrage": true,
+    "skirmish": true,
+    "damage": [
+      {
+        "type": "Explosive",
+        "val": 3
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 5
+      },
+      {
+        "type": "Threat",
+        "val": 2
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_ap",
+        "name": "ARMOR-PIERCING (AP)",
+        "description": "Damage dealt by this weapon ignores Armor."
+      },
+      {
+        "id": "tg_smart",
+        "name": "SMART",
+        "description": "This weapon has self-guidance systems, self-propelled projectiles, or even nanorobotic ammunition. These systems are effective enough that its attacks can’t simply be dodged – they must be scrambled or jammed. Because of this, all attacks with this weapon – including melee and ranged attacks – use the target’s E-Defense instead of Evasion. Targets with no E-Defense count as having 8 E-Defense."
+      }
+    ]
+  }
+]
