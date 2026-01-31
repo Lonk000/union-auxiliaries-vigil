@@ -1,0 +1,1388 @@
+[
+    {
+        "id": "cap_npc_architect_protector",
+        "name": "PROTECTOR",
+        "origin": {
+          "type": "Class",
+          "name": "ARCHITECT",
+          "base": true
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "Adjacent allied characters can use the Architect for hard cover. The Architect ignores difficult and dangerous terrain.",
+        "tags": []
+      },
+    
+    {
+        "id": "cap_npc_architect_slurry_cannon",
+        "name": "SLURRY CANNON",
+        "origin": {
+          "type": "Class",
+          "name": "ARCHITECT",
+          "base": true
+        },
+        "locked": false,
+        "type": "Weapon",
+        "tags": [
+          {
+            "id": "tg_knockback",
+            "val": 5
+          }
+        ],
+        "weapon_type": "Heavy CQB",
+        "attack_bonus": [
+          1,
+          2,
+          3
+        ],
+        "damage": [
+        ],
+        "range": [
+          {
+            "type": "Cone",
+            "val": 5
+          }
+        ],
+        "effect": "Place a size 1 piece of hard cover in a free space in the area. Spaces adjacent to it become difficult terrain until the start of the Architect’s next turn."
+      },
+
+      {
+        "id": "cap_npc_architect_citadel_combat_terraformer",
+        "name": "CITADEL COMBAT TERRAFORMER",
+        "origin": {
+          "type": "Class",
+          "name": "ARCHITECT",
+          "base": true
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "The Architect can use the following actions:<br><li>Print (Recharge 4+): Place up to 3 blocks of size 1 hard cover within Range 3, or one block of Size 2 cover.<li> Rift: The Architect chooses a Line 5 area in Range 5. At the start of its next turn the area collapses. Objects and terrain in the area are destroyed. Characters must pass an Agility save or become Immobilized and gain soft cover until they pass a Hull save as a quick action.<li>Sharpen: A Blast 1 area in Sensors becomes difficult terrain until the end of the scene or you use this action again. Characters that fall Prone in the area take {3/5/7} Kinetic damage.<li>Tremor: All characters in a Blast 1 area in Sensors must pass a Hull save or be knocked Prone. Objects and terrain in the area take 10 AP Kinetic damage.",
+        "tags": [
+          {
+            "id": "tg_quick_action"
+          }
+        ]
+      },
+
+      {
+        "id": "cap_npc_architect_gungnir_laser_emplacement",
+        "name": "GUNGNIR LASER EMPLACEMENT",
+        "origin": {
+          "type": "Class",
+          "name": "ARCHITECT",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "GUNGNIR Laser (Size 1, 20 HP, 5 Eva, 5 E-Def, Tags: Deployable, Resistance to all damage)<br>As a full action, the Architect places a GUNGNIR Laser in a free adjacent space and marks a Line 20 area from it. They can choose a new Line as a quick action while adjacent, replacing the previous area. It primes at the end of the round and becomes Charged.<br>They or any allied character adjacent to the GUNGNIR Laser may take 4 Heat to fire it as a quick action. The GUNGNIR must be Charged to be fired. When fired, all characters in or adjacent to the Line traced by the laser must pass a Hull save or take {16/20/24} AP Energy Damage. It then becomes uncharged. It becomes Charged again at the end of the next round.",
+        "tags": [
+          {
+            "id": "tg_deployable"
+          },
+          {
+            "id": "tg_quick_action"
+          },
+          {
+              "id": "tg_full_action"
+          },
+          {
+            "id": "tg_limited",
+            "val": 1
+          }
+        ]
+      },
+      {
+        "id": "cap_npc_architect_civil_class_terrain_printer",
+        "name": "CIVIL-CLASS TERRAIN PRINTER",
+        "origin": {
+          "type": "Class",
+          "name": "ARCHITECT",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "The Architect marks two free spaces in line of sight and Range 5 of each other. At least one must be within Range 3 of it. Allied characters on one space may use one space of movement to immediately travel to the other space in a straight line, ignoring engagement, other characters, mines and without provoking reactions. They stop the movement early if an obstruction or terrain blocks their path.",
+        "tags": [
+          {
+            "id": "tg_quick_action"
+          },
+          {
+              "id": "tg_recharge",
+              "val": 5
+          }
+        ]
+      },
+      {
+        "id": "cap_npc_architect_insertion_catapult",
+        "name": "INSERTION CATAPULT",
+        "origin": {
+          "type": "Class",
+          "name": "ARCHITECT",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "The Architect becomes Immobilized until the start of its next turn. As a quick action it can throw an adjacent ally that is the same size or smaller than it to any space within Range 10. This movement ignores engagement and does  not provoke reactions, and ends early if they hit an obstruction or character. If they hit a character, that character must pass a Hull save or be knocked Prone. ",
+        "tags": [
+          {
+            "id": "tg_quick_action"
+          },
+          {
+              "id": "tg_protocol"
+          }
+        ]
+      },
+
+      {
+        "id": "cap_npc_architect_sealant_blend",
+        "name": "SEALANT BLEND",
+        "origin": {
+          "type": "Class",
+          "name": "ARCHITECT",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The Slurry Cannon gains On Hit: Targets must pass a Hull save or become Immobilized until they spend a quick action to break free.",
+        "tags": [
+        ]
+      },
+
+      {
+        "id": "cap_npc_architect_trench_warrior",
+        "name": "TRENCH WARRIOR",
+        "origin": {
+          "type": "Class",
+          "name": "ARCHITECT",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "While the Architect has cover they gain +2 Armor. As a quick action it can dig a Line 4 trench 2 spaces wide with at least one space adjacent to it. Characters fully within the trench gain soft cover. This trench lasts until the Architect uses this action again, or an adjacent character destroys it by passing a Hull check as a Full Action.",
+        "tags": [
+            {
+                "id": "tg_quick_action"
+            },{
+              "id": "tg_recharge",
+              "val": 4
+            }
+        ]
+      },
+      {
+        "id": "cap_npc_architect_sandblast",
+        "name": "SANDBLAST",
+        "origin": {
+          "type": "Class",
+          "name": "ARCHITECT",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The Architect creates an eruption of particulate in a free Blast 2 area within Sensors and line of sight that lasts until the end of their next turn. Characters at least partially in the area have soft cover and treat all characters as being Invisible. If they end their turn in the area they take 3 AP Kinetic damage.",
+        "tags": [
+            {
+                "id": "tg_quick_action"
+            }
+        ]
+      },
+
+      {
+        "id": "cap_npc_grenadier_taiko_gl_16",
+        "name": "TAIKO GL-16",
+        "origin": {
+          "type": "Class",
+          "name": "GRENADIER",
+          "base": true
+        },
+        "locked": false,
+        "type": "Weapon",
+        "effect": "At T2, this weapon can make two attacks at a time, targeting either the same character or two different ones. At T3, it can make three attacks at a time. On a hit, the target is knocked back 1 space in a direction of the Grenadier’s choice.",
+        "tags": [
+          {
+              "id": "tg_arcing"
+          }
+        ],
+        "weapon_type": "Main Launcher",
+        "attack_bonus": [
+          1,
+          2,
+          3
+        ],
+        "damage": [
+            {
+                "type": "Explosive",
+                "damage": [5, 5, 5]
+            }
+        ],
+        "range": [
+          {
+            "type": "Range",
+            "val": 5
+          }
+        ],
+        "on_hit": ""
+      },
+
+      {
+        "id": "cap_npc_grenadier_sweeper_armor",
+        "name": "SWEEPER ARMOR",
+        "origin": {
+          "type": "Class",
+          "name": "GRENADIER",
+          "base": true
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The Grenadier has resistance to Explosive damage, and immunity to damage from drones, deployables, grenades, and mines. This trait does not affect weapons with the Drone tag.",
+        "tags": [
+        ]
+      },
+
+      {
+        "id": "cap_npc_grenadier_throw_grenade",
+        "name": "THROW GRENADE",
+        "origin": {
+          "type": "Class",
+          "name": "GRENADIER",
+          "base": true
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "The Grenadier throws one of the following grenades at a space in Range 5, creating a Blast 1 explosion.<li>Concussion: Characters in the area that fail a Hull save are knocked back 3 spaces and if they hit an obstruction, become Impaired until the end of their next turn and Prone.<li>Incendiary: Characters in the area that fail an Agility save take {1/2/3} Burn and cool half as much Heat the next time they clear Heat before the end of their next turn.<li>Shock: Characters in the area that fail an Engineering save take {2/3/4} Heat and have +2 Difficulty on tech attacks and attacks with smart and seeking weapons until the end of their next turn.<li>Smoke: This grenade explodes in a Blast 2. Until the end of the Grenadier’s next turn, characters and objects in the blast area have soft cover.",
+        "tags": [
+            {
+                "id": "tg_quick_action"
+            },
+            {
+                "id": "tg_turn",
+                "val": 1
+            }
+        ]
+      },
+
+      {
+        "id": "cap_npc_grenadier_death_knell",
+        "name": "DEATH KNELL",
+        "origin": {
+          "type": "Class",
+          "name": "GRENADIER",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "When the Grenadier is destroyed it can immediately throw one grenade.",
+        "tags": [
+        ]
+      },
+
+      {
+        "id": "cap_npc_grenadier_home_cooking",
+        "name": "HOME COOKING",
+        "origin": {
+          "type": "Class",
+          "name": "GRENADIER",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "When the Grenadier uses Throw Grenade, it can activate this trait to increase the Blast radius of the grenade by 1.",
+        "tags": [{
+            "id": "tg_recharge",
+            "val": 4
+        }
+        ]
+      },
+      {
+        "id": "cap_npc_grenadier_sabot_spike",
+        "name": "SABOT SPIKE",
+        "origin": {
+          "type": "Class",
+          "name": "GRENADIER",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "The Grenadier attaches an explosive spike to an adjacent Drone, object, or terrain. It can detonate all Sabot Spikes as a protocol. All affected drones or objects are each pushed 3 spaces in any direction before they explode in a Burst 1 area. Characters in the area must pass an Agility save or take {8/12/16} Explosive damage, or half as much on a success.",
+        "tags": [{
+            "id": "tg_recharge",
+            "val": 5
+        },
+        {
+            "id": "tg_quick_action"
+        }
+        ]
+      },
+      {
+        "id": "cap_npc_grenadier_guerilla_defilade",
+        "name": "GUERILLA DEFILADE",
+        "origin": {
+          "type": "Class",
+          "name": "GRENADIER",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "When a character fails a save that the Grenadier forced, they treat the Grenadier as Invisible until the start of its next turn.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_grenadier_short_fuses",
+        "name": "SHORT FUSES",
+        "origin": {
+          "type": "Class",
+          "name": "GRENADIER",
+          "base": false
+        },
+        "locked": false,
+        "type": "Tech",
+        "effect": "The Grenadier makes a tech attack against a character in Sensors. On a hit they unload all loading weapons and a system with the grenade or mine tag immediately loses one charge. They then take {2/3/4} AP Explosive damage if a weapon was unloaded, and {2/3/4} AP Explosive damage if they lost a charge.",
+        "tags": [
+          {
+            "id": "tg_quick_tech"
+          },
+          {
+              "id": "tg_recharge",
+              "val": 5
+          }
+        ],
+        "tech_type": "Quick",
+        "attack_bonus": [
+          1, 2, 3
+        ],
+        "accuracy": [
+          1, 1, 1
+        ]
+      },
+      {
+        "id": "cap_npc_interceptor_ssc_total_suite",
+        "name": "SSC TOTAL SUITE",
+        "origin": {
+          "type": "Class",
+          "name": "INTERCEPTOR",
+          "base": true
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "The Interceptor can hover when they move or boost.",
+        "tags": [
+        ]
+      },
+
+
+      {
+        "id": "cap_npc_grenadier_smart_munitions",
+        "name": "SMART MUNITIONS",
+        "origin": {
+          "type": "Class",
+          "name": "GRENADIER",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "The Grenadier’s grenades do not require line of sight as long as it’s possible to trace a path to the target, and allied characters automatically succeed on saves to avoid their effects.",
+        "tags": [
+        ]
+      },
+
+      {
+        "id": "cap_npc_interceptor_interdiction_smg",
+        "name": "INTERDICTION SMG",
+        "origin": {
+          "type": "Class",
+          "name": "INTERCEPTOR",
+          "base": true
+        },
+        "locked": false,
+        "type": "Weapon",
+        "effect": "This weapon can be fired as a reaction whenever a character with an Interception Mark makes an attack against an allied character, targeting the attacker.",
+        "tags": [
+          {
+            "id": "tg_reliable",
+            "val": "{1/2/3}"
+          }
+        ],
+        "weapon_type": "Auxiliary Cannon",
+        "attack_bonus": [
+          2, 4, 6
+        ],
+        "damage": [
+            {
+                "type": "Kinetic",
+                "damage": [3, 5, 7]
+            }
+        ],
+        "range": [
+          {
+            "type": "Range",
+            "val": 3
+          },{
+            "type": "Threat",
+            "val": 3
+          }
+        ]
+      },
+
+      {
+        "id": "cap_npc_interceptor_interception_mark",
+        "name": "INTERCEPTION MARK",
+        "origin": {
+          "type": "Class",
+          "name": "INTERCEPTOR",
+          "base": true
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The Interceptor chooses a hostile character in line of sight to gain an Interception Mark. Damage from their weapons ignores that character's armor, and whenever that character moves, they can move an equal number of spaces. Only one character can be marked at a time; creating a new mark removes the previous one.",
+        "tags": [{
+            "id": "tg_protocol"
+        },
+        {
+            "id": "tg_recharge",
+            "val": 5
+        }
+        ]
+      },
+
+      {
+        "id": "cap_npc_interceptor_itchy_trigger",
+        "name": "ITCHY TRIGGER",
+        "origin": {
+          "type": "Class",
+          "name": "INTERCEPTOR",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "Reaction attacks with the Interdiction SMG resolve before the triggering action. It gains On Hit: the target gains +1 Difficulty on the next attack roll they make this turn.",
+        "tags": [
+        ]
+      },
+
+      {
+        "id": "cap_npc_interceptor_point_defense_screen",
+        "name": "POINT-DEFENSE SCREEN",
+        "origin": {
+          "type": "Class",
+          "name": "INTERCEPTOR",
+          "base": false
+        },
+        "locked": false,
+        "type": "Reaction",
+        "effect": "The Interceptor makes a contested attack roll. If they win, the attack automatically misses.",
+        "tags": [{
+            "id": "tg_round",
+            "val": 1
+                 },
+                 {
+                     "id": "tg_recharge",
+                     "val": 5
+                 }],
+        "trigger": "A character in Range 3 makes an attack."
+      },
+      {
+        "id": "cap_npc_interceptor_shard_projector",
+        "name": "SHARD PROJECTOR",
+        "origin": {
+          "type": "Class",
+          "name": "INTERCEPTOR",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "Until the end of the Interceptor’s next turn, hostile characters treat spaces in Range 3 of the Interceptor as difficult terrain. They can ignore this by taking 1 AP Kinetic damage for each space they move in the area.",
+        "tags": [{
+          "id": "tg_protocol"
+        },{
+          "id": "tg_recharge",
+          "val": 4
+        }
+        ]
+      },
+      {
+        "id": "cap_npc_interceptor_reflex_dive",
+        "name": "REFLEX/DIVE",
+        "origin": {
+          "type": "Class",
+          "name": "INTERCEPTOR",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The Interceptor’s movement does not provoke reactions and ignores engagement.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_interceptor_supersonic_insertion",
+        "name": "SUPERSONIC INSERTION",
+        "origin": {
+          "type": "Class",
+          "name": "INTERCEPTOR",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The Interceptor does not start the scene on the battlefield. Instead, at the start of a hostile character’s turn you may place it in Range 3 of them. As a full action it can remove itself from the battlefield, returning at the start of its next turn anywhere within Range 50. If multiple characters have this trait, only one can activate it per turn.",
+        "tags": [{
+            "id": "tg_full_action"
+        }
+        ]
+      },
+      {
+        "id": "cap_npc_interceptor_stuncrown",
+        "name": "Stuncrown",
+        "origin": {
+          "type": "Class",
+          "name": "INTERCEPTOR",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "The Interceptor creates a Burst 3 flash. Characters in the affected area must pass a Systems save or become Jammed until the end of their next turn, or Impaired on a success.",
+        "tags": [{
+            "id": "tg_quick_action"
+        },
+        {
+            "id": "tg_limited",
+            "val": 1
+        }
+        ]
+      },
+      {
+        "id": "cap_npc_interceptor_chaff_packet",
+        "name": "Chaff Packet",
+        "origin": {
+          "type": "Class",
+          "name": "INTERCEPTOR",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "When the Interceptor Boosts it may create a Burst 2 explosion in the space it started movement in. Characters in the area must pass a Systems save or be unable to take reactions or draw line of sight except to adjacent spaces until the end of their next turn.",
+        "tags": [
+        {
+            "id": "tg_limited",
+            "val": 2
+        }
+        ]
+      },
+      {
+        "id": "cap_npc_packmaster_behemoth_drone",
+        "name": "BEHEMOTH DRONE",
+        "origin": {
+          "type": "Class",
+          "name": "PACKMASTER",
+          "base": true
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "Behemoth Drone (Size 2, {15/20/25} HP, 8 Eva, 8 E-Def, 4 Speed, 2 Armor, Tags: Drone)<br>The Packmaster starts each scene with a powerful companion drone deployed that can move independently. It can command the drone to take one of the following actions as a quick action:<li>Lunge: Make a melee attack at {+2/+4/+6} against an adjacent character. On hit, they take {6/9/12} Kinetic damage and become Grappled by the drone, which has a Hull score of {2/4/6}.<li>Maim: A character grappled by the drone takes {4/6/8} AP Kinetic damage and becomes Jammed and Impaired until they escape the grapple.",
+        "tags": [
+        {
+            "id": "tg_turn",
+            "val": 1
+        },
+        {
+            "id": "tg_quick_action"
+        },
+        {
+            "id": "tg_drone"
+        }
+        ]
+      },
+      {
+        "id": "cap_npc_packmaster_primal_reflex",
+        "name": "PRIMAL REFLEX",
+        "origin": {
+          "type": "Class",
+          "name": "PACKMASTER",
+          "base": true
+        },
+        "locked": false,
+        "type": "Reaction",
+        "effect": "Effect: They must pass an Agility save or be knocked Prone. ",
+        "tags": [{
+            "id": "tg_round",
+            "val": 1
+                 }],
+        "trigger": "A character starts movement adjacent to the Behemoth Drone. "
+      },
+      {
+        "id": "cap_npc_packmaster_overcharge_link",
+        "name": "OVERCHARGE LINK",
+        "origin": {
+          "type": "Class",
+          "name": "PACKMASTER",
+          "base": true
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The Behemoth Drone regains all HP (even if it was destroyed) and moves up to its Speed. The Packmaster becomes Stunned until the start of their next turn.",
+        "tags": [{
+            "id": "tg_full_action"
+        },
+        {
+            "id": "tg_recharge",
+            "val": 5
+        }
+        ]
+      },
+
+      {
+        "id": "cap_npc_packmaster_tracer_rifle",
+        "name": "TRACER RIFLE",
+        "origin": {
+          "type": "Class",
+          "name": "PACKMASTER",
+          "base": true
+        },
+        "locked": false,
+        "type": "Weapon",
+        "effect": "",
+        "tags": [
+          {
+            "id": "tg_smart"
+          }
+        ],
+        "weapon_type": "Main Rifle",
+        "attack_bonus": [
+          2, 4, 6
+        ],
+        "damage": [
+            {
+                "type": "Energy",
+                "damage": [2, 3, 5]
+            },
+            {
+              "type": "Heat",
+              "damage": [1,1,1]
+            }
+        ],
+        "range": [
+          {
+            "type": "Range",
+            "val": 10
+          }
+        ],
+        "on_hit": "The Behemoth Drone can move 3 spaces directly towards the Packmaster’s target. The next attack any character makes against the target before the end of the Packmaster’s next turn gains +1 Accuracy."
+      },
+      {
+        "id": "cap_npc_packmaster_stalker_cloak",
+        "name": "STALKER CLOAK",
+        "origin": {
+          "type": "Class",
+          "name": "PACKMASTER",
+          "base": true
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "Characters more than Range 5 from the Packmaster treat it as being Invisible.",
+        "tags": []
+      },
+      {
+        "id": "cap_npc_packmaster_hex_drone",
+        "name": "HEX DRONE",
+        "origin": {
+          "type": "Class",
+          "name": "PACKMASTER",
+          "base": false
+        },
+        "locked": false,
+        "type": "Tech",
+        "effect": "The Packmaster makes a tech attack against a character in Sensors. On a hit they have +1 Difficulty on all checks and saves and take 2 AP Kinetic damage at the end of each of their turns. They can remove the drone by passing a Systems save at the end of their turn, or an adjacent ally can attempt the save as a quick action. ",
+        "tags": [
+          {
+            "id": "tg_quick_tech"
+          },
+          {
+              "id": "tg_recharge",
+              "val": 5
+          }
+        ],
+        "tech_type": "Quick",
+        "attack_bonus": [
+          1, 2, 3
+        ],
+        "accuracy": [
+          1, 1, 1
+        ]
+      },
+      {
+        "id": "cap_npc_packmaster_hegemony_command_imperative",
+        "name": "HEGEMONY COMMAND IMPERATIVE",
+        "origin": {
+          "type": "Class",
+          "name": "PACKMASTER",
+          "base": false
+        },
+        "locked": false,
+        "type": "Tech",
+        "effect": "The Packmaster moves every drone in its Sensors up to 4 spaces each in any direction.",
+        "tags": [
+          {
+            "id": "tg_quick_tech"
+          }
+        ],
+        "tech_type": "Quick"
+      },
+      {
+        "id": "cap_npc_packmaster_beast_bond",
+        "name": "BEAST BOND",
+        "origin": {
+          "type": "Class",
+          "name": "PACKMASTER",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "As long as the Behemoth Drone is within the Packmaster’s Sensors and line of sight, they both gain +1 Accuracy on all checks and saves.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_packmaster_skilled_hunter",
+        "name": "SKILLED HUNTER",
+        "origin": {
+          "type": "Class",
+          "name": "PACKMASTER",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "At the start of the scene the Packmaster marks a character. They and the Behemoth Drone have +1 Accuracy on attacks against that character, and deal {+2/3/4} bonus damage on critical hits against them.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_packmaster_snare_drone",
+        "name": "SNARE DRONE",
+        "origin": {
+          "type": "Class",
+          "name": "PACKMASTER",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "Snare Drone (Size 2, {5/10/15} HP, 10 Eva, 10 E-Def, Tags: Drone)<br>The Packmaster deploys a Snare Drone into a free space in Sensors and line of sight. When a character starts their turn adjacent to a Snare Drone or moves adjacent to it for the first time in a round they must pass a Hull save or become Immobilized and Prone until the drone is destroyed.",
+        "tags": [{
+            "id": "tg_drone"
+        },{
+            "id": "tg_quick_action"
+        },{
+            "id": "tg_limited",
+            "val": 2
+        }
+        ]
+      },
+      {
+        "id": "cap_npc_packmaster_biotic_components",
+        "name": "BIOTIC COMPONENTS",
+        "origin": {
+          "type": "Class",
+          "name": "PACKMASTER",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The Behemoth Drone gains +1 Speed and +1 Accuracy on Agility checks and saves. At the end of the Packmaster’s turn it becomes Invisible until the start of its next turn or until it takes damage.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_packmaster_killshot",
+        "name": "KILLSHOT",
+        "origin": {
+          "type": "Class",
+          "name": "PACKMASTER",
+          "base": false
+        },
+        "locked": false,
+        "type": "Weapon",
+        "effect": "If this weapon does not cause its target to be destroyed or lose Structure, it instead only deals its Reliable damage.",
+        "tags": [
+          {
+            "id": "tg_loading"
+          },{
+              "id": "tg_reliable",
+              "val": "{2/3/4}"
+          }
+        ],
+        "weapon_type": "Heavy Rifle",
+        "attack_bonus": [
+          1, 2, 3
+        ],
+        "damage": [
+            {
+                "type": "Kinetic",
+                "damage": [10, 15, 20]
+            }
+        ],
+        "range": [
+          {
+            "type": "Range",
+            "val": 10
+          }
+        ],
+        "on_hit": ""
+      },
+      {
+        "id": "cap_npc_vector_widowmaker_long_rifle",
+        "name": "'WIDOWMAKER' LONG-RIFLE",
+        "origin": {
+          "type": "Class",
+          "name": "Vector",
+          "base": true
+        },
+        "locked": false,
+        "type": "Weapon",
+        "effect": "",
+        "tags": [
+          {
+            "id": "tg_ap"
+          },{
+              "id": "tg_knockback",
+              "val": 1
+          }
+        ],
+        "weapon_type": "Heavy Rifle",
+        "attack_bonus": [
+          2, 4, 6
+        ],
+        "damage": [
+            {
+                "type": "Kinetic",
+                "damage": [4, 6, 8]
+            }
+        ],
+        "range": [
+          {
+            "type": "Range",
+            "val": 15
+          }
+        ],
+        "on_hit": "The Vector’s target must pass a Hull save or immediately land (counting as falling without taking damage) and be unable to fly until the end of their next turn."
+      },
+      {
+        "id": "cap_npc_vector_modified_eva_suite",
+        "name": "MODIFIED EVA SUITE",
+        "origin": {
+          "type": "Class",
+          "name": "VECTOR",
+          "base": true
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "The Vector can fly when they move or boost.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_vector_microjet_lance",
+        "name": "MICROJET LANCE",
+        "origin": {
+          "type": "Class",
+          "name": "VECTOR",
+          "base": true
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "As a free action the Vector marks a Line 20 area visible to all characters, priming a microjet lance. When a hostile character voluntarily moves into a space in this area, it fires. All characters in the affected area must pass an Agility save or take 12 Kinetic damage and be knocked back 2 spaces or half as much damage on a successful save. A character can cause a lance to fire early with a successful ranged or tech attack against its origin space, targeting the Vector’s evasion or e-defense.<br><br>If a character would be affected by multiple lances simultaneously, they make a single save and take +{2/3/4} damage and +2 Knockback per additional lance. The lance stops early if it hits terrain or an object, destroying that object. Characters flying above the line must also make the save. Multiple lances cannot originate from the same space.<br><br>The Vector can spend a quick action to take this free action {1/2/3} more times this turn.",
+        "tags": [{
+            "id": "tg_free_action"},
+            {
+              "id": "tg_quick_action"
+            }
+        ]
+      },
+      {
+        "id": "cap_npc_vector_burst_silos",
+        "name": "BURST SILOS",
+        "origin": {
+          "type": "Class",
+          "name": "VECTOR",
+          "base": false
+        },
+        "locked": false,
+        "type": "Weapon",
+        "effect": "Objects and terrain in the affected area take 10 AP Explosive Damage.<br>At T2 this weapon can attack two targets at a time, or three at T3. The targeted areas cannot overlap.",
+        "tags": [
+        ],
+        "weapon_type": "Main Launcher",
+        "attack_bonus": [
+          1, 2, 3
+        ],
+        "damage": [
+            {
+                "type": "Explosive",
+                "damage": [3, 3, 3]
+            }
+        ],
+        "range": [
+          {
+            "type": "Range",
+            "val": 10
+          },{
+              "type": "Blast",
+              "val": 1
+          }
+        ],
+        "on_hit": ""
+      },
+      {
+        "id": "cap_npc_vector_revenant_nail",
+        "name": "Revenant Nail",
+        "origin": {
+          "type": "Class",
+          "name": "VECTOR",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "The Vector chooses a character with Lock-On. When they take this action and at the end of each of that character’s turns as long as they have Lock-On from any source, place a Microjet Lance that includes them in its area. A character can end this effect by passing a Systems save as a quick action. The Vector can only target one character with this ability at a time.",
+        "tags": [{
+          "id": "tg_quick_action"
+        }
+        ]
+      },
+      {
+        "id": "cap_npc_vector_radar_hound",
+        "name": "RADAR HOUND",
+        "origin": {
+          "type": "Class",
+          "name": "VECTOR",
+          "base": false
+        },
+        "locked": false,
+        "type": "Reaction",
+        "effect": "Effect: The Vector boosts before the action resolves, and places a Microjet Lance targeting the triggering character's location either before or after they finish the movement. ",
+        "tags": [{
+            "id": "tg_round",
+            "val": 1
+        }],
+        "trigger": "A character in Range 20 targets the Vector with a tech action."
+      },
+      {
+        "id": "cap_npc_vector_talon_rage_targeting_matrix",
+        "name": "TALON/RAGE TARGETING MATRIX",
+        "origin": {
+          "type": "Class",
+          "name": "VECTOR",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "The Vector chooses any number of active Microjet Lances. Each chosen lance can target a new area, using the same origin space, and the Vector takes Heat equal to the number of lances chosen.",
+        "tags": [{
+            "id": "tg_quick_action"
+        },{
+          "id": "tg_heat_self",
+          "val": "???"
+        }
+        ]
+      },
+      {
+        "id": "cap_npc_vector_autonomous_deployment",
+        "name": "AUTONOMOUS DEPLOYMENT",
+        "origin": {
+          "type": "Class",
+          "name": "VECTOR",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "When the Vector places a Microjet Lance, the line can start from any space within Range 3.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_vector_colossus_quiver",
+        "name": "COLOSSUS QUIVER",
+        "origin": {
+          "type": "Class",
+          "name": "VECTOR",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "The Vector rolls 1d3+{1/2/3}. It can use the Microjet Lance action that many additional times this turn, and takes Heat equal to that value.",
+        "tags": [{
+            "id": "tg_quick_action"
+        },{
+          "id": "tg_recharge",
+          "val": 5
+        }
+        ]
+      },
+
+      {
+        "id": "cap_npc_virtue_particle_barrier",
+        "name": "PARTICLE BARRIER",
+        "origin": {
+          "type": "Class",
+          "name": "VIRTUE",
+          "base": true
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The Virtue starts the scene with {10/15/20} Overshield. It gains ½ as much at the start of each of its turns, adding onto Overshield it has up to that value. As a quick action it can extend the shield to an allied character in Sensors and line of sight. Whenever that character would take damage, the Virtue takes the same amount before reduction, and they take no damage. This linking effect lasts until the Virtue chooses a new target, is reduced to 0 Overshield, is Jammed or Stunned, or either character ends their turn without line of sight to each other.",
+        "tags": [{
+            "id": "tg_quick_action"
+        }
+        ]
+      },
+      {
+        "id": "cap_npc_virtue_bless",
+        "name": "Bless",
+        "origin": {
+          "type": "Class",
+          "name": "VIRTUE",
+          "base": true
+        },
+        "locked": false,
+        "type": "Tech",
+        "effect": "The Virtue takes 4 AP Energy damage and chooses an allied character in Sensors and line of sight. That character may then choose one of the following options:<ul><li>Reload a single weapon.</li><li>Cool {3/4/5} Heat.</li><li>Immediately roll to Recharge.</li></ul>",
+        "tags": [
+          {
+            "id": "tg_quick_tech"
+          }
+        ],
+        "tech_type": "Quick"
+      },
+      {
+        "id": "cap_npc_virtue_consecrate",
+        "name": "CONSECRATE",
+        "origin": {
+          "type": "Class",
+          "name": "VIRTUE",
+          "base": true
+        },
+        "locked": false,
+        "type": "Tech",
+        "effect": "Choose a free Blast 2 area in Sensors and line of sight. Hostile characters cannot voluntarily enter the area until the start of the Virtue's next turn.",
+        "tags": [
+          {
+            "id": "tg_quick_tech"
+          },
+          {
+              "id": "tg_recharge",
+              "val": 5
+          }
+        ],
+        "tech_type": "Quick"
+      },
+      {
+        "id": "cap_npc_virtue_rarified_components",
+        "name": "RARIFIED COMPONENTS",
+        "origin": {
+          "type": "Class",
+          "name": "VIRTUE",
+          "base": true
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The Virtue cannot take the Grunt template",
+        "tags": [
+        ]
+      },
+
+      {
+        "id": "cap_npc_virtue_impulse_barrier",
+        "name": "IMPULSE BARRIER",
+        "origin": {
+          "type": "Class",
+          "name": "VIRTUE",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The Virtue and its linked Particle Barrier target have immunity to being knocked back, pushed, or pulled as long as the Virtue has Overshield.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_virtue_blinding_shield",
+        "name": "BLINDING SHIELD",
+        "origin": {
+          "type": "Class",
+          "name": "VIRTUE",
+          "base": false
+        },
+        "locked": false,
+        "type": "Reaction",
+        "effect": "Effect: That character treats all other characters as being Invisible until the end of their next turn.",
+        "tags": [{
+            "id": "tg_turn",
+            "val": 1
+        }
+        ],
+        "trigger": "A hostile character hits the Virtue with an attack."
+      },
+
+
+
+
+      {
+        "id": "cap_npc_virtue_data_censer_node",
+        "name": "DATA-CENSER NODE",
+        "origin": {
+          "type": "Class",
+          "name": "VIRTUE",
+          "base":false
+        },
+        "locked": false,
+        "type": "Tech",
+        "effect": "The Virtue creates a Censer construct (Size 1, 5 HP, 10 Eva/E-Def) in a free space in Sensors. Allied characters can use the construct as hard cover, and an adjacent ally can consume it as a quick action to end one condition that was not self-inflicted and gain {4/6/8} Overshield. ",
+        "tags": [
+          {
+            "id": "tg_quick_tech"
+          },
+          {
+              "id": "tg_heat_self",
+              "val": 1
+          }
+        ],
+        "tech_type": "Quick"
+      },
+
+      {
+        "id": "cap_npc_virtue_excommunicate",
+        "name": "EXCOMMUNICATE",
+        "origin": {
+          "type": "Class",
+          "name": "VIRTUE",
+          "base": false
+        },
+        "locked": false,
+        "type": "Tech",
+        "effect": "The Virtue makes a tech attack against a target within Sensors. On a hit, they are pushed 3 spaces directly away from the Virtue and take {1/2/3} Heat. The knockback and the Heat increase by +3 if the target has any Overshield.",
+        "tags": [
+          {
+            "id": "tg_quick_tech"
+          }
+        ],
+        "tech_type": "Quick",
+        "attack_bonus": [
+          2, 4, 6
+        ]
+      },
+      {
+        "id": "cap_npc_virtue_sympathetic_metahook",
+        "name": "SYMPATHETIC METAHOOK",
+        "origin": {
+          "type": "Class",
+          "name": "VIRTUE",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "Either the Virtue or its Particle Barrier target can end their link as a free action. When they do, all conditions on the target that were not self-inflicted are transferred to the Virtue.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_virtue_energized_barrier",
+        "name": "ENERGIZED BARRIER",
+        "origin": {
+          "type": "Class",
+          "name": "VIRTUE",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "Particle Barrier lets its target fly when they move or Boost. When the link ends its target can move up to its speed as a reaction. ",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_pyre_unlicensed_modifications",
+        "name": "UNLICENSED MODIFICATIONS",
+        "origin": {
+          "type": "Template",
+          "name": "PYRE",
+          "base": true
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The Pyre has +1 Accuracy on Engineering checks and saves, and rolls twice on Stress checks (if applicable), taking the higher result.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_pyre_cauterize",
+        "name": "CAUTERIZE",
+        "origin": {
+          "type": "Template",
+          "name": "PYRE",
+          "base": true
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "1/Round when the Pyre Boosts it may take 1d6 Heat to move that many extra spaces.",
+        "tags": [{
+            "id": "tg_round",
+            "val": 1
+        },{
+          "id": "tg_heat_self",
+          "val": "1d6"
+        }
+        ]
+      },
+      {
+        "id": "cap_npc_pyre_core_channel",
+        "name": "CORE CHANNEL",
+        "origin": {
+          "type": "Template",
+          "name": "PYRE",
+          "base": true
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The first attack the Pyre makes on its turn while in the danger zone deals either +1d6 bonus damage or +2 Heat (their choice). This increases to +2d6 bonus damage/4 Heat if they are Exposed.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_pyre_traits",
+        "name": "PYRE TRAITS",
+        "origin": {
+          "type": "Template",
+          "name": "PYRE",
+          "base": true
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "When choosing optional systems, the Pyre can also choose from the Pyre Systems and Traits list.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_pyre_overclocked_batteries",
+        "name": "OVERCLOCKED BATTERIES",
+        "origin": {
+          "type": "Template",
+          "name": "PYRE",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "When the Pyre rolls to Recharge, it can reroll after seeing the result. It must take the second result, and then takes Heat equal to the second result.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_pyre_gamma_rounds",
+        "name": "GAMMA ROUNDS",
+        "origin": {
+          "type": "Template",
+          "name": "PYRE",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "All of the Pyre’s attacks gain +2 Heat(self), and bonus damage the Pyre deals is always Burn. Weapons that attack multiple times only incur this heat once.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_pyre_redundant_systems",
+        "name": "REDUNDANT SYSTEMS",
+        "origin": {
+          "type": "Template",
+          "name": "PYRE",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "The Pyre can activate this system to stabilize as a quick action.",
+        "tags": [{
+            "id": "tg_limited",
+            "val": 1
+        },{
+            "id": "tg_quick_action"
+        }
+        ]
+      },
+      {
+        "id": "cap_npc_pyre_unstable_system",
+        "name": "UNSTABLE SYSTEM",
+        "origin": {
+          "type": "Template",
+          "name": "PYRE",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "When the Pyre is destroyed it explodes as per a Self-Destruct.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_pyre_fuel_rod_sling",
+        "name": "FUEL ROD SLING",
+        "origin": {
+          "type": "Template",
+          "name": "PYRE",
+          "base": false
+        },
+        "locked": false,
+        "type": "Weapon",
+        "effect": "On Attack: The  Pyre cools {2/4/6} Heat.",
+        "tags": [{
+              "id": "tg_limited",
+              "val": 2
+          }
+        ],
+        "weapon_type": "Main CQB",
+        "attack_bonus": [
+          1, 2, 3
+        ],
+        "damage": [
+            {
+                "type": "Energy",
+                "damage": [4, 6, 8]
+            },{
+                "type": "Heat",
+                "damage": [2, 2, 2]
+            }
+        ],
+        "range": [
+          {
+            "type": "Range",
+            "val": 5
+          }
+        ],
+        "on_hit": ""
+      },
+      {
+        "id": "cap_npc_pyre_walking_disaster",
+        "name": "WALKING DISASTER",
+        "origin": {
+          "type": "Template",
+          "name": "PYRE",
+          "base": false
+        },
+        "locked": false,
+        "type": "Trait",
+        "effect": "The Pyre emits a Burst 3 environmental field. This space counts as one of the following environmental hazards (p278 of the Lancer core book): Extreme Heat, Extreme Sun, Particulate Storms, Electrical Storms, Disruptive Storms, Dangerous Storms, or Molten World. The Pyre is immune to this environment.",
+        "tags": [
+        ]
+      },
+      {
+        "id": "cap_npc_pyre_degradation_field",
+        "name": "DEGRADATION FIELD",
+        "origin": {
+          "type": "Template",
+          "name": "PYRE",
+          "base": false
+        },
+        "locked": false,
+        "type": "System",
+        "effect": "1/Round on a critical hit with any weapon, the Pyre imbues its target with a disintegrating aura. They cannot benefit from Accuracy on the final roll for any attack, only regain ½ as much HP whenever they gain HP, and cannot gain new Overshield (ex: if they were at 4/10 HP and Stabilized, they would regain +6, halve to +3, for a final value of 7). They can end this effect by passing an Engineering save as a full action, or by ending their turn within Range 3 of the Pyre. It also ends if the Pyre is destroyed.",
+        "frequency": "1/Round",
+        "tags": []
+      }
+
+
+
+]

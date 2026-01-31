@@ -1,0 +1,762 @@
+
+[
+{
+    "id": "cap_riptide_ballistic_harpoon",
+    "name": "'RIPTIDE' BALLISTIC HARPOON",
+    "mount": "Main",
+    "type": "Cannon",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "2d3"
+      }
+    ],
+    "range": [
+            {
+        "type": "Range",
+        "val": 15
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_reliable",
+      	"val": 2
+      },
+      {
+        "id": "tg_knockback",
+      	"val": 2
+      },
+      {
+        "id": "tg_loading"
+      }
+    ],
+    "source": "IPS-N",
+    "license": "PHAROS",
+    "license_level": 2,
+      "on_hit": "If the Knockback from this weapon causes your target to hit an object or terrain, they become pinned to it. They become <b>Immobilized</b> until they remove the bolt with a Quick Action, taking <b>3 AP Kinetic damage</b>.",
+    "description": "Many an IPS-N asset reclamation team has been saved by a ‘rod from god’ fired by an orbiting Pharos - and many a pirate dreads the day their chassis will be punctured by an unreachable arbalest. ",
+    "sp": 0
+  },
+
+  {
+    "id": "cap_bulkhead_auger",
+    "name": "BULKHEAD AUGER",
+    "mount": "Heavy",
+    "type": "Rifle",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d6+2"
+      }
+    ],
+    "range": [
+            {
+        "type": "Line",
+        "val": 15
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_knockback",
+      	"val": 1
+      },
+      {
+        "id": "tg_loading"
+      },
+      {
+        "id": "tg_ap"
+      },
+      {
+        "id": "tg_ordnance"
+      }
+    ],
+    "source": "IPS-N",
+    "license": "PHAROS",
+    "license_level": 3,
+    "on_attack": "This weapon deals <b>20 AP Kinetic damage</b> to objects and terrain in the target area when fired, before you roll to attack. ",
+    "on_hit": "Targets must pass a <b>Hull</b> save or be knocked <b>Prone</b>.",
+      "on_crit": "Targets that fail the save become <b>Shredded</b> until the end of their next turn.",
+    "description": "Augers are defined by ammunition rather than firearm — upscaled Throughbolt shells with two-stage ignition to first puncture hard targets with a plasma lance before a liquid-mass kinetic delivers the actual impact. ",
+    "sp": 0
+  },
+
+
+
+  {
+    "id": "cap_demisolar_lens",
+    "name": "DEMISOLAR LENS",
+    "mount": "Heavy",
+    "type": "CQB",
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "2d3+2"
+      }
+    ],
+    "range": [
+            {
+        "type": "Range",
+        "val": 8
+      },
+      {
+        "type": "Cone",
+        "val": 3
+      },
+      {
+        "type": "Threat",
+        "val": 3
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_heat_self",
+      	"val": 2
+      }
+    ],
+    "source": "HORUS",
+    "license": "COUATL",
+    "license_level": 2,
+      "on_attack": "This weapon deals an additional +3 Burn against targets that have damaged you since the end of your last turn.",
+    "description": ">\\ RE:RE:RE: ‘Subj. Magnifier DEV Q/A’<br>>\\ K: so uh<br>>\\ K: just try to close your eyes next time you fire it I guess<br>>\\ K: not really our problem",
+    "sp": 1
+  },
+
+  {
+    "id": "cap_corona_purge",
+    "name": "CORONA PURGE",
+    "mount": "Main",
+    "type": "CQB",
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "9"
+      }
+    ],
+    "range": [
+            {
+        "type": "Burst",
+        "val": 3
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_heat_self",
+      	"val": 6
+      },
+      {
+        "id": "tg_limited",
+        "val": 1
+      },
+      {
+        "id": "tg_unique"
+      }
+    ],
+    "source": "HORUS",
+    "license": "COUATL",
+    "license_level": 3,
+      "on_hit": "The damage from this weapon decreases by 3 for each space between you and the target. On a hit, characters must pass an Engineering save or choose between either taking Heat equal to the damage they took or becoming Jammed until the end of their next turn.",
+    "description": ">\\ PRIVATE MESSAGE: ENCRYPTION ENGRAM %#*FLSGD++<br>>\\ I: are you really sure about this one i thought this was just for fun<br>>\\ I: you said we were doing a dummy run to buzz the graycoats <br>>\\ I: the hell do we need a subnuclear vent for????<br>>\\ K: dont worry. <br>>\\ K: they’ll never see us coming<br>>\\ K: all sins will be forgiven",
+    "sp": 0
+  },
+
+  {
+    "id": "cap_shriek_rifle",
+    "name": "SHRIEK RIFLE",
+    "mount": "Main",
+    "type": "Rifle",
+    "damage": [
+      {
+        "type": "Explosive",
+        "val": "1d3+2"
+      }
+    ],
+    "range": [
+            {
+        "type": "Range",
+        "val": 12
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_loading"
+      },
+      {
+        "id": "tg_accurate"
+      },
+      {
+        "id": "tg_heat_self",
+      	"val": 1
+      }
+    ],
+    "source": "SSC",
+    "license": "SICKLEWING",
+    "license_level": 2,
+      "on_hit": "Your target must pass a Hull save or become Shredded until the end of their next turn. If your target is Shredded this weapon deals maximum damage instead of rolling.",
+    "description": "Rather than firing a projectile, the Caracara Mk.2 Sonic Rifle creates a thin beam of hyper-pressurized atmosphere shaped by intense sonic emitters, visible only as a faint distortion to the air accompanied by a flash of sonoluminescence. The beam is incredibly short-lived but the pinpoint force it exerts can bypass typical defenses to pulverize fragile internals.",
+    "sp": 0
+  },
+  {
+    "id": "cap_typhoon_channel",
+    "name": "TYPHOON-PATTERN ION CHANNEL",
+    "mount": "Main",
+    "type": "Cannon",
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "3"
+      },
+      {
+        "type": "Burn",
+        "val": "4"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 10
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_arcing"
+      },
+      {
+        "id": "tg_heat_self",
+        "val": 5
+      }
+    ],
+    "source": "HA",
+    "license": "TAMETOMO",
+    "license_level": 2,
+      "on_attack": "If you or your target are suffering from Burn, reduce the Heat cost for attacking by 2, or by 4 if you both are.",
+    "description": "“Lo! How the clouds themselves part for Harrison! By His will we are made stewards of the Natural Law! His is the name Fearkiller, and by His works even death holds no terrors! Ride Valkyrie, Ajax, Beowulf, and strike your name to His legend!”<br><br>Creed of Legion Platoon 514 “Storm Kings”",
+    "sp": 0
+  },
+  {
+    "id": "mw_tametomo_integrated",
+    "name": "PT3 FLARE BOW",
+    "mount": "Main",
+    "type": "Rifle",
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "1d3/Charge"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 8
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_overkill"
+      }
+    ],
+      "effect": "This weapon’s profile is determined by how many charges it has; for every <b>5 Heat</b> you gain, or cool by stabilizing (combined; do not track separately), this weapon gains <b>1 charge</b> (max 4). It begins with 1 charge, and resets to 1 charge after each attack. Charges persist between scenes, but are lost on a full repair.",
+      "on_hit": "Count each time the <b>Overkill</b> tag triggers on an attack; after the attack resolves, all characters in a <b>Burst 1</b> centered on your initial target must pass an <b>Agility</b> save or take that much + the number of charges expended <b>Burn</b>, or half on a success. Your target automatically fails this save. You then take an equal amount of <b>Burn</b>.",
+    "sp": 0
+  },
+
+
+
+  {
+    "id": "cap_dispersal_bow",
+    "name": "DISPERSAL BOW",
+    "mount": "Main",
+    "type": "Launcher",
+    "damage": [
+      {
+        "type": "Explosive",
+        "val": "1d3+2"
+      }
+    ],
+    "range": [
+            {
+        "type": "Range",
+        "val": 10
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_arcing"
+      },
+      {
+        "id": "tg_knockback",
+      	"val": 1
+      }
+    ],
+    "source": "PI-OF",
+    "license": "BASIL",
+    "license_level": 2,
+      "on_attack": "You can expend 1 Repair to attack a Blast 2 area instead, and knock targets Prone on a hit.",
+    "description": "Keeping in line with their standards of high-efficiency/low-cost supply paradigms, many PI-OF munition schematics can be easily supplemented with available low-grade materials for increased impact and effective spread.",
+    "sp": 0
+  },
+  {
+    "id": "cap_grim_harvest_plasma_scythe",
+    "name": "'GRIM HARVEST' PLASMA SCYTHE",
+    "mount": "Superheavy",
+    "type": "Melee",
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "2d6"
+      },
+      {
+        "type": "Burn",
+        "val": 6
+      }
+    ],
+    "range": [
+            {
+        "type": "Threat",
+        "val": 1
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_overkill"
+      }
+    ],
+    "source": "PI-OF",
+    "license": "BASIL",
+    "license_level": 3,
+      "effect": "This weapon counts as both a melee and nexus weapon, but only makes melee attacks. This weapon may be used to attack as normal, or deployed as a Drone.",
+      "deployables": [{
+        "name": "Scythe Drone",
+        "type": "Drone",
+        "detail": "The Scythe Drone can be deployed to an adjacent free space as a free action. Once deployed you may attack with it as though it is still a weapon, but with Threat traced from the drone. You can recall the drone with a Quick Action if it is adjacent to you. Until recalled or destroyed, it remains deployed until the end of the scene. If destroyed it follows the normal rules for repairing a drone and can’t be used until repaired.",
+        "activation": "Free",
+        "recall": "Quick",
+        "hp": 10,
+        "armor": 2,
+        "size": 0.5,
+        "speed": 4,
+        "evasion": 10,
+        "edef": 10
+        
+      }],
+    "description": "Most terraforming work by Pinnacle Industries is automated; a variety of proprietary subaltern and drone designs are offered depending on climate and scale. Local flora is usually clearcut before other work begins, ensuring that the land is available for Pinnacle-approved seedstock. The tools responsible were exceedingly easy to convert by the Orion Faction.",
+    "sp": 0
+  },
+
+
+  {
+    "id": "cap_micro_mass_driver",
+    "name": "MICRO-MASS DRIVER",
+    "mount": "Heavy",
+    "type": "Cannon",
+    "damage": [
+      {
+        "type": "Explosive",
+        "val": "1d6+3"
+      }
+    ],
+    "range": [
+            {
+        "type": "Range",
+        "val": 12
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_knockback",
+        "val": 1
+      },{
+        "id": "tg_accurate"
+      },{
+        "id": "tg_ordnance"
+      }
+    ],
+    "source": "PI-OF",
+    "license": "CORIANDER",
+    "license_level": 1,
+    "description": "The actual ballistic design of the TT.8 M-Driver is simple mag-acceleration of an explosive round; the addition of an equal weight of recoil compensation, predictive targeting braces, and weight-adjusting active munition sculpts has increased its cost far above market value.",
+    "sp": 0
+  },
+  {
+    "id": "cap_wildfire_missiles",
+    "name": "WILDFIRE MISSILES",
+    "mount": "Superheavy",
+    "type": "Launcher",
+    "damage": [
+      {
+        "type": "Explosive",
+        "val": "1d6+2"
+      }
+    ],
+    "range": [
+            {
+        "type": "Range",
+        "val": 15
+      },{
+        "type": "Blast",
+        "val": 1
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_arcing"
+      }
+    ],
+    "source": "PI-OF",
+    "license": "CORIANDER",
+    "license_level": 3,
+      "effect": "This weapon can target two separate <b>Blast 1</b> areas when fired. After attacking, a cloud of smoke lingers in the targeted area that grants soft cover to allied characters, and <b>+1 Difficulty</b> to ranged and melee attacks made by hostile characters within them. Gain the <b>Ignition</b> protocol.",
+      "actions": [{
+        "name": "Ignition",
+        "heat_cost": 2,
+        "activation": "Protocol",
+        "detail": "Take 2 Heat to detonate all lingering smoke created by the Wildfire Missiles. Hostile characters in the affected areas must pass an <b>Agility</b> save or take <b>4 Burn</b> and be knocked <b>Prone</b>, or half as much on a success. Allied characters gain soft cover until the end of their next turn and can move 2 spaces. This movement ignores engagement and does not provoke reactions."
+      }],
+    "description": "“How many times? How many times can we burn it all down and start over before we finally learn? Will the land still bear life then? Will it let us stay? How often will we build a fire and call it bright while smoke burns our eyes and disguises its shape? How many times will we throw our hearts and hands into the flames, and be surprised when they return charred and incapable of being anything but more tinder? And if we do not feed it, we leave it be, bury it deep and well, will it devour still our children in our stead? Consider this a letter of resignation. You can keep whatever doesn’t burn, but I’m tired of building ash and selling it as salvation.”",
+    "sp": 0
+  },
+
+
+  {
+    "id": "cap_flintlock_pistol",
+    "name": "FLINTLOCK PISTOL",
+    "mount": "Auxiliary",
+    "type": "Rifle",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d3+1"
+      }
+    ],
+    "range": [
+            {
+        "type": "Range",
+        "val": 8
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_inaccurate"
+      }
+    ],
+    "source": "PI-OF",
+    "license": "FENNEL",
+    "license_level": 1,
+      "on_attack": "You are pushed 1 space in any direction.",
+    "description": "Despite the ever increasing pace of technological advancement, sometimes simpler solutions are still better. Many pieces of Pinnacle Industries equipment rely on solely mechanical action, with easily replaceable parts and no digital interface to increase the ease of repair and upkeep in isolated environments. This ethos is reflected in the lightweight and interchangeable design of the Fennel, making it a perfect pair for more archaic weaponry.",
+    "sp": 0
+  },
+
+  {
+    "id": "cap_apothecary_marksman_rifle",
+    "name": "'APOTHECARY' MARKSMAN RIFLE",
+    "mount": "Main",
+    "type": "Rifle",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": 4
+      }
+    ],
+    "range": [
+            {
+        "type": "Range",
+        "val": 12
+      }
+    ],
+    "source": "PI-OF",
+    "license": "FENNEL",
+    "license_level": 3,
+      "on_hit": "1/Round, this weapon deals +1 bonus damage for every condition (Impaired, Slowed, Immobilized, Jammed, Shredded, or Stunned) affecting your target, to a maximum of +6.",
+    "description": "Weighted ‘Apothecary’ rounds see suboptimal penetration against most targets – until they hit a stressed plate that they shred like paper.",
+    "sp": 1
+  },
+
+  {
+    "id": "cap_dazzler",
+    "name": "DAZZLER",
+    "mount": "Auxiliary",
+    "type": "CQB",
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "1"
+      }
+    ],
+    "range": [
+            {
+        "type": "Range",
+        "val": 3
+      },
+      {
+        "type":"Threat",
+        "val": 3
+      }
+    ],
+    "source": "PI-OF",
+    "license": "LEMONGRASS",
+    "license_level": 1,
+      "on_hit": "The target has +1 difficulty on the next attack roll they make. This effect can stack.",
+    "description": "‘Dazzler’ capacitor plates use a powerful burst of charge to induce temporary opposing charges in their target. Once established, a flood of conductive ferro-chaff is released to complete the circuit, resulting in a flash of glittering light and signal noise as charge arcs across the gap.",
+    "sp": 0
+  },
+
+  {
+    "id": "cap_voltaic_swarm",
+    "name": "VOLTAIC SWARM",
+    "mount": "Main",
+    "type": "Nexus",
+    "tags": [{"id": "tg_smart"}],
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "1d3"
+      }
+    ],
+    "range": [
+            {
+        "type": "Burst",
+        "val": 2
+      }
+    ],
+    "source": "PI-OF",
+    "license": "LEMONGRASS",
+    "license_level": 3,
+      "effect": "This weapon does not attack allied characters in its area. Instead they gain a protective swarm of charged nanites. The next time a hostile character makes an attack against them or moves into an adjacent space, the swarm activates. The triggering character takes 1d3 Energy damage and is knocked back 2 spaces. The swarm is then expended. A character may only have one swarm at a time.",
+    "description": "Like a buzzing swarm of bees, flickering clouds of nanites billow from printing hives hidden in the core of the frame. They swirl and grow until they completely surround the mech – and are obliterated in a flash, tiny capacitors expended all at once in a simultaneous electrical shock, conducted along the metal fog.",
+    "sp": 0
+  },
+
+  {
+    "id": "cap_grinder_combat_uzi",
+    "name": "'GRINDER' COMBAT UZI",
+    "mount": "Auxiliary",
+    "type": "CQB",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d3"
+      }
+    ],
+    "range": [
+            {
+        "type": "Range",
+        "val": 3
+      },
+      {
+        "type":"Threat",
+        "val": 3
+      }
+    ],
+    "tags": [{
+      "id": "tg_reliable",
+      "val": 1
+    }],
+    "source": "PI-OF",
+    "license": "PEPPERCORN",
+    "license_level": 1,
+      "on_attack": "Characters adjacent to your target also take the Reliable damage from this weapon as if it had missed them.",
+    "description": "The Grinder is a staple of many Pinnacle Industries combat lines thanks to its simple design and high ratings in the field. It operates on a straightforward principle: the more bullets you shoot, the more likely you are to hit something. It’s high rate of fire is well suited to the Peppercorn’s high speed tactics that don’t leave time for ‘precision’ or ‘aiming’.",
+    "sp": 0
+  },
+  {
+    "id": "cap_plasma_caster",
+    "name": "PLASMA CASTER",
+    "mount": "Main",
+    "type": "Cannon",
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "2"
+      },{
+        "type": "Burn",
+        "val": "1-3"
+      }
+    ],
+    "range": [
+            {
+        "type": "Range",
+        "val": 3
+      }
+    ],
+    "effect": "This weapon deals Burn equal to its Range from the target (up to a maximum of 3 Burn).",
+    "source": "PI-OF",
+    "license": "PEPPERCORN",
+    "license_level": 2,
+    "description": "The Peppercorn’s plasma caster was an inspired development during the refinement of its plasmatic treads. Careful manipulation of magnetic coils allowed the plasma to be collected and linearly repelled from the primary corona at extreme velocities.",
+    "sp": 0
+  },
+  {
+    "id": "cap_furnace_hammer",
+    "name": "FURNACE HAMMER",
+    "mount": "Main",
+    "type": "Melee",
+    "profiles": [{
+      "name": "Standard",
+      "damage": [{
+        "type": "Kinetic",
+        "val": "1d6"
+      }],
+      "range": [{
+        "type": "Threat",
+        "val": 2
+      }],
+      "tags": [{
+        "id": "tg_knockback",
+        "val": 1
+      }],
+      "effect": "This weapon deals 10 AP Kinetic damage to objects and terrain.",
+      "actions": [{
+        "name": "Prime Furnace Hammer",
+        "activation": "Quick",
+        "detail": "Take 2 Heat to prime the Furnace Hammer, Slowing your mech and allowing use of its \"Primed\" profile.",
+        "heat_cost": 2
+      }]
+    },
+    {
+      "name": "Primed",
+      "damage": [{
+        "type": "Explosive",
+        "val": "1d6"
+         },
+        {
+          "type": "Burn",
+          "val": 3
+        }],
+      "range": [{
+        "type": "Threat",
+        "val": 2
+      }],
+      "effect": "While the Furnace Hammer is Primed you are Slowed. It loses Primed on a hit of if you stop priming it as a free action. This weapon deals 20 AP Explosive damage to objects and terrain.",
+      "actions": [{
+        "name": "Cease Priming",
+        "activation": "Free",
+        "detail": "End the Furnace Hammer's \"Primed\" status, ending the Slowed condition and allowing the Furnace Hammer to be used with its \"Standard\" profile."
+      }],
+      "tags": [{
+        "id": "tg_knockback",
+        "val": 3
+      }],
+      "on_crit": "Your target is knocked Prone."
+    }
+  ],
+    "source": "PI-OF",
+    "license": "ROSEMARY",
+    "license_level": 1,
+    "description": "Housed within this hammer’s tungsten shell is a flash injection furnace powered by compressed fuel cartridges. Once loaded and lit, the single-use cartridges can be expended for an explosive gout of flame and force at the point of impact, compounding the already weighty swing of the hammer.",
+    "sp": 0
+  },
+
+  {
+    "id": "cap_snap_crush_mining_jaws",
+    "name": "SNAP-CRUSH MINING JAWS",
+    "mount": "Heavy",
+    "type": "Melee",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "2d3+3"
+      }
+    ],
+    "range": [
+            {
+        "type": "Threat",
+        "val": 1
+      }
+    ],
+    "tags": [{
+      "id": "tg_overkill"
+         },
+        {
+          "id": "tg_ap"
+        }],
+    "source": "PI-OF",
+    "license": "ROSEMARY",
+    "license_level": 2,
+    "on_hit": "The target must pass a Hull save or be Immobilized until the end of their next turn.",
+    "description": "Modeled after the jaw structure of ancient aquatic fossils found on Cradle, Snap-Crushers use a combination of hydraulics, spring storage, servo motion, and sheer weight to slam closed in an instant. The hard metal plates crush whatever is in their way, pinning what they don’t turn to dust.",
+    "sp": 0
+  },
+  {
+    "id": "cap_geoform_wrecking_ball",
+    "name": "GEOFORM WRECKING BALL",
+    "mount": "Superheavy",
+    "type": "Melee",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "4d6"
+      }
+    ],
+    "range": [
+            {
+        "type": "Threat",
+        "val": 2
+      }
+    ],
+    "tags": [],
+    "source": "PI-OF",
+    "license": "ROSEMARY",
+    "license_level": 3,
+    "on_hit": "Draw a Cone 3 from your target in any direction. Characters in the area of your choice, including your target, are knocked back 3 spaces and all characters must pass a Hull save or be knocked Prone. This weapon deals 30 AP Kinetic damage to objects and terrain in the cone.",
+    "description": "These wrecking balls are made in special factories housed deep in gas giants, where the intense pressure and heat create a hardness and density unimaginable under standard conditions. Given time they are capable of shattering almost any normal planetary substrate — utilizing wide, arcing swings to build up even greater momentum than is granted by their immense weight.",
+    "sp": 0
+  },
+
+  {
+    "id": "cap_tt8_alpine_spring_carbine",
+    "name": "TT.8 'ALPINE SPRING' CARBINE",
+    "mount": "Main",
+    "type": "Rifle",
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d3+3"
+      }
+    ],
+    "range": [
+            {
+        "type": "Range",
+        "val": 8
+      }
+    ],
+    "tags": [{
+      "id": "tg_loading"
+         }],
+    "source": "PI-OF",
+    "license": "SPEARMINT",
+    "license_level": 2,
+    "on_hit": "Create a Burst 1 of difficult terrain centered on the target that lasts until the end of the scene. Characters that start their turn in this area or enter it for the first time on their turn must pass an Agility save or fall Prone.",
+    "description": "Each ‘Tried and True’ product designation is given a number representing the number of prototypes or iterations that came before the final release – a simultaneous proof of PI-OF’s dedication as a supplier, and the resources they have available to facilitate research.",
+    "sp": 0
+  },
+
+  {
+    "id": "cap_tt32_glacier_lake_coolant_hose",
+    "name": "TT.32 'GLACIER LAKE' COOLANT HOSE",
+    "mount": "Heavy",
+    "type": "CQB",
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "1d6+1"
+      }
+    ],
+    "range": [
+            {
+        "type": "Cone",
+        "val": 5
+      }
+    ],
+    "tags": [{
+      "id": "tg_knockback",
+      "val": 2
+    }],
+    "source": "PI-OF",
+    "license": "SPEARMINT",
+    "license_level": 3,
+    "effect": "You cannot attack with this weapon if you are in the danger zone.",
+    "on_hit": "Characters must pass an Engineering save or have their Speed reduced by 2 (min 0). This effect is cumulative, and lasts until they pass a Hull save as a quick action.",
+    "description": "The long development cycle of the GL Chemical Hose was never due to a lack of results – in fact, it scored at or above 86% efficacy from the first test, which was a simple junction of an SP-01 Atmospheric Condenser and its native coolant channel. The delays were from a much more pressing issue of safety; even before military adaptation, ‘freezer burn’ incidents occupied 78% of all on-duty injuries for Spearmint pilots.",
+    "sp": 0
+  }
+]

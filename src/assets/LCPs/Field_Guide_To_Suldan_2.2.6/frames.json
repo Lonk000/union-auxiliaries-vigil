@@ -1,0 +1,1856 @@
+[
+  {
+    "id": "fgtsf_charioteer",
+    "license_level": 2,
+    "source": "C&H",
+    "name": "CHARIOTEER",
+    "mechtype": [
+      "Support"
+    ],
+    "description": "The Charioteer is perhaps one of Chandrasekhar & Herschel's most immediately recognizable chassis despite its diminutive size, and it features prominently in much of the company's marketing material. This fast and lightweight model has its origins in the popular sport of performance chassis racing, where speed, handling, and agility are typically valued more highly than firepower. As a result the chassis itself is minimally armed and armored, boasting a streamlined frame constructed from advanced materials along with a powerful, compact reactor and drive systems capable of outputting extreme overland kp/h speeds for extended durations, though maintenance times between sorties are commensurately high as well.<br>Nonetheless the Charioteer is guaranteed by C&H to perform to mil-spec standard, intended to fill the role of a high-speed reconnaissance and forward observation unit, and its ability to cover long distances rapidly has also seen it employed for other tasks such as search-and-rescue operations and courier duties. Due to the frame's compact design, larger pilots may find this chassis less comfortable to operate for extended deployments.",
+    "mounts": [
+      "Flex"
+    ],
+    "stats": {
+      "size": 0.5,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 6,
+      "evasion": 12,
+      "edef": 8,
+      "heatcap": 5,
+      "repcap": 2,
+      "sensor_range": 15,
+      "tech_attack": 1,
+      "save": 10,
+      "speed": 6,
+      "sp": 8
+    },
+    "traits": [
+    {
+      "name": "Secondary Motive Systems",
+      "description": "The Charioteer can Boost while Slowed."
+    },
+    {
+      "name": "Supermaneuverability",
+      "description": "Becoming Engaged does not cause the Charioteer to stop moving, and you do not treat hostile characters as obstructions."
+    },
+    {
+      "name": "Forward Observation Suite",
+      "description": "1/round, the Charioteer may Scan and Lock On to a character within Range 3 as a free action."
+    },
+    {
+      "name": "Hangar Queen",
+      "description": "The Charioteer must spend 2 Repairs to repair destroyed systems during rests instead of 1."
+    }],
+    "core_system": {
+      "name": "HYPERION Reactor",
+      "description": "Military-grade coldcore fusion reactors are precisely tuned and balanced for optimal output during the rigors of combat, but racing frames have different performance requirements. C&H's proprietary EF-320 HYPERION reactor was designed by Mattias Herschel, five-time winner of the Kaleka Cup, to provide enhanced power flow capable of maintaining extreme speeds for prolonged periods. Superior motive output is kept manageable thanks to high-performance stabilization gyros and a sophisticated ride-by-wire control system, and as a result the Charioteer is capable of acceleration so sudden that conventional fire-control systems have difficulty anticipating its movements.<br>The HYPERION can even be pushed further for brief periods. Disengaging a reactor's fusion regulators is highly inadvisable for anyone who is not a certified nuclear reactor technician, and C&H Ltd. waives all responsibility for pilots who opt to do so anyway. Nonetheless the fact that the Charioteer can withstand such power output at all is a testament to its design.",
+      "active_name": "Redline",
+      "active_effect": "Gain the Mach Acceleration reaction for the rest of the scene.",
+      "active_actions": [
+        {
+          "name": "Mach Acceleration",
+          "activation": "Reaction",
+          "frequency": "1/round",
+          "trigger": "You are targeted by an attack.",
+          "detail": "You may immediately Boost, interrupting that attack before it can be rolled. This movement ignores engagement and doesn't provoke reactions. If you are unable to be attacked at your new position, such as no longer being in range, area of effect, or line of sight, the attack automatically misses you."
+        }
+      ],
+      "use": "Encounter",
+      "activation": "Protocol",
+      "passive_name": "HYPERION Reactor",
+      "passive_effect": "Whenever you move 12 or more spaces during a single turn, all attacks against you are made at +1 Difficulty until the start of your next turn. This effect does not stack."
+    },
+    "image_url": "https://i.imgur.com/z0gDS9Z.png",
+    "y_pos": 44 
+  },
+  {
+    "id": "fgtsf_kalista",
+    "license_level": 2,
+    "source": "C&H",
+    "name": "KALISTA",
+    "mechtype": [
+      "Striker",
+      "Defender"
+    ],
+    "description": "The Kalista is C&H's main frontline assault model, a bulky, robustly-built design based on a common gladiatorial retrofit built around a modified heavy industrial frame. Not cutting-edge in the slightest, what the Kalista lacks in sophisticated electronics it makes up for with overwhelmingly resilient engineering and a variety of system options tailored for the brutal close-combat engagements it excels at, well suited for pilots who prefer to focus on a straightforward, aggressive offense.<br>Standardization of the Kalista license incorporates additional refinements to the design's overall construction, many of which were personally implemented and tested by Jun Chandrasekhar herself, whose own gladiatorial chassis served as one of the early models from which the Kalista was developed. These refinements include a universal interchangeable part replacement scheme to make between-action and in-field refits even easier, and the latest version is also fully compatible with OGOUN, C&H's first in-house combat ready NHP platform.",
+    "mounts": [
+      "Main",
+      "Main",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 2,
+      "structure": 4,
+      "stress": 4,
+      "armor": 2,
+      "hp": 10,
+      "evasion": 6,
+      "edef": 6,
+      "heatcap": 5,
+      "repcap": 8,
+      "sensor_range": 5,
+      "tech_attack": -2,
+      "save": 10,
+      "speed": 3,
+      "sp": 5
+    },
+    "traits": [
+      {
+        "name": "Reinforced Frame",
+        "description": "The Kalista has Immunity to Shredded."
+      },
+      {
+        "name": "Built To Last",
+        "description": "If the Kalista is destroyed, it only requires 2 Repairs to be repaired"
+      },
+      {
+          "name": "Lumbering",
+          "description": "When the Kalista Boosts, it must move in a straight line."
+      }
+    ],
+    "core_system": {
+      "name": "Ruggedized Construction",
+      "active_name": "Berserker Drive",
+      "active_effect": "<b>Trigger:</b> You take structure damage that would cause you to make a structure damage check.<br><b>Effect:</b> Do not make a structure damage check. You may then immediately restore your HP to full, clear all conditions that weren't caused by your own systems or talents, and you may repair structure damage at a rate of 1 Repair per structure damage. For the rest of the scene, 1/round you may deal +2 bonus damage on hit with a melee attack for each point of structure damage repaired this way.",
+      "description": "The result of of a rigorous engineering process derived from thousands of hours of both industrial and gladiatorial experience, the Kalista is rated for conditions in excess of what some purpose-built military-grade designs are expected to endure. Internal components are layered with redundancy, allowing for uninterrupted combat performance even when subjected to significant operational stresses, and construction is optimized for ease of field repairs.<br>In addition to this, a network of burnout flash micro-printers and RawMat feedstock reserves are embedded within the Kalista's structure and tied to primary damage control systems, capable of autonomous full-frame repairs upon detection of severe structural integrity failure. High-density capacitors automatically provide additional power reserves, pushing the mech into a temporary overcharged state to help it overcome both the stress of emergency self-construction as well as whatever battlefield threat necessitated such action.",
+      "activation": "Reaction"
+    },
+    "image_url": "https://i.imgur.com/KuAsVWh.png",
+    "y_pos": 12
+  },
+  {
+    "id": "fgtsf_kallarani",
+    "license_level": 2,
+    "source": "C&H",
+    "name": "KALLARANI",
+    "mechtype": [
+      "Striker"
+    ],
+    "description": "One of C&H's more controversial licenses, there's little doubt that the origins of the Kallarani chassis and its systems lie in piracy. This lends credence to the persistent rumors that one of the company's undisclosed financial backers is or was once a pirate themselves, but C&H adamantly deny any and all claims that they encourage license holders to engage in illegal activities - while nonetheless maintaining that they have no control over what pilots choose to do with their licenses. However one chooses to look at it, the Kallarani is well suited to shipboard actions in addition to urban combat scenarios, providing pilots with a variety of powerful and flexible close-quarters options and drone network systems to choose from.<br>During the uprising the Kallarani was the chassis of choice for members of the Suldani Revolutionary Engineering Corps, who utilized it extensively in the bloody block-by-block fighting with the Emir's Royal Guard. Though they suffered heavy casualties in the process, they cultivated a fearsome reputation that ultimately led to numerous Guard units routing or even surrendering rather than having to face them in combat, and the design has enjoyed a certain prestige among revolutionary veterans and provisional security force commanders ever since.",
+    "mounts": [
+      "Flex",
+      "Flex",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 1,
+      "hp": 8,
+      "evasion": 8,
+      "edef": 10,
+      "heatcap": 6,
+      "repcap": 4,
+      "sensor_range": 8,
+      "tech_attack": 1,
+      "save": 10,
+      "speed": 4,
+      "sp": 5
+    },
+    "traits": [
+      {
+        "name": "Multirole Armament",
+        "description": "Whenever the Kallarani Barrages, if it chooses two or more weapons of different types (Rifle, CQB, Launcher, Cannon, Nexus, or Melee), it gains +1 Accuracy to an attack of its choice made as part of that Barrage."
+      },
+      {
+        "name": "Ambush Jammers",
+        "description": "The Kallarani counts as Invisible during the first round in each scene."
+      },
+      {
+        "name": "Integrated EVA Rig",
+        "description": "The Kallarani counts as having a propulsion system in low or zero gravity and submarine environments."
+      }
+    ],
+    "core_system": {
+      "name": "Typhoon Airburst Projector",
+      "description": "Adapted from a close-in point defense system, the Typhoon is a chassis-integrated sensor package and launcher optimized for close-quarters combat and zone interdiction. Sensors track a target's bearing, direction, and range, then launch an airburst fragmentation shell set to detonate at optimum distance to ensure on-target saturation even around corners or behind cover.<br>An extremely common modification, especially among pirates, is to override the sensor restrictions and overclock the Typhoon's launch mechanisms. Though taxing, the result is a devastating rolling barrage capable of saturating a wide area with shrapnel. Softtarget/materiel kill efficiency approaches maximum percentage within the designated bombardment area, clearing areas of even entrenched threats and securing dronespace superiority during high-intensity boarding actions.",
+      "active_name": "Decksweeper Fusillade",
+      "active_effect": "Create a Blast 5 area, with at least one space adjacent to you. All Drones, Deployables, and Mines within this area are instantly destroyed. All other characters within this area become Impaired until the end of their next turn and must pass an Agility save or take 2d6 kinetic damage (Biological characters take 4d6 kinetic damage). On a success, they take half damage. This salvo of airburst explosives can reach any target as long as there is a path to do so.",
+      "activation": "Full",
+      "integrated": [
+        "fgtsmw_kallarani_integrated"
+      ]
+    },
+    "image_url": "https://i.imgur.com/KigMvpa.png",
+    "y_pos": 16
+  },
+  {
+    "id":"fgtsf_matador",
+    "license_level": 2,
+    "source": "C&H",
+    "name": "MATADOR",
+    "mechtype": [
+      "Defender"
+    ],
+    "description": "Rather than any sort of gladiatorial combat, the Matador was primarily sourced from designs utilized by the Suldani Independence Front in their ongoing conflict with Arclight TransColonial corporate reclamation forces. C&H bills this frame as an asymmetrical warfare platform ideal for pilots conducting long-term guerrilla warfare operations against technologically and numerically superior opposition. Aggressive counterintrusion and anti-systemic invasion packages allow even less technically proficient pilots to engage advanced units on equal footing.<br>The Matador has been a point of contention for Arclight TransColonial since its introduction, who have lodged several formal protests at what they feel to be clear evidence that Chandrasekhar & Herschel is covertly supporting the SIF despite the company's official position to the contrary. C&H in turn denies this, stating that their mandate is to provide their license holders with access to the finest combat-grade chassis and compatible systems they can provide, no matter their provenance.",
+    "mounts": [
+      "Flex",
+      "Main/Aux"
+    ],
+    "stats": {
+      "size": 2,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 12,
+      "evasion": 10,
+      "edef": 6,
+      "heatcap": 8,
+      "repcap": 4,
+      "sensor_range": 3,
+      "tech_attack": -2,
+      "save": 11,
+      "speed": 4,
+      "sp": 7
+    },
+    "traits": [
+      {
+        "name": "Hostile Architecture",
+        "description": "All hostile tech actions and hostile abilities which inflict Systems saves made against the Matador cause the attacker to take 2 heat. If either the Matador or the target is in the Danger Zone, the attacker take 2 AP energy damage as well."
+      },
+      {
+        "name": "IFF Spoofer",
+        "description": "1/round, whenever a hostile character targets an allied character within Range 3 with a tech action, an attack using a Smart weapon, or an ability which inflicts a Systems save which does not also include the Matador, you may force that attack, action, or save to target the Matador instead even if could not originally have done so (such as due to range, etc)."
+      },
+      {
+        "name": "Guardian",
+        "description": "Adjacent allied characters can use the Matador for Hard Cover."
+      },
+      {
+        "name": "Weak Computer",
+        "description": "The Matador has +1 Difficulty on all Systems checks and saves."
+      }
+    ],
+    "core_system": {
+      "name": "Anthem Wideband Jammer",
+      "description": "The earliest versions of this system were sourced from salvaged corvette-grade interdiction screens, designed to protect subline spacecraft from autonomous and semiautonomous drones and munitions during naval combat operations. Since those early days the design has been refined and streamlined, though it remains as aggressivelyindiscriminate as ever, blanketing an area with wideband suppression signals and electromagnetic interference that jams communications, scrambles autonomous weaponry, and inflicts debilitating feedback upon invasive electronic warfare systems, providing complete electronic cover for rapid-strike covert operations.",
+      "active_name": "Blackout",
+      "active_effect": "Create a Burst 3 suppression zone around you. While this ability is active, characters in the area cannot use any AI, Drone, or Smart weapons or systems. Any such systems deployed within the area are rendered inert, AI systems become mute and non-functional, and all communication systems are rendered inoperable. These effects immediately end whenever a character or deployed system leaves the area. Any character in the area who attempts a tech action, and any character who attempts a tech action against targets within the area, must roll 1d6. On a 4+, they take 1d6 heat and the tech action automatically fails with no effect. This effect does not stack with Invisible.<br>This effect lasts until the beginning of your next turn. You may extend the duration by taking 1d3 heat each additional round at the start of your turn, or you may end it at any time at the start of your turn as a free action. The jammer also deactivates at the end of the scene.",
+      "use": "Encounter",
+      "activation": "Protocol"
+    },
+    "image_url": "https://i.imgur.com/LHVrAKv.png"
+  },
+  {
+    "id": "fgtsf_pesilat",
+    "license_level": 2,
+    "source": "C&H",
+    "name": "PESILAT",
+    "mechtype": [
+      "Striker",
+      "Controller"
+    ],
+    "description": "Unarmed martial arts have a long historical association with oppressive regimes as a way for those without ready access to weaponry to learn how to defend themselves, sometimes even training in plain sight. On Suldan the situation was no different, and over time, under the guise of pilot training and gladiatorial exhibitions, the secret techniques and technologies of the pilot martial art known as raksasa silat were passed down from master to student.<br>The Pesilat is a robust and flexible lightweight chassis design created by C&H from the ground up, made to fulfill the unique hybrid close-combat and electronic warfare capabilities demanded by the practitioners of this esoteric fighting art. Incorporating an advanced full-body haptic/kinesthetic control interface for 1-1 equivalent motion translation, the Pesilat is a physically demanding chassis to operate, and martial arts conditioning is a highly recommended component of any Pesilat pilot's familiarization process.",
+    "mounts": [
+      "Aux/Aux"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 8,
+      "evasion": 10,
+      "edef": 10,
+      "heatcap": 6,
+      "repcap": 5,
+      "sensor_range": 5,
+      "tech_attack": 2,
+      "save": 11,
+      "speed": 5,
+      "sp": 8
+    },
+    "traits": [
+      {
+        "name": "Contact Bridge",
+        "description": "The Pesilat gains +1 Accuracy on Invade tech attacks against characters it is grappling."
+      },
+      {
+        "name": "Rising Sun Module",
+        "description": "Standing from Prone does not cost the Pesilat its movement, and it may stand from Prone even while Immobilized."
+      },
+      {
+        "name": "Muscle-Tracer Haptics",
+        "description": "1/round, the Pesilat may deal +1d6 bonus damage on hit with a non-weapon melee attack (such as Ram, Grapple, Improvised Attack, etc)."
+      }
+    ],
+    "core_system": {
+      "name": "Combat Induction Chassis",
+      "description": "Raksasa silat practitioners often outfit their mechs with custom systemic intrusion software designed to enhance their combat capabilities, all the more useful when access to weaponry is tightly restricted. A particular aspect of this style is the use of point-topoint contact induction transmission, bypassing the need for remote electronic signature acquisition and interfacing directly with target systems within close range. The Pesilat is fully outfitted with one such hardware/software induction suite, giving pilots the ability to initiate systemic attacks via physical contact using their mech's own frame as a transmission bridge.</br> This isn't the only chassis modification that raksasa silat masters make to their mechs, however. There are other powerful enhancements and modifications as well, the precise details of which are seldom shared with those outside their ranks, but nonetheless boast impressive combat performance. C&H is proud to offer one such enhancement package to pilots who display sufficient dedication to walking this path.",
+      "active_name": "Demon Tiger Overdrive",
+      "active_effect": "For the rest of the scene, your Improvised Attacks become Threat 2, AP, and can attack two targets at a time.",
+      "activation": "Protocol",
+      "passive_name": "Combat Induction Chassis",
+      "passive_effect": "Your Improvised Attacks have Reliable 2. Whenever you successfully hit a character with an Improvised Attack, you may immediately make an Invade tech attack against them as a free action. You may Invade in this way even if you are Jammed."
+    },
+    "image_url": "https://i.imgur.com/bkxjmlp.png",
+    "y_pos": 17
+  },
+  {
+    "id": "fgtsf_retiarius",
+    "license_level": 2,
+    "source": "C&H",
+    "name": "RETIARIUS",
+    "mechtype": [
+      "Controller"
+    ],
+    "description": "Not every gladiatorial battle is fought to the death. More often than not, bouts last until one mech is no longer able to operate whether that means a total kill or simply an effective kill. The Retiarius is a sturdy close- to mid-range suppression/support unit built around this principle, designed to carry a payload tailored to disable as well as destroy, typically including a frame-integrated autoloading net launcher adapted from modular cargo winch systems for entangling and restraining opponents.<br>This makes the Retiarius ideally suited to specialized operations where less-lethal capabilities and reduced collateral damage are desired, such as low-intensity security patrols, live target capture and extraction, or even training exercises, all in addition to the general tactical flexibility of locking down high-priority targets during standard combat operations. After-action metrics of Retiarius chassis in live-fire engagements report upwards of 70% target casualty minimization with no negative impact on overall combat performance.",
+    "mounts": [
+      "Flex",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 1,
+      "hp": 10,
+      "evasion": 7,
+      "edef": 8,
+      "heatcap": 7,
+      "repcap": 4,
+      "sensor_range": 10,
+      "tech_attack": 0,
+      "save": 12,
+      "speed": 4,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Nanoweave Net Launcher",
+        "description": "1/round, you may choose a character in Range 5 and pull them 2 spaces in any direction as a free action. This movement ignores engagement and doesn't provoke reactions. Rams and Grapples against that character are made with +1 Accuracy until the end of their next turn."
+      },
+      {
+        "name": "Shock Absorbers",
+        "description": "The Retiarius has Immunity to Knockback."
+      },
+      {
+        "name": "Stable Footing",
+        "description": "Whenever the Retiarius is knocked Prone, you may make a Hull check. On a success, you remain standing instead."
+      }
+    ],
+    "core_system": {
+      "name": "Anchorpoint Entanglement System",
+      "description": "Ongoing adoption of the Retiarius license beyond Suldan as well as continued research and refinement of less-lethal chassis systems has led Chandrasekhar & Herschel to develop ANCHORPOINT, an experimental semi-autonomous deployable area suppression payload. Each individual ANCHORPOINT unit affixes itself solidly into place with a tristage pneumatic/plasma/electromagnetic piton system. Once secured, these units are capable of independently prioritizing hostile targets within a designated coverage zone and restraining them them with volleys of magnetically accelerated grapnels attached to high-tensile nanocarbon-weave cables rated for 30 tons. Without the aid of time and dedicated engineering equipment, entangled targets will often cause self-inflicted structural damage attempting to disengage from the grapnels under their own power, their own hulls giving out before the ANCHORPOINT does.",
+      "active_name": "Deploy Anchorpoints",
+      "active_effect": "Deploy three anchorpoint units to free spaces within Range 5 of your mech. During your turn, each unit can target one hostile character within Range 5 of itself with a restraint grapnel as a free action, and those targets automatically become Immobilized as long as the anchorpoint is attached to them. A restrained character can attempt to remove the grapnel at the start of their turn by passing a Hull save. On a success, the effect ends but they take 4 kinetic damage in the process of ripping themselves free. Multiple anchorpoints may restrain the same character, adding +1 Difficulty to the Hull save and +2 kinetic damage inflicted on a successful save for each anchorpoint after the first.<br>An anchorpoint can only attach itself to one target at a time, and you may choose to end this effect on any or all anchorpoint units at the start of your turn as a protocol. Anchorpoint units are special Size 1/2 deployable objects with 10 HP and 5 Evasion. They last until the end of the scene and then deactivate.",
+      "activation": "Protocol"
+    },
+    "image_url": "https://i.imgur.com/8z3WYY3.png",
+    "y_pos": 25
+  },
+  {
+    "id": "fgtsf_sabreur",
+    "license_level": 2,
+    "source": "C&H",
+    "name": "SABREUR",
+    "mechtype": [
+      "Striker"
+    ],
+    "description": "On Suldan, the popularity of the arena runs all the way from the most impoverished socioeconomic strata to the rarefied heights of the planet's self-styled aristocracy. Formal chassis dueling was adopted by the upper class of Suldani society during the Emir's reign in an attempt to further distinguish themselves, with various members of the nobility importing and even commissioning custom chassis designed specifically for dueling purposes. Despite a brief fascination with Smith-Shimano models, interests eventually turned to more local, bespoke designs.<br>Following the revolution, C&H engineers liberated the specifications for one such design in the Sabreur and repurposed it for broader distribution. While the precise battlefield role of such a dueling-oriented design remains somewhat vague, adoption rates have risen significantly since C&H has begun advertising it as “a high-performance chassis for elite pilots,” opting to let matters of strategic deployment and combat doctrine sort themselves out.",
+    "mounts": [
+      "Flex",
+      "Main/Aux"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 8,
+      "evasion": 12,
+      "edef": 6,
+      "heatcap": 4,
+      "repcap": 4,
+      "sensor_range": 10,
+      "tech_attack": -1,
+      "save": 10,
+      "speed": 5,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Reaction Enhancer",
+        "description": "Any number of times per round, whenever an enemy's ranged or melee attack roll is equal to the Sabreur's Evasion, you may force that attack to automatically miss as a reaction. The Sabreur has Immunity to all damage and effects from attacks that miss this way, and they cannot be rerolled."
+      },
+      {
+        "name": "Early Warning System",
+        "description": "The Sabreur takes half damage from failed saves."
+      },
+      {
+        "name": "Riposte",
+        "description": "1/round, whenever a hostile character attacks the Sabreur, until the end of your next turn your next melee attack against that character does +1d6 bonus damage on hit. If the triggering attack misses, you may roll this bonus damage twice and take the highest result."
+      }
+    ],
+    "core_system": {
+      "name": "Archangel Autokinesics",
+      "description": "Many chassis duelists employ purpose-tasked integrated NHP partitions, often referred to as their “second,” to handle various operations in order to allow them to focus their attention more fully upon the finer points of martial honor. This particular iteration, designated ARCHANGEL, employs a synapse-analogue reflex architecture that bypasses conventional permission/denial channels in order to respond to incoming attacks with greatly increased reaction time, pre-calculating evasive maneuvers based on comprehensive kinesic models and threat evaluation patterns, granting pilots a “sixth sense” that allows them to more comprehensively avoid danger.<br>Pushing additional power and architecture permissions into this system is technically possible and greatly boosts reaction/response parameters beyond manufacturer baselines but carries with it the risk of the partition spontaneously developing enhanced cognition. While the results can be undeniably effective, it is strongly recommended that any pilot that does so cycle this system afterwards as soon as possible. C&H reminds its license holders that it accepts no liability for spontaneous NHP enlightenment and associated responsibilities thereof.",
+      "active_name": "Ancillary Battle Consciousness",
+      "active_effect": "For the rest of the scene, the final attack roll for any ranged attack made against you cannot benefit from Accuracy, and you gain the Instinct Edge reaction.",
+      "active_actions": [
+        {
+          "name": "Instinct Edge",
+          "activation": "Reaction",
+          "trigger": "A hostile character misses an attack against you.",
+          "detail": "Move up to your speed towards the triggering character, ignoring engagement and reactions. If you end this movement adjacent to that character, they take 3 AP kinetic damage. This reaction can be taken as many times per round as it is triggered, but each character can only take damage from this ability 1/round."
+        }
+      ],
+      "use": "Encounter",
+      "activation": "Protocol"
+    },
+    "image_url": "https://i.imgur.com/AeWdBkQ.png",
+    "y_pos": 18
+  },
+  {
+    "id": "fgtsf_sagittarius",
+    "license_level": 2,
+    "source": "C&H",
+    "name": "SAGITTARIUS",
+    "mechtype": [
+      "Striker"
+    ],
+    "description": "The earliest Sagittarius designs were makeshift affairs, constructed by the Suldani Independence Front utilizing salvaged materials, including numerous advanced systems along with specialized composite materials used by Arclight TransColonial notable for their lightweight durability and radiation-absorbent properties, creating a distinct, bespoke chassis most commonly associated with the SIF's special operations unit, the Cheshire Cats. The result is a compact and highly elusive design optimized for guerilla warfare and hit-and-run operations.<br>Recent combat analysis and after-action reports of conflicts along the Chiraji Mountain range have identified an increase in Sagittarius-analogue chassis useage as well as a corresponding increase in apparent design standardization, which Arclight TransColonial representatives have used to bolster their claims that Chandrasekhar & Herschel is directly aiding the SIF in their activities following the company's adoption of the Sagittarius as a formal license. C&H has staunchly refuted these allegations, highlighting several key technical differences between the SIF models and their own designs.",
+    "mounts": [
+      "Flex"      
+    ],
+    "stats": {
+      "size": 0.5,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 6,
+      "evasion": 12,
+      "edef": 8,
+      "heatcap": 5,
+      "repcap": 2,
+      "sensor_range": 15,
+      "tech_attack": 0,
+      "save": 10,
+      "speed": 5,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Predator",
+        "description": "The Sagittarius gains +1 Accuracy on all attacks made from Hidden."
+      },
+      {
+        "name": "Stealth Composites",
+        "description": "The Sagittarius has Immunity to Lock On."
+      },
+      {
+        "name": "Sensor Ghost",
+        "description": "Attacks against the Sagittarius that do not have Line of Sight count it as Invisible."
+      }
+    ],
+    "core_system": {
+      "name": "Blackjacket Combat Bow",
+      "description": "One of the challenges facing the SIF during initial development of the Sagittarius was formulating a ballistic weapon system for stealth operations and HVT elimination. Chassis-grade weaponry is notoriously resistant to conventional sound suppression techniques, and advanced sensor systems are highly capable of triangulating incoming weapons fire via accoustics, thermal signatures, and electromagnetic discharge.<br>The eventual solution was a surprisingly archaic one, but one that nonetheless has amply proven its effectiveness in combat. The Blackjacket is a chassis-grade compound bow capable of (relatively) silently launching large, reinforced arrows at velocity sufficient to threaten even armored cavalry. The required draw weight in order to achieve this output necessitates the use of advanced engineering materials such as nanocarbon fiber and arachnosynth weave in order to withstand the stresses of purely mechanical operation at chassis scale without immediately shattering. Even then, the bow also employs a series of additional torque enhancers to maximize power, though overall projectile velocity remains comparatively low next to more conventional armaments. As such, effect on target is regularly facilitated through the use of specialized warheads in order to defeat more advanced defensive measures, with the standard loadout utilizing a contact-triggered piston spike designed to penetrate armor.",
+      "active_name": "Special Reserve",
+      "active_effect": "You shunt reserve power into a series of potent, if unstable, warheads. Gain one use each of the following specialized arrows until the end of the scene:<br><br><i>EMP Capacitor</i><br>The bow deals energy damage, and on hit the target becomes Stunned until the end of its next turn. On a miss, the target becomes Impaired and Slowed until the end of its next turn.<br><br><i>Fuel-Air Explosive</i><br>On Attack: Instead of dealing damage normally, create a Blast 2 area of volatile fuel within Range 10. As a free action you may detonate this fuel, and all characters within the area must pass a Hull save or take 2d6 explosive damage and be knocked Prone. On a success, they take half damage only. Each turn you do not detonate the fuel it continues to saturate the area. At the start of your next turn after attacking, increase the area to Blast 3. At the start of the turn after that, the detonation's damage becomes 3d6. This fuel dissipates at the end of the scene.<br><br><i>Seeker Flock</i><br> The bow gains Reliable 4. On hit or miss, choose up to three additional targets within range and deal 4 kinetic damage to them.",
+      "activation": "Protocol",
+      "integrated": [
+        "fgtsmw_sagittarius_integrated"
+      ]
+    },
+    "image_url": "https://i.imgur.com/5oobzyr.png",
+    "y_pos": 18 
+  },
+  {
+    "id": "fgtsf_kangto",
+    "license_level": 0,
+    "name": "KANGTO",
+    "source": "GMS",
+    "mechtype": [
+        "Balanced"
+    ],
+    "description": "This frame may only be used by pilots with the Kangto Endochassis core bonus.",
+    "mounts": [
+        "Flex"
+    ],
+    "stats": {
+      "size": 0.5,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 6,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 5,
+      "repcap": 2,
+      "sensor_range": 8,
+      "tech_attack": 0,
+      "save": 10,
+      "speed": 4,
+      "sp": 4
+    },
+    "traits": [
+      {
+        "name": "Inheritance",
+        "description": "Choose one trait from your original mech and transfer it to the Kangto when this mech is first deployed. This now counts as that trait for the Kangto until the next Full Repair."
+      },
+      {
+        "name": "Replaceable Parts",
+        "description": "While resting, the Kangto can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+      }
+    ],
+    "core_system": {
+      "name": "Auxiliary Coldcore Reactor",
+      "active_name": "Emergency Power",
+      "active_effect": "Boost as a free action. This action is <b>Efficient,</b> and refunds 1 Core Power at the end of any scene in which it's used.",
+      "activation": "Free Action"
+    },
+    "data_type": "frame",
+    "aptitude": {},
+    "image_url": "https://compcon-image-assets.s3.amazonaws.com/frames/nodata.png"
+  },
+  {
+    "id": "fgtsf_efreet",
+    "license_level": 2,
+    "name": "EFREET",
+    "source": "HORUS",
+    "mechtype": [
+        "Defender","Controller"
+    ],
+    "description": "The suspected origin of the Efreet PG can be traced back to the Taiko-Fujikoshi Sistema incident, during which the corporation's engineering R&D division suffered a sudden catastrophic event sufficient to garner UIB attention. It remains undetermined whether or not Taiko-Fujikoshi Sistema was knowingly working in conjunction with Horus or whether Horus elements had infiltrated the corporation and covertly steered its efforts, and the disappearance of all R&D staff present at the time of the incident along with 0.38 cubic kilometers of the surrounding area at ground zero have hampered conclusive forensic investigations.<br>Sufficient materiel was recovered for Union scientists to deduce the function of the previously unknown PG, which operates as a platform for spatial manipulation technology. The effect is not blink-based teleportation as it is presently understood and appears to operate on different principles altogether, similar to those identified in the Minotaur PG. The result is a hypermobile close-protection and rapid response chassis which operates in stark defiance of conventional maneuverability doctrines. Presently the Efreet is classified as an unknown threat level PG, and details pertaining to Taiko-Fujikoshi Sistema are currently classified under VERMILLION CASCADE clearance level.",
+    "mounts": [
+        "Flex",
+        "Main"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 2,
+      "hp": 8,
+      "evasion": 7,
+      "edef": 10,
+      "heatcap": 6,
+      "repcap": 4,
+      "sensor_range": 5,
+      "tech_attack": 1,
+      "save": 10,
+      "speed": 4,
+      "sp": 7
+    },
+    "traits": [
+      {
+        "name": "Foldstep",
+        "description": "Whenever the Efreet Boosts, it may instead swap places with an allied character within Range 3, teleporting both of them."
+      },
+      {
+        "name": "Unbounded",
+        "description": "1/round, whenever the Efreet moves off the edge of the battlefield map it may \"wrap around\" to the opposite side as if they were connected. Other characters cannot follow or be carried by you during this movement, and you must end any such movement fully on one side of the map."
+      }
+      ,{
+        "name": "Spatial Distortion",
+        "description": "The Efreet treats all targets outside of Sensors as having soft cover."
+      }
+    ],
+    "core_system": {
+      "name": "Co-Location Matrix",
+      "description": "'We are no longer living in a world of rubber sheets and pencils being pushed through a folded piece of paper. Our understanding of space-time has grown, yes, and with this understanding new mysteries have arisen to take the place of the old. Now we have been given answers without the questions that precede them, and the responsibility falls upon us to pull back the veil that separates knowing from understanding. For all of human history our model of the universe has been that effect inexorably follows cause, but if we are to do more with this fragmentary knowledge that we have been gifted then we require a new way of looking at the world.' <br> --Dr. Maria Sejwani, keynote speech, Union Paracausal Sciences Symposium <br> (3135u)",
+      "active_name": "Omnipresence",
+      "active_effect": "For the rest of the scene, every space of movement you make counts all free spaces adjacent to all mechs within Sensors, allied or hostile, as valid destinations. Moving this way counts as teleportation, and this can be repeated for every space of movement you make. Each time you teleport next to an allied character using this ability, you may give them a Co-Location Mark, and you may have any number of active Co-Location Marks at a time.",
+      "use": "Encounter",        
+      "passive_name": "Co-Location Matrix",
+      "passive_effect": "As a protocol you may choose an allied character within Sensors and give them a Co-Location Mark. You may only have a single Co-Location Mark active at a time, and applying your Mark to a different character removes it from the first. Unused marks also disappear at the end of the scene. You gain the Anomalous Interdiction reaction.",
+      "passive_actions":[
+        {
+          "name": "Co-Location Mark",
+          "activation": "Protocol",
+          "detail": "Choose an allied character within Sensors and give them a Co-Location Mark."
+        },
+        {
+          "name": "Anomalous Interdiction",
+          "activation": "Reaction",
+          "trigger": "A character with your Co-Location Mark is hit by a ranged or melee attack. You do not require line of sight to this character.",
+          "detail": "Consume that character's Mark and choose one of the following effects. You may also teleport to a free space adjacent to that character before or after the chosen effect:<br><ul><li>The target gains Resistance to all damage from the triggering attack, but you take half of the damage your target takes before calculating Armor and Resistance.</li><li>You may target the attacker with Overwatch.</li>"
+        }
+      ],
+      "activation": "Protocol"
+    },
+    "image_url": "https://i.imgur.com/Bf8mtma.png",
+    "y_pos": 30
+  },
+  {
+    "id": "fgtsf_comet",
+    "license_level": 2,
+    "source": "SSC",
+    "name": "COMET",
+    "mechtype": [
+      "Striker", "Support"
+    ], 
+    "description": "Originally conceived as an aerial multirole combat chassis suited for high-speed interception and close-support missions, the Comet became the focal point for an SSC self-guided weapons development initiative due to its numerous hardpoints and advanced electronics systems. The current iteration of the Comet is categorized as a \"distributed gunship network,\" acting as a central command-and-control hub for squadrons of autonomous weaponized drone platforms. This paradigm allows for both greater effective weapon coverage in contested battlefields as well as enabling Comet pilots to dedicate more of their focus to the task of flying, utilizing the chassis' exceptional maneuverability to avoid incoming fire while their networked drone swarms seek out and engage hostile targets independently.",
+    "mounts": [
+      "Flex",
+      "Main/Aux",
+      "Main/Aux"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 8,
+      "evasion": 12,
+      "edef": 8,
+      "heatcap": 5,
+      "repcap": 3,
+      "sensor_range": 10,
+      "tech_attack": 1,
+      "save": 10,
+      "speed": 5,
+      "sp": 5
+    },
+    "traits": [
+      {
+        "name": "Integrated Flight Systems",
+        "description": "The Comet can fly when it moves."
+      },
+      {
+        "name": "Thrust Vectoring",
+        "description": "1/round, before or after the Comet Boosts it may move 2 spaces in any direction. This movement ignores engagement and doesn't provoke reactions."
+      },
+      {
+        "name": "Hunter-Seeker Network",
+        "description": "The Comet's Nexus weapons gain Reliable based on weapon size (Auxiliary: 1, Main: 2, Heavy or larger: 3), or if they already have Reliable they add +1 to their value, and can still be used to make ranged attacks when Jammed."
+      },
+      {
+        "name": "Fragile",
+        "description": "The Comet takes +1 Difficulty to all Hull saves and checks."
+      }
+    ],
+    "core_system": {
+      "name": "NEWACS",
+      "description": "Part of SSC's ongoing push into expanded tactical and strategic dronespace dominance, the Nexus Enhanced Warning and Control System takes capabilities typically reserved for large-scale command and control aircraft and decentralizes them across a chassis-integrated drone control framework. By marrying this system to a more nimble platform, commanders are able to rely upon chassis such as the Comet to provide superior battlespace management and airborne ground surveillance capabilities without the same vulnerabilities to counterattack that more traditional C2BM aircraft face during high-threat operations.",
+      "active_name": "Sky Eye",
+      "active_effect": "For the rest of the scene, at the end of each of your turns as a free action you may Bolster all allied characters within Sensors and line of sight that you are at a higher elevation than, and Lock On to all hostile characters within Sensors and line of sight that you are at a higher elevation than.",
+      "activation": "Protocol"
+    },
+    "image_url": "https://i.imgur.com/7iUY5ln.png",
+    "y_pos": 44
+  },
+  {
+    "id": "fgtsf_worden",
+    "license_level": 2,
+    "source": "IPS-N",
+    "name": "WORDEN",
+    "mechtype": ["Artillery"],
+    "description": "A notable evolutionary bridge between the use of modified industrial frames and more recent purpose-built military-grade chassis such as the Drake, the Worden is a mid- to long-range direct fire support platform designed to serve on terrestrial theaters first and foremost, a rarity at the time for IPS-N. The development of the Worden was plagued by difficulty as engineers struggled to meet competing requirements for firepower, durability, and size, and the initial prototypes proved to be too sluggish and prone to mechanical failure. Frustrated by the constraints of operating within a gravity well, the decision was ultimately made to remove most of the armor from the frame along with increasing the overall size of the platform to allow for greater stability when mounting heavy weaponry. Despite its rocky origins and somewhat dated design, the Worden enjoys a favorable reputation among those who serve alongside it. A mainstay of Union Auxiliary forces an colonial militias, the chassis is known for being simple to operate, easy to repair, an capable of laying down withering volumes of fire for extended durations.",
+    "mounts": [
+      "Heavy",
+      "Main",
+      "Flex"
+    ],
+    "stats": {
+      "size": 2,
+      "structure": 4,
+      "stress": 4,
+      "armor": 1,
+      "hp": 8,
+      "edef": 8,
+      "evasion":7 ,
+      "heatcap": 5,
+      "repcap": 6,
+      "save": 10,
+      "sensor_range": 15,
+      "sp": 5,
+      "speed":3 ,
+      "tech_attack": -1
+    },
+    "traits": [
+      {
+        "name": "Walking Fire",
+        "description": "1/round, on a critical hit with a Cannon, the Worden may choose another character within Range 3 and line of sight of that target. Deal 1d6 damage of that weapon's type to that character, and they become Impaired until the end of their next turn."
+      },
+      {
+        "name": "Gun Shield",
+        "description": "Whenever the Worden Barrages, ranged and melee attacks against it are made with +1 Difficulty until the end of its next turn."
+      },
+      {
+        "name": "Barrel Insulation",
+        "description": "The Worden ignores the first point of heat it generates from Overkill each turn."
+      },
+      {
+        "name": "Exposed Reactor",
+        "description": "The Worden receives +1 Difficulty on Engineering checks and saves."
+      }
+    ],
+    "core_system": {
+      "name": "Fire Control Override",
+      "description": "Dissatisfied with the results of early prototype testing and facing mounting pressure to deliver results, IPS-N engineers hastily conceived of a novel system to allow pilots to manually bypass the chassis' fire control safety limiters and burst timing regulators in an attempt to increase the Worden's effective firepower without further compromising its already tenuous power-to-weight ratio. The result was surprisingly effective but predictably disastrous, with several noted instances of test frames suffering cascading system failures leading to runaway meltdowns during live-fire exercises and costing test pilots their lives. Ultimately the Worden underwent significant redesign, but the temperamental fire control modifications were removed from the finalized production license until substantial client research and hardware feedback data indicated that many pilots were frequently employing non-standard versions of these modifications as field upgrades despite the risks involved. As a result, IPS-N now offers two versions of the license, the Worden/J-Model which comes with the modifications disabled, and the Worden/S-Model which allows for manual override.",
+      "active_name": "Disengage Limiters",
+      "active_effect": "For the rest of the scene you may no longer Skirmish during your turn, but when you Barrage you may attack with three weapons or with one Superheavy weapon and one other weapon, and you may Barrage as a full action and take another quick action during your turn as well. 1/round you may also Barrage as a free action, ignoring Loading on all weapons, but you take 1 stress damage immediately afterwards which cannot be prevented by any means.",
+      "use": "Encounter",
+      "activation": "Protocol"
+    },
+    "image_url": "https://i.imgur.com/UBrzCkS.png",
+    "y_pos": 22
+  },
+  {
+    "id": "fgtsf_agrippa",
+    "license_level": 2,
+    "source": "HA",
+    "name": "AGRIPPA",
+    "mechtype": ["Support"],
+    "description": "The Agrippa, a sister design to the Iskander, is a combat engineering chassis built to support allied forces by constructing and reinforcing fortified emplacements, conducting salvage and repair operations, and facilitating rapid troop and logistics transport across uneven or unstable terrain. Well armored but only lightly armed, the Agrippa is more than just another weapon in the Armory's arsenal but a symbol of its commitment to building better worlds for the citizens under its purview, and it is just as commonly seen on distant colony worlds and working within disaster areas as it is on the battlefield, assisting with construction, infrastructure repair, search-and-rescue, and security duties. Despite this, the Agrippa remains a military chassis first and foremost; for those who oppose the Armory, it is instead a symbol of relentless implacability, enabling Legionnaires to cross cut bridges and minefields, swiftly returning damaged chassis to fighting order, and reinforcing defensive positions into unassailable fortresses. The Agrippa is equipped with a heavy dorsal-mounted mass driver capable of launching a specially prepared field-deployable emplacement systems at a distance as well as a pairlinked PACKMULE, a semi-autonomous utility drone designed to multiply a single pilot's effective response coverage during high-intensity combat scenarios.",
+    "mounts": [
+      "Main/Aux"
+    ],
+    "stats": {
+      "size": 2,
+      "structure": 4,
+      "stress": 4,
+      "armor": 2,
+      "hp": 8,
+      "edef": 10,
+      "evasion": 6,
+      "heatcap": 7,
+      "repcap": 6,
+      "save": 11,
+      "sensor_range": 10,
+      "sp": 8,
+      "speed": 3,
+      "tech_attack": 0
+    },
+    "traits": [
+      {
+        "name": "Field Repairs",
+        "description": "When you Stabilize the Agrippa, it can spend 1 Repair to repair an adjacent allied character's destroyed weapon or system."
+      },
+      {
+        "name": "Guardian",
+        "description": "Allied characters can use the Agrippa for hard cover."
+      },
+      {
+        "name": "Mass Driver",
+        "description": "1/round, when the Agrippa uses a Deployable system it can place that system in a free open space within Range 10 and line of sight instead of placing it normally."
+      }
+  ],
+    "core_system": {
+      "name": "PACKMULE Utility Drone",
+      "description": "The Armory's PACKMULE mass conveyor drone system is a modular cargo hauler platform often used by rear-echelon Legionnaires to streamline logistics supply operations and materiel distribution, but it also sees use by frontline troops as a multipurpose, all-terrain squad support system for both infantry- and chassis-tier units alike. Mass produced and distributed to Purview forces wherever they may find themselves deployed, the multipurpose comp/con-enabled utility drone comes equipped with a variety of tools and hardware/firmware package options, and can be assigned to assist with tasks such as triage, spectral data analysis, explosive ordnance disposal, hardware diagnostics, communications relay, and combat engineering. PACKMULE drones are also equipped with retractable high-test ballistic armor panels and programmed with tactical responses for intelligent defilade positioning and critical threat interception. Attrition rates among units involved in active combat tend to be correspondingly high, necessitating frequent reprint and resupply.<br>A recent addition to the baseline PACKMULE model is the incorporation of the Journeyman repair-swarm system as a standardized platform upgrade, having completed prototype testing and being approved for general field use. Journeyman represents the Armory's latest advance in semi-autonomous hive/swarm heuristics and intelligent battlefield triage, utilizing a fleet of several dozen self-directed repair drones launched from a central bay. Once deployed, these drones seek out units operating on allied tactical networks and begin effecting emergency repairs independently from controller input, allowing pilots to focus on more complex tasks or threat neutralization as necessary.",
+      "active_name": "Rapid Reconstruction",
+      "active_effect": "If your PACKMULE drone is destroyed, immediately repair it and return it to full HP. For the rest of the scene, your drone gains Resistance to all damage, heat, and burn. As a quick action, you may direct a reconstructor swarm from the PACKMULE to rapidly administer field repairs to nearby allies.",
+      "activation": "Protocol",
+      "active_actions":[{
+        "name": "Reconstructor Swarm",
+        "activation": "Quick",
+        "detail": "Choose a single allied character within Range 3 of the drone and spend 1 Repair. That character may restore their HP to full, clear all burn, and clear a condition that wasn't caused by their own systems, talents, etc."
+      }],
+      "passive_name": "PACKMULE Utility Drone", 
+      "passive_effect": "Your mech comes equipped with a versatile utility drone that accompanies you. The drone has Speed 5 and shares your Evasion, E-Defense, and Armor. It can move independently on your turn, but can't take any other actions. If you can fly or teleport, it can too. If the drone is within Sensors you may recall it as a quick action, docking it with your mech where it cannot be targeted. You may redeploy it to a space within Sensors as a quick action. When you rest or perform a Full Repair, your drone regains all HP and is automatically repaired if it was destroyed.",
+      "deployables": [{
+        "name": "PACKMULE Drone",
+        "type": "Drone",
+        "size": 0.5,
+        "hp": "10 + {grit}",
+        "speed": 5,
+        "detail": "The PACKMULE has the following effects: <ul><li>Whenever you Bolster an allied character, you may choose an additional allied character who is adjacent to the drone to also receive the benefits.</li><li>When you Stabilize, you may choose an allied character who is adjacent to the drone and clear a condition that wasn't caused by their own systems, talents, etc.</li><li>As a protocol you may order the drone to deploy its ballistic panels. It becomes Immobilized and gains Immunity to all involuntary movement while this is active, and unfolds into a Size 1 emplacement 2 spaces long that counts as hard cover, oriented however you like within a free space. You may end this effect as a protocol.</li><li>When you print this mech, choose a non-combat utility modification to equip to your drone. If the GM agrees that this modification would help with either a pilot or mech skill check, you gain +1 Accuracy for that roll. You may change out this modification whenever you perform a Full Repair.</li></ul>",
+        "recall": "Quick",
+        "redeploy": "Quick"
+      }]
+    },
+    "image_url": "https://i.imgur.com/V9zwmLK.png",
+    "y_pos": 28
+  },
+  {
+    "id": "fgtsf_nelson_alt_flight_type",
+    "variant": "NELSON",
+    "source": "IPS-N",
+    "name": "NELSON FLIGHT TYPE",
+    "mechtype": [
+      "Striker"
+    ],
+    "y_pos": 25,
+    "license_level": 2,
+    "description": "<p>This variant can be taken at rank II of the Nelson license instead of the base FRAME.</p><p>One of the most commonly requisitioned enhancements to IPS-N's Nelson chassis, from novice pilots and veterans alike, is atmospheric flight capability. The difficulties inherent in chassis-tier flight are considerable given the unsuitability of most designs for airborne operations, but the Nelson's comparatively lightweight frame, robust kinetic reinforcement, and Perpetual Momentum Drive all make it uniquely suited to handling the challenges of flight.</p><p>Because of this, IPS-N has obtained a wealth of feedback regarding such modifications in action, and has recently begun limited rollout of a dedicated high-performance Nelson Flight Type variant, with plans to expand distribution in the future if successfully adopted. Thus far initial results are promising, with the chassis' PMD integrated into the frame's flight systems, providing the Nelson FT with greater straight line speed and evasive maneuverability than the base model is ordinarily capable of. Footage of Albatross pilots utilizing the design in daring, high-speed aerial melee combat has generated a massive surge of interest, and the demand for license contracts may result in a generalized release sooner than anticipated.</p>",
+    "mounts": [
+      "Flex",
+      "Main/Aux"
+    ],
+    "stats": {
+      "size": 1,
+      "stress": 4,
+      "structure": 4,
+      "armor": 0,
+      "hp": 8,
+      "evasion": 12,
+      "edef": 7,
+      "heatcap": 6,
+      "repcap": 4,
+      "sensor_range": 5,
+      "tech_attack": 0,
+      "save": 10,
+      "speed": 6,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Integrated Flight Systems",
+        "description": "The Nelson can fly when it moves."
+      },
+      {
+        "name": "Jet Lancer",
+        "description": "1/round, after you move 6 or more spaces in a straight line, the Nelson's next melee attack deals +1d6 bonus damage on hit and gains Knockback 2."
+      },
+      {
+        "name": "Reactive Verniers",
+        "description": "While flying, any time the Nelson is hit by an attack, it may move 2 spaces in any direction. This movement ignores engagement and doesn't provoke reactions."
+      }
+    ],
+    "core_system": {
+      "name": "Linear Microburst Drive",
+      "active_name": "Drive Burst",
+      "active_effect": "Spinning up your drives, you fly your Speed in a straight line, dealing 1d6 kinetic damage to all hostile characters below or adjacent to the path taken. This movement ignores engagement, doesn't provoke reactions, and can pass through other characters. You may choose a character you pass through or adjacent to during this and pull them to the end of your movement. If they collide with a wall, mech, or other obstruction that would cause them to stop moving, they must pass a Hull save or be knocked Prone. Once this movement is complete, you may then move an additional 3 spaces in the same direction if you wish, continuing to ignore engagement, reactions, and other characters. This action is <b>Efficient,</b> and refunds 1 Core Power at the end of any scene in which it's used.",
+      "description": "While the base model Nelson employs IPS-N's Perpetual Momentum Drive to facilitate high-speed lateral movement on demand, the Nelson Flight Type utilizes the PMD's fractional nearlight spooling capabilities much like a naval \"microburst\" drive, storing and then shunting energy directly into drive systems to briefly achieve moments of sudden and dramatic linear acceleration. Like the base Nelson chassis, the Flight Type configuration's Linear Microburst Drive requires significant reinforcement and compensation in order to avoid catastrophic frame failure or pilot injury during such maneuvers, and extensive training in terrestrial atmospheric flight operations is recommended to avoid fatal collisions when engaging the drive.",
+      "activation": "Full Action"
+    },
+    "data_type": "frame",
+    "aptitude": {},
+    "image_url": "https://compcon-image-assets.s3.amazonaws.com/frames/nodata.png"
+  },
+  {
+    "id": "fgtsf_deaths_head_alt_reaper_dart",
+    "variant": "DEATH’S HEAD",
+    "source": "SSC",
+    "name": "REAPER DART",
+    "mechtype": [
+      "Artillery"
+    ],
+    "y_pos": 25,
+    "license_level": 2,
+    "description": "<p>This variant can be taken at rank II of the Death's Head license instead of the base FRAME.</p><p>Following developmental feedback and combat data analysis of the Death's Head sniper/fire support platform, SSC engineers began laying the groundwork for future line offerings based on the initial design. Though fast and maneuverable, it was noted that the Death's Head's performance and TTK metrics notably declined when tasked with missions in denser urban areas with obstructed sightlines necessitating frequent repositioning. While arguably a deployment issue rather than any flaw inherent to the design itself, demand remained consistent for a precision fire-support chassis capable of operating alongside other units while on the move.</p><p>The Reaper Dart, known during prototype trials as the Death's Head High-Mobility/Designated Marksman Variant, is an iteration of its parent chassis designed to address these demands. Less technologically and neurologically demanding than its predecessor, the Death's Head's suite of neural sync targeting systems has been exchanged for a frame-wide array of computer-controlled stabilization enhancements, allowing it to fire on the move without sacrificing accuracy. This enables pilots to engage in rapid maneuvers across a variety of environments with no noticeable loss in combat uptime.</p>",
+    "mounts": [
+      "Main/Aux",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 1,
+      "stress": 4,
+      "structure": 4,
+      "armor": 0,
+      "hp": 8,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 5,
+      "repcap": 3,
+      "sensor_range": 20,
+      "tech_attack": 0,
+      "save": 10,
+      "speed": 5,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Stabilized Platform",
+        "description": "The Reaper Dart ignores the Ordnance tag with Rifles. Rifles without Ordnance instead gain Reliable based on weapon size (Auxiliary: 1, Main: 2, Heavy or larger: 3), or if they already have Reliable they add +1 to their value."
+      },
+      {
+        "name": "Sharpshooter",
+        "description": "1/round, the Reaper Dart may reroll a ranged attack. The target cannot be in hard cover, and you must keep the second result."
+      }
+    ],
+    "core_system": {
+      "name": "Ballistic Superiority",
+      "active_name": "Perfect Shot",
+      "active_effect": "Your next attack with a rifle against a character with the Lock On condition gains Reliable 3 (if it already has Reliable, increase its value to 3 if lower) and its damage can't be reduced in any way, but you must consume the Lock On during the attack. On hit, choose one of the following effects:<ul><li>Your target is Shredded until the end of their next turn.</li><li>Your target is knocked back 3 spaces in a direction of your choice and knocked Prone.</li><li>Your target loses Hidden and Invisible, cannot gain those statuses, and only has line of sight to adjacent spaces until the end of their next turn.</li></ul>On a miss, your target is Impaired until the end of their next turn. This action is <b>Efficient,</b> and refunds 1 Core Power at the end of any scene in which it's used.",
+      "description": "While the Death's Head's precognitive targeting system boasts undeniably impressive performance, irregularities in neural bridge compatibility combined with demanding calibration and maintenance requirements have led SSC engineers to explore less taxing alternatives for long-range precision fire augmentations compatible with a broader selection of pilots. A combination of cutting-edge comp/con assisted targeting and custom high-power, high-velocity ammunition is capable of delivering enhanced single-shot kill performance as needed.",
+      "activation": "Protocol"
+    },
+    "data_type": "frame",
+    "aptitude": {},
+    "image_url": "https://i.imgur.com/vT4QD1x.png"
+  },
+  {
+    "id": "fgtsf_hydra_alt_chimera",
+    "variant": "HYDRA",
+    "license_level": 2,
+    "source": "HORUS",
+    "name": "CHIMERA",
+    "mechtype": ["Striker", "Controller"],
+    "description": "<p>This variant can be taken at rank II of the Hydra license instead of the base FRAME.</p><p>The very concept of developmental offshoots becomes difficult to categorize in regard to HORUS chassis classification, pattern-group design naturally lending itself to a high degree of non-standard engineering, but there are nonetheless instances of particularly noteworthy variants which become widely enough disseminated and adopted to be considered a new PG classification unto themselves.</p><p>The Chimera is one such instance, easily identified as a variant of the Hydra based on its disarticulation-capable frame, though unlike its progenitor the Chimera's base components trend towards larger, more heavily equipped units. Serving in more of a direct assault and aggressive area-denial role compared to the Hydra's broad-spectrum battlefield coverage, Chimeras have been most regularly identified in service with militant HORUS cells, but have also begun to infrequently appear across other battlefields as well, typically operating as a part of irregular strike forces, partisan groups, and techgnostic/transhumanist cults.</p>",
+    "mounts": [
+      "Main",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 8,
+      "edef": 10,
+      "evasion": 7,
+      "heatcap": 5,
+      "repcap": 4,
+      "save": 11,
+      "sensor_range": 8,
+      "sp": 8,
+      "speed": 5,
+      "tech_attack": 1
+    },
+    "traits": [
+      {
+        "name": "Aggressive Heuristics",
+        "description": "The Chimera gains +1 Accuracy on all attacks with Nexus weapons against targets within Range 2 of one or more of its Drones."
+      },
+      {
+        "name": "Pack Guidance",
+        "description": "Whenever the Chimera Locks On to or makes a tech attack against a hostile character, you may move up to two Drones you control 2 spaces in any direction."
+      }
+  ],
+    "core_system": {
+      "name": "TALON Tripartition",
+      "description": "<p>A derivation of standard OROCHI NHP architecture, either deliberately engineered or the result of divergent evolutionary development, TALON is the codename for the presumed frame-integrated NHP within the Chimera variant chassis codebase. Behaviorally, TALON operates along similar lines to OROCHI, though with a much more aggressive, predatory bearing, analogous to pack hunter behavior. TALON sub-units are built around mech-tier weaponry and operate either independently from the primary unit or as autonomous hardpoints when docked with the main chassis.</p><p>Though field intelligence on the PG is limited, what observations exist along with intercepted and recovered communication logs suggest that long-term Chimera pilots may begin to exhibit similar aggressive characteristics themselves, possibly influenced by extended duration ontologic bridging and neurosyncronization.</p>",
+      "active_name": "Preystalker",
+      "active_effect": "Choose one of your deployed TALON drones within Sensors and swap places with it, both you and the drone teleporting to the other's position, and you may then attack with a deployed TALON drone of your choice. This action is <b>Efficient,</b> and refunds 1 Core Power at the end of any scene in which it's used.",
+      "activation": "Quick Action",
+      "integrated": [
+        "fgtsmw_chimera_integrated"
+      ],
+      "passive_name": "TALON Drones", 
+      "passive_effect": "<p>Your mech is accompanied by a pair of armed companion drones. Your TALON drones share your Evasion, E-Defense, and Speed. They can move independently on your turn, but can't take any other actions. If you can fly or teleport, they can too. If your TALON drones are within Sensors, you may recall one or both of them as a quick action, integrating them into your mech's body where they cannot be targeted. You may redeploy one or both of them to a space within Sensors as a quick action. When you rest or perform a Full Repair, your drones regain all HP and are automatically repaired if they were destroyed.</p><p>At the start of each scene, you may choose to have one or both TALON drones deployed or integrated into your mech.</p>",
+      "deployables": [{
+        "name": "TALON Drone",
+        "type": "Drone",
+        "size": 0.5,
+        "hp": "10 + {grit}",
+        "detail": "Each TALON drone is capable of being used to attack as though they were weapons with the following profile. Measure Range, Threat, engagement, and line of sight from the corresponding TALON drone whenever it is used to make attacks and for Overwatch. These weapons count as integrated mounts. While integrated into your mech's body after being recalled, you may use these weapons as though they were equipped to your mech.",
+        "recall": "Quick",
+        "redeploy": "Quick"
+      }]
+    },
+    "image_url": "https://compcon-image-assets.s3.amazonaws.com/frames/nodata.png",
+    "data_type": "frame",
+    "aptitude": {},
+    "y_pos": 25
+  },
+  {
+    "id": "fgtsf_saladin_alt_fearkiller",
+    "variant": "SALADIN",
+    "source": "HA",
+    "name": "SALADIN \"FEARKILLER\"",
+    "mechtype": ["Defender"],
+    "y_pos": 25,
+    "license_level": 2,
+    "description": "<p>This variant can be taken at rank II of the Saladin license instead of the base FRAME.</p><p>The original model Saladin chassis christened \"Fearkiller\" by John Creighton Harrison I holds a mythic place in the annals of the Armory's history, with to-scale reconstructions found in museums across numerous worlds within the Purview and the remnants of the original chassis prominently displayed in the Institute of Galactic History on Ras Shamra. While the Sherman is the Armory's most prolific frame, the Saladin is perhaps its most iconic.</p><p>The newest Saladin variant, named after that iconic chassis, is the latest product of the Think Tank's continued research into applied tachyon field systems. Trading substructural reinforcement for expanded power generation, variable frame configuration, and additional hardpoints, the Saladin \"Fearkiller\" is designed for \"aggressive defense\" actions, safeguarding assault units undertaking critical spearpoint missions or escorting VIPs across hot zones where hostile contact is assured. Utilized extensively in pacification actions on New Madrassa, the \"Fearkiller\" has only recently been cleared for licensing outside of Armory space, and its presence elsewhere remains an uncommon sight for now.</p>",
+    "mounts": [
+      "Main",
+      "Flex"
+    ],
+    "stats": {
+      "size": 2,
+      "stress": 4,
+      "structure": 4,
+      "armor": 1,
+      "hp": 12,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 8,
+      "repcap": 4,
+      "sensor_range": 5,
+      "tech_attack": 0,
+      "save": 10,
+      "speed": 3,
+      "sp": 8
+    },
+    "traits": [
+      {
+        "name": "Indomitable Presence",
+        "description": "When you first print the Saladin and whenever you perform a Full Repair, you may set its Size to either 2 or 3."
+      },
+      {
+        "name": "Reactive Defense Matrix",
+        "description": "The Saladin can take reactions as normal when Stunned or after Bracing."
+      },
+      {
+        "name": "Guardian",
+        "description": "Adjacent allied characters can use the Saladin for hard cover."
+      }
+    ],
+    "core_system": {
+      "name": "Intercessor Array",
+      "description": "<p>The integrated projector array mounted to the \"Fearkiller\" is the latest in Harrison Armory's ongoing developments in the field of applied tachyon technologies. Unlike a standard Tachyon Loop which can only be maintained for brief durations at exceptional power draw, this new generation model is designed to project and maintain a stable, ongoing bidirectional barrier via direct point-to-point transmission. Once a link is established, the loop is capable of sustaining itself, automatically modulating transmission output to account for fluctuations in field integrity. Presently, only a single stable link can be maintained at a time, and the system requires ongoing proximity to the transmission source in order to maintain effective coherence, but Armory engineers are confident that these shortcomings can be addressed in time.</p><p>While a conventional Tachyon Loop disperses intercepted kinetic/energetic force across the barrier, the Intercessor Array is capable of recirculating accumulated energy through the loop itself, giving skilled operators the ability to atemporally \"slingshot\" themselves and their charges along the transmission channel or to shunt excess power directly into weapons systems.</p>",
+      "active_name": "Tachyon Surge",
+      "active_effect": "<b>Trigger:</b> A linked character within Sensors is hit by an attack and damage has been rolled.<br><b>Effect:</b> That character gains Resistance to all damage, heat, and burn from the triggering attack, and all other attacks against them are made at +1 Difficulty until the end of their next turn. You may also pull them adjacent to you by the most direct route possible as part of this effect. Then choose either that character or yourself to become empowered by absorbed energy. The chosen character's next ranged or melee attack cannot have its damage reduced in any way. Any effects triggered from spending CP can be used as well as a part of this reaction, even if they could normally only be taken during your own turn. This action is <b>Efficient,</b> and refunds 1 Core Power at the end of any scene in which it's used.",
+      "use": "Encounter",        
+      "passive_name": "Intercessor Array",
+      "passive_effect": "As a quick action, choose an allied character within Sensors and link them to your protective systems. You may take a second reaction each turn, but that reaction may only be used if the trigger is a hostile action or effect made against a linked character within Sensors. Only a single character can be linked this way at a time, and linking a new character causes the effect to end on the first one. Otherwise, it lasts until the end of the scene. You gain the Bidirectional Barrier reaction.<br><br>Each time you Activate a system with the Shield tag or take a reaction triggered by a hostile action or effect made against a linked character, you may have the link pull you 2 spaces towards that character by the most direct route possible as part of that action.",
+      "passive_actions":[
+        {
+          "name": "Intercessor Array",
+          "activation": "Quick Action",
+          "detail": "Choose an allied character within Sensors and link them to your protective systems."
+        },
+        {
+          "name": "Bidirectional Barrier",
+          "activation": "Reaction",
+          "frequency": "2/round",
+          "trigger": "You or a linked character within Sensors are targeted by an attack.",
+          "detail": "Add +1 Difficulty to that attack roll. This reaction can be taken twice per round, once for yourself and once for a linked character."
+        }
+      ],
+      "activation": "Reaction"
+    },
+    "data_type": "frame",
+    "aptitude": {},
+    "image_url": "https://compcon-image-assets.s3.amazonaws.com/frames/nodata.png"
+  },
+  {
+    "id": "fgtsf_kalista_alt_gajasura",
+    "variant": "KALISTA",
+    "license_level": 2,
+    "source": "C&H",
+    "name": "GAJASURA",
+    "mechtype": ["Striker", "Defender"],
+    "description": "<p>This variant can be taken at rank II of the Kalista license instead of the base FRAME.</p><p>Known as the \"Red-Eyed Demon,\" Pranesh Vasa was one of the most renowned and celebrated arena fighters of the Suldani pre-Emirate era. The only son of a municipal administrator, Vasa had an unassuming upbringing but felt unfulfilled with the life laid out before him. This discontentment continued to grow for years until, in a snap decision, he abandoned his job, sold off his possessions, and signed on as a gladiator, whereupon he discovered that despite lacking any previous experience he nonetheless possessed a natural gift for fighting. In later interviews, he would go on to describe this turn of events as \"finally finding himself on the arena floor.\"</p><p>Vasa's personal chassis, Gajasura, was emblematic of his fighting style, as relentless and brutal as he was humble and plainspoken outside of the arena. Built to weather blows with overlapping armor plates and rigged to shunt additional power to systems during catastrophic near-failure conditions, Gajasura could outlast and out-trade virtually any opponent, and during his career Vasa enhanced it further with a variety of frame-integrated weapons to suit his personal close-combat fighting style. This design would go on to inspire numerous others, including those which would form the foundation of Chandrasekhar & Herschel's Kalista heavy assault chassis.</p><p>In the aftermath of Vasa's death during what would be his final bout, both his body and his chassis went missing and were never recovered, a mystery that has only served to heighten his legend since then. While his body's whereabouts continue to remain unknown, the recent rediscovery of Gajasura in largely intact condition is an incredible moment in the preservation of Suldani cultural history.</p><p>",
+    "mounts": [
+      "Main",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 2,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 12,
+      "edef": 6,
+      "evasion": 6,
+      "heatcap": 5,
+      "repcap": 8,
+      "save": 10,
+      "sensor_range": 3,
+      "sp": 5,
+      "speed": 3,
+      "tech_attack": -2
+    },
+    "traits": [
+      {
+        "name": "Reinforced Frame",
+        "description": "The Gajasura has Immunity to Shredded."
+      },
+      {
+        "name": "Ablative Plating",
+        "description": "1/round, the Gajasura can spend 1 Repair after taking damage from a character to gain Resistance to that damage. If this damage causes you to make a structure damage check, you automatically treat the result of that check as a Glancing Blow."
+      },
+      {
+        "name": "Nearfail Capacitors",
+        "description": "1/round, the Gajasura may deal +1d6 bonus damage on hit with a melee attack if it has 2 structure or less."
+      }
+  ],
+    "core_system": {
+      "name": "Demon's Fang",
+      "description": "<p>For much of his career, Vasa almost solely employed frame-integrated weapons in combat, preferring them to manipulator-held or hardpoint-mounted armaments. The most notable, and most iconic, example of this was eventually gifted to him by Saburo Adeyemi, a retired artisan from the Terashima enclave whose travels had brought him to Suldan and who was a great admirer of Vasa's performance in the arena. Dubbed the \"Demon's Fang,\" this forearm-mounted double blade became synonymous with Vasa, oft-imitated but never duplicated.</p><p>While numerous parts of the original frame have long since been replaced over the years, or fallen into disrepair after an extended period of disuse, the Demon's Fang remains unaltered and in combat-ready condition even now. Its integration into the frame is a remarkable work of craftsmanship, as capable of swiftly severing limbs and carving apart hulls as the day it was forged.</p><p>Non-destructive analysis of Gajasura and the Demon's Fang by a team of C&H engineers has led to the creation of a licensed version for distribution, while the original is now on display at the Bishara Museum of Culture and Technology in Hadiqa.</p>",
+      "active_name": "Killing Floor",
+      "active_effect": "Make an attack with the Demon's Fang as a free action. This action is <b>Efficient,</b> and refunds 1 Core Power at the end of any scene in which it's used.",
+      "activation": "Free Action",
+      "integrated": [
+        "fgtsmw_gajasura_integrated"
+      ]
+    },
+    "image_url": "https://compcon-image-assets.s3.amazonaws.com/frames/nodata.png",
+    "data_type": "frame",
+    "aptitude": {},
+    "y_pos": 25
+  },
+    {
+    "id": "fgtsf_pointman",
+    "license_level": 1,
+    "source": "IPS-N",
+    "name": "POINTMAN",
+    "mechtype": [
+      "Specialty"
+    ],
+    "specialty": true,
+	"image_url": "https://i.imgur.com/qQ0eXQW.png",
+    "y_pos": 0,
+    "description": "Designed as a general purpose license centered around high-threat close-quarters missions, Pointman draws upon IPS-Northstar's extensive experience in boarding and anti-piracy operations to provide pilots with a flexible tactical package regardless of chassis specs. All Pointman systems are certified by IPS-N's own Special Operations Unit, Naval/Downwell as fully capable in both shipboard as well as terrestrial theaters.",
+    "mounts": [
+      "Main",
+      "Flex",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 10,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 6,
+      "repcap": 5,
+      "sensor_range": 10,
+      "tech_attack": 0,
+      "save": 10,
+      "speed": 4,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Initiative",
+        "description": "1/scene the Everest may take any quick action as a free action."
+      },
+      {
+        "name": "Replaceable parts",
+        "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+      }
+    ],
+    "core_system": {
+      "name": "Hyperspec Fuel Injector",
+      "description": "",
+      "active_name": "Power Up",
+      "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+      "activation": "Protocol"
+    }
+  },
+  {
+    "id": "fgtsf_vigil",
+    "license_level": 1,
+    "source": "IPS-N",
+    "name": "VIGIL",
+    "mechtype": [
+      "Specialty"
+    ],
+    "specialty": {
+      "source": "IPS-N",
+      "min_rank": 1
+    },
+	"image_url": "https://i.imgur.com/nAc5Q1O.png",
+    "y_pos": 0,
+    "description": "Advertised as a companion license to the Pointman series, the IPS-N Vigil package is designed with defensive actions in mind. In use aboard all IPS-N naval vessels and provided as a complimentary license to merchant vessels operating along trade routes in and out of the Argo Navis system, all Vigil systems supplement take-and-hold/counterboarding operations by providing pilots with quick-deploying, modular defilade enhancements which can be used to reinforce threatened positions or establish entrenched killzones along probable avenues of approach.",
+    "mounts": [
+      "Main",
+      "Flex",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 10,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 6,
+      "repcap": 5,
+      "sensor_range": 10,
+      "tech_attack": 0,
+      "save": 10,
+      "speed": 4,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Initiative",
+        "description": "1/scene the Everest may take any quick action as a free action."
+      },
+      {
+        "name": "Replaceable parts",
+        "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+      }
+    ],
+    "core_system": {
+      "name": "Hyperspec Fuel Injector",
+      "description": "",
+      "active_name": "Power Up",
+      "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+      "activation": "Protocol"
+    }
+  },
+{
+  "id": "fgtsf_overlord",
+  "license_level": 1,
+  "source": "IPS-N",
+  "name": "OVERLORD",
+  "mechtype": [
+    "Specialty"
+  ],
+  "specialty": {
+    "source": "IPS-N",
+    "min_rank": 2
+  },
+	"image_url": "https://i.imgur.com/iZXwxAO.png",
+    "y_pos": 0,
+  "description": "IPS-N's tactical fireteam/squad-integrated command-and-control license, designated Overlord, is designed to fulfill the need for centralized enhancement of joint combat operations. A combination of upgraded hardware including sensors and communication suites along with NHP-enhanced targeting systems and tactical networking software serves to complement any small-unit formation or doctrine, including assault, fire-support/target designation, defensive actions, and special operations.",
+  "mounts": [
+    "Main",
+    "Flex",
+    "Heavy"
+  ],
+  "stats": {
+    "size": 1,
+    "structure": 4,
+    "stress": 4,
+    "armor": 0,
+    "hp": 10,
+    "evasion": 8,
+    "edef": 8,
+    "heatcap": 6,
+    "repcap": 5,
+    "sensor_range": 10,
+    "tech_attack": 0,
+    "save": 10,
+    "speed": 4,
+    "sp": 6
+  },
+  "traits": [
+    {
+      "name": "Initiative",
+      "description": "1/scene the Everest may take any quick action as a free action."
+    },
+    {
+      "name": "Replaceable parts",
+      "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+    }
+  ],
+  "core_system": {
+    "name": "Hyperspec Fuel Injector",
+    "description": "",
+    "active_name": "Power Up",
+    "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+    "activation": "Protocol"
+  }
+},
+  {
+    "id": "fgtsf_sparrowhawk",
+    "license_level": 1,
+    "source": "SSC",
+    "name": "SPARROWHAWK",
+    "mechtype": [
+      "Specialty"
+    ],
+    "specialty": true,
+	"image_url": "https://i.imgur.com/qQ0eXQW.png",
+    "y_pos": 0,
+    "description": "The Sparrowhawk license is a self-contained specialty permission package designed as a part of SSC's Aerospace Superiority Initiative to provide mech pilots operating in aerial warfare engagements with enhanced theater-specific combat capabilities. Traditional air support/air superiority doctrine can be achieved utilizing properly equipped mech chassis in place of aerospace fighters while still retaining ground assault capabilities, giving such squadrons unparalleled multi-role flexibility across tactical strike/interceptor and fire support engagements.",
+    "mounts": [
+      "Main",
+      "Flex",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 10,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 6,
+      "repcap": 5,
+      "sensor_range": 10,
+      "tech_attack": 0,
+      "save": 10,
+      "speed": 4,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Initiative",
+        "description": "1/scene the Everest may take any quick action as a free action."
+      },
+      {
+        "name": "Replaceable parts",
+        "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+      }
+    ],
+    "core_system": {
+      "name": "Hyperspec Fuel Injector",
+      "description": "",
+      "active_name": "Power Up",
+      "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+      "activation": "Protocol"
+    }
+  },
+  {    
+    "id": "fgtsf_micromonarch",
+    "license_level": 1,
+    "source": "SSC",
+    "name": "MICROMONARCH",
+    "mechtype": [
+      "Specialty"
+    ],
+        "specialty": {
+          "source": "SSC",
+          "min_rank": 1
+        },
+	"image_url": "https://i.imgur.com/nAc5Q1O.png",
+    "y_pos": 0,
+    "description": "User feedback has indicated a strong desire for a multi-role missile system tailored for mid/close range engagements as opposed to the Monarch's long-range fire support doctrine, and thus the Micromonarch system package is a developmental outgrowth of SSC's mainline missile battery platform, designed in advance of a fully dedicated alternative chassis. Finally available for licensing following extensive field tests, the Micromonarch is intended to serve not only as a supplemental block upgrade for the Monarch itself but as a flexible set of tactical armament options for all properly licensed pilots.",
+    "mounts": [
+      "Main",
+      "Flex",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 10,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 6,
+      "repcap": 5,
+      "sensor_range": 10,
+      "tech_attack": 0,
+      "save": 10,
+      "speed": 4,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Initiative",
+        "description": "1/scene the Everest may take any quick action as a free action."
+      },
+      {
+        "name": "Replaceable parts",
+        "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+      }
+    ],
+    "core_system": {
+      "name": "Hyperspec Fuel Injector",
+      "description": "",
+      "active_name": "Power Up",
+      "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+      "activation": "Protocol"
+    }
+  },
+  {    
+    "id": "fgtsf_myrmidon",
+    "license_level": 1,
+    "source": "SSC",
+    "name": "MYRMIDON",
+    "mechtype": [
+      "Specialty"
+    ], "specialty": {
+      "source": "SSC",
+      "min_rank": 2
+    },
+	"image_url": "https://i.imgur.com/iZXwxAO.png",
+    "y_pos": 0,
+    "description": "While the concept of fully biological chassis engineering has long been theorized, the practical limitations facing such designs remain substantial. Despite this, Smith-Shimano continues to push the boundaries of integrated biotechnological design, combining tailored bio-sourced and inspired systems into their full suite of precision engineered combat frames. Myrmidon is the latest exclusive license in the Panoply Biotica line of cutting-edge design permissions, delivering performance enhancing frame-wide upgrades sourced from SSC's extensively cultivated xenogenetic database as well as bespoke organisms designed from the ground up to support pilots during even the most taxing operations.",
+    "mounts": [
+      "Main",
+      "Flex",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 10,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 6,
+      "repcap": 5,
+      "sensor_range": 10,
+      "tech_attack": 0,
+      "save": 10,
+      "speed": 4,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Initiative",
+        "description": "1/scene the Everest may take any quick action as a free action."
+      },
+      {
+        "name": "Replaceable parts",
+        "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+      }
+    ],
+    "core_system": {
+      "name": "Hyperspec Fuel Injector",
+      "description": "",
+      "active_name": "Power Up",
+      "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+      "activation": "Protocol"
+    }
+  },
+{    
+  "id": "fgtsf_logos",
+  "license_level": 1,
+  "source": "HORUS",
+  "name": "LOGOS",
+  "mechtype": [
+    "Specialty"
+  ],
+  "specialty": true,
+	"image_url": "https://i.imgur.com/qQ0eXQW.png",
+    "y_pos": 0,
+  "description": "With the increased prevalence of NHP and sub-NHP assisted electronic warfare doctrine in the modern battlefield, a seemingly endless proliferation of weaponized code protocols, logic viruses, and hunter/killer algorithms have been developed and spread throughout Union space. Consequently, Logos isn't a license in the conventional sense but instead serves as authorized omninet access to an extensive repository of electronic warfare programs curated and distributed by HORUS archivists. As electronic countermeasures and defensive systems adapt and evolve over time, the selection of viable programs, themselves part of the evolutionary arms race, dynamically updates to account for emergent battlefield trends.",
+  "mounts": [
+    "Main",
+    "Flex",
+    "Heavy"
+  ],
+  "stats": {
+    "size": 1,
+    "structure": 4,
+    "stress": 4,
+    "armor": 0,
+    "hp": 10,
+    "evasion": 8,
+    "edef": 8,
+    "heatcap": 6,
+    "repcap": 5,
+    "sensor_range": 10,
+    "tech_attack": 0,
+    "save": 10,
+    "speed": 4,
+    "sp": 6
+  },
+  "traits": [
+    {
+      "name": "Initiative",
+      "description": "1/scene the Everest may take any quick action as a free action."
+    },
+    {
+      "name": "Replaceable parts",
+      "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+    }
+  ],
+  "core_system": {
+    "name": "Hyperspec Fuel Injector",
+    "description": "",
+    "active_name": "Power Up",
+    "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+    "activation": "Protocol"
+  }
+},
+{
+  "id": "fgtsf_thirdeye",
+  "license_level": 1,
+  "source": "HORUS",
+  "name": "THIRDEYE",
+  "mechtype": [
+    "Specialty"
+  ],
+  "specialty": {
+    "source": "HORUS",
+    "min_rank": 1
+  },
+	"image_url": "https://i.imgur.com/nAc5Q1O.png",
+    "y_pos": 0,
+  "description": "While HORUS pattern-groups typically defy standard combat role classification there often arises a need to fulfill specific battlefield goals not addressed by any of the collective's extant designs. When this occurs multiple specialty licenses are quickly developed in tandem, disseminated, field-tested, discarded, and those that successfully meet or exceed requirements are recompiled and standardized for general distribution. Thirdeye is one such license, designed to facilitate a sharpshooter doctrine across various platforms.",
+  "mounts": [
+    "Main",
+    "Flex",
+    "Heavy"
+  ],
+  "stats": {
+    "size": 1,
+    "structure": 4,
+    "stress": 4,
+    "armor": 0,
+    "hp": 10,
+    "evasion": 8,
+    "edef": 8,
+    "heatcap": 6,
+    "repcap": 5,
+    "sensor_range": 10,
+    "tech_attack": 0,
+    "save": 10,
+    "speed": 4,
+    "sp": 6
+  },
+  "traits": [
+    {
+      "name": "Initiative",
+      "description": "1/scene the Everest may take any quick action as a free action."
+    },
+    {
+      "name": "Replaceable parts",
+      "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+    }
+  ],
+  "core_system": {
+    "name": "Hyperspec Fuel Injector",
+    "description": "",
+    "active_name": "Power Up",
+    "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+    "activation": "Protocol"
+  }
+},
+{
+  "id": "fgtsf_bunraku",
+  "license_level": 1,
+  "source": "HORUS",
+  "name": "BUNRAKU",
+  "mechtype": [
+    "Specialty"
+  ],
+  "specialty": {
+    "source":"HORUS",
+    "min_rank": 2
+  },
+	"image_url": "https://i.imgur.com/iZXwxAO.png",
+    "y_pos": 0,
+  "description": "Appearing on the omninet only recently, Union intelligence analysis has yet to determine if the license designated Bunraku is early evidence of a completely new HORUS patterngroup or simply a testbed for experimental technologies being disseminated to qualified license holders. Preliminary reports are suggestive of an esoteric squad-level tactical integration/command paradigm which------------------------------------------------------------------------------[these are my gifts to you use them wisely, or not, as you will]-----------------------------------",
+  "mounts": [
+    "Main",
+    "Flex",
+    "Heavy"
+  ],
+  "stats": {
+    "size": 1,
+    "structure": 4,
+    "stress": 4,
+    "armor": 0,
+    "hp": 10,
+    "evasion": 8,
+    "edef": 8,
+    "heatcap": 6,
+    "repcap": 5,
+    "sensor_range": 10,
+    "tech_attack": 0,
+    "save": 10,
+    "speed": 4,
+    "sp": 6
+  },
+  "traits": [
+    {
+      "name": "Initiative",
+      "description": "1/scene the Everest may take any quick action as a free action."
+    },
+    {
+      "name": "Replaceable parts",
+      "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+    }
+  ],
+  "core_system": {
+    "name": "Hyperspec Fuel Injector",
+    "description": "",
+    "active_name": "Power Up",
+    "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+    "activation": "Protocol"
+  }
+},
+{
+  "id": "fgtsf_spitfire",
+  "license_level": 1,
+  "source": "HA",
+  "name": "SPITFIRE",
+  "mechtype": [
+    "Specialty"
+  ],
+  "specialty": true,
+	"image_url": "https://i.imgur.com/qQ0eXQW.png",
+    "y_pos": 0,
+  "description": "Many state and corpro-state militaries rely primarily upon kinetic/explosive platforms for the majority of their armament solutions, reserving energy-based weaponry for specialty purposes, but Harrison Armory's Spitfire license is part of a wide-reaching campaign being undertaken to reverse that paradigm. An advertisement campaign seeking to position HA laser weaponry as \"a pilot's best friend in dark places\" has preceded aggressive inroads towards markets traditionally given over to GMS and IPS-N, prompting an arms race both offensively and defensively.",
+  "mounts": [
+    "Main",
+    "Flex",
+    "Heavy"
+  ],
+  "stats": {
+    "size": 1,
+    "structure": 4,
+    "stress": 4,
+    "armor": 0,
+    "hp": 10,
+    "evasion": 8,
+    "edef": 8,
+    "heatcap": 6,
+    "repcap": 5,
+    "sensor_range": 10,
+    "tech_attack": 0,
+    "save": 10,
+    "speed": 4,
+    "sp": 6
+  },
+  "traits": [
+    {
+      "name": "Initiative",
+      "description": "1/scene the Everest may take any quick action as a free action."
+    },
+    {
+      "name": "Replaceable parts",
+      "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+    }
+  ],
+  "core_system": {
+    "name": "Hyperspec Fuel Injector",
+    "description": "",
+    "active_name": "Power Up",
+    "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+    "activation": "Protocol"
+  }
+},
+{
+  "id": "fgtsf_foundry",
+  "license_level": 1,
+  "source": "HA",
+  "name": "FOUNDRY",
+  "mechtype": [
+    "Specialty"
+  ],
+  "specialty": {
+    "source": "HA",
+    "min_rank": 1
+  },
+	"image_url": "https://i.imgur.com/nAc5Q1O.png",
+    "y_pos": 0,
+  "description": "Harrison Armory's recently launched Foundry initiative is an effort to create a self-contained permission package, allowing qualified pilots to create customized, personally tailored armaments on a wider-than-bespoke scale - all without having to venture outside of the umbrella of the Armory's greater product-space. Predictive customer and client-state loyalty metrics anticipate a favorable increase over time following the license's rollout into wider markets, and plans are already underway for a series of complementary licenses to further enhance its tactical benefits across a variety of theaters.",
+  "mounts": [
+    "Main",
+    "Flex",
+    "Heavy"
+  ],
+  "stats": {
+    "size": 1,
+    "structure": 4,
+    "stress": 4,
+    "armor": 0,
+    "hp": 10,
+    "evasion": 8,
+    "edef": 8,
+    "heatcap": 6,
+    "repcap": 5,
+    "sensor_range": 10,
+    "tech_attack": 0,
+    "save": 10,
+    "speed": 4,
+    "sp": 6
+  },
+  "traits": [
+    {
+      "name": "Initiative",
+      "description": "1/scene the Everest may take any quick action as a free action."
+    },
+    {
+      "name": "Replaceable parts",
+      "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+    }
+  ],
+  "core_system": {
+    "name": "Hyperspec Fuel Injector",
+    "description": "",
+    "active_name": "Power Up",
+    "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+    "activation": "Protocol"
+  }
+},
+{
+  "id": "fgtsf_downwell",
+  "license_level": 1,
+  "source": "HA",
+  "name": "DOWNWELL",
+  "mechtype": [
+    "Specialty"
+  ],
+  "specialty": {
+    "source":"HA",
+    "min_rank": 2
+  },
+	"image_url": "https://i.imgur.com/iZXwxAO.png",
+    "y_pos": 0,
+  "description": "Harrison Armory's latest public beta test license is now available for qualified pilots interested in participating in live testing of their newest in-development armaments. Developed under the codename Downwell, this license represents the Think Tank's ongoing efforts at creating a comprehensive full-frame gravitic platform. Artificial gravity generation currently remains limited in practical civilian applications but finds increasing use in military theaters, primarily in nearlight k-comp systems. Finding viable ways to expand upon the uses of this technology is the next obvious step, and HA is uniquely poised to deliver on that promise thanks to decades of experience in cutting-edge and paracausal combat systems development.",
+  "mounts": [
+    "Main",
+    "Flex",
+    "Heavy"
+  ],
+  "stats": {
+    "size": 1,
+    "structure": 4,
+    "stress": 4,
+    "armor": 0,
+    "hp": 10,
+    "evasion": 8,
+    "edef": 8,
+    "heatcap": 6,
+    "repcap": 5,
+    "sensor_range": 10,
+    "tech_attack": 0,
+    "save": 10,
+    "speed": 4,
+    "sp": 6
+  },
+  "traits": [
+    {
+      "name": "Initiative",
+      "description": "1/scene the Everest may take any quick action as a free action."
+    },
+    {
+      "name": "Replaceable parts",
+      "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+    }
+  ],
+  "core_system": {
+    "name": "Hyperspec Fuel Injector",
+    "description": "",
+    "active_name": "Power Up",
+    "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+    "activation": "Protocol"
+  }
+},
+{
+  "id": "fgtsf_shepherd",
+  "license_level": 1,
+  "source": "C&H",
+  "name": "SHEPHERD",
+  "mechtype": [
+    "Specialty"
+  ],
+  "specialty": true,
+	"image_url": "https://i.imgur.com/qQ0eXQW.png",
+    "y_pos": 0,
+  "description": "Shepherd is Chandrasekhar & Herschel's robust and customizable all-chassis license designed to provide pilots with tailor-made solutions for all-theater/all-terrain load-enhancing capability. Each Shepherd license comes with C&H's lifetime guarantee, and all included systems are rigorously tested to ensure performance under even the most rugged conditions, including the infamous Badlands Endurance Trial.",
+  "mounts": [
+    "Main",
+    "Flex",
+    "Heavy"
+  ],
+  "stats": {
+    "size": 1,
+    "structure": 4,
+    "stress": 4,
+    "armor": 0,
+    "hp": 10,
+    "evasion": 8,
+    "edef": 8,
+    "heatcap": 6,
+    "repcap": 5,
+    "sensor_range": 10,
+    "tech_attack": 0,
+    "save": 10,
+    "speed": 4,
+    "sp": 6
+  },
+  "traits": [
+    {
+      "name": "Initiative",
+      "description": "1/scene the Everest may take any quick action as a free action."
+    },
+    {
+      "name": "Replaceable parts",
+      "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+    }
+  ],
+  "core_system": {
+    "name": "Hyperspec Fuel Injector",
+    "description": "",
+    "active_name": "Power Up",
+    "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+    "activation": "Protocol"
+  }
+},
+{
+  "id": "fgtsf_talwar",
+  "license_level": 1,
+  "source": "C&H",
+  "name": "TALWAR",
+  "mechtype": [
+    "Specialty"
+  ],
+    "specialty": {
+      "source": "C&H",
+      "min_rank": 1
+    },
+	"image_url": "https://i.imgur.com/nAc5Q1O.png",
+    "y_pos": 0,
+  "description": "The Talwar permission package is offered to all of C&H's standing license holders with an interest in expanding their available arsenal with the finest in specialty weaponry optimized for close range engagements. Every Talwar system is designed to meet C&H's rigorous standards of quality and mil-spec reliability that pilots have come to trust, providing flexible and powerful defense solutions that can't be found elsewhere.",
+  "mounts": [
+    "Main",
+    "Flex",
+    "Heavy"
+  ],
+  "stats": {
+    "size": 1,
+    "structure": 4,
+    "stress": 4,
+    "armor": 0,
+    "hp": 10,
+    "evasion": 8,
+    "edef": 8,
+    "heatcap": 6,
+    "repcap": 5,
+    "sensor_range": 10,
+    "tech_attack": 0,
+    "save": 10,
+    "speed": 4,
+    "sp": 6
+  },
+  "traits": [
+    {
+      "name": "Initiative",
+      "description": "1/scene the Everest may take any quick action as a free action."
+    },
+    {
+      "name": "Replaceable parts",
+      "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+    }
+  ],
+  "core_system": {
+    "name": "Hyperspec Fuel Injector",
+    "description": "",
+    "active_name": "Power Up",
+    "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+    "activation": "Protocol"
+  }
+},
+{
+  "id": "fgtsf_mantle",
+  "license_level": 1,
+  "source": "C&H",
+  "name": "MANTLE",
+  "mechtype": [
+    "Specialty"
+  ],
+    "specialty": {
+      "source": "C&H",
+      "min_rank": 2
+    },
+	"image_url": "https://i.imgur.com/iZXwxAO.png",
+    "y_pos": 0,
+  "description": "While melee combat is considered to be a specialized role among many state-level military and security services, Chandrasekhar & Herschel's Mantle draws upon centuries of gladiatorial weapons engineering experience to provide licensed pilots with a selection of close-combat enhancements that blend classic designs with contemporary materials. C&H's selection of military-grade hardplate shields are suitable for multiple chassis types and battlefield roles, with a variety of customized styles and designs to choose from.",
+  "mounts": [
+    "Main",
+    "Flex",
+    "Heavy"
+  ],
+  "stats": {
+    "size": 1,
+    "structure": 4,
+    "stress": 4,
+    "armor": 0,
+    "hp": 10,
+    "evasion": 8,
+    "edef": 8,
+    "heatcap": 6,
+    "repcap": 5,
+    "sensor_range": 10,
+    "tech_attack": 0,
+    "save": 10,
+    "speed": 4,
+    "sp": 6
+  },
+  "traits": [
+    {
+      "name": "Initiative",
+      "description": "1/scene the Everest may take any quick action as a free action."
+    },
+    {
+      "name": "Replaceable parts",
+      "description": "While resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+    }
+  ],
+  "core_system": {
+    "name": "Hyperspec Fuel Injector",
+    "description": "",
+    "active_name": "Power Up",
+    "active_effect": "For the rest of this scene, you gain +1 Accuracy on all attacks, checks, and saves; additionally, 1/turn, you can Boost as a free action.",
+    "activation": "Protocol"
+  }
+}
+]

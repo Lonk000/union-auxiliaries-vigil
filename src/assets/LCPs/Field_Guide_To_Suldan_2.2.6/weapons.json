@@ -1,0 +1,1343 @@
+[
+  {
+    "id": "fgtsmw_exo_firehawk",
+    "name": "Firehawk Plasma Rifle",
+    "mount": "Heavy",
+    "type": "Rifle",
+    "damage": 
+    [{"type": "Energy","val": "7"},
+     {"type": "Heat","val": "1d6"}
+],
+    "range": [{
+      "type": "Range",
+      "val": 10
+    }],
+    "tags": [
+      {"id": "tg_ap"},
+      {"id": "tg_heat_self", "val": 3},
+      {"id": "tg_exotic"}
+    ],
+    "source": "EXOTIC",
+    "description": "Among the materiel recovered from the now-dormant planetary defense network complex are several examples of locally designed chassis-portable plasma weaponry, primarily intended for Janissary use along with advanced RPV and heavy assault subaltern units. The Firehawk, unlike typical wide-splash plasma weapons, fires discrete bolts of high-energy plasma, maintaining coherence at range via electromagnetic channel containment. Highly effective against conventional armor and shielding, capable of penetrating even hardened targets and overwhelming even advanced thermal dissipation systems, the Firehawk's supercharged output results in a relatively short effective range as well as heavy power-consumption and coolant requirements."
+  },
+  {
+    "id": "fgtsmw_remote_targeting_relay",
+    "name": "Remote Targeting Relay",
+    "mount": "Main",
+    "type": "CQB",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d3+4"
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 5
+    }],
+    "tags": [
+      {"id": "tg_inaccurate"},
+      {"id": "tg_loading"}
+    ],
+    "source": "C&H",
+    "license": "CHARIOTEER",
+    "license_level": 1,
+    "on_hit": "This weapon embeds a beacon into the target which activates at the end of your turn, creating a Burst 2 area. Ranged attacks against hostile characters within this area (including the embedded target) gain Arcing, and any hostile character that begins its turn in this area gains Lock On. A struck character can successfully pass a Hull save as a quick action to remove the beacon and end this effect.<br>You may also target a free open space within range, hitting automatically. Treat beacons fired this way as Size 1/2 objects with 5 HP and 5 Evasion.",
+    "description": "Initially adapted from telemetric surveying beacons and refined for military use as part of the Charioteer initiative, C&H's remote targeting relay system is a hardpoint-mounted, squad-integrated multiplatform targeting solution for facilitating accurate fire in artillery bombardment, surgical HVT elimination, and precision fire support operations. Upon deployment, each beacon automatically anchors itself in place via explosively driven piton, and once activated they begin providing real-time telemetry to all allied units equipped with the proper targeting coordination firmware and system-compatible munitions, permissions for which are included as part of the license package at no extra cost."
+  },
+  {
+    "id": "fgtsmw_tiger_claws",
+    "name": "Tiger Claws",
+    "mount": "Main",
+    "type": "Melee",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "4"
+    }],
+    "range": [{
+      "type": "Threat",
+      "val": 1
+    }],
+    "tags": [
+      {"id": "tg_unique"}
+    ],
+    "source": "C&H",
+    "license": "KALISTA",
+    "license_level": 1,
+    "effect": "This weapon can be used while Jammed",
+    "on_hit": "This weapon deals +1d3 bonus damage against targets that are Shredded or have 0 Armor.",
+    "description": "While integrating weapon systems directly into a mech's chassis is a common modification among pilots, it takes a true engineering artist to do so in an elegant, aesthetically pleasing, and minimally intrusive fashion without compromising structural integrity. The license for this particular melee combat system comes with several distinct styles to choose from, each of which was once an original custom design for a celebrated arena champion of note. The “Red-Eyed Demon” Pranesh Vasa's forearm-mounted dual blade assembly is the clear favorite among license holders, with a 67.35% retention rate across all frames."
+  },
+  {
+    "id": "fgtsmw_macuahuitl_chainsword",
+    "name": "Macuahuitl Chainsword",
+    "mount": "Heavy",
+    "type": "Melee",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d6+4"
+    }],
+    "range": [{
+      "type": "Threat",
+      "val": 1
+    }],
+    "tags": [
+      {"id": "tg_overkill"},
+      {"id": "tg_heat_self", "val": 1}
+    ],
+    "source": "C&H",
+    "license": "KALISTA",
+    "license_level": 2,
+    "effect": "When you roll a 6 on this weapon's base damage die or if this weapon's damage is otherwise maximized, it automatically deals an additional +1d6 bonus damage. If you roll another 6 on that bonus damage die or if it is maximized as well, you must repeat this process again up to a maximum of +3d6 bonus damage added this way.",
+    "description": "Hot-blooded arena enthusiasts are less concerned with battlefield reliability so much as they are the flash of sparks and the scream of rending metal. Though mech-scale motorized chain weapons are offered under several specialty licenses by assorted vendors, the Macuahuitl is C&H's attempt to engineer a more robust and practical version of a gladiatorial favorite. Derived from an industrial mining cutter and upgraded with with an oversized, high-powered drive motor, the result is a terrifying, if temperamental, beast capable of shearing through joints and armor plating with ease, assuming the user can remain in control of it."
+  },
+  {
+    "id": "fgtsmw_motorized_tetsubo",
+    "name": "Motorized Tetsubo",
+    "mount": "Superheavy",
+    "type": "Melee",
+    "damage": [{
+      "val": "3d6",
+      "type": "Kinetic"
+    }],
+    "range": [{
+      "type": "Threat",
+      "val": 2
+    }],
+    "tags": [
+      {"id": "tg_overkill"}
+    ],
+    "source": "C&H",
+    "license": "KALISTA",
+    "license_level": 3,
+    "on_hit": "This weapon deals additional damage based on how many 6's you roll on its base damage dice:<br><ul><li>1: Deal an additional 4 damage.</li><li>2. Deal an additional 7 damage, and the target becomes Shredded until the end of the current turn.</li><li>3 or if the weapon's damage is otherwise maximized: Deal an additional 10 damage, and the target becomes Shredded until the end of their next turn.</li></ul><br><br>As a full action you can swing this ungainly weapon in sweeping blow.",
+    "actions": [{
+      "name": "Sweeping Blow",
+      "activation": "Full",
+      "detail": "Characters within Burst 2 must pass a Hull save or take 1d6+3 kinetic damage, be knocked back 2 spaces, and knocked Prone. On a success, they take half damage only."
+    }],
+    "description": "In the arena, spectacle is everything. Bigger, flashier, and more brutal weapons are highly sought after, with competitors and weapon designers constantly attempting to one-up each other in the field of sensational violence, and few weapons are bigger or more brutal than what C&H dubs the motorized tetsubo. Effectively a chainsword scaled up to enormous size, even without power this massive, ungainly weapon's reinforced housing is sturdy enough to be used as a vicious bludgeon, and with its motor revving it can shred through other mechs outright in a single blow."
+  },
+  {
+    "id": "fgtsmw_type_17_boarding_pistol",
+    "name": "Type-17 Boarding Pistol",
+    "mount": "Auxiliary",
+    "type": "CQB/Melee",
+    "source": "C&H",
+    "license": "KALLARANI",
+    "license_level": 1,
+    "profiles":[
+      {
+        "name": "CQB",
+        "damage": [{
+          "type": "Kinetic",
+          "val": "1d3"
+        }],
+        "range": [
+          {"type": "Range", "val": 5},
+          {"type": "Threat", "val": 3}
+        ]
+      },
+      {
+        "name": "Melee",
+        "damage":[{
+          "type": "Kinetic",
+          "val": "1d3"
+        }],
+        "range":[{
+          "type": "Threat",
+          "val": "1"
+        }]
+    }
+  ],
+    "effect": "This weapon can be freely used with either profile. Modifications and talents which only affect ranged or melee weapons only function when used with the appropriate profile.",
+    "description": "In close-quarters combat, engagement ranges can shift in the blink of an eye, moving from range to melee and back again. Combination weapons have long been an attempt to provide pilots with a flexible combat solution to the challenges of boarding/counterboarding urban warfare operations, but many pilots frequently find them to be cumbersome or underpowered. The Type-17 is an older design, a lightweight pistol with a housing married to a reinforced combat blade. Though it lacks the stopping power of higher-caliber weapons, C&H have significantly improved the weapon's accuracy and reliability over earlier models, and with sufficient practice the ability to fluidly switch between ranged and melee combat can provide unexpected tactical advantages."
+  },  
+  {
+    "id": "fgtsmw_scavenger_nexus",
+    "name": "Scavenger Nexus",
+    "mount": "Main",
+    "type": "Nexus",
+    "sp": 1,
+    "damage": [{
+        "type": "Kinetic",
+        "val": "1d3+1"
+    }],
+    "range": [{
+        "type": "Range",
+        "val": 10
+    }],
+    "tags": [
+      {"id": "tg_overkill"},
+      {"id": "tg_smart"}
+    ],
+    "source": "C&H",
+    "license": "KALLARANI",
+    "license_level": 1,
+    "effect": "This weapon deals 10 AP kinetic damage to objects, cover, terrain, and the environment. You gain the Patch Job Quick Tech option",
+    "actions":[{
+      "name": "Patch Job",
+      "activation": "Quick Tech",
+      "detail": "Choose an allied character within Sensors. They may take 1d6 heat and spend 1 Repair to immediately restore their HP to full. This can only be used 1/scene on each character." 
+    }],
+    "description": "The VF-20 “Termite” is a VTOL/all-atmosphere capable drone platform originally designed for use by shipbreakers and salvage crews to assist with dismantling decommissioned ships and spaceborne infrastructure assets, but pirates and mercenary crews frequently employ modified versions of these civilian drones as ad hoc combat units. This standardized license model is less makeshift in design, but nonetheless incorporates a variety of hardpoint-mounted demolition tools rated for combat use as well as engineering. Skilled operators can even utilize these drones to administer minor field repairs in a pinch."
+  },
+  {
+    "id": "fgtsmw_salamander_incendiary_shotgun",
+    "name": "Salamander Incendiary Shotgun",
+    "mount": "Main",
+    "type": "CQB",
+    "profiles":[
+      {
+        "name": "Narrow Choke",
+        "damage": [
+          {"type": "Kinetic","val": "1d3"},
+          {"type": "Burn","val": 2}
+        ],
+        "range":[
+          {"type": "Range","val": 5},
+          {"type": "Threat","val": 3}
+        ]
+      },
+      {
+        "name": "Wide Choke",
+        "damage": [
+          {"type": "Kinetic","val": "1d3"},
+          {"type": "Burn","val": 2}
+        ],
+        "range":[{"type": "Cone","val": 5}]
+      }
+    ],
+    "tags": [
+      {"id": "tg_overkill"},
+      {"id": "tg_heat_self","val": 1}
+    ],
+    "source": "C&H",
+    "license": "KALLARANI",
+    "license_level": 2,
+    "effect": "This weapon can be used with either profile, but not both in the same round.",
+    "description": "While incendiary weapons remain a historical point of contention in the aftermath of the Hercynian Crisis, C&H somewhat irreverently advertises this particular license as an “advanced combat engineering torch optimized for use in close quarters.” Whether the Galactic Treaties Board finds this sufficiently amusing to pass muster remains to be seen, but in the meantime license holders are able to requisition this reinforced combat shotgun designed to fire a mixture of superheated magnesium-jacketed flechettes and aerosolized nanoparticle thermite. Devastating against lightly armored targets in close-quarters engagements and shipboard assaults, the weapon also features an adjustable choke for optimal payload delivery."
+  },
+  {
+    "id": "fgtsmw_type_96_shield_gun",
+    "name": "Type-96 Shield Gun",
+    "mount": "Heavy",
+    "sp": 2,
+    "source": "C&H",
+    "license": "KALLARANI",
+    "license_level": 3,
+    "type": "Cannon/Melee",
+    "actions": [{
+      "name": "Select Profile",
+      "activation": "Protocol",
+      "detail": "Select one of the Assault Shield or Retractable Howitzer profiles. This profile remains active until a new one is selected. Modifications and talents which only affect ranged or melee weapons only function when used with the appropriate profile."
+    }],
+    "profiles": [
+      {
+        
+        "name": "Assault Shield (Melee)",
+        "damage":[{
+          "type": "Kinetic",
+          "val":"1d6+4"
+        }],
+        "range":[{
+          "type": "Threat",
+          "val": 1
+        }],
+        "tags":[{"id":"tg_knockback","val": 1}],
+        "effect": "When you Brace, if your Armor is less than 4 you increase it to 4 until the end of your next turn."
+      },
+      {
+        "name": "Retractable Howitzer (Cannon)",
+        "damage":[{
+          "type":"Explosive",
+          "val": "2d6"
+        }],
+        "range":[
+          {"type": "Range","val": 10},
+          {"type": "Blast","val": 1}
+        ],
+        "tags":[
+          {"id": "tg_arcing"},
+          {"id": "tg_ordnance"},
+          {"id": "tg_overkill"}
+        ]
+      }
+    ],
+    "description": "An extension of the combination weapon design philosophy, the Type-96 takes things a step further than merely integrating two different weapons together. A combined offensive/defensive system, a heavy-duty assault shield provides reliable, if cumbersome, protection against multiple threat types, while a high-powered howitzer capable of both direct and indirect fire is housed within, safely concealed behind retractable panels when not in use. While some may find the wisdom of deliberately subjecting a heavy weapon to serious impacts questionable, and adoption rates were never high during the system's initial forays into the market, C&H nonetheless offers this license to pilots who find the multiple types of close-combat protection the Type-96 offers to be invaluable."
+  },
+  {
+    "id": "fgtsmw_viral_knife",
+    "name": "Viral Knife",
+    "mount": "Auxiliary",
+    "type": "Melee",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d3"
+    }],
+    "range": [{
+      "type": "Threat",
+      "val": 1
+    }],
+    "source": "C&H",
+    "license": "MATADOR",
+    "license_level": 1,
+    "on_hit": "The target must pass a Hull save or be injected with a viral payload. Until the end of their next turn, the next time they make a tech action or force a character to make a Systems save, they take 3 AP energy damage.",
+    "description": "The Suldani Independence Front's ongoing struggles have led to a variety of novel improvised weapon designs showcasing technical creativity in liu of advanced manufacturing capabilities. Derived from mining injector spikes, the so-called viral knife uses a superhardened blade along with a revolving injection cylinder to deploy a volatile but highly effective viral codex-slurry payload directly into physically compromised systems. Capable of wreaking havoc upon technologically sophisticated combat platforms C&H's wide-distribution license incorporates a number of safety and reliability refinement in the codex-slurry formulation for optimal performance, though users are nonetheless advised to avoid unprotected contact with the payload."
+  },
+  {
+    "id": "fgtsmw_banderilla_anti_radiation_missiles",
+    "name": "Banderilla Anti-Radiation Missiles",
+    "mount": "Main",
+    "type": "Launcher",
+    "sp": 1,
+    "damage": [{
+      "type": "Explosive",
+      "val": "1d6+2"
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 15
+    }],
+    "tags": [
+      {"id": "tg_inaccurate"}
+    ],
+    "source": "C&H",
+    "license": "MATADOR",
+    "license_level": 3,
+    "effect": "Whenever a hostile character makes a tech action against you or forces you to make a Systems save, until the end of your next turn all attacks with this weapon lose Inaccurate and gain Reliable 3 and Seeking against that character.<br>You may set this weapon into an enhanced tracking mode as a quick action. While in this mode, the effect of this weapon also applies whenever hostile characters make tech actions or force Systems saves against any allied characters within Range 3, but you become Slowed. You may end this effect as a protocol.",
+    "description": "Though they can be dumbfired in a pinch, the Banderilla missile platform's onboard expert system achieves full potential when provided with hostile active sensor sweeps to home in on, riding an enemy's own electronic emmissions back to the source to deliver precision indirect-attack and counterbattery fire regardless of intervening terrain. Each missile incorporates advanced inertial and topographical navigation systems as well as a multistage motor with burn-loiter capabilities to overcome reactive sensor shutdowns, homing in on an active threat's current or extrapolated position to deliver its payload on target."
+  },
+  {
+    "id": "fgtsmw_tangler_cannon",
+    "name": "Tangler Cannon",
+    "mount": "Main",
+    "type": "Cannon",
+    "damage": [],
+    "range": [{
+      "type": "Range",
+      "val": 10
+    }],
+    "tags": [
+      {"id": "tg_accurate"},
+      {"id": "tg_knockback","val": 2}
+    ],
+    "source": "C&H",
+    "license": "RETIARIUS",
+    "license_level": 1,
+    "on_hit": "The target must pass a Hull save. If they fail then they become Slowed and take +2 Difficulty on all Hull and Agility saves and checks until the end of their next turn. If this weapon's Knockback causes the target to collide with an obstruction large enough to stop their movement then they become Immobilized until the end of their next turn on a failed save instead of Slowed.",
+    "effect": "This weapon does no damage and cannot deal damage (from talents or otherwise).",
+    "description": "An upscaled and higher-powered version of the restraint adhesive projection systems commonly employed for riot control, the tangler cannon is not rated for less-lethal actions against infantry-scale targets and C&H Ltd. would like to remind license holders that they can not be held liable for accidental injuries or deaths via suffocation that may occur due to the improper use of this system. Each tangler shell is loaded with a quick-curing molecular adhesive polymer resin with an airburst proximity trigger to maximize target coverage with each shot, restraining joints, fouling movement systems, and bringing targets to a standstill, making this weapon an ideal choice for securing bounties, salvage ops, or field interrogations."
+  },
+  {
+    "id": "fgtsmw_shock_lash",
+    "name": "Shock Lash",
+    "mount": "Main",
+    "type": "Melee",
+    "damage": [
+      {"type": "Kinetic","val": "1d6"},
+      {"type": "Energy","val": 2}
+    ],
+    "range": [{
+      "type": "Threat",
+      "val": 3
+    }],
+    "tags": [
+      {"id": "tg_inaccurate"},
+      {"id": "tg_overkill"},
+      {"id": "tg_heat_self","val": 1}
+    ],
+    "source": "C&H",
+    "license": "RETIARIUS",
+    "license_level": 2,
+    "on_crit": "The target must pass a Systems save or become Jammed until the end of their next turn. On a success, they become Impaired until the end of their next turn.",
+    "description": "A length of reinforced, high-strength superconductive alloy cable hooked up to an electromagnetic field generator, powered down the shock lash is little more than an ungainly bludgeon, but when drawing power directly from a coldcore reactor the weapon springs to life in a crackling ionized plasma sheath capable of discharging up to 0.65 GJ upon impact. The combination of kinetic impact, thermal stress, and electrical feedback is perfectly suited to inflict severe damage to a target's internal components, triggering cascading system failures and critical overloads."
+  },
+  {
+    "id": "fgtsmw_blast_chain",
+    "name": "Blast Chain",
+    "mount": "Heavy",
+    "type": "Melee",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d6+2"
+    }],
+    "range": [{
+      "type": "Threat",
+      "val": 3
+    }],
+    "tags": [
+      {"id": "tg_loading"}
+    ],
+    "source": "C&H",
+    "license": "RETIARIUS",
+    "license_level": 3,
+    "on_hit": "You may automatically Grapple your target. You may maintain this grapple regardless of adjacency as long as the target remains within this weapon's Threat. You cannot make attacks with this weapon while maintaining this grapple. If you control the grapple, you can pull the target adjacent to you as a free action.<br>You may end this grapple as normal, or use a quick action to detonate the mines on the chain. Doing so immediately ends the grapple, deals 2d6 explosive damage to the target, and they become Shredded until the end of their next turn. This weapon does not need to be reloaded until you detonate these mines.",
+    "description": "Perhaps the most visually distinctive weapon in the Retiarius line, the blast chain is self-described, a chain comprised of high-powered electromagnetic limpet mines joined together with flexible links of titanium/polycarbon weave. The result is an unusual weapon that can be used to entangle and restrain enemies from a distance before reeling them in, allowing the user to pummel their opponent with other weapons along with the option of finishing them off in spectacular fashion by detonating the mines attached to them."
+  },
+  {
+    "id": "fgtsmw_peregrine_seeker_glaive",
+    "name": "Peregrine Seeker Glaive",
+    "mount": "Auxiliary",
+    "type": "Melee",
+    "sp": 1,
+    "damage": [{
+      "type": "Kinetic",
+      "val": "2"
+    }],
+    "range": [
+      {"type": "Threat","val": 1}
+    ],
+    "tags": [{"id": "tg_thrown", "val": 5}],
+    "source": "C&H",
+    "license": "SABREUR",
+    "license_level": 1,
+    "effect": "When thrown against targets further than Range 1, this weapon gains Seeking and deals 1d3+2 kinetic damage.",
+    "description": "In formal mech duels, ranged armaments are often strictly prohibited with participants being restricted to melee weaponry only. The result of enterprising duelists looking to exploit this particular loophole, the Peregrine seeker glaive is a deceptively sophisticated combat knife, each blade a self-contained smart weapon system with independent throw-and-forget target tracking and course correction capabilities allowing it to land effective hits from seemingly impossible angles. Every seeker glaive is neuro-coded to prevent thrown blades from being turned back against their user."
+  },
+  {
+    "id": "fgtsmw_smartblade",
+    "name": "Smartblade",
+    "mount": "Main",
+    "type": "Melee",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "3"
+    }],
+    "range": [{
+      "type": "Threat",
+      "val": 1
+    }],
+    "tags": [
+      {"id": "tg_smart"},
+      {"id": "tg_unique"}
+    ],
+    "source": "C&H",
+    "license": "SABREUR",
+    "license_level": 2,
+    "effect": "When you consume Lock On as part of an attack with this weapon, it deals 1d6+3 AP kinetic damage.",
+    "description": "A pinnacle of modern materials engineering and elegant design, the smartblade appears deceptively lightweight and slender for a mech-scale melee weapon, but the blade itself is forged from an advanced polymorphic metamaterial alloy reinforced by a electromagnetic control field. Onboard expert systems tied directly into the mech's sensor array are capable of adjusting the blade's structure in real-time for optimum performance against designated targets. Inexperienced users often complain that the weapon seems to fight against their input, and C&H offers a complimentary familiarization and training sim package to all license holders."
+  },
+  {
+    "id": "fgtsmw_shroud_missiles",
+    "name": "Shroud Missiles",
+    "mount": "Main",
+    "type": "Launcher",
+    "damage": [{
+      "type": "Explosive",
+      "val": "1d6"
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 10
+    }],
+    "tags": [
+      {"id": "tg_arcing"},
+      {"id": "tg_heat_self", "val": 1}
+    ],
+    "source": "C&H",
+    "license": "SAGITTARIUS",
+    "license_level": 1,
+    "on_attack": "Trace a line between you and the target and create a Blast 1 cloud of smoke centered on a space within that line. All characters and objects within the area benefit from soft cover until the end of your next turn, at which point the smoke disperses.",
+    "description": "Developed as a versatile weapon system to facilitate rapid strike and reposition maneuvers, the SIF utilizes what they refer to as shroud missiles both as an opening salvo during advances as well as to cover fighting retreats during fallback. Once launched, each missile deploys secondary smoke charges along its flight path at predetermined distances, rapidly providing enhanced obscurance and defensive coverage against visual, IR/IIR, electro-optical, and SACLOS guidance systems."
+  },
+  {
+    "id":"fgtsmw_kallarani_integrated",
+    "name": "Typhoon Airburst Projector",
+    "mount": "Main",
+    "type": "Launcher",
+    "profiles":[
+      {
+        "name": "Airburst",
+        "damage":[{
+          "type": "Kinetic",
+          "val": "3"
+        }],
+        "range":[
+          {"type": "Range", "val": 5},
+          {"type": "Cone", "val": 5}
+        ],
+        "tags":[
+          {"id":"tg_arcing"}
+        ]
+      },
+      {
+        "name": "Close-In Defense",
+        "damage":[{
+          "type": "Kinetic",
+          "val": "3"
+        }],
+        "range":[
+          {"type": "Cone", "val": 3}
+        ],
+        "tags":[
+          {"id":"tg_knockback","val": 2}
+        ],
+        "effect": "This mode ignores ranged penalties from Engaged, and can be fired as a free action before or after you Barrage."
+      }
+    ]
+  },
+  {
+    "id": "fgtsmw_sagittarius_integrated" ,
+    "name": "Blackjacket Combat Bow",
+    "mount": "Main",
+    "type": "Launcher, Rifle",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d6+3"
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 10
+    }],
+    "tags": [
+      {"id": "tg_arcing"}
+    ],
+    "actions":[{
+      "name": "Draw Back Bow",
+      "activation": "Quick",
+      "detail": "1/round, this weapon can be drawn back with a quick action to increase its Range to 15 and its damage to 2d6+3 kinetic damage on its next attack. This effect is lost if you move for any reason."
+    }],
+    "effect": "If you attack with this weapon while Hidden you do not automatically break Hiding. On hit, the target must pass a Systems save or you remain Hidden, even if the attack triggers other effects that would normally break Hiding such as additional saves. On a miss you automatically remain Hidden.<br><br>When you print this mech or during a full repair, choose 6 of these specialized arrows to equip to your mech. You may choose individual options more than once, up to a maximum of 2 uses of any given option. Whenever you attack with this weapon, you may expend one of these arrows to gain its effect. These arrows do not count as a Limited system and cannot be replenished or enhanced by systems and abilities that affect Limited systems.<br><br><i>Mute Charge</i><br>You do not break Hiding with this option on hit or miss. The bow deals energy damage, and on hit the target becomes Jammed until the end of its next turn. Characters can only be affected by this option 1/scene.<br><br><i>Thermite Warhead</i><br> On Hit: Create a Burst 1 area around the target. The target and all characters within the area take 3 burn.<br><br><i>Hyperdense Penetrator</i><br>On Hit: The bow deals +1d6 bonus damage and the target is Shredded until the end of its next turn.<br><br><i>Fragmentation Bolt</i><br>The bow deals explosive damage and its range becomes Range 10, Blast 2, but it deals half damage to targets without the Biological tag.<br><br><i>Grapnel Line</i><br>On Attack: You may either choose a target within Range 10 and force them to pass a Hull save or be knocked prone, or you may target a free space or surface within Range 10 and immediately fly to that space or the nearest adjacent free space. You must end this movement on the ground or another solid surface or else immediately begin falling. This option deals no damage and cannot deal damage (from talents or otherwise).<br><br><i>Viral Payload</i><br>On Hit: The target takes 2 heat and is Slowed, Impaired, and all tech attacks against them gain +1 Accuracy until the end of their next turn."
+  },
+  {
+    "id": "fgtsmw_slipgun",
+    "name": "Slipgun",
+    "mount": "Main",
+    "type": "CQB",
+    "damage": [],
+    "range": [{
+      "type": "Cone","val": 3
+      }],
+    "tags": [
+      {"id": "tg_unique"}
+    ],
+    "source": "HORUS",
+    "license": "EFREET",
+    "license_level": 1,
+    "on_attack": "Characters within the affected area must pass a Systems save or take 1d6 energy damage and be teleported 2 spaces in a direction of your choice. Allied characters that fail this save take half damage. This weapon cannot be modified or benefit from core bonuses.",
+    "description": "++Cut a hole in the membrane, peeling back the barrier that separates objects in space from one another. Firmly grasp the threads that anchor bodies and perspectives to a single point in time, a series of discrete moments forming a continuum both linear and cyclical. Ready your weapon, take aim, and [fire]"
+  },
+  {
+    "id": "fgtsmw_qublade",
+    "name": "Qublade",
+    "mount": "Main",
+    "type": "Melee",
+    "sp":1,
+    "damage": [{
+      "type": "Kinetic",
+      "val": "4"
+      }],
+    "range": [{
+      "type": "Threat",
+      "val": "1d3+1"
+      }],
+    "tags": [
+      {"id": "tg_accurate"},
+      {"id": "tg_unique"}
+    ],
+    "source": "HORUS",
+    "license": "EFREET",
+    "license_level": 3,
+    "effect": "At the start of each scene and each of your turns, roll 1d3+1 to determine this weapon's Threat until the start of your next turn. This weapon's Threat cannot be modified.",
+    "on_hit": "You may immediately swap places with the targeted character, teleporting both of you. There must be sufficient free space for both of you to occupy your new locations.",
+    "description": "\"Is it the blade that changes shape, or merely your perception of it? Hold a twig beneath the surface of a pond and observe how it appears in two places at once, yet it remains fixed in space. What if, by some transitive property, a thing could appear to exist only in one place but actually exist in many at once? Carve away at these impossible infinities and what remains? I leave you now to contemplate these mysteries. Do not look to the blade for answers, for it has none. A weapon rarely holds any answers worth knowing.\" --Precepts of Ioshin Voss"
+  },
+  {
+    "id": "fgtsmw_colony_nexus",
+    "name": "Colony Nexus",
+    "mount": "Auxiliary",
+    "type": "Nexus",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d3"
+    }],
+    "range": [
+      {"type": "Range","val": 3},
+      {"type": "Threat","val": 3}
+    ],
+    "tags":[
+      {"id": "tg_smart"}
+    ],
+    "source": "SSC",
+    "license": "COMET",
+    "license_level": 1,
+    "effect": "Each successful attack you make with a colony nexus increases the damage of all other equipped colony nexus attacks you make by +1. This effect stacks up to a maximum of +3 additional damage, and resets to 0 when it would increase to +4 or at the end of the scene.",
+    "description": "A reformulation of conventional nexus design, the Colony nexus acts as a distributed weapon system controlling dozens of microdrone units across multiple command-and-control nodes operating in parallel. While an individual Colony node's performance may be considered unexceptional, as more nodes are linked together they spontaneously develop heightened combat effectiveness as tactical intelligence and aggression responses increase across each individual weapon-unit."
+  },
+  {
+    "id": "fgtsmw_archer_nexus",
+    "name": "Archer Nexus",
+    "mount": "Main",
+    "type": "Nexus",
+    "damage": [{
+      "type": "Explosive",
+      "val": "1d6+3"
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 10
+    }],
+    "tags": [
+      {"id": "tg_loading"},
+      {"id": "tg_smart"}
+    ],
+    "source": "SSC",
+    "license": "COMET",
+    "license_level": 2,
+    "on_attack": "You may choose to give this weapon either AP or Seeking against targets with the Lock On condition. If you do so, you may not consume the Lock On as part of that attack.",
+    "description": "A versatile and effective missile launch platform, SSC's Archer nexus is designed to secure mid- to long-range air-to-air/air-to-ground superiority via precision munition strikes. A long loiter time and advanced hunter/killer decision making capabilities facilitate effective operation across multiple mission profiles, and each drone's hardpoints are able to accept a variety of missiles, from the fire-and-forget Kodandam to the Agneya anti-armor guided missile."
+  },
+  {
+    "id": "fgtsmw_harrier_nexus",
+    "name": "Harrier Nexus",
+    "mount": "Main",
+    "type": "Nexus",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d6+1"
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 5
+    }],
+    "tags": [
+      {"id": "tg_smart"}
+    ],
+    "source": "SSC",
+    "license": "COMET",
+    "license_level": 3,
+    "effect": "At the end of your turn, as a free action you may deal 1 AP kinetic damage to all targets within Range 5 and line of sight that have Lock On.",
+    "description": "The Harrier nexus is an aggressive, dedicated gunnery/suppression unit designed for close-in fire support. Typically equipped with heavy caliber chassis-tier automatic weaponry for sustained rate-of-fire against near-range threats, each drone's advanced SSC all-theater hover maneuverability suite allows them to quickly track multiple targets independently without compromising accuracy or stability, and sophisticated heuristics grant them unparalleled battlefield autonomy even without direct operator supervision."
+  },
+  {
+    "id": "fgtsmw_warthog_gpmg",
+    "name": "\"Warthog\" GPMG",
+    "mount": "Heavy",
+    "type": "Cannon",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "2d6"
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 12
+    }],
+    "tags": [
+      {"id": "tg_overkill"}
+    ],
+    "source": "IPS-N",
+    "license": "WORDEN",
+    "license_level": 1,
+    "effect": "This weapon can attack two targets at a time up to 3 spaces away from each other. If you choose to attack two targets, this weapon's damage becomes 1d6 kinetic damage instead.",
+    "description": "The venerable IPS-N Machine Gun, General-Purpose, affectionately referred to by its adherents as the Warthog, is a somewhat dated design originally hearkening back to the Hercynian Crisis. Though the latest iteration of the weapon still lacks the sophistication of more modern chassis-mounted support/suppression platforms, a generous ammunition capacity and high cyclic rate help make up for its shortcomings, allowing skilled operators to lay down heavy volumes of fire without interruption. An integrated stabilizing armature helps mitigate the weapon's famously disagreeable recoil while allowing users to quickly retrain their sights upon multiple advancing targets as necessary."
+  },
+  {
+    "id": "fgtsmw_sticky_launcher",
+    "name": "Sticky Launcher",
+    "mount": "Main",
+    "type": "Launcher",
+    "profiles": [
+      {
+        "name": "Normal Rounds",
+        "damage": [{
+          "type": "Explosive",
+          "val": "1d6"
+        }],
+        "range": [ 
+          {"type": "Range","val": 10}
+        ], 
+        "tags": [
+          {"id": "tg_arcing"}
+        ]
+      },
+      {
+        "name": "Sticky Grenades",
+        "range": [ 
+          {"type": "Range","val": 10}
+        ], 
+        "tags": [
+          {"id": "tg_arcing"}
+        ],
+        "damage": [{"type": "Explosive", "val": "1d6"}],
+        "actions":[{
+          "name":"Detonate Sticky Grenades",
+          "activation":"Protocol",
+          "detail": "You detonate all launched sticky grenades, creating a burst 1 area around each grenade. Affected characters must pass an Agility save or take 1d6 explosive damage, and characters caught in multiple overlapping sticky grenade detonations must pass an Agility save or take 2d6 explosive damage instead. On a success, affected characters take half damage. Any target with a grenade stuck to them automatically fails this save upon detonation."
+        }],
+        "effect": "When fired this way you may target objects, obstructions, and open spaces, hitting automatically, or make a regular attack roll against a valid target within range. On hit, sticky grenades deal no damage and cannot benefit from any mods or systems which modify a weapon's damage or other characteristics on hit."
+      }
+    ],
+    "source": "IPS-N",
+    "license": "WORDEN",
+    "license_level": 2,
+    "description": "A common armament for area denial and hard/soft target interdiction, ST or Sticky Type grenade launchers fire low velocity projectiles designed to either detonate on impact or to adhere to surfaces using a combination of burnout electromagnetic generators and quick-hardening adhesive foam. Once applied to targets, stuck grenades can be manually detonated, allowing users to easily create ambush killzones, impromptu minefields, and reinforced defensive positions."
+  },
+  {
+    "id": "fgtsmw_mk_12_chassis_served_support_weapon",
+    "name": "MK 12 Chassis-Served Support Weapon",
+    "mount": "Superheavy",
+    "type": "Cannon",
+    "profiles":[
+      {
+        "name": "Unstabilized",
+        "damage": [{
+          "type": "Kinetic",
+          "val": "3d6"
+        }],
+        "range": [{
+          "type": "Range",
+          "val": 15
+        }],
+        "tags": [
+          {"id": "tg_inaccurate"},
+          {"id": "tg_ordnance"},
+          {"id": "tg_overkill"}
+        ],
+        "actions":[{
+          "name": "Activate Stabilizers",
+          "activation":"Protocol",
+          "detail": "Activate Stabilized weapon profile."
+        }]
+      },
+      {
+        "name": "Stabilized",
+        "damage": [{
+          "type": "Kinetic",
+          "val": "4d6"
+        }],
+        "range": [{
+          "type": "Range",
+          "val": 15
+        }],
+        "tags": [
+          {"id": "tg_loading"},
+          {"id": "tg_overkill"},
+          {"id": "tg_reliable","val": 4},
+          {"id": "tg_heat_self","val": 2}
+        ],
+        "actions":[{
+          "name": "Deactivate Stabilizers",
+          "activation":"Protocol",
+          "detail": "Deactivate Stabilized weapon profile."
+        }],
+        "on_attack": "On hit or miss with this weapon, if the target is not in hard cover they must pass an Agility save or take 1d6 kinetic damage and become Impaired and Slowed until the end of their next turn. They may voluntarily drop Prone to automatically pass this save as well.",
+        "effect": "You become Immobilized, but gain the benefits of hard cover and you can't be pushed, pulled, knocked Prone, or knocked back by smaller characters. An adjacent allied mech may spend a quick action to reload this weapon for you. You may deactivate this weapon's stabilizers as a protocol at the start of your turn, and it deactivates automatically if you are forced to move or knocked Prone."
+      }
+    ],
+    "source": "IPS-N",
+    "license": "WORDEN",
+    "license_level": 3,
+    "description":"Referred to across theaters by a variety of colorful nicknames such as the \"Meat Grinder,\" the \"Lawnmower,\" and the \"Chassis-Shredding Shit Wrecker,\" the Mark 12 CSSW is a heavy automatic field weapon designed for use as an area denial/suppression system operating from a fixed position. While technically chassis-portable, standard doctrine calls for the weapon to be braced prior to use and for operators to work in tandem with a dedicated loader as otherwise the voracious rate of fire is capable of outpacing even automated feed systems. The development of the less finicky Leviathan HAC has reduced overall demand for the Mk 12, but IPS-N plans on maintaining the license for the foreseeable future, citing its historical effectiveness during protracted engagements against even numerically superior opposing forces."
+  },
+  {
+    "id": "fgtsmw_onager_combat_shotgun",
+    "name": "Onager Combat Shotgun",
+    "type": "CQB",
+    "mount": "Main",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d6+1"
+    }],
+    "range": [
+      {"type": "Cone","val": 5},
+      {"type": "Threat","val": 3}
+    ],
+    "tags": [
+      {"id": "tg_knockback", "val": 1},
+      {"id": "tg_loading"}
+    ],
+    "source": "HA",
+    "license": "AGRIPPA",
+    "license_level": 1,
+    "description": "Often issued to rear line units and engineering crews as a personal defense weapon, the Armory's standard pattern Onager Combat Shotgun is a simple but powerful close-quarters armament designed for responsiveness and ease of handling. The weapon's typical ammunition load calls for standardized magazines containing an overlapping mix of both wide-area shot and solid slugs, not only streamlining in-field resupply but ensuring sufficient coverage and effect upon all targets within optimal range."
+  },
+  {
+    "id": "fgtsmw_vayavya_missiles",
+    "name": "Vayavya Missiles",
+    "mount": "Main",
+    "type": "Launcher",
+    "damage": [{
+      "type": "Explosive",
+      "val": "1d6"
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 15
+    }],
+    "tags": [
+      {"id": "tg_smart"}
+    ],
+    "source": "SSC",
+    "license": "SPARROWHAWK",
+    "license_level": 1,
+    "effect": "Any flying target hit by this weapon must pass a Hull save or immediately land (this counts as falling without any damage), and additionally become Slowed and can't fly until the end of their next turn. Attacks with this weapon receive +1 Accuracy when used against targets that are flying or at a higher elevation.",
+    "description": "Built upon the backbone of the Sharanga framework, the Vayavya serves as SSC's dedicated air-to-air/ground-to-air missile system. Instead of the standard high-explosive shaped-charge warhead, each missile utilizes a continuous-rod annular fragmentation payload for maximum confirmed-kill efficacy against airborne targets. Pilots are advised that each missile's onboard guidance system is specifically configured for engagement against aerial targets and performance may significantly degrade when used outside of that role."
+  },
+  {
+    "id": "fgtsmw_govardhana_micromissiles",
+    "name": "Govardhana Micromissiles",
+    "mount": "Auxiliary",
+    "type": "Launcher",
+    "damage": [{
+      "type": "Explosive",
+      "val": 4
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 5
+    }],
+    "tags": [
+      {"id": "tg_limited", "val": 4}
+    ],
+    "source": "SSC",
+    "license": "MICROMONARCH",
+    "license_level": 1,
+    "effect": "This weapon can attack two targets at a time. If you attack two targets, this weapon deals 2 explosive damage instead.",
+    "description": "Intended as a theater/role alternative for the Sharanga system and the foundation of the Micromonarch initiative, the Govardhana is SSC's premier chassis-mounted micromissile system, delivering advanced precision-guided munitions in fire-selectable volleys. Each launcher is stack-loaded to maximize ammunition capacity for increased operational duration and a variety of hardpoint configurations are available to fit all major manufacturers' standard frames with minimal adjustment required."
+  },
+  {
+    "id": "fgtsmw_teen_baan_missiles",
+    "name": "Teen Baan Missiles",
+    "mount": "Heavy",
+    "sp": 2,
+    "type": "Launcher",
+    "profiles":[
+      {
+        "name": "Multi-target",
+        "damage": [{
+          "type": "Explosive",
+          "val": "1d6 + 1"
+        }],
+        "range": [
+          {"type": "Range", "val": 10},
+          {"type": "Blast", "val": 2}
+        ],
+        "tags": [
+          {"id": "tg_arcing"},
+          {"id": "tg_ordnance"},
+          {"id": "tg_smart"}
+        ],
+        "effect": "This weapon does not attack yourself or allied characters caught in its area of effect."
+      },        
+      {
+        "name": "Single Target",
+        "damage": [{
+          "type": "Explosive",
+          "val": "2d6+2"
+        }],
+        "range": [{
+          "type": "Range",
+          "val": 10
+        }],
+        "tags": [
+          {"id": "tg_arcing"},
+          {"id": "tg_ordnance"},
+          {"id":"tg_reliable","val": 4},
+          {"id": "tg_smart"}
+        ],
+        "effect":"You may instead use the following profile with this weapon against a single character with the Lock On condition. You must consume the Lock On during the attack, forgoing the usual Accuracy bonus."
+      }
+    ],
+    "source": "SSC",
+    "license": "MICROMONARCH",
+    "license_level": 1,
+    "description": "Furthering development of the Micromonarch license as a close- to mid-range system, the Teen Baan cluster missile represents a significant advancement in reduced-collateral smart weapon design. Each missile is a self-contained launch vehicle for multiple independent guided submunitions receiving coordinating telemetry from an integrated comp/con unit, and the use of SSC's proprietary BRILLIANCE tacnet/IFF integration protocols allows for unparalleled danger-close fire missions without the risk of incidental blue-on-blue outcomes."
+  },
+  {
+    "id": "fgtsmw_seeker_catapult",
+    "name": "Seeker Catapult", 
+    "mount": "Heavy",
+    "type": "Rifle, Nexus",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d6+4"
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 15
+    }],
+    "tags": [
+      {"id": "tg_ap"},
+      {"id": "tg_loading"},
+      {"id": "tg_smart"}
+    ],
+    "source": "HORUS",
+    "license": "THIRDEYE",
+    "license_level": 1,
+    "on_hit": "You may make a secondary attack against the nearest enemy within Range 5 of the first target, checking line of sight and cover from the first target's location. This secondary attack can't deal bonus damage and doesn't trigger additional secondary attacks.",
+    "description": "A hybrid drone/ballistic weapon system incorporating design elements reminiscent of Smith-Shimano railgun architecture as well as elements from what appear to be non-Union technology, the seeker catapult requires a more extensive charging cycle than conventional electromagnetic weapons due to its increased projectile mass. When launched, the high-velocity drone round is propelled with enough force to defeat most armor composites, and once it achieves positive effect-on-target it switches over to an atavistic mode, aggressively pursuing hunt/kill imperatives on its own recognizance until secondary propulsion systems are exhausted."
+  },
+  {
+    "id": "fgtsmw_polaris_pattern_multifunction_laser",
+    "name": "POLARIS-Pattern Multifunction Laser",
+    "mount": "Main",
+    "type": "Rifle",
+    "damage": [{
+      "type": "Energy",
+      "val": "1d6"}
+    ],
+    "range": [{
+      "type": "Range",
+      "val": 8}
+    ],
+    "tags": [
+      {"id": "tg_loading"}
+    ],
+    "source": "HA",
+    "license": "SPITFIRE",
+    "license_level": 1,
+    "on_attack": "You may overclock this weapon to gain Overkill and deal +3 bonus damage on hit. This weapon does not need to be reloaded until you attack this way.",
+    "effect": "This weapon gives +1 Accuracy to pilot or mech skill checks involving laser communication, precision cutting or welding, data transfer, laser microphone interferometry, or other miscellaneous tasks which could be supplemented with a low power laser system.", 
+    "description": "The HA POLARIS-pattern directed energy system has less petawatt output than the SOL line rifle, but what it lacks in power it makes up for in versatility. Designed in response to requests for a simple, durable, and flexible laser weapon suitable for legion recruits and local auxiliary forces, the POLARIS has two primary firing modes, standard beam and high-draw \"assault\" pulse, and can function as a multipurpose laser tool courtesy of an integrated firmware suite. Additionally the weapon's frame features embedded universal charging ports suitable for infantry and dismounted pilots on bivouac."
+  },
+  {
+    "id":"fgtsmw_orion_pattern_hotshot_laser",
+    "name": "ORION-Pattern \"Hotshot\" Laser",
+    "mount": "Auxiliary",
+    "type": "CQB",
+    "damage": [{
+      "type": "Energy",
+      "val": "1d3"
+    }],
+    "range": [
+      {"type": "Range", "val": 3},
+      {"type": "Threat", "val": 3}
+    ],
+    "tags": [
+      {"id":"tg_overkill"}
+    ],
+    "source": "HA",
+    "license": "SPITFIRE",
+    "license_level": 1,
+    "on_attack": "You may take 1 heat to deal +1 burn on hit.", 
+    "description": "Billed as a personal defense weapon suitable for engineers and artillery units far from the frontline, the ORION-pattern pistol is nonetheless suitable for assault purposes due to its dual solid-state power pack/core-integrated feed which allows it to briefly achieve output comparable to mainline armaments. Care should be taken when overdrawing to avoid destructive thermal overload, and the higher-than-typical rate of reported hardware failure is frequently attributed to overzealous users."
+  },
+  {
+    "id": "fgtsmw_advanced_combat_rifle_modular",
+    "name": "Advanced Combat Rifle, Modular",
+    "mount": "Main",
+    "type": "Rifle",
+    "profiles":[
+      {
+        "name": "Assault",
+        "range":[{
+          "type": "Range",
+          "val": 10
+        }],
+        "damage":[{
+          "type": "Kinetic",
+          "val": "1d6"
+        }],
+        "tags": [
+          {"id": "tg_accurate"}
+        ]
+      },
+      {
+        "name": "DMR",
+        "range":[{
+          "type": "Range",
+          "val": 12
+        }],
+        "damage":[{
+          "type":"Kinetic",
+          "val": "1d6+3"
+        }],
+        "tags": [
+          {"id": "tg_accurate"},
+          {"id": "tg_loading"}
+        ]
+      },
+      {
+        "name": "Commando",
+        "range": [
+          {"type": "Range","val": 8},
+          {"type": "Threat","val": 3}
+        ],
+        "damage" : [{
+          "type": "Kinetic",
+          "val": "1d6"}],
+          "effect": "This weapon gains +1 Accuracy on all attacks made as reactions."
+      }
+    ],
+    "source": "HA",
+    "license": "FOUNDRY",
+    "license_level": 1,
+    "effect": "You may equip up to two Mods, to this weapon and you reduce the cost of any Mods applied to this weapon by 1 SP each, to a minimum of 1. Each time you print this weapon, choose one of the following profiles to apply to it. You may choose a different profile each time you print a new copy.",
+    "description": "One of 200 rifle designs selected for trial during Harrison Armory's recent call for a multipurposecombat weapon system and the only design to be approved for further development, the HA Advanced Combat Rifle is fundamentally a standard ballistic weapon with a profile similar to other assault rifle designs available for license. Where it excels is in its modular nature, the ACR-M being designed from the ground up to readily accept and seamlessly integrate a wide variety of user profiles, modifications, and upgrades, allowing pilots to easily create a weapon tailored to their precise needs. An integrated selectable smart-magazine system also allows for seamless, interspersed chambering of multiple ammunition types, providing enhanced performance against multiple target profiles on a per-engagement basis."
+  },
+  {
+    "id": "fgtsmw_kinesis_driver",
+    "name": "Kinesis Driver",
+    "mount": "Superheavy",
+    "type": "Cannon",
+    "profiles":[
+      {
+        "name": "Collapser Field",
+        "damage": [{
+          "type": "Kinetic", "val": "2d6"
+        }],
+        "range": [
+          {"type": "Blast", "val": 1 },
+          {"type": "Range", "val": 20}
+        ],
+        "tags": [
+          {"id": "tg_ordnance"},
+          {"id": "tg_heat_self", "val": 3}
+        ],
+        "effect": "This weapon's blast zone extends vertically up to 10 spaces high.",
+        "on_hit": "Targets must pass a Hull save or be knocked Prone. Flying characters that fail this save are forced to land (they fall but do not take damage), then knocked Prone."
+      },
+      {
+        "name": "Linear Field",
+        "damage": [{
+          "type": "Kinetic",
+          "val": "3d6"
+        }],
+        "range": [{
+          "type": "Range",
+          "val": 20
+        }],
+        "tags": [
+          {"id": "tg_ordnance"},
+          {"id": "tg_heat_self", "val": 5},
+          {"id": "tg_ap"}
+        ],
+        "on_hit": "This weapon deals +1d6 bonus damage for each point of Armor the target has, up to a maximum of +3d6."
+      }
+    ],
+    "source": "HA",
+    "license": "DOWNWELL",
+    "license_level": 1,
+    "description": "Following on from the Iskander and its directed gravitic projector systems, the next obvious step in adapting artificial gravity generation for battlefield use is to create a chassis-portable, high-powered weapon system. HA's current field-ready prototype system is still in the early stages of development, requiring an auxiliary power pack in addition to standard coldcore feed draw, but is able to project a shaped pulse of gravitational force upon a targeted area at combat-acceptable ranges. This zone of force is sufficient to inflict substantial damage through a combination of turbulent gravity shear and kinetic stresses, capable of overwhelm significant amounts of mass with tremendous force. Once sufficient live-fire combat data has been collected, the Armory design bureau's next focus will be miniaturization."
+  },
+  {
+    "id":"fgtsmw_tactical_webbing",
+    "name": "Tactical Webbing",
+    "mount": "Auxiliary",
+    "type": "System",
+    "damage": [{"type": "Kinetic", "val": 0}],
+    "range": [{"type": "Range", "val": 0}],
+
+    "tags": [
+      {"id":"tg_unique"}
+    ],
+    "source": "C&H",
+    "license": "SHEPHERD",
+    "license_level": 1,
+    "effect": "This system occupies a non-integrated mount of your choice in place of weapons. Choose up to two systems with the Grenade, Mine, or Deployable tags and load them onto this system, reducing their combined SP costs by 4 to a minimum of 0. If this system is destroyed then all systems loaded onto it cannot be used until the tactical webbing is repaired.<br><br><b>NOTE:</b> This feature is unsupported by Comp/Con. Instead, you can write the systems in the notes section of this weapon, creating custom counters for their Limited uses and accounting for SP accordingly.",
+    "description": "C&H's latest \"Tenzing\" line of mech-scale tactical sub-hardpoint fasteners allows users a number of flexible configurations to best fit their frame, providing hands-free load bearing solutions capable of supporting a wide variety of battlefield deployable systems from all major manufacturers. Observers have remarked upon the similarities to this system and a now-discontinued license previously offered by Smith-Shimano Corpro, to which C&H representatives have thus far issued no comment."
+  },
+  {
+    "id":"fgtsmw_sirocco_machine_pistol",
+    "name": "Sirocco Machine Pistol",
+    "mount": "Auxiliary",
+    "type": "CQB",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d3+1"
+    }],
+    "range": [
+      {"type": "Range", "val": 3},
+      {"type": "Threat", "val": 3}
+    ],
+    "tags": [
+      {"id": "tg_inaccurate"},
+      {"id": "tg_loading"}
+    ],
+    "source": "C&H",
+    "license": "TALWAR",
+    "license_level": 1,
+    "on_attack": "On attack, you may expend this weapon's ammunition in a single burst to treat its range as Cone 5. This weapon does not need to be reloaded until you attack this way.", 
+    "description": "The Mitsubachi Tactical Machine Pistol is a weapon infamous for its numerous design flaws, poor engineering, and a cyclic rate sufficiently overtuned to cause the weapon to jam and even explode unless printed with a burst regulator. The design license was quickly abandoned, then just as quickly pirated where it became a common sight in the hands of outlaws and criminals. The Sirocco, however, is an updated and overhauled officially licensed refinement of the original design, specially reinforced to allow for unrestricted rate-of-fire even while using C&H's custom hyper-velocity ammunition. The weapon's cyclic rate remains quite high and pilots are advised to adjust logistics/supply requisitions accordingly with prolonged use."
+  },
+  {
+    "id": "fgtsmw_slug_gun",
+    "name": "Slug Gun",
+    "mount": "Heavy",
+    "type": "Cannon",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "2d6+6"
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 5
+    }],
+    "tags": [
+      {"id": "tg_ap"},
+      {"id": "tg_loading"},
+      {"id": "tg_overkill"}
+    ],
+    "license": "TALWAR",
+    "license_level": 1,
+    "source": "C&H",
+    "on_hit": "The target must pass a Hull save or be knocked Prone.",
+    "effect": "After any attack with this weapon that triggers Overkill, you must pass a Hull check or be knocked Prone.",
+    "description": "Gladiators and pirates both are known for the inventive, often illegal, and inevitably dangerous modifications they're willing to make to weapons for the sake of spectacle or an unexpected advantage in combat. No one knows precisely who the first pilot reckless or desperate enough to wield a cut-down main battle tank's gun as a makeshift cannon was, but they certainly weren't the last to try, and now C&H presents licensed pilots with the opportunity to use one themselves following significant user safety improvements. Despite these upgrades the \"Tunguska\" short-barrel cannon's ballistic properties limit it to point-blank effective engagement ranges, and it remains just as cumbersome to reload as ever, but its solid core smoothbore shells deliver staggering power in a comparatively compact package."
+  },
+  {
+    "id": "fgtsmw_electropasma_shield",
+    "name": "Electroplasma Shield",
+    "mount": "Main",
+    "type": "Melee",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d6"
+    }],
+    "range": [{
+      "type": "Threat",
+      "val": 1
+    }],
+    "tags": [
+      {"id": "tg_limited", "val": 2},
+      {"id": "tg_unique"}
+    ],
+    "source": "C&H",
+    "license": "MANTLE",
+    "license_level": 1,
+    "on_hit": "You may expend a charge to deal +1d6 bonus energy damage.",
+    "effect": "You may attack with this weapon without expending or requiring charges, and whenever you would be forced to destroy a weapon due to critical damage or other effects, you may choose this weapon to destroy even if it has no charges remaining.",
+    "actions":[{
+      "name": "Energetic Parry",
+      "activation": "Reaction",
+      "frequency": "1/round",
+      "trigger": "You are hit by a ranged or a melee attack.",
+      "detail": "Take 3 heat and expend a charge to gain Resistance against the triggering attack."
+    }],
+    "description": "A contemporary adaptation of the now-outdated explosive/reactive armor concept, electromagnetic/reactive armor is comprised of electrically charged plates separated by an air gap to form a high-powered capacitor. When the outermost layer is penetrated the circuit is closed, creating an energetic plasma jet which diffuses incoming kinetic energy and attenuates hostile wave-based weapons fire. This particular system adapts the technology to an armature-mounted shield, adding the ability to manually trigger capacitor cells to function as a powerful close-combat plasma torch, though doing so rapidly degrades the shield's defensive capabilities."
+  },
+  {
+    "id": "fgtsmw_khetaka_heavy_combat_shield",
+    "name": "Khetaka Heavy Combat Shield",
+    "mount": "Heavy",
+    "type": "Melee",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d6+3"
+    }],
+    "range": [{
+      "type": "Threat",
+      "val": "1"
+    }],
+    "tags": [
+      {"id": "tg_knockback", "val": 2}
+    ],
+    "source": "C&H",
+    "license": "MANTLE",
+    "license_level": 1,
+    "effect": "Your mech is considered to be one Size larger for purposes of engagement, and you may reduce any involuntary movement against you by 1 space to a minimum of 0.",
+    "description": "Utilizing reinforced manipulator-free mounting for increased resilience under combat stresses, C&H's Khetaka model heavy combat shield is comprised of multiple articulated plates for optimum full-frame coverage and increased threat interception profile across multiple chassis configurations. The shield's composite armor construction and adjustible angling ensures maximum deflection as well as serving as an effective close-combat armament in its own right, while internal stabilizers help offset its significant mass and provide additional compensation against sub-payload kinetic impacts."
+  },
+  
+  {
+    "id": "fgtsmw_underbarrel_launcher_weapon",
+    "name": "Underbarrel Breacher",
+    "mount": "Auxiliary",
+    "type": "Launcher",
+	  "profiles": 
+	  [{
+        "name": "Underbarrel Breacher",
+        "range": [{
+          "type": "Range",
+          "val": 3
+        }],
+        "damage": [{
+          "type": "Explosive",
+          "val": "5"
+        }],
+	"on_hit": "The target must pass a Hull save or become Shredded until the end of their next turn."
+		}],
+    "tags": [
+	{"id": "tg_loading"},
+	{"id": "tg_ap"}
+	        ],
+	"effect": "When fired at objects, cover, terrain, and the environment, this weapon automatically deals 20 AP explosive damage to up to three adjacent Size 1 sections."
+  },
+  {
+    "id": "fgtsmw_ballistic_shield",
+    "name": "Ballistic Shield",
+    "mount": "Main",
+    "type": "Melee",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d3+2"
+    }],
+    "range": [{
+      "type": "Threat",
+      "val": 1
+    }],
+    "tags": [
+      {"id": "tg_knockback", "val": 1}
+    ],
+    "source": "IPS-N",
+    "license": "POINTMAN",
+    "license_level": 1,
+    "actions":[{
+      "name": "Extend Ballistic Panels",
+      "activation": "Protocol",
+      "detail": "As a protocol, you may extend or retract the shield's ballistic panels. While the panels are extended you become Slowed, but you gain Resistance to all attacks made as a reaction, and when you perform a critical hit with this weapon the target is knocked Prone."
+    }],
+    "description": "A common armament among boarding teams, IPS-N's Rampart chassis-grade combat shield can be affixed to a brachial mount or manipulator-held, and features a retractable panel design to minimize user profile in close quarters where maneuverability can be vital. When needed, the reinforced laminate panels extend and lock securely into place to provide a secondary layer of ablative protection against ballistic/kinetic impacts and directed energy weaponry. Survival rates of assault leaders utilizing Rampart shields in action see an increase of 22% on average."
+  },
+  {
+    "id": "fgtsmw_chimera_integrated" ,
+    "name": "TALON Drone",
+    "mount": "Main",
+    "type": "Nexus",
+    "damage": [{
+      "type": "Energy",
+      "val": "1d6"
+    }],
+    "range": [
+      {"type": "Range","val": 3},
+      {"type": "Threat","val": 3}
+    ],
+    "tags": [
+      {"id": "tg_reliable","val": 2}, {"id": "tg_smart"}
+    ]
+  },
+  {
+    "id": "fgtsmw_gajasura_integrated" ,
+    "name": "Demon's Fang",
+    "mount": "Main",
+    "type": "Melee",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d6+3"
+    }],
+    "range": [
+      {"type": "Threat","val": 1}
+    ],
+    "tags": [
+      {"id": "tg_reliable","val": 4}
+    ],
+    "effect": "This weapon can be used while Jammed. 1/round, if you destroy a character with this weapon you can move up to 2 spaces and make another attack with this weapon as a free action. This movement ignores engagement and doesn't provoke reactions."
+  },
+  {
+    "id": "fgtsmw_anti_armor_missile",
+    "name": "MC-AML Anti-Armor Missile Launcher",
+    "mount": "Main",
+    "type": "Launcher",
+    "damage": [{
+      "type": "Explosive",
+      "val": "4"
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 10
+    }],
+    "tags": [
+      {"id": "tg_ap"},
+      {"id": "tg_ordnance"}
+    ],
+    "license": "GMS",
+    "source": "GMS",
+    "license_level": 0,
+    "description": "GMS weapons run the gamut from venerable designs kept current through regular standardization programs to cutting-edge armaments built to meet modern battlefield challenges, and their catalogue is always expanding. Many of these weapons are frequently mounted to a wide variety of armored vehicles beyond just mechs, such as light machine guns and anti-armor missile launchers, while other designs are strictly intended for mechanized chassis operation, such as the high-powered heavy assault shotgun and their line of extended blade/haft anti-cavalry melee weaponry. This is in addition to periodic updates to the T-3 line of advanced and exotic ordnance, ranging from the Wasp nexus which launches guided swarms of shaped-charge explosive microdrones to the \"Downburst\" apex superiority nexus, a large gunship-tier directed strike unit capable of providing squads with dedicated fire support."
+  },
+  {
+    "id": "fgtsmw_anti_cavalry_melee",
+    "name": "MC-BAC Anti-Cavalry Melee Weapon",
+    "mount": "Heavy",
+    "type": "Melee",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d6+3"
+    }],
+    "range": [{
+      "type": "Threat",
+      "val": 2
+    }],
+    "tags": [
+      {"id": "tg_accurate"}, {"id": "tg_knockback","val": 1}
+    ],
+    "license": "GMS",
+    "source": "GMS",
+    "license_level": 0,
+    "description": "GMS weapons run the gamut from venerable designs kept current through regular standardization programs to cutting-edge armaments built to meet modern battlefield challenges, and their catalogue is always expanding. Many of these weapons are frequently mounted to a wide variety of armored vehicles beyond just mechs, such as light machine guns and anti-armor missile launchers, while other designs are strictly intended for mechanized chassis operation, such as the high-powered heavy assault shotgun and their line of extended blade/haft anti-cavalry melee weaponry. This is in addition to periodic updates to the T-3 line of advanced and exotic ordnance, ranging from the Wasp nexus which launches guided swarms of shaped-charge explosive microdrones to the \"Downburst\" apex superiority nexus, a large gunship-tier directed strike unit capable of providing squads with dedicated fire support."
+  },
+  {
+    "id": "fgtsmw_apex_nexus",
+    "name": "MC-Downburst Apex Nexus",
+    "mount": "Superheavy",
+    "type": "Nexus",
+    "damage": [{
+      "type": "Explosive",
+      "val": "2d6+3"
+    }],
+    "range": [
+      {"type": "Range", "val": 10},
+      {"type": "Line", "val": 5}
+  ],
+    "tags": [
+      {"id": "tg_arcing"},
+      {"id": "tg_smart"}
+  ],
+    "license": "GMS",
+    "source": "GMS",
+    "license_level": 0,
+    "description": "GMS weapons run the gamut from venerable designs kept current through regular standardization programs to cutting-edge armaments built to meet modern battlefield challenges, and their catalogue is always expanding. Many of these weapons are frequently mounted to a wide variety of armored vehicles beyond just mechs, such as light machine guns and anti-armor missile launchers, while other designs are strictly intended for mechanized chassis operation, such as the high-powered heavy assault shotgun and their line of extended blade/haft anti-cavalry melee weaponry. This is in addition to periodic updates to the T-3 line of advanced and exotic ordnance, ranging from the Wasp nexus which launches guided swarms of shaped-charge explosive microdrones to the \"Downburst\" apex superiority nexus, a large gunship-tier directed strike unit capable of providing squads with dedicated fire support."
+  },
+  {
+    "id": "fgtsmw_assault_shotgun",
+    "name": "MC-ASG Assault Shotgun",
+    "mount": "Heavy",
+    "type": "CQB",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "1d6+7"
+    }],
+    "range": [
+      {"type": "Range", "val": 5},
+      {"type": "Threat", "val": 3}
+  ],
+    "tags": [
+      {"id": "tg_loading"},
+      {"id": "tg_knockback","val": 2}
+    ],
+    "license": "GMS",
+    "source": "GMS",
+    "license_level": 0,
+    "description": "GMS weapons run the gamut from venerable designs kept current through regular standardization programs to cutting-edge armaments built to meet modern battlefield challenges, and their catalogue is always expanding. Many of these weapons are frequently mounted to a wide variety of armored vehicles beyond just mechs, such as light machine guns and anti-armor missile launchers, while other designs are strictly intended for mechanized chassis operation, such as the high-powered heavy assault shotgun and their line of extended blade/haft anti-cavalry melee weaponry. This is in addition to periodic updates to the T-3 line of advanced and exotic ordnance, ranging from the Wasp nexus which launches guided swarms of shaped-charge explosive microdrones to the \"Downburst\" apex superiority nexus, a large gunship-tier directed strike unit capable of providing squads with dedicated fire support."
+  },
+  {
+    "id": "fgtsmw_light_machine_gun",
+    "name": "MC-LMG Light Machine Gun",
+    "mount": "Auxiliary",
+    "type": "Rifle",
+    "damage": [{
+      "type": "Kinetic",
+      "val": "2"
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 10
+    }],
+    "license": "GMS",
+    "source": "GMS",
+    "license_level": 0,
+    "description": "GMS weapons run the gamut from venerable designs kept current through regular standardization programs to cutting-edge armaments built to meet modern battlefield challenges, and their catalogue is always expanding. Many of these weapons are frequently mounted to a wide variety of armored vehicles beyond just mechs, such as light machine guns and anti-armor missile launchers, while other designs are strictly intended for mechanized chassis operation, such as the high-powered heavy assault shotgun and their line of extended blade/haft anti-cavalry melee weaponry. This is in addition to periodic updates to the T-3 line of advanced and exotic ordnance, ranging from the Wasp nexus which launches guided swarms of shaped-charge explosive microdrones to the \"Downburst\" apex superiority nexus, a large gunship-tier directed strike unit capable of providing squads with dedicated fire support."
+  },
+  {
+    "id": "fgtsmw_wasp_nexus",
+    "name": "MC-DWA Wasp Nexus",
+    "mount": "Auxiliary",
+    "type": "Nexus",
+    "damage": [{
+      "type": "Explosive",
+      "val": "1"
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 5
+    }],
+    "tags": [
+      {"id": "tg_accurate"},
+      {"id": "tg_ap"},
+      {"id": "tg_smart"}
+    ],
+    "license": "GMS",
+    "source": "GMS",
+    "license_level": 0,
+    "description": "GMS weapons run the gamut from venerable designs kept current through regular standardization programs to cutting-edge armaments built to meet modern battlefield challenges, and their catalogue is always expanding. Many of these weapons are frequently mounted to a wide variety of armored vehicles beyond just mechs, such as light machine guns and anti-armor missile launchers, while other designs are strictly intended for mechanized chassis operation, such as the high-powered heavy assault shotgun and their line of extended blade/haft anti-cavalry melee weaponry. This is in addition to periodic updates to the T-3 line of advanced and exotic ordnance, ranging from the Wasp nexus which launches guided swarms of shaped-charge explosive microdrones to the \"Downburst\" apex superiority nexus, a large gunship-tier directed strike unit capable of providing squads with dedicated fire support."
+  }
+]

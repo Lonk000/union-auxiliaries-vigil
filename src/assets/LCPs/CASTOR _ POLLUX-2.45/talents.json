@@ -1,0 +1,133 @@
+[
+{
+    "id": "cap_bricklayer_talent",
+    "name": "BRICKLAYER",
+    "terse": "Make your deployables bigger, stronger, and hardier",
+    "description": "You are the wall. Behind you: a nation, an ideal, a home. Ahead: everything that would tear it down. You engineer your own schematics, tune your own printers, build a citadel on the battlefield. Stay tall, pilot – you’ve weathered far greater storms.",
+    "ranks": [
+        {
+            "name": "WEATHERPROOFING",
+            "description": "Your Deployables gain +5 HP. As long as they have full HP they also have Resistance to all damage.",
+            "synergies": [{
+                "locations": ["system"],
+                "system_types": ["deployable"],
+                "detail": "Your Deployables gain +5 HP. As long as they have full HP they also have Resistance to all damage."
+            }],
+            "bonuses": [{
+                "id": "deployable_hp",
+                "val": 5
+            }]
+          },
+          {
+            "name": "AMBITIOUS ARCHITECT",
+            "description": "When you place a Deployable system you can choose to make it one Size smaller or larger (max Size 4). If it occupies a Line it can be up to 2 spaces longer or shorter.",
+            "synergies": [{
+                "locations": ["system"],
+                "system_types": ["deployable"],
+                "detail": "When you place a Deployable system you can choose to make it one Size smaller or larger (max Size 4). If it occupies a Line it can be up to 2 spaces longer or shorter."
+            }]
+          },
+          {
+            "name": "BRICK BY BRICK",
+            "description": "1/Scene as a Protocol you may repair an adjacent Deployable, restoring ½ its max HP. Any leftover HP becomes Overshield instead.",
+            "actions":[{
+                "name": "Brick by Brick",
+                "activation": "Protocol",
+                "frequency": "1/Scene",
+                "detail": "Choose an adjacent Deployable. It regains ½ its max HP. Any leftover HP becomes Overshield instead."
+            }]
+          }
+    ]
+  },
+
+
+  {
+    "id": "cap_cyborg_talent",
+    "name": "CYBORG",
+    "terse": "Push your mech to its limits while it's afflicted with statuses",
+    "description": "Some mechanics claim they can talk to their machines - but you take it literally. More than just cosmetic changes, your augments mean your mech is like an extension of your body. Was it a back-alley surgeon or a blacksite engineer? Did you pay in manna or blood? Was it your decision, or someone else’s? Either way, there’s no going back now. ",
+    "ranks": [
+        {
+            "name": "NEURAL LINK",
+            "description": "When a hostile character attacks you as a reaction on your turn, roll 1d6. On a 4+, the attack misses."
+          },
+          {
+            "name": "VOLITION OVERRIDE",
+            "description": "When your mech is Stunned or Jammed, you may still move up to ½ your Speed as a standard move, and still take the Skirmish action. All attacks made this way have +2 Difficulty and cause you to take 1 Heat.",
+            "synergies": [{
+                "locations": ["skirmish", "move"],
+                "detail": "When your mech is Stunned or Jammed, you may still move up to ½ your Speed as a standard move, and still take the Skirmish action. All attacks made this way have +2 Difficulty and cause you to take 1 Heat."
+            }]
+          },
+          {
+            "name": "FULL CEREBRAL SYNC",
+            "description": "When your mech is destroyed, you may choose to keep it active through sheer force of will. You are instead reduced to 1 HP. You can not recover or lose HP while this effect is active. At the end of each of your turns, and whenever you take damage, roll 1d20+Grit. On a 10+, your mech remains active, otherwise it is immediately destroyed. At the end of each of your turns while this ability is active you gain +1 cumulative Difficulty on subsequent rolls. You may only use this ability once per Full Repair.",
+            "synergies": [{
+                "locations": ["hp", "structure"],
+                "detail": "When your mech is destroyed, you may choose to keep it active through sheer force of will. You are instead reduced to 1 HP. You can not recover or lose HP while this effect is active. At the end of each of your turns, and whenever you take damage, roll 1d20+Grit. On a 10+, your mech remains active, otherwise it is immediately destroyed. At the end of each of your turns while this ability is active you gain +1 cumulative Difficulty on subsequent rolls. You may only use this ability once per Full Repair."
+            }]
+          }
+    ]
+  },
+
+  {
+    "id": "cap_sapper_talent",
+    "name": "SAPPER",
+    "terse": "Gain a Saboteur's Toolbox to modify and empower your mines",
+    "description": "You’re like a gardener planting seeds – only yours bloom into brilliant explosions. Even when it makes your hands reek of accelerant or singes off your eyebrows, you’re never happier than when you’re sealing your new mix... as much as your shipmates might wish otherwise.",
+    "ranks": [
+        {
+            "name": "SMART TRIGGER",
+            "description": "You and your allies cannot trigger your own mines unless you choose to, and have +1 Accuracy on saves to avoid their effects. Hostile characters have +1 Difficulty on checks to disarm your mines."
+          },
+          {
+            "name": "CUSTOM CASING",
+            "description": "You have a supply of custom-designed mine casings that can be used with all of your mine systems. Gain the Saboteur's Toolbox sytem.<br>1/turn when you deploy a mine you may also expend a charge from this system for the listed effect.<ul><li> Remote (1 charge): This mine does not detonate by adjacency. Instead, you may detonate it as a quick action after it has armed. Saves to avoid a mine detonated this way gain +1 Difficulty.</li><li> Sparrow (1 charge): This mine floats in the air and ignores height when calculating adjacency. When it explodes, all characters above it are considered to be in the blast radius.</li></ul>",
+            "exclusive": true,
+            "integrated": ["cap_sapper_1"]
+          },
+          {
+            "name": "EXPERT DEMOLITIONIST",
+            "description": "At the end of a scene, you regain 1 Limited charge for any mine system you deployed that has not detonated, and 1 charge for any Saboteur’s Toolbox options attached to it. This does not stack with other effects that allow you to regain lost charges at the end of the scene. You also gain the following options for your Saboteur’s Toolbox:<ul><li>Limpet (2 charges): You do not deploy the mine, instead priming it with an adhesive. The next time you hit a character with a melee attack the mine sticks to them, sharing their position. They cannot cause it to detonate, but it otherwise acts as a normal mine. If it detonates they automatically fail any save it forces.</li><li>Wandering (2 charges): When you deploy this mine, pick a character. The mine moves three spaces towards them at the end of each of your turns by the most direct path, though it will avoid obvious hazards. If it moves into their space, it detonates, but otherwise acts like a normal mine. If that character is destroyed the mine stops moving.</li></ul>",
+            "exclusive": true,
+            "integrated": ["cap_sapper_2"]
+          }
+    ]
+  },
+
+  {
+    "id": "cap_wasteborn_talent",
+    "name": "WASTEBORN",
+    "terse": "Harden yourself against Burn and hostile environments",
+    "description": "What was left, after the Flare? Howling wastes and scorching dust, and the invisible needles of radiation that drilled into the soil to sow a slower death. How many thousands died in those first days? The count has long been lost. But you know that you survived. You never knew the land before the wastes. The danger is an old partner, one you’ve learned to hold at bay – and when the softskins come, fumbling and ignorant – how to let it loose.",
+    "ranks": [
+        {
+            "name": "LEAD COFFIN",
+            "description": "When you Stabilize you clear all Burn. If your line of sight or Sensors would be reduced below Range 5 by a hostile effect, they are instead reduced to Range 5.",
+            "synergies": [{
+                "locations": ["stabilize"],
+                "detail": "When you Stabilize you clear all Burn."
+            }]
+          },
+          {
+            "name": "LIGHTNING ROD",
+            "description": "You have resistance to all damage or Heat you take from an environmental effect (dangerous terrain, dangerous storms, extreme sun, etc). When you clear Burn, you can take 1d3+1 Heat to force a character in Range 3 to make an Engineering save or take Burn equal to the amount you cleared.",
+            "synergies": [{
+                "locations": ["burn"],
+                "detail": "When you clear Burn, you can take 1d3+1 Heat to force a character in Range 3 to make an Engineering save or take Burn equal to the amount you cleared."
+            }]
+          },
+          {
+            "name": "GAMMA FLOOD",
+            "description": "1/Round when you hit a character with a weapon that deals at least partially energy damage or Burn, you overwhelm their reactor. Until the end of their next turn they have +1 Difficulty on checks to avoid environmental effects and terrain, and if they would clear any Burn they only clear half as much. If they are destroyed or melt down before the end of their next turn they leave behind a Hazardous Wreck their size in their space. Hazardous Wrecks project a Burst 1 zone of harsh radiation. Characters other than you in the affected area have +1 Difficulty on attacks against characters outside the area, and take 1 Burn and 1 Heat if they enter the area for the first time on their turn, or end their turn in the area.",
+            "synergies": [{
+                "locations": ["weapon"],
+                "weapon_sizes": ["any"],
+                "weapon_types": ["any"],
+                "detail": "1/Round when you hit a character with a weapon that deals at least partially energy damage or Burn, you overwhelm their reactor. Until the end of their next turn they have +1 Difficulty on checks to avoid environmental effects and terrain, and if they would clear any Burn they only clear half as much. <br><br>If they are destroyed or melt down before the end of their next turn they leave behind a Hazardous Wreck their size in their space. Hazardous Wrecks project a Burst 1 zone of harsh radiation. Characters other than you in the affected area have +1 Difficulty on attacks against characters outside the area, and take 1 Burn and 1 Heat if they enter the area for the first time on their turn, or end their turn in the area."
+                
+            }]
+          }
+    ]
+  }
+]  
