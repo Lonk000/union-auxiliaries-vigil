@@ -1,13 +1,13 @@
 {
   "id": "48042952-9850-482d-be28-e3a0959a7e59",
   "name": "Raul Torres",
-  "callsign": "Vagabond ",
+  "callsign": "Vagabond",
   "level": 0,
   "status": "Active",
   "dead": false,
   "background": "Outlaw",
   "current_hp": 6,
-  "text_appearance": "<p>Heavily armored, Light brown military jacket, high tech helmet</p>",
+  "text_appearance": "<p>Heavily armoured, Light brown military jacket, high tech helmet</p>",
   "notes": "NPC:\n\nOn Ship (Rio Grande):\nRio (ai)\nCaptain Bridget Ferris \nFirst Lt Alex Kim\nstaff sergeant Omari Garcia\n Union ambassador Nilan Bannerjee (sketchy)\n\nCharacter Background: \n\nHad experience as a pilot for long period of time \ncame from fudalistic planet \nLost memory \nCame to and became a lancer \n",
   "history": "<p>\"I don't know much about how I got here, all I know is once I'm in the cockpit I feel more at home than anywhere else\"</p>",
   "skills": [
