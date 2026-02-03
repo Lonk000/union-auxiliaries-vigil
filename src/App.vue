@@ -3,12 +3,17 @@
 		<div v-if="!isInitialized" class="boot-screen">
 			<div class="scanline"></div>
 			<div class="boot-content">
-				<div class="glitch-text">TERMINAL STANDBY</div>
-				<div class="typewriter-container">
-					<span class="system-status">>> UNION-VIGIL // OS_ENCRYPTED_V.2.0.1</span>
+				<div class="vigil-logo">VIGIL OS</div>
+				
+				<div class="terminal-box">
+					<p class="typewriter-text line-1">>> KERNEL_LOAD_SUCCESSFUL [OK]</p>
+					<p class="typewriter-text line-2">>> MOUNTING VIRTUAL_FILESYSTEM... [DONE]</p>
+					<p class="typewriter-text line-3">>> DECRYPTING_USER_PROFILE...</p>
+					<p class="typewriter-text line-4">>> SYSTEM_READY</p>
 				</div>
+
 				<button class="init-button" @click="initializeSystem">
-					INITIALIZE MISSION BRIEFING
+					LOG IN
 				</button>
 			</div>
 		</div>
@@ -78,15 +83,13 @@ export default {
 	methods: {
 		initializeSystem() {
 			this.isInitialized = true;
-			// Audio context must be resumed/played within the user-click handler
 			this.$nextTick(() => {
 				const audio = this.$refs.startupSound;
 				if (audio) {
-					audio.volume = 0.6;
+					audio.volume = 0.5;
 					audio.play().catch(e => console.warn("Audio blocked:", e));
 				}
 			});
-			// Move the router logic here so it happens AFTER the click
 			this.$router.push("/status");
 		},
 		setTitleFavicon(title, favicon) {
@@ -157,7 +160,7 @@ export default {
 						description: c.description,
 						value: c.progress,
 						max: c.segments,
-						color: "#3CB043"
+						color: "#81B2B3" 
 					}];
 				});
 
@@ -174,14 +177,19 @@ export default {
 </script>
 
 <style>
-/* Global App Constraints */
+/* Ensure font-family matches your site's .ttf font */
+@font-face {
+	font-family: 'VigilFont';
+	src: url('@/assets/fonts/Vermin Vibes.ttf') format('truetype');
+}
+
 #app {
 	min-height: 100vh;
 	overflow: hidden !important;
 	background-color: black;
 }
 
-/* BOOT SCREEN */
+/* OS STARTUP SCREEN */
 .boot-screen {
 	position: fixed;
 	top: 0;
@@ -194,74 +202,71 @@ export default {
 	justify-content: center;
 	align-items: center;
 	z-index: 10000;
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'VigilFont', 'Courier New', monospace;
 }
 
-.boot-content {
-	text-align: center;
-	z-index: 2;
+.vigil-logo {
+	color: #fff;
+	font-size: 4rem;
+	letter-spacing: 15px;
+	margin-bottom: 30px;
+	text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
-.glitch-text {
-	color: #ffff00; /* Yellow from your site theme */
-	font-size: 2.5rem;
-	font-weight: bold;
-	margin-bottom: 5px;
-	letter-spacing: 8px;
-	text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
-}
-
-/* Typewriter Effect Styling */
-.typewriter-container {
-	display: inline-block;
+.terminal-box {
+	text-align: left;
+	width: 320px;
 	margin-bottom: 50px;
 }
 
-.system-status {
-	color: #3CB043; /* Green from your site theme */
-	font-size: 0.9rem;
+.typewriter-text {
+	color: #81B2B3; /* Site Teal */
+	font-size: 0.8rem;
 	overflow: hidden;
-	border-right: .15em solid #3CB043;
 	white-space: nowrap;
-	margin: 0 auto;
-	display: block;
-	animation: 
-		typing 3s steps(40, end),
-		blink-caret .75s step-end infinite;
+	width: 0;
+}
+
+/* Sequence Staging */
+.line-1 { animation: typing 0.6s steps(30, end) 0.2s forwards; }
+.line-2 { animation: typing 0.6s steps(30, end) 0.8s forwards; }
+.line-3 { animation: typing 0.6s steps(30, end) 1.4s forwards; }
+.line-4 { 
+    color: #fff;
+    animation: typing 0.6s steps(30, end) 2.0s forwards, blink-caret 0.8s step-end infinite;
+    border-right: 0.15em solid #fff;
 }
 
 .init-button {
-	background: transparent;
-	color: #ffff00;
-	border: 1px solid #ffff00;
-	padding: 18px 36px;
+	background: #1a2a2b;
+	color: #81B2B3;
+	border: 1px solid #81B2B3;
+	padding: 15px 50px;
 	font-size: 1rem;
 	font-family: inherit;
 	cursor: pointer;
 	text-transform: uppercase;
 	transition: all 0.2s ease;
-	letter-spacing: 2px;
+	/* Clip-path mirrors the angled containers in your screenshot */
+	clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
 }
 
 .init-button:hover {
-	background: rgba(255, 255, 0, 0.1);
-	box-shadow: 0 0 20px rgba(255, 255, 0, 0.3);
-	color: #fff;
-	border-color: #fff;
+	background: #81B2B3;
+	color: #000;
+	box-shadow: 0 0 20px rgba(129, 178, 179, 0.4);
 }
 
-/* Retro Scanline Layer */
 .scanline {
 	width: 100%;
 	height: 100%;
 	z-index: 1;
-	background: linear-gradient(0deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.2) 50%);
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%);
 	background-size: 100% 4px;
 	pointer-events: none;
 	position: absolute;
 }
 
-/* Animations */
 @keyframes typing {
 	from { width: 0 }
 	to { width: 100% }
@@ -269,13 +274,9 @@ export default {
 
 @keyframes blink-caret {
 	from, to { border-color: transparent }
-	50% { border-color: #3CB043; }
+	50% { border-color: #fff; }
 }
 
-.fade-leave-active {
-	transition: opacity 1.2s ease;
-}
-.fade-leave-to {
-	opacity: 0;
-}
+.fade-leave-active { transition: opacity 1.5s ease-in-out; }
+.fade-leave-to { opacity: 0; }
 </style>
