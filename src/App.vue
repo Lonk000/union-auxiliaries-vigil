@@ -1,26 +1,43 @@
 <template>
-	<div class="page-wrapper">
-		<Header :planet-path="planetPath" :class="{ animate: animate }" :header="header" />
-		<Sidebar :animate="animate" :class="{ animate: animate }" />
+	<transition name="fade">
+		<div v-if="!isInitialized" class="boot-screen">
+			<div class="scanline"></div>
+			<div class="boot-content">
+				<div class="glitch-text">TERMINAL STANDBY</div>
+				<div class="typewriter-container">
+					<span class="system-status">>> UNION-VIGIL // OS_ENCRYPTED_V.2.0.1</span>
+				</div>
+				<button class="init-button" @click="initializeSystem">
+					INITIALIZE MISSION BRIEFING
+				</button>
+			</div>
+		</div>
+	</transition>
+
+	<div v-if="isInitialized" class="app-interface">
+		<div class="page-wrapper">
+			<Header :planet-path="planetPath" :class="{ animate: animate }" :header="header" />
+			<Sidebar :animate="animate" :class="{ animate: animate }" />
+		</div>
+		<div id="router-view-container">
+			<router-view :animate="animate" :initial-slug="initialSlug" :missions="missions" :events="events"
+				:pilots="pilots" :clocks="clocks" :reserves="reserves" />
+		</div>
+		<svg style="visibility: hidden; position: absolute" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+			version="1.1">
+			<defs>
+				<filter id="round">
+					<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -5"
+						result="goo" />
+					<feComposite in="SourceGraphic" in2="goo" operator="atop" />
+				</filter>
+			</defs>
+		</svg>
+		<audio ref="startupSound">
+			<source src="/startup.ogg" type="audio/ogg" />
+		</audio>
 	</div>
-	<div id="router-view-container">
-		<router-view :animate="animate" :initial-slug="initialSlug" :missions="missions" :events="events"
-			:pilots="pilots" :clocks="clocks" :reserves="reserves" />
-	</div>
-	<svg style="visibility: hidden; position: absolute" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
-		version="1.1">
-		<defs>
-			<filter id="round">
-				<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
-				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -5"
-					result="goo" />
-				<feComposite in="SourceGraphic" in2="goo" operator="atop" />
-			</filter>
-		</defs>
-	</svg>
-	<audio ref="startupSound" autoplay>
-		<source src="/startup.ogg" type="audio/ogg" />
-	</audio>
 </template>
 
 <script>
@@ -36,6 +53,7 @@ export default {
 
 	data() {
 		return {
+			isInitialized: false,
 			animate: Config.animate,
 			initialSlug: Config.initialSlug,
 			planetPath: Config.planetPath,
@@ -57,34 +75,20 @@ export default {
 		this.importReserves(import.meta.glob("@/assets/reserves/*.json"));
 		this.importPilots(import.meta.glob("@/assets/pilots/*.json"));
 	},
-	mounted() {
-		// --- START STARTUP SOUND LOGIC ---
-		const audio = this.$refs.startupSound;
-
-		const playStartup = () => {
-			if (audio) {
-				audio.play()
-					.then(() => {
-						// Clean up listeners once successful
-						window.removeEventListener('click', playStartup);
-						window.removeEventListener('keydown', playStartup);
-						window.removeEventListener('touchstart', playStartup);
-					})
-					.catch(() => {
-						// Console silence to avoid cluttering logs
-					});
-			}
-		};
-
-		// Listen for the first user interaction to bypass browser blocks
-		window.addEventListener('click', playStartup);
-		window.addEventListener('keydown', playStartup);
-		window.addEventListener('touchstart', playStartup);
-		// --- END STARTUP SOUND LOGIC ---
-
-		this.$router.push("/status");
-	},
 	methods: {
+		initializeSystem() {
+			this.isInitialized = true;
+			// Audio context must be resumed/played within the user-click handler
+			this.$nextTick(() => {
+				const audio = this.$refs.startupSound;
+				if (audio) {
+					audio.volume = 0.6;
+					audio.play().catch(e => console.warn("Audio blocked:", e));
+				}
+			});
+			// Move the router logic here so it happens AFTER the click
+			this.$router.push("/status");
+		},
 		setTitleFavicon(title, favicon) {
 			document.title = title;
 			let headEl = document.querySelector('head');
@@ -104,9 +108,7 @@ export default {
 				mission["content"] = content.split("\n").splice(3).join("\n");
 				this.missions = [...this.missions, mission];
 			});
-			this.missions = this.missions.sort(function (a, b) {
-				return b["slug"] - a["slug"];
-			})
+			this.missions = this.missions.sort((a, b) => b["slug"] - a["slug"]);
 		},
 		async importEvents(files) {
 			let filePromises = Object.keys(files).map(path => files[path]());
@@ -144,33 +146,26 @@ export default {
 				pilotFromJson.name = pilotFromJson.name.replace("※", "");
 				pilotFromJson.callsign = pilotFromJson.callsign.replace("※", "");
 				let pilotFromVue = this.pilotSpecialInfo[pilotFromJson.callsign.toUpperCase()];
-				let pilot = {
-					...pilotFromJson,
-					...pilotFromVue,
-				};
+				let pilot = { ...pilotFromJson, ...pilotFromVue };
 				this.pilots = [...this.pilots, pilot];
-				pilot.clocks.forEach(content => {
-					let clock = {};
-					clock["type"] = `Pilot Project // ${pilot.callsign}`;
-					clock["result"] = "";
-					clock["name"] = content.title;
-					clock["description"] = content.description;
-					clock["value"] = content.progress;
-					clock["max"] = content.segments;
-					clock["color"] = "#3CB043";
-					this.clocks = [...this.clocks, clock];
+
+				pilot.clocks.forEach(c => {
+					this.clocks = [...this.clocks, {
+						type: `Pilot Project // ${pilot.callsign}`,
+						result: "",
+						name: c.title,
+						description: c.description,
+						value: c.progress,
+						max: c.segments,
+						color: "#3CB043"
+					}];
 				});
 
-				pilot.reserves.forEach(content => {
-					let reserve = {};
-					reserve["type"] = content.type;
-					reserve["name"] = content.name;
-					reserve["description"] = content.description;
-					reserve["label"] = content.label;
-					reserve["cost"] = content.cost;
-					reserve["notes"] = content.notes;
-					reserve["callsign"] = pilot.callsign.toUpperCase();
-					this.reserves = [...this.reserves, reserve];
+				pilot.reserves.forEach(r => {
+					this.reserves = [...this.reserves, {
+						...r,
+						callsign: pilot.callsign.toUpperCase()
+					}];
 				});
 			});
 		},
@@ -179,8 +174,108 @@ export default {
 </script>
 
 <style>
+/* Global App Constraints */
 #app {
 	min-height: 100vh;
 	overflow: hidden !important;
+	background-color: black;
+}
+
+/* BOOT SCREEN */
+.boot-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: #000;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 10000;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.boot-content {
+	text-align: center;
+	z-index: 2;
+}
+
+.glitch-text {
+	color: #ffff00; /* Yellow from your site theme */
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-bottom: 5px;
+	letter-spacing: 8px;
+	text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+/* Typewriter Effect Styling */
+.typewriter-container {
+	display: inline-block;
+	margin-bottom: 50px;
+}
+
+.system-status {
+	color: #3CB043; /* Green from your site theme */
+	font-size: 0.9rem;
+	overflow: hidden;
+	border-right: .15em solid #3CB043;
+	white-space: nowrap;
+	margin: 0 auto;
+	display: block;
+	animation: 
+		typing 3s steps(40, end),
+		blink-caret .75s step-end infinite;
+}
+
+.init-button {
+	background: transparent;
+	color: #ffff00;
+	border: 1px solid #ffff00;
+	padding: 18px 36px;
+	font-size: 1rem;
+	font-family: inherit;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: all 0.2s ease;
+	letter-spacing: 2px;
+}
+
+.init-button:hover {
+	background: rgba(255, 255, 0, 0.1);
+	box-shadow: 0 0 20px rgba(255, 255, 0, 0.3);
+	color: #fff;
+	border-color: #fff;
+}
+
+/* Retro Scanline Layer */
+.scanline {
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: linear-gradient(0deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.2) 50%);
+	background-size: 100% 4px;
+	pointer-events: none;
+	position: absolute;
+}
+
+/* Animations */
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+}
+
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: #3CB043; }
+}
+
+.fade-leave-active {
+	transition: opacity 1.2s ease;
+}
+.fade-leave-to {
+	opacity: 0;
 }
 </style>
