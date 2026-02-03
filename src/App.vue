@@ -7,13 +7,13 @@
 			
 			<div class="terminal-container">
 				<p class="boot-text line-1">VIGIL CORE BOOTLOADER v.4.0.1</p>
-				<p class="boot-text line-2">MEMORY CHECK........................[ 65536 TB OK ]</p>
+				<p class="boot-text line-2">MEMORY CHECK........................[ 65536_TB_OK ]</p>
 				<p class="boot-text line-3">INITIALIZING VIGIL_KERNEL_01......[ DONE ]</p>
 				<p class="boot-text line-4">MOUNTING /DEV/SDA1 ON /ROOT.......[ OK ]</p>
 				<p class="boot-text line-5">VERIFYING ENCRYPTED_VOLUMES.......[ VERIFIED ]</p>
-				<p class="boot-text line-6">DETECTING COGNITIVE_HARDWARE.....[ NEURAL_LINK READY ]</p>
+				<p class="boot-text line-6">DETECTING COGNITIVE_HARDWARE.....[ NEURAL_LINK_READY ]</p>
 				<p class="boot-text line-7">SYNCING CELESTIAL_COORDINATES.....[ SYNCED ]</p>
-				<p class="boot-text line-8">INITIALIZING OMNI_UPLINK........[ SIGNAL STABLE ]</p>
+				<p class="boot-text line-8">INITIALIZING OMNI_UPLINK........[ SIGNAL_STABLE ]</p>
 				<p class="boot-text line-9">PULSING OMNI_BUS_HANDSHAKE........[ ACKNOWLEDGED ]</p>
 				<p class="boot-text line-10">DECRYPTING_UI_ASSETS..............[ READY ]</p>
 				<p class="boot-text line-11">LOADING PILOT_INTERFACE_MODULE....[ SUCCESS ]</p>
@@ -29,6 +29,8 @@
 				</div>
 				
 				<h1 class="vigil-os-title">VIGIL OS</h1>
+				<h2 class="vigil-os-subtitle">Vanguard Initiative for Galactic Intervention and Logistics</h2>
+				<p class="vigil-os-slogan">'A Safer Point of View'</p>
 				<button class="init-button" @click="initializeSystem">
 					LOG IN
 				</button>
