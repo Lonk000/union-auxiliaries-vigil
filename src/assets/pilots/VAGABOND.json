@@ -70,7 +70,15 @@
     }
   ],
   "pilot_gear": {
-    "armor": [ { "id": "pg_medium_hardsuit" } ],
+    "armor": [ {
+        "id": "pg_assault_hardsuit",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "",
+        "flavorDescription": "These hardsuits, common among military units, feature heavier plating than light hardsuits but more mobility than heavy hardsuits. They are powered, augmenting the user’s strength, and typically feature an onboard computer, sensor suite, integrated air, burst EVA system, and waste recycling systems.",
+        "customDamageType": null
+      }],
     "weapons": [
       { "id": "pg_medium_signature" },
       { "id": "pg_archaic_melee" }
