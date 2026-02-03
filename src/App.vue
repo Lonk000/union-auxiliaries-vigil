@@ -248,10 +248,9 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 #app {
-	min-height: 100vh;
-	overflow: hidden !important;
-	background-color: black;
-	font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto; /* Allows scrolling when content is long */
 }
 
 /* BOOT SCREEN */
