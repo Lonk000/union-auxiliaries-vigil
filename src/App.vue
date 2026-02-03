@@ -3,7 +3,8 @@
 		<div v-if="!isInitialized" class="boot-screen">
 			<div class="scanline"></div>
 			<div class="boot-content">
-				<div class="vigil-logo">VIGIL OS</div>
+				<img src="/faction-logos/vigil.svg" class="vigil-logo-img" alt="VIGIL OS Logo" />
+				<div class="vigil-os-title">VIGIL OS</div>
 				
 				<div class="terminal-box">
 					<p class="typewriter-text line-1">>> KERNEL_LOAD_SUCCESSFUL [OK]</p>
@@ -177,7 +178,7 @@ export default {
 </script>
 
 <style>
-/* Ensure font-family matches your site's .ttf font */
+/* Font import adjusted to Vermin Vibes found in repo assets */
 @font-face {
 	font-family: 'VigilFont';
 	src: url('@/assets/fonts/Vermin Vibes.ttf') format('truetype');
@@ -205,12 +206,19 @@ export default {
 	font-family: 'VigilFont', 'Courier New', monospace;
 }
 
-.vigil-logo {
+.vigil-logo-img {
+	width: 120px;
+	height: auto;
+	margin-bottom: 10px;
+	filter: drop-shadow(0 0 10px rgba(129, 178, 179, 0.5));
+}
+
+.vigil-os-title {
 	color: #fff;
-	font-size: 4rem;
-	letter-spacing: 15px;
+	font-size: 3.5rem;
+	letter-spacing: 12px;
 	margin-bottom: 30px;
-	text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+	text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .terminal-box {
@@ -220,7 +228,7 @@ export default {
 }
 
 .typewriter-text {
-	color: #81B2B3; /* Site Teal */
+	color: #81B2B3; /* Tactical Teal */
 	font-size: 0.8rem;
 	overflow: hidden;
 	white-space: nowrap;
@@ -247,7 +255,7 @@ export default {
 	cursor: pointer;
 	text-transform: uppercase;
 	transition: all 0.2s ease;
-	/* Clip-path mirrors the angled containers in your screenshot */
+	/* Mirrors the angled containers in the Vigil UI */
 	clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
 }
 
@@ -277,6 +285,6 @@ export default {
 	50% { border-color: #fff; }
 }
 
-.fade-leave-active { transition: opacity 1.5s ease-in-out; }
+.fade-leave-active { transition: opacity 1.2s ease-in-out; }
 .fade-leave-to { opacity: 0; }
 </style>
