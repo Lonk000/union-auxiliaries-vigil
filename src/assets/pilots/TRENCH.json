@@ -8,7 +8,7 @@
   "dead": false,
   "text_appearance": "<p><strong>Baseline Physical Assessment:</strong><br>Subject exhibits non-baseline morphology including cranial horn structures, caudal extension, and enhanced muscular density. Skeletal and connective tissues show reinforcement beyond human norms. All adaptations are stable and non-degenerative. No corrective intervention required.</p><p><strong>Neurological &amp; Cognitive Load:</strong><br>OHM interface stability remains exceptional under sustained high-output conditions. Neural response patterns indicate strong resistance to feedback shock and sensory overload. Reaction latency is slightly reduced compared to light-frame pilots; performance remains optimal for heavy platforms.</p><p><strong>Psychological Profile:</strong><br>Low emotional volatility. Flat affect with controlled expression. No indicators of dissociation, aggression, dysregulation, or identity fragmentation. Subject displays strong self-concept and operational focus.</p><p><strong>OHM Integration Notes:</strong><br>Synchronization remains stable at elevated stress thresholds. Subject demonstrates natural aptitude for battlefield anchoring, threat saturation management, and long-duration engagements. Non-baseline physiology presents no adverse OHM interaction.</p><p><strong>Risk Factors:</strong><br>Low. Subject shows a tendency toward self-reliance and extended operational endurance beyond recommended limits. Enforced rest cycles advised.</p><p><strong>Clearance Status:</strong><br>- <strong>APPROVED FOR ACTIVE DEPLOYMENT</strong><br>- <strong>AUTHORIZED FOR HEAVY FIRE SUPPORT FRAMES</strong></p>",
   "notes": "SSgt. Omari Garcia - Marine legend\nRio - ship AI\nCpt Bridgid Farris - CO\n1Lt. Alex Kim - XO?\nNilan Bannerjee - Union Ambassador",
-  "history": "<p>Takeda Hikinata is built like an emplacement and moves like he knows it. Augmented physiology—horns, tail, reinforced musculature—marks him as nonstandard, but he treats it as background noise. Whatever was done to him, it stuck, and he learned how to make it useful.</p><p>Her callsign comes from his spec-ops years: calm, immovable, and reliably cold when things go loud. Hikinata doesn’t posture or escalate. He waits, absorbs pressure, and answers with overwhelming force once the field is fully measured.</p><p>In a frame, he favors heavy fire support for the same reason he favored anchoring roles on foot: control. he doesn’t chase momentum. She denies it to everyone else.</p><p>If <em>Fridge</em> is deployed, the engagement will slow down—whether the enemy wants it to or not.</p>",
+  "history": "<p>Takeda Hikinata is built like an emplacement and moves like he knows it. Augmented physiology—horns, tail, reinforced musculature—marks him as nonstandard, but he treats it as background noise. Whatever was done to him, it stuck, and he learned how to make it useful.</p><p>Her callsign comes from his spec-ops years: calm, immovable, and reliably cold when things go loud. Hikinata doesn’t posture or escalate. He waits, absorbs pressure, and answers with overwhelming force once the field is fully measured.</p><p>In a frame, he favors heavy fire support for the same reason he favored anchoring roles on foot: control. he doesn’t chase momentum. He denies it to everyone else.</p><p>If <em>Trench</em> is deployed, the engagement will slow down—whether the enemy wants it to or not.</p>",
   "quirks": [],
   "current_hp": 9,
   "background": "Spec Ops",
@@ -16,7 +16,7 @@
   "mechs": [
     {
       "id": "ccce32c5-d792-4774-9432-726a2c37c81a",
-      "name": "BT",
+      "name": "Siege",
       "notes": "<ul><li><p>Subject-authorized exterior markings present on primary chassis plating.</p></li><li><p>Artwork combines <strong>Japanese ink-brush motifs</strong> with <strong>Indigenous Canadian formline-inspired geometry</strong>.</p></li><li><p>Application is <strong>asymmetrical</strong> and limited to select armor surfaces (torso, single shoulder).</p></li><li><p>Pigments are non-reflective and do not interfere with sensor, thermal, or stealth profiles.</p></li><li><p>Motifs appear <strong>symbolic rather than decorative</strong>; interpreted as protective or anchoring in nature.</p></li><li><p>Markings show signs of repeated reapplication following frame repairs.</p></li><li><p>Subject declined cosmetic standardization; request approved due to zero operational impact.</p></li><li><p>No evidence of psychological fixation, ritual dependency, or identity destabilization associated with markings.</p></li><li><p>Presence of artwork correlates with <strong>slightly improved focus during extended engagements</strong>.</p></li></ul><p><em>Addendum:</em><br>Frame markings treated by subject as functional. Removal not recommended.</p>",
       "gm_note": "",
       "frame": "mf_standard_pattern_i_everest",
@@ -431,7 +431,7 @@
   "shareCodeExpiry": "",
   "isRemoteResource": true,
   "remoteIID": "us-east-1:88c19765-1c57-c54d-8d4e-cd0e1dcb6ca4",
-  "remoteKey": "pilot/Takeda Shiori--a1a0de73-9c8d-45b4-987b-541158677510--active",
+  "remoteKey": "pilot/Takeda Hikinata--a1a0de73-9c8d-45b4-987b-541158677510--active",
   "skills": [
     { "id": "sk_blow_something_up", "rank": 1 },
     { "id": "sk_get_somewhere_quickly", "rank": 1 },
