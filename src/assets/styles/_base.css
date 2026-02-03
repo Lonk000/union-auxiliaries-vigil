@@ -44,7 +44,9 @@
 /* --- BOOT SEQUENCE FONT FIX --- */
 .boot-sequence, 
 #boot-container, 
-.boot-text {
+.boot-text,
+.vigil-os-title,
+.vigl-os-subtitle {
 	font-family: 'Roboto', sans-serif !important;
 	font-weight: 400;
 	text-transform: uppercase;
