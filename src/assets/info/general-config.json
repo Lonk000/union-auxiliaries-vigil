@@ -5,13 +5,13 @@
   "defaultTitle": "VIGIL |",
   "icon": "/faction-logos/vigil.svg",
   "header": {
-    "planet": "IK-66 'Mercade'",
+    "planet": "Cressidium",
     "year": "5021u",
-    "system": "Ikaros",
-    "gate": "Hymn",
-    "ring": "Dawnline Shore",
+    "system": "Sartai",
+    "gate": "N/A",
+    "ring": "Cascade",
     "headerTitle": "VIGIL",
-    "headerSubtitle": "Vanguard Initiative",
+    "headerSubtitle": "'A safer point of view'",
     "subheaderTitle": "Incident",
     "subheaderSubtitle": "1412"
   },
