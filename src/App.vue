@@ -287,8 +287,8 @@ export default {
 
 .boot-text {
 	color: #81B2B3;
-	/* Increased from 0.8rem to 1.1rem (adjust as needed) */
-	font-size: 1.2rem; 
+	/* Increased from 0.8rem to 1.0rem (adjust as needed) */
+	font-size: 1.0rem; 
 	font-weight: 300;
 	/* Increased spacing between lines for readability */
 	margin-bottom: 8px; 
