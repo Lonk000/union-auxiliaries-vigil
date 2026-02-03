@@ -255,12 +255,6 @@ export default {
   flex-direction: column;
 }
 
-#router-view-container {
-  flex: 1;
-  width: 100%;
-  overflow-y: visible; /* Let the children define the height */
-}
-
 /* BOOT SCREEN */
 .boot-screen {
 	position: fixed;
