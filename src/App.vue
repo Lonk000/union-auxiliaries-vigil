@@ -225,9 +225,6 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 #app {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
 	background: #000;
 	font-family: 'Roboto', sans-serif;
 }
@@ -240,88 +237,77 @@ export default {
 	display: flex;
 	flex-direction: column;
 	padding: 40px;
-	overflow: hidden;
 }
 
 .terminal-container {
-	flex: 1;
+	position: relative;
 	z-index: 5;
 }
 
 .boot-text {
 	font-family: 'Roboto', monospace !important;
 	color: #81B2B3;
-	font-size: 1.0rem; 
+	font-size: 1rem; 
 	font-weight: 300;
-	margin-bottom: 8px; 
+	margin-bottom: 6px; 
 	white-space: nowrap;
 	overflow: hidden;
 	width: 0;
+	/* The "forwards" ensures it stays at 100% width after animating */
+	animation: typing 0.4s steps(40) forwards;
 }
 
-/* Staggered Typing Animations */
-.line-1  { animation: typing 0.3s steps(40) 0.1s forwards; }
-.line-2  { animation: typing 0.3s steps(40) 0.3s forwards; }
-.line-3  { animation: typing 0.3s steps(40) 0.5s forwards; }
-.line-4  { animation: typing 0.3s steps(40) 0.7s forwards; }
-.line-5  { animation: typing 0.3s steps(40) 0.9s forwards; }
-.line-6  { animation: typing 0.3s steps(40) 1.1s forwards; }
-.line-7  { animation: typing 0.3s steps(40) 1.3s forwards; }
-.line-8  { animation: typing 0.3s steps(40) 1.5s forwards; }
-.line-9  { animation: typing 0.3s steps(40) 1.7s forwards; }
-.line-10 { animation: typing 0.3s steps(40) 1.9s forwards; }
-.line-11 { animation: typing 0.3s steps(40) 2.1s forwards; }
-.line-12 { animation: typing 0.3s steps(40) 2.3s forwards; }
-.line-13 { animation: typing 0.3s steps(40) 2.5s forwards; }
-.line-14 { animation: typing 0.3s steps(40) 2.7s forwards; }
-.line-15 { animation: typing 0.6s steps(40) 3.1s forwards; color: #fff; }
+/* Hard-coded delays to ensure they fire in sequence */
+.line-1  { animation-delay: 0.1s; }
+.line-2  { animation-delay: 0.3s; }
+.line-3  { animation-delay: 0.5s; }
+.line-4  { animation-delay: 0.7s; }
+.line-5  { animation-delay: 0.9s; }
+.line-6  { animation-delay: 1.1s; }
+.line-7  { animation-delay: 1.3s; }
+.line-8  { animation-delay: 1.5s; }
+.line-9  { animation-delay: 1.7s; }
+.line-10 { animation-delay: 1.9s; }
+.line-11 { animation-delay: 2.1s; }
+.line-12 { animation-delay: 2.3s; }
+.line-13 { animation-delay: 2.5s; }
+.line-14 { animation-delay: 2.7s; }
+.line-15 { animation-delay: 3.0s; color: #fff; font-weight: 700; }
 
-/* REFIXED: Centering and Roboto for Login UI */
 .login-ui {
 	position: absolute;
-	top: 50%;
+	top: 55%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	display: flex;
 	flex-direction: column;
-	align-items: center; /* Center horizontally */
-	justify-content: center; /* Center vertically */
+	align-items: center;
 	text-align: center;
 	z-index: 20;
 	opacity: 0;
-	width: 100%;
-	animation: fadeIn 1s ease forwards 3.6s;
-}
-
-.logo-wrap {
-	margin-bottom: 20px;
+	animation: fadeIn 0.8s ease forwards 3.5s;
 }
 
 .vigil-logo-img {
-	width: 140px;
+	width: 120px;
 	filter: brightness(0) invert(1);
-	display: block;
-	margin: 0 auto;
+	margin-bottom: 15px;
 }
 
 .vigil-os-title {
 	font-family: 'Roboto', sans-serif;
 	color: #fff;
-	font-size: 2.2rem;
-	font-weight: 700;
-	letter-spacing: 12px;
-	margin: 10px 0;
-	text-transform: uppercase;
+	font-size: 2rem;
+	letter-spacing: 10px;
+	margin: 5px 0;
 }
 
 .vigil-os-subtitle {
 	font-family: 'Roboto', sans-serif;
 	color: #81B2B3;
-	font-size: 0.9rem;
-	font-weight: 300;
-	letter-spacing: 5px;
-	margin-bottom: 40px;
-	text-transform: uppercase;
+	font-size: 0.8rem;
+	letter-spacing: 4px;
+	margin-bottom: 30px;
 }
 
 .init-button {
@@ -329,25 +315,31 @@ export default {
 	background: transparent;
 	color: #81B2B3;
 	border: 1px solid #81B2B3;
-	padding: 15px 60px;
-	font-size: 1.1rem;
-	font-weight: 400;
+	padding: 12px 50px;
+	font-size: 1rem;
 	cursor: pointer;
-	text-transform: uppercase;
-	letter-spacing: 4px;
-	transition: all 0.3s ease;
+	letter-spacing: 3px;
+	transition: 0.3s;
+	/* Clip path for that Sci-Fi look */
 	clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
 }
 
 .init-button:hover {
 	background: #81B2B3;
 	color: #000;
-	box-shadow: 0 0 20px rgba(129, 178, 179, 0.4);
+	box-shadow: 0 0 15px rgba(129, 178, 179, 0.5);
 }
 
-@keyframes typing { from { width: 0; } to { width: 100%; } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes typing { 
+	from { width: 0; } 
+	to { width: 100%; } 
+}
 
-.fade-leave-active { transition: opacity 0.8s ease; }
+@keyframes fadeIn { 
+	from { opacity: 0; transform: translate(-50%, -45%); } 
+	to { opacity: 1; transform: translate(-50%, -50%); } 
+}
+
+.fade-leave-active { transition: opacity 0.5s; }
 .fade-leave-to { opacity: 0; }
 </style>
