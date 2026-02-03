@@ -128,7 +128,7 @@ import ProgressBar from '@/components/ProgressBar.vue'
 import Burden from '@/components/Burden.vue'
 
 // IMPORT SOUND UTILITY
-import { playAudio } from '@/utils/audio'
+import { playAudio } from '@/utils/audio.js'
 
 export default {
   components: {

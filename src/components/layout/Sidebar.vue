@@ -28,7 +28,7 @@
 
 <script>
 // IMPORT SOUND UTILITY
-import { playAudio } from '@/utils/audio';
+import { playAudio } from '@/utils/audio.js';
 
 export default {
   props: {
