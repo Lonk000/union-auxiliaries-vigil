@@ -15,7 +15,11 @@
 			</div>
 
 			<div class="login-ui">
-				<img src="/faction-logos/vigil.svg" class="vigil-logo-img" alt="VIGIL OS Logo" />
+				<div class="logo-scanner-wrap">
+					<img src="/faction-logos/vigil.svg" class="vigil-logo-img" alt="Vigil Logo" />
+					<div class="scanning-bar"></div>
+				</div>
+				
 				<h1 class="vigil-os-title">VIGIL OS</h1>
 				<button class="init-button" @click="initializeSystem">
 					LOG IN
@@ -203,9 +207,9 @@ export default {
 	display: flex;
 	flex-direction: column;
 	padding: 40px;
+	overflow: hidden;
 }
 
-/* TOP LEFT TERMINAL TEXT */
 .terminal-container {
 	flex: 1;
 	text-align: left;
@@ -221,7 +225,6 @@ export default {
 	width: 0;
 }
 
-/* Boot Sequence Timing */
 .line-1 { animation: typing 0.3s steps(40) 0.1s forwards; }
 .line-2 { animation: typing 0.3s steps(40) 0.4s forwards; }
 .line-3 { animation: typing 0.3s steps(40) 0.7s forwards; }
@@ -229,33 +232,53 @@ export default {
 .line-5 { animation: typing 0.3s steps(40) 1.3s forwards; }
 .line-6 { animation: typing 0.3s steps(40) 1.6s forwards; }
 .line-7 { animation: typing 0.3s steps(40) 1.9s forwards; }
-.line-8 { 
-	color: #fff;
-	animation: typing 0.5s steps(40) 2.2s forwards;
-}
+.line-8 { color: #fff; animation: typing 0.5s steps(40) 2.2s forwards; }
 
 /* CENTERED LOGIN UI */
 .login-ui {
 	position: absolute;
-	top: 50%;
+	top: 55%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
 	opacity: 0;
-	animation: fadeIn 1s ease forwards 2.8s; /* Fades in after boot text */
+	animation: fadeIn 1s ease forwards 2.8s;
+}
+
+.logo-scanner-wrap {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 10px;
 }
 
 .vigil-logo-img {
-	width: 120px;
-	margin-bottom: 20px;
-	filter: drop-shadow(0 0 10px rgba(129, 178, 179, 0.4));
+	width: 140px;
+	display: block;
+	filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+}
+
+/* THE SCANNER EFFECT */
+.scanning-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background: linear-gradient(to bottom, transparent, rgba(129, 178, 179, 0.5), transparent);
+	box-shadow: 0 0 15px rgba(129, 178, 179, 0.3);
+	animation: scanMove 3s infinite linear;
+}
+
+@keyframes scanMove {
+	0% { top: -10%; }
+	100% { top: 110%; }
 }
 
 .vigil-os-title {
 	color: #fff;
-	font-size: 2.5rem;
+	font-size: 2.2rem;
 	font-weight: 700;
-	letter-spacing: 15px;
+	letter-spacing: 12px;
 	margin-bottom: 40px;
 	text-transform: uppercase;
 }
@@ -279,7 +302,6 @@ export default {
 	box-shadow: 0 0 20px rgba(129, 178, 179, 0.4);
 }
 
-/* Scanline Effect */
 .scanline {
 	width: 100%;
 	height: 100%;
@@ -292,15 +314,8 @@ export default {
 	left: 0;
 }
 
-@keyframes typing {
-	from { width: 0 }
-	to { width: 100% }
-}
-
-@keyframes fadeIn {
-	from { opacity: 0; }
-	to { opacity: 1; }
-}
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 .fade-leave-active { transition: opacity 1.2s ease; }
 .fade-leave-to { opacity: 0; }
