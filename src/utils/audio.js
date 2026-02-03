@@ -1,22 +1,24 @@
 // src/utils/audio.js
-
-// Pre-create the audio objects so they are ready instantly
 const audioCache = {
   click: new Audio('/sounds/click.mp3'),
   pageswap: new Audio('/sounds/pageswap.mp3'),
-  close: new Audio('/sounds/close.mp3') 
+  close: new Audio('/sounds/close.mp3') // Make sure this file exists in public/sounds/
 };
 
-export const playAudio = (path, volume = 0.4) => {
-  // Determine which sound to play based on the string passed
-  const key = path.includes('pageswap') ? 'pageswap' : 'click';
-  const sound = audioCache[key];
+export const playAudio = (keyOrPath, volume = 0.4) => {
+  // 1. Try to find by exact key (e.g., 'close', 'click')
+  // 2. Fallback: check if the path string contains a keyword
+  let sound = audioCache[keyOrPath];
+  
+  if (!sound) {
+    if (keyOrPath.includes('pageswap')) sound = audioCache.pageswap;
+    else if (keyOrPath.includes('close')) sound = audioCache.close;
+    else sound = audioCache.click;
+  }
 
   if (sound) {
-    sound.currentTime = 0; // Snap to start so rapid clicks work
+    sound.currentTime = 0;
     sound.volume = volume;
-    sound.play().catch(() => {
-      /* Browser blocked until first user gesture */
-    });
+    sound.play().catch(() => {});
   }
 };
