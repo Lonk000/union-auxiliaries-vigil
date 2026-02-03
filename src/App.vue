@@ -9,7 +9,7 @@
 				<p class="boot-text line-3">INITIALIZING VIGIL_KERNEL_01......[ DONE ]</p>
 				<p class="boot-text line-4">MOUNTING /DEV/SDA1 ON /ROOT.......[ OK ]</p>
 				<p class="boot-text line-5">VERIFYING ENCRYPTED_VOLUMES.......[ VERIFIED ]</p>
-				<p class="boot-text line-6">ESTABLISHING SARTAI_UPLINK........[ SIGNAL STABLE ]</p>
+				<p class="boot-text line-6">ESTABLISHING OMNI_UPLINK........[ SIGNAL STABLE ]</p>
 				<p class="boot-text line-7">LOADING PILOT_INTERFACE_MODULE....[ SUCCESS ]</p>
 				<p class="boot-text line-8">>> SYSTEM READY. AWAITING USER AUTHENTICATION...</p>
 			</div>
