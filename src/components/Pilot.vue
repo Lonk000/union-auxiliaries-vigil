@@ -140,8 +140,6 @@ import nrfawData from 'lancer-nrfaw-data'
 import longrimData from 'lancer-longrim-data'
 
 import wallflowerData from '@/assets/LCPs/wallflower-data-2.0.5'
-import castorPolluxData from '@/assets/LCPs/CASTOR_POLLUX-2.45'
-import coldcoreColiseumData from '@/assets/LCPs/COLDCORE_COLISEUM_V2.0'
 import fieldGuideToSuldanData from '@/assets/LCPs/Field_Guide_To_Suldan_2.2.6'
 import intercorpData from '@/assets/LCPs/Intercorp 3.2'
 import dustgraveData from '@/assets/LCPs/dustgrave-data-1.4.0'
