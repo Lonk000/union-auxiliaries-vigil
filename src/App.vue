@@ -15,9 +15,9 @@
 				<p class="boot-text line-7">SYNCING CELESTIAL_COORDINATES.....[ SYNCED ]</p>
 				<p class="boot-text line-8">INITIALIZING OMNI_UPLINK........[ SIGNAL STABLE ]</p>
 				<p class="boot-text line-9">PULSING OMNI_BUS_HANDSHAKE........[ ACKNOWLEDGED ]</p>
-				<p class="boot-text line-10">DECRYPTING_UI_ASSETS..............[ QUANTUM_READY ]</p>
+				<p class="boot-text line-10">DECRYPTING_UI_ASSETS..............[ READY ]</p>
 				<p class="boot-text line-11">LOADING PILOT_INTERFACE_MODULE....[ SUCCESS ]</p>
-				<p class="boot-text line-12">CHECKING BIOMETRIC_CLEARANCE......[ LEVEL 4 ]</p>
+				<p class="boot-text line-12">CHECKING BIOMETRIC_CLEARANCE......[ CLEAR ]</p>
 				<p class="boot-text line-13">ESTABLISHING SECURE_TUNNEL.........[ ENCRYPTED ]</p>
 				<p class="boot-text line-14">REGISTERING SESSION_ID............[ #VGL-9928-X ]</p>
 				<p class="boot-text line-15">>> SYSTEM READY. AWAITING USER AUTHENTICATION...</p>
@@ -286,9 +286,11 @@ export default {
 
 .boot-text {
 	color: #81B2B3;
-	font-size: 0.8rem;
+	/* Increased from 0.8rem to 1.1rem (adjust as needed) */
+	font-size: 1.2rem; 
 	font-weight: 300;
-	margin-bottom: 4px;
+	/* Increased spacing between lines for readability */
+	margin-bottom: 8px; 
 	overflow: hidden;
 	white-space: nowrap;
 	width: 0;
