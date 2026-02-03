@@ -248,9 +248,17 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 #app {
-    min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto; /* Allows scrolling when content is long */
+  min-height: 100vh; /* Allow it to be taller than the screen */
+  overflow-y: auto !important; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent side-scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+#router-view-container {
+  flex: 1;
+  width: 100%;
+  overflow-y: visible; /* Let the children define the height */
 }
 
 /* BOOT SCREEN */
