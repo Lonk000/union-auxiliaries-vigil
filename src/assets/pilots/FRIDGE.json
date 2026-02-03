@@ -441,7 +441,7 @@
   "talents": [
     { "id": "t_heavy_gunner", "rank": 1 },
     { "id": "t_spotter", "rank": 1 },
-    { "id": "t_siege_specialist", "rank": 1 }
+    { "id": "t_brutal", "rank": 1 }
   ],
   "mechSkills": [0, 1, 0, 1],
   "counter_data": [],
