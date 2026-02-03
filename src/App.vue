@@ -178,16 +178,15 @@ export default {
 </script>
 
 <style>
-/* Font import adjusted to Vermin Vibes found in repo assets */
-@font-face {
-	font-family: 'VigilFont';
-	src: url('@/assets/fonts/Vermin Vibes.ttf') format('truetype');
-}
+/* Import Roboto from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 #app {
 	min-height: 100vh;
 	overflow: hidden !important;
 	background-color: black;
+	/* Apply Roboto as the default font */
+	font-family: 'Roboto', sans-serif;
 }
 
 /* OS STARTUP SCREEN */
@@ -203,45 +202,47 @@ export default {
 	justify-content: center;
 	align-items: center;
 	z-index: 10000;
-	font-family: 'VigilFont', 'Courier New', monospace;
+	font-family: 'Roboto', sans-serif;
 }
 
 .vigil-logo-img {
-	width: 120px;
+	width: 100px;
 	height: auto;
-	margin-bottom: 10px;
-	filter: drop-shadow(0 0 10px rgba(129, 178, 179, 0.5));
+	margin-bottom: 20px;
+	filter: drop-shadow(0 0 8px rgba(129, 178, 179, 0.4));
 }
 
 .vigil-os-title {
 	color: #fff;
-	font-size: 3.5rem;
-	letter-spacing: 12px;
+	font-size: 2.5rem;
+	font-weight: 700;
+	letter-spacing: 10px;
 	margin-bottom: 30px;
-	text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+	text-transform: uppercase;
 }
 
 .terminal-box {
 	text-align: left;
-	width: 320px;
+	width: 300px;
 	margin-bottom: 50px;
 }
 
 .typewriter-text {
-	color: #81B2B3; /* Tactical Teal */
-	font-size: 0.8rem;
+	color: #81B2B3; 
+	font-size: 0.75rem;
+	font-weight: 300;
 	overflow: hidden;
 	white-space: nowrap;
 	width: 0;
 }
 
 /* Sequence Staging */
-.line-1 { animation: typing 0.6s steps(30, end) 0.2s forwards; }
-.line-2 { animation: typing 0.6s steps(30, end) 0.8s forwards; }
-.line-3 { animation: typing 0.6s steps(30, end) 1.4s forwards; }
+.line-1 { animation: typing 0.5s steps(30, end) 0.1s forwards; }
+.line-2 { animation: typing 0.5s steps(30, end) 0.6s forwards; }
+.line-3 { animation: typing 0.5s steps(30, end) 1.1s forwards; }
 .line-4 { 
     color: #fff;
-    animation: typing 0.6s steps(30, end) 2.0s forwards, blink-caret 0.8s step-end infinite;
+    animation: typing 0.5s steps(30, end) 1.6s forwards, blink-caret 0.8s step-end infinite;
     border-right: 0.15em solid #fff;
 }
 
@@ -249,27 +250,28 @@ export default {
 	background: #1a2a2b;
 	color: #81B2B3;
 	border: 1px solid #81B2B3;
-	padding: 15px 50px;
-	font-size: 1rem;
-	font-family: inherit;
+	padding: 12px 40px;
+	font-size: 0.9rem;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
 	cursor: pointer;
 	text-transform: uppercase;
 	transition: all 0.2s ease;
-	/* Mirrors the angled containers in the Vigil UI */
+	letter-spacing: 2px;
 	clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
 }
 
 .init-button:hover {
 	background: #81B2B3;
 	color: #000;
-	box-shadow: 0 0 20px rgba(129, 178, 179, 0.4);
+	box-shadow: 0 0 15px rgba(129, 178, 179, 0.3);
 }
 
 .scanline {
 	width: 100%;
 	height: 100%;
 	z-index: 1;
-	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%);
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
 	background-size: 100% 4px;
 	pointer-events: none;
 	position: absolute;
@@ -285,6 +287,6 @@ export default {
 	50% { border-color: #fff; }
 }
 
-.fade-leave-active { transition: opacity 1.2s ease-in-out; }
+.fade-leave-active { transition: opacity 1s ease-in-out; }
 .fade-leave-to { opacity: 0; }
 </style>
