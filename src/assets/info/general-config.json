@@ -1,6 +1,6 @@
 {
   "initialSlug": "001",
-  "planetPath": "/Cressidium.webm",
+  "planetPath": "planets/Cressidium.webm",
   "animate": true,
   "defaultTitle": "VIGIL |",
   "icon": "/faction-logos/vigil.svg",
