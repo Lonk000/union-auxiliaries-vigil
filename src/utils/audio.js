@@ -3,7 +3,8 @@
 // Pre-create the audio objects so they are ready instantly
 const audioCache = {
   click: new Audio('/sounds/click.mp3'),
-  pageswap: new Audio('/sounds/pageswap.mp3')
+  pageswap: new Audio('/sounds/pageswap.mp3'),
+  close: new Audio('/sounds/close.mp3') 
 };
 
 export const playAudio = (path, volume = 0.4) => {

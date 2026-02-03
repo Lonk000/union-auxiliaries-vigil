@@ -162,7 +162,8 @@ export default {
   },
   methods: {
   pilotModal() {
-    playAudio('/sounds/click.mp3', 0.5); // This fires the preloaded 'click' singleton
+    playAudio('click', 0.5); // Open sound
+    
     this.$oruga.modal.open({
       component: PilotModal,
       custom: true,
@@ -175,10 +176,16 @@ export default {
       },
       class: 'custom-modal',
       width: 1920,
+      // TRIGGER SOUND ON CLOSE
+      onCancel: () => {
+        playAudio('close', 0.4); 
+      }
     })
   },
+
   mechModal() {
-    playAudio('/sounds/click.mp3', 0.5); // This fires the preloaded 'click' singleton
+    playAudio('click', 0.5); // Open sound
+    
     this.$oruga.modal.open({
       component: MechModal,
       custom: true,
@@ -192,9 +199,12 @@ export default {
       },
       class: 'custom-modal',
       width: 1920,
+      // TRIGGER SOUND ON CLOSE
+      onCancel: () => {
+        playAudio('close', 0.4);
+      }
     })
   },
-    // ... rest of your existing methods (getActiveMech, getBond, capitalize, etc.) remain unchanged
     getBond() { this.bond = this.bonds.find((obj) => obj.id === this.pilot.bondId) },
     getActiveMech() {
       const activeMechID = this.pilot.state.active_mech_id;
