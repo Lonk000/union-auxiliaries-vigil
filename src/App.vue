@@ -18,7 +18,7 @@
 			</filter>
 		</defs>
 	</svg>
-	<audio autoplay>
+	<audio ref="startupSound" autoplay>
 		<source src="/startup.ogg" type="audio/ogg" />
 	</audio>
 </template>
@@ -58,6 +58,30 @@ export default {
 		this.importPilots(import.meta.glob("@/assets/pilots/*.json"));
 	},
 	mounted() {
+		// --- START STARTUP SOUND LOGIC ---
+		const audio = this.$refs.startupSound;
+
+		const playStartup = () => {
+			if (audio) {
+				audio.play()
+					.then(() => {
+						// Clean up listeners once successful
+						window.removeEventListener('click', playStartup);
+						window.removeEventListener('keydown', playStartup);
+						window.removeEventListener('touchstart', playStartup);
+					})
+					.catch(() => {
+						// Console silence to avoid cluttering logs
+					});
+			}
+		};
+
+		// Listen for the first user interaction to bypass browser blocks
+		window.addEventListener('click', playStartup);
+		window.addEventListener('keydown', playStartup);
+		window.addEventListener('touchstart', playStartup);
+		// --- END STARTUP SOUND LOGIC ---
+
 		this.$router.push("/status");
 	},
 	methods: {
@@ -117,7 +141,6 @@ export default {
 			let fileContents = await Promise.all(filePromises);
 			fileContents.forEach(content => {
 				let pilotFromJson = JSON.parse(JSON.stringify(content));
-				// In case the pilot was added from a copy on compcon via sharecode, remove the "reference mark" symbol
 				pilotFromJson.name = pilotFromJson.name.replace("※", "");
 				pilotFromJson.callsign = pilotFromJson.callsign.replace("※", "");
 				let pilotFromVue = this.pilotSpecialInfo[pilotFromJson.callsign.toUpperCase()];
@@ -159,7 +182,5 @@ export default {
 #app {
 	min-height: 100vh;
 	overflow: hidden !important;
-	/* border-right: 1px solid #ff0;
-	border-bottom: 1px solid #ff0; */
 }
 </style>
