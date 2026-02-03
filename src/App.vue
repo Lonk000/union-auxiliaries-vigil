@@ -65,7 +65,7 @@
 import Header from "./components/layout/Header.vue";
 import Sidebar from "./components/layout/Sidebar.vue";
 import Config from "@/assets/info/general-config.json";
-import { playSFX } from "@/utils/sounds"; // Ensure you created this file!
+import { playSFX } from "@/utils/sounds"; 
 
 export default {
 	components: { Header, Sidebar },
@@ -102,21 +102,23 @@ export default {
 		this.importPilots(import.meta.glob("@/assets/pilots/*.json"));
 	},
 	methods: {
-		// New method to handle sounds for dynamically rendered items
 		handleGlobalClick(e) {
 			const target = e.target;
 
-			// 1. Check for Sidebar Navigation (Sound: nav.mp3)
-			if (target.closest('.sidebar-layout a')) {
+			// 1. Sidebar/Navigation (Sound: pageswap.mp3)
+			if (target.closest('.sidebar-layout a') || target.closest('.o-side__content a')) {
 				playSFX('sidebar');
 				return;
 			}
 
-			// 2. Check for Missions, Pilot Info, or Mech Info (Sound: action.mp3)
+			// 2. Missions, Pilots, Mechs (Sound: click.mp3)
+			// target.closest checks if the click happened on or inside these classes
 			if (
 				target.closest('.mission') || 
+				target.closest('.pilot-wrapper') || 
 				target.closest('.pilot-column') || 
-				target.closest('.mech-column')
+				target.closest('.mech-column') ||
+				target.closest('.section-header')
 			) {
 				playSFX('action');
 			}
@@ -150,7 +152,7 @@ export default {
 				ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
 				ctx.fillRect(0, 0, canvas.width, canvas.height);
 				ctx.fillStyle = "#81B2B3"; 
-				ctx.font = fontSize + "px Roboto";
+				ctx.font = fontSize + "px Roboto"; // Canvas Roboto fix
 				for (let i = 0; i < drops.length; i++) {
 					const text = letters.charAt(Math.floor(Math.random() * letters.length));
 					ctx.globalAlpha = 0.12; 
@@ -164,7 +166,6 @@ export default {
 			};
 			this.matrixInterval = setInterval(draw, 35);
 		},
-        // ... (rest of your import methods remain the same)
 		setTitleFavicon(title, favicon) {
 			document.title = title;
 			let headEl = document.querySelector('head');
@@ -173,11 +174,93 @@ export default {
 			faviconEl.setAttribute('href', favicon);
 			headEl.appendChild(faviconEl);
 		},
-        async importMissions(files) { /* existing code */ },
-        async importEvents(files) { /* existing code */ },
-        async importClocks(files) { /* existing code */ },
-        async importReserves(files) { /* existing code */ },
-        async importPilots(files) { /* existing code */ }
+		async importMissions(files) {
+			let filePromises = Object.keys(files).map(path => files[path]());
+			let fileContents = await Promise.all(filePromises);
+			fileContents.forEach(content => {
+				let mission = {};
+				const lines = content.split("\n");
+				mission["slug"] = lines[0];
+				mission["name"] = lines[1];
+				mission["status"] = lines[2];
+				mission["content"] = lines.slice(3).join("\n");
+				this.missions = [...this.missions, mission];
+			});
+			this.missions = this.missions.sort((a, b) => b["slug"] - a["slug"]);
+		},
+		async importEvents(files) {
+			let filePromises = Object.keys(files).map(path => files[path]());
+			let fileContents = await Promise.all(filePromises);
+			fileContents.forEach(content => {
+				let event = {};
+				const lines = content.split("\n");
+				event["title"] = lines[0];
+				event["location"] = lines[1];
+				event["time"] = lines[2];
+				event["thumbnail"] = lines[3];
+				event["content"] = lines.slice(4).join("\n");
+				this.events = [...this.events, event];
+			});
+			this.events = this.events.reverse();
+		},
+		async importClocks(files) {
+			let filePromises = Object.keys(files).map(path => files[path]());
+			let fileContents = await Promise.all(filePromises);
+			fileContents.forEach(content => {
+				this.clocks = [...this.clocks, ...(content.default || content)];
+			});
+		},
+		async importReserves(files) {
+			let filePromises = Object.keys(files).map(path => files[path]());
+			let fileContents = await Promise.all(filePromises);
+			fileContents.forEach(content => {
+				this.reserves = [...this.reserves, ...(content.default || content)];
+			});
+		},
+		async importPilots(files) {
+			let filePromises = Object.keys(files).map(path => files[path]());
+			let fileContents = await Promise.all(filePromises);
+			fileContents.forEach(content => {
+				let pilotFromJson = content.default || content;
+				pilotFromJson.name = pilotFromJson.name.replace("※", "");
+				pilotFromJson.callsign = pilotFromJson.callsign.replace("※", "");
+				let pilotFromVue = this.pilotSpecialInfo[pilotFromJson.callsign.toUpperCase()] || {};
+				let pilot = { ...pilotFromJson, ...pilotFromVue };
+				this.pilots = [...this.pilots, pilot];
+
+				if (pilot.clocks) {
+					pilot.clocks.forEach(c => {
+						this.clocks = [...this.clocks, {
+							type: `Pilot Project // ${pilot.callsign}`,
+							name: c.title,
+							description: c.description,
+							value: c.progress,
+							max: c.segments,
+							color: "#81B2B3" 
+						}];
+					});
+				}
+			});
+		},
 	},
 };
 </script>
+
+<style>
+/* Ensure Roboto is available for the Boot Sequence */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+.boot-text {
+	font-family: 'Roboto', sans-serif !important;
+	color: #81B2B3;
+	font-size: 1.0rem; 
+	font-weight: 300;
+	margin-bottom: 8px; 
+	overflow: hidden;
+	white-space: nowrap;
+	width: 0;
+	text-shadow: 0 0 5px rgba(129, 178, 179, 0.4);
+}
+
+/* Rest of your styles remain unchanged */
+</style>
