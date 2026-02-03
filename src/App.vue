@@ -101,26 +101,6 @@ export default {
 		this.importReserves(import.meta.glob("@/assets/reserves/*.json"));
 		this.importPilots(import.meta.glob("@/assets/pilots/*.json"));
 	},
-	methods: {
-		// New method to handle sounds for dynamically rendered items
-		handleGlobalClick(e) {
-			const target = e.target;
-
-			// 1. Check for Sidebar Navigation (Sound: nav.mp3)
-			if (target.closest('.sidebar-layout a')) {
-				playSFX('sidebar');
-				return;
-			}
-
-			// 2. Check for Missions, Pilot Info, or Mech Info (Sound: action.mp3)
-			if (
-				target.closest('.mission') || 
-				target.closest('.pilot-column') || 
-				target.closest('.mech-column')
-			) {
-				playSFX('action');
-			}
-		},
 		initializeSystem() {
 			this.isInitialized = true;
 			this.$nextTick(() => {
