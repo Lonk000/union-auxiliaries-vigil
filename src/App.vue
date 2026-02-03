@@ -2,7 +2,6 @@
 	<transition name="fade">
 		<div v-if="!isInitialized" class="boot-screen">
 			<canvas ref="matrixCanvas" class="matrix-canvas"></canvas>
-			
 			<div class="scanline"></div>
 			
 			<div class="terminal-container">
@@ -27,7 +26,6 @@
 				<div class="logo-wrap">
 					<img src="/faction-logos/vigil.svg" class="vigil-logo-img" alt="Vigil Logo" />
 				</div>
-				
 				<h1 class="vigil-os-title">VIGIL OS</h1>
 				<h2 class="vigil-os-subtitle">Vanguard Initiative for Galactic Intervention and Logistics</h2>
 				<button class="init-button" @click="initializeSystem">
@@ -69,11 +67,7 @@ import Sidebar from "./components/layout/Sidebar.vue";
 import Config from "@/assets/info/general-config.json";
 
 export default {
-	components: {
-		Header,
-		Sidebar,
-	},
-
+	components: { Header, Sidebar },
 	data() {
 		return {
 			isInitialized: false,
@@ -107,47 +101,6 @@ export default {
 		this.importPilots(import.meta.glob("@/assets/pilots/*.json"));
 	},
 	methods: {
-		initMatrix() {
-			const canvas = this.$refs.matrixCanvas;
-			if (!canvas) return;
-			const ctx = canvas.getContext('2d');
-
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight;
-
-			const letters = "01ABCDEF<>[]{}/\\|+=*&^%$#@!";
-			const fontSize = 14;
-			const columns = canvas.width / fontSize;
-			const drops = [];
-
-			for (let i = 0; i < columns; i++) {
-				drops[i] = Math.random() * -100;
-			}
-
-			if (this.matrixInterval) clearInterval(this.matrixInterval);
-
-			const draw = () => {
-				ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
-				ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-				ctx.fillStyle = "#81B2B3"; 
-				ctx.font = fontSize + "px Roboto"; // Restored Roboto here
-
-				for (let i = 0; i < drops.length; i++) {
-					const text = letters.charAt(Math.floor(Math.random() * letters.length));
-					ctx.globalAlpha = 0.12; 
-					ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-					if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-						drops[i] = 0;
-					}
-					drops[i]++;
-				}
-				ctx.globalAlpha = 1.0;
-			};
-
-			this.matrixInterval = setInterval(draw, 35);
-		},
 		initializeSystem() {
 			this.isInitialized = true;
 			this.$nextTick(() => {
@@ -158,6 +111,34 @@ export default {
 				}
 			});
 			this.$router.push("/status");
+		},
+		initMatrix() {
+			const canvas = this.$refs.matrixCanvas;
+			if (!canvas) return;
+			const ctx = canvas.getContext('2d');
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			const letters = "01ABCDEF<>[]{}/\\|+=*&^%$#@!";
+			const fontSize = 14;
+			const columns = canvas.width / fontSize;
+			const drops = [];
+			for (let i = 0; i < columns; i++) { drops[i] = Math.random() * -100; }
+			if (this.matrixInterval) clearInterval(this.matrixInterval);
+			const draw = () => {
+				ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+				ctx.fillRect(0, 0, canvas.width, canvas.height);
+				ctx.fillStyle = "#81B2B3"; 
+				ctx.font = fontSize + "px Roboto, monospace";
+				for (let i = 0; i < drops.length; i++) {
+					const text = letters.charAt(Math.floor(Math.random() * letters.length));
+					ctx.globalAlpha = 0.12; 
+					ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+					if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) { drops[i] = 0; }
+					drops[i]++;
+				}
+				ctx.globalAlpha = 1.0;
+			};
+			this.matrixInterval = setInterval(draw, 35);
 		},
 		setTitleFavicon(title, favicon) {
 			document.title = title;
@@ -172,10 +153,11 @@ export default {
 			let fileContents = await Promise.all(filePromises);
 			fileContents.forEach(content => {
 				let mission = {};
-				mission["slug"] = content.split("\n")[0];
-				mission["name"] = content.split("\n")[1];
-				mission["status"] = content.split("\n")[2];
-				mission["content"] = content.split("\n").splice(3).join("\n");
+				const lines = content.split("\n");
+				mission["slug"] = lines[0];
+				mission["name"] = lines[1];
+				mission["status"] = lines[2];
+				mission["content"] = lines.slice(3).join("\n");
 				this.missions = [...this.missions, mission];
 			});
 			this.missions = this.missions.sort((a, b) => b["slug"] - a["slug"]);
@@ -185,11 +167,12 @@ export default {
 			let fileContents = await Promise.all(filePromises);
 			fileContents.forEach(content => {
 				let event = {};
-				event["title"] = content.split("\n")[0];
-				event["location"] = content.split("\n")[1];
-				event["time"] = content.split("\n")[2];
-				event["thumbnail"] = content.split("\n")[3];
-				event["content"] = content.split("\n").splice(4).join("\n");
+				const lines = content.split("\n");
+				event["title"] = lines[0];
+				event["location"] = lines[1];
+				event["time"] = lines[2];
+				event["thumbnail"] = lines[3];
+				event["content"] = lines.slice(4).join("\n");
 				this.events = [...this.events, event];
 			});
 			this.events = this.events.reverse();
@@ -198,89 +181,50 @@ export default {
 			let filePromises = Object.keys(files).map(path => files[path]());
 			let fileContents = await Promise.all(filePromises);
 			fileContents.forEach(content => {
-				this.clocks = JSON.parse(JSON.stringify(content)).default;
+				this.clocks = [...this.clocks, ...(content.default || content)];
 			});
 		},
 		async importReserves(files) {
 			let filePromises = Object.keys(files).map(path => files[path]());
 			let fileContents = await Promise.all(filePromises);
 			fileContents.forEach(content => {
-				this.reserves = JSON.parse(JSON.stringify(content)).default;
+				this.reserves = [...this.reserves, ...(content.default || content)];
 			});
 		},
 		async importPilots(files) {
 			let filePromises = Object.keys(files).map(path => files[path]());
 			let fileContents = await Promise.all(filePromises);
 			fileContents.forEach(content => {
-				let pilotFromJson = JSON.parse(JSON.stringify(content));
+				let pilotFromJson = content.default || content;
 				pilotFromJson.name = pilotFromJson.name.replace("※", "");
 				pilotFromJson.callsign = pilotFromJson.callsign.replace("※", "");
-				let pilotFromVue = this.pilotSpecialInfo[pilotFromJson.callsign.toUpperCase()];
+				let pilotFromVue = this.pilotSpecialInfo[pilotFromJson.callsign.toUpperCase()] || {};
 				let pilot = { ...pilotFromJson, ...pilotFromVue };
 				this.pilots = [...this.pilots, pilot];
-
-				pilot.clocks.forEach(c => {
-					this.clocks = [...this.clocks, {
-						type: `Pilot Project // ${pilot.callsign}`,
-						result: "",
-						name: c.title,
-						description: c.description,
-						value: c.progress,
-						max: c.segments,
-						color: "#81B2B3" 
-					}];
-				});
-
-				pilot.reserves.forEach(r => {
-					this.reserves = [...this.reserves, {
-						...r,
-						callsign: pilot.callsign.toUpperCase()
-					}];
-				});
+				if (pilot.clocks) {
+					pilot.clocks.forEach(c => {
+						this.clocks = [...this.clocks, {
+							type: `Pilot Project // ${pilot.callsign}`,
+							name: c.title,
+							description: c.description,
+							value: c.progress,
+							max: c.segments,
+							color: "#81B2B3" 
+						}];
+					});
+				}
 			});
-		},
-	},
+		}
+	}
 };
 </script>
 
 <style>
-/* Added Font Import to ensure Roboto is available */
+/* Cleaned up styles and ensured Roboto fallback */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-#app {
-  min-height: 100vh;
-  overflow-y: auto !important;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.boot-screen {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background: #000;
-	z-index: 10000;
-	display: flex;
-	flex-direction: column;
-	padding: 40px;
-	overflow: hidden;
-}
-
-.matrix-canvas {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	pointer-events: none;
-}
-
 .boot-text {
-	font-family: 'Roboto', sans-serif !important; /* Forces Roboto */
+	font-family: 'Roboto', monospace !important;
 	color: #81B2B3;
 	font-size: 1.0rem; 
 	font-weight: 300;
@@ -291,11 +235,22 @@ export default {
 	text-shadow: 0 0 5px rgba(129, 178, 179, 0.4);
 }
 
-/* ... existing animations and layout styles remain the same ... */
+/* Re-adding the typewriter animation specifically for the boot sequence */
+.line-1 { animation: typing 0.4s steps(40) 0.2s forwards; }
+.line-2 { animation: typing 0.4s steps(40) 0.6s forwards; }
+.line-3 { animation: typing 0.4s steps(40) 1.0s forwards; }
+.line-4 { animation: typing 0.4s steps(40) 1.4s forwards; }
+.line-5 { animation: typing 0.4s steps(40) 1.8s forwards; }
+.line-6 { animation: typing 0.4s steps(40) 2.2s forwards; }
+.line-7 { animation: typing 0.4s steps(40) 2.6s forwards; }
+.line-8 { animation: typing 0.4s steps(40) 3.0s forwards; }
+.line-9 { animation: typing 0.4s steps(40) 3.4s forwards; }
+.line-10 { animation: typing 0.4s steps(40) 3.8s forwards; }
+.line-11 { animation: typing 0.4s steps(40) 4.2s forwards; }
+.line-12 { animation: typing 0.4s steps(40) 4.6s forwards; }
+.line-13 { animation: typing 0.4s steps(40) 5.0s forwards; }
+.line-14 { animation: typing 0.4s steps(40) 5.4s forwards; }
+.line-15 { animation: typing 0.4s steps(40) 5.8s forwards; }
 
 @keyframes typing { from { width: 0 } to { width: 100% } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-.fade-leave-active { transition: opacity 1.2s ease; }
-.fade-leave-to { opacity: 0; }
 </style>
