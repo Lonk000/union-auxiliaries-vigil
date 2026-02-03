@@ -2,17 +2,21 @@
 	<transition name="fade">
 		<div v-if="!isInitialized" class="boot-screen">
 			<div class="scanline"></div>
-			<div class="boot-content">
-				<img src="/faction-logos/vigil.svg" class="vigil-logo-img" alt="VIGIL OS Logo" />
-				<div class="vigil-os-title">VIGIL OS</div>
-				
-				<div class="terminal-box">
-					<p class="typewriter-text line-1">>> KERNEL_LOAD_SUCCESSFUL [OK]</p>
-					<p class="typewriter-text line-2">>> MOUNTING VIRTUAL_FILESYSTEM... [DONE]</p>
-					<p class="typewriter-text line-3">>> DECRYPTING_USER_PROFILE...</p>
-					<p class="typewriter-text line-4">>> SYSTEM_READY</p>
-				</div>
+			
+			<div class="terminal-container">
+				<p class="boot-text line-1">VIGIL CORE BOOTLOADER v.4.0.1</p>
+				<p class="boot-text line-2">MEMORY CHECK........................[ 65536 KB OK ]</p>
+				<p class="boot-text line-3">INITIALIZING VIGIL_KERNEL_01......[ DONE ]</p>
+				<p class="boot-text line-4">MOUNTING /DEV/SDA1 ON /ROOT.......[ OK ]</p>
+				<p class="boot-text line-5">VERIFYING ENCRYPTED_VOLUMES.......[ VERIFIED ]</p>
+				<p class="boot-text line-6">ESTABLISHING SARTAI_UPLINK........[ SIGNAL STABLE ]</p>
+				<p class="boot-text line-7">LOADING PILOT_INTERFACE_MODULE....[ SUCCESS ]</p>
+				<p class="boot-text line-8">>> SYSTEM READY. AWAITING USER AUTHENTICATION...</p>
+			</div>
 
+			<div class="login-ui">
+				<img src="/faction-logos/vigil.svg" class="vigil-logo-img" alt="VIGIL OS Logo" />
+				<h1 class="vigil-os-title">VIGIL OS</h1>
 				<button class="init-button" @click="initializeSystem">
 					LOG IN
 				</button>
@@ -178,18 +182,16 @@ export default {
 </script>
 
 <style>
-/* Import Roboto from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 #app {
 	min-height: 100vh;
 	overflow: hidden !important;
 	background-color: black;
-	/* Apply Roboto as the default font */
 	font-family: 'Roboto', sans-serif;
 }
 
-/* OS STARTUP SCREEN */
+/* BOOT SCREEN */
 .boot-screen {
 	position: fixed;
 	top: 0;
@@ -197,84 +199,97 @@ export default {
 	width: 100vw;
 	height: 100vh;
 	background: #000;
+	z-index: 10000;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	z-index: 10000;
-	font-family: 'Roboto', sans-serif;
+	padding: 40px;
+}
+
+/* TOP LEFT TERMINAL TEXT */
+.terminal-container {
+	flex: 1;
+	text-align: left;
+}
+
+.boot-text {
+	color: #81B2B3;
+	font-size: 0.8rem;
+	font-weight: 300;
+	margin-bottom: 4px;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 0;
+}
+
+/* Boot Sequence Timing */
+.line-1 { animation: typing 0.3s steps(40) 0.1s forwards; }
+.line-2 { animation: typing 0.3s steps(40) 0.4s forwards; }
+.line-3 { animation: typing 0.3s steps(40) 0.7s forwards; }
+.line-4 { animation: typing 0.3s steps(40) 1.0s forwards; }
+.line-5 { animation: typing 0.3s steps(40) 1.3s forwards; }
+.line-6 { animation: typing 0.3s steps(40) 1.6s forwards; }
+.line-7 { animation: typing 0.3s steps(40) 1.9s forwards; }
+.line-8 { 
+	color: #fff;
+	animation: typing 0.5s steps(40) 2.2s forwards;
+}
+
+/* CENTERED LOGIN UI */
+.login-ui {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	opacity: 0;
+	animation: fadeIn 1s ease forwards 2.8s; /* Fades in after boot text */
 }
 
 .vigil-logo-img {
-	width: 100px;
-	height: auto;
+	width: 120px;
 	margin-bottom: 20px;
-	filter: drop-shadow(0 0 8px rgba(129, 178, 179, 0.4));
+	filter: drop-shadow(0 0 10px rgba(129, 178, 179, 0.4));
 }
 
 .vigil-os-title {
 	color: #fff;
 	font-size: 2.5rem;
 	font-weight: 700;
-	letter-spacing: 10px;
-	margin-bottom: 30px;
+	letter-spacing: 15px;
+	margin-bottom: 40px;
 	text-transform: uppercase;
-}
-
-.terminal-box {
-	text-align: left;
-	width: 300px;
-	margin-bottom: 50px;
-}
-
-.typewriter-text {
-	color: #81B2B3; 
-	font-size: 0.75rem;
-	font-weight: 300;
-	overflow: hidden;
-	white-space: nowrap;
-	width: 0;
-}
-
-/* Sequence Staging */
-.line-1 { animation: typing 0.5s steps(30, end) 0.1s forwards; }
-.line-2 { animation: typing 0.5s steps(30, end) 0.6s forwards; }
-.line-3 { animation: typing 0.5s steps(30, end) 1.1s forwards; }
-.line-4 { 
-    color: #fff;
-    animation: typing 0.5s steps(30, end) 1.6s forwards, blink-caret 0.8s step-end infinite;
-    border-right: 0.15em solid #fff;
 }
 
 .init-button {
 	background: #1a2a2b;
 	color: #81B2B3;
 	border: 1px solid #81B2B3;
-	padding: 12px 40px;
-	font-size: 0.9rem;
-	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
+	padding: 15px 60px;
+	font-size: 1rem;
 	cursor: pointer;
 	text-transform: uppercase;
+	letter-spacing: 3px;
 	transition: all 0.2s ease;
-	letter-spacing: 2px;
 	clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
 }
 
 .init-button:hover {
 	background: #81B2B3;
 	color: #000;
-	box-shadow: 0 0 15px rgba(129, 178, 179, 0.3);
+	box-shadow: 0 0 20px rgba(129, 178, 179, 0.4);
 }
 
+/* Scanline Effect */
 .scanline {
 	width: 100%;
 	height: 100%;
-	z-index: 1;
-	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
+	z-index: 10;
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
 	background-size: 100% 4px;
 	pointer-events: none;
 	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 @keyframes typing {
@@ -282,11 +297,11 @@ export default {
 	to { width: 100% }
 }
 
-@keyframes blink-caret {
-	from, to { border-color: transparent }
-	50% { border-color: #fff; }
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
 
-.fade-leave-active { transition: opacity 1s ease-in-out; }
+.fade-leave-active { transition: opacity 1.2s ease; }
 .fade-leave-to { opacity: 0; }
 </style>
