@@ -27,15 +27,11 @@
 </template>
 
 <script>
-// IMPORT SOUND UTILITY
 import { playAudio } from '@/utils/audio.js';
 
 export default {
   props: {
-    animate: {
-      type: Boolean,
-      required: true,
-    },
+    animate: { type: Boolean, required: true },
   },
   data() {
     return {
@@ -46,7 +42,8 @@ export default {
   },
   methods: {
     swapSound() {
-      playAudio('/sounds/pageswap.mp3', 0.3); // SOUND ADDED
+      // Direct call to the cached sound
+      playAudio('/sounds/pageswap.mp3', 0.3);
     }
   }
 };

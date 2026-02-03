@@ -161,39 +161,40 @@ export default {
     this.getBond();
   },
   methods: {
-    pilotModal() {
-      playAudio('/sounds/click.mp3', 0.5); // SOUND ADDED
-      this.$oruga.modal.open({
-        component: PilotModal,
-        custom: true,
-        trapFocus: true,
-        props: {
-          pilot: this.pilot,
-          talents: this.talents,
-          skills: this.skills,
-          frames: this.frames,
-        },
-        class: 'custom-modal',
-        width: 1920,
-      })
-    },
-    mechModal() {
-      playAudio('/sounds/click.mp3', 0.5); // SOUND ADDED
-      this.$oruga.modal.open({
-        component: MechModal,
-        custom: true,
-        trapFocus: true,
-        props: {
-          animate: this.animate,
-          mech: this.activeMech,
-          systemsData: this.mechSystems,
-          weaponsData: this.mechWeapons,
-          pilot: this.pilot,
-        },
-        class: 'custom-modal',
-        width: 1920,
-      })
-    },
+   methods: {
+  pilotModal() {
+    playAudio('/sounds/click.mp3', 0.5); // This fires the preloaded 'click' singleton
+    this.$oruga.modal.open({
+      component: PilotModal,
+      custom: true,
+      trapFocus: true,
+      props: {
+        pilot: this.pilot,
+        talents: this.talents,
+        skills: this.skills,
+        frames: this.frames,
+      },
+      class: 'custom-modal',
+      width: 1920,
+    })
+  },
+  mechModal() {
+    playAudio('/sounds/click.mp3', 0.5); // This fires the preloaded 'click' singleton
+    this.$oruga.modal.open({
+      component: MechModal,
+      custom: true,
+      trapFocus: true,
+      props: {
+        animate: this.animate,
+        mech: this.activeMech,
+        systemsData: this.mechSystems,
+        weaponsData: this.mechWeapons,
+        pilot: this.pilot,
+      },
+      class: 'custom-modal',
+      width: 1920,
+    })
+  },
     // ... rest of your existing methods (getActiveMech, getBond, capitalize, etc.) remain unchanged
     getBond() { this.bond = this.bonds.find((obj) => obj.id === this.pilot.bondId) },
     getActiveMech() {
