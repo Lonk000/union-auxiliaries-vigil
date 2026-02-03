@@ -1,5 +1,3 @@
-please implement it into the whole vue
-
 <template>
 	<transition name="fade">
 		<div v-if="!isInitialized" class="boot-screen">
