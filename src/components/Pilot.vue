@@ -5,7 +5,7 @@
         <div class="heading h1">{{ pilot.callsign }}</div>
         <div class="heading h2">({{ pilot.name }}) </div>
       </div>
-      <div class="col"><img src="/faction-logos/msmc.svg"></div>
+      <div class="col"><img src="/faction-logos/vigil.svg"></div>
     </div>
     <div class="body">
       <div class="add-padding"> Union Administrative RM-4 Pilot Identification Protocol (IDENT) Record
