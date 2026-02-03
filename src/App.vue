@@ -57,7 +57,7 @@
 			</defs>
 		</svg>
 		<audio ref="startupSound">
-			<source src="/startup.ogg" type="audio/ogg" />
+			<source src="/startup 1.mp3" type="audio/mpeg" />
 		</audio>
 	</div>
 </template>
