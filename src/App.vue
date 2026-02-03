@@ -149,7 +149,7 @@ export default {
 		async importMissions(files) {
 			let filePromises = Object.keys(files).map(path => files[path]());
 			let fileContents = await Promise.all(filePromises);
-			let missions = [];
+			let tempMissions = [];
 			fileContents.forEach(content => {
 				let mission = {};
 				const lines = content.split("\n");
@@ -157,14 +157,14 @@ export default {
 				mission["name"] = lines[1];
 				mission["status"] = lines[2];
 				mission["content"] = lines.slice(3).join("\n");
-				missions.push(mission);
+				tempMissions.push(mission);
 			});
-			this.missions = missions.sort((a, b) => b["slug"] - a["slug"]);
+			this.missions = tempMissions.sort((a, b) => b["slug"] - a["slug"]);
 		},
 		async importEvents(files) {
 			let filePromises = Object.keys(files).map(path => files[path]());
 			let fileContents = await Promise.all(filePromises);
-			let events = [];
+			let tempEvents = [];
 			fileContents.forEach(content => {
 				let event = {};
 				const lines = content.split("\n");
@@ -173,9 +173,9 @@ export default {
 				event["time"] = lines[2];
 				event["thumbnail"] = lines[3];
 				event["content"] = lines.slice(4).join("\n");
-				events.push(event);
+				tempEvents.push(event);
 			});
-			this.events = events.reverse();
+			this.events = tempEvents.reverse();
 		},
 		async importClocks(files) {
 			let filePromises = Object.keys(files).map(path => files[path]());
@@ -194,14 +194,14 @@ export default {
 		async importPilots(files) {
 			let filePromises = Object.keys(files).map(path => files[path]());
 			let fileContents = await Promise.all(filePromises);
-			let pilots = [];
+			let tempPilots = [];
 			fileContents.forEach(content => {
 				let pilotFromJson = content.default || content;
 				pilotFromJson.name = pilotFromJson.name.replace("※", "");
 				pilotFromJson.callsign = pilotFromJson.callsign.replace("※", "");
 				let pilotFromVue = this.pilotSpecialInfo[pilotFromJson.callsign.toUpperCase()] || {};
 				let pilot = { ...pilotFromJson, ...pilotFromVue };
-				pilots.push(pilot);
+				tempPilots.push(pilot);
 				if (pilot.clocks) {
 					pilot.clocks.forEach(c => {
 						this.clocks = [...this.clocks, {
@@ -215,7 +215,7 @@ export default {
 					});
 				}
 			});
-			this.pilots = pilots;
+			this.pilots = tempPilots;
 		}
 	}
 };
@@ -226,19 +226,15 @@ export default {
 
 #app {
 	min-height: 100vh;
-	overflow-y: auto !important;
-	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
 	background: #000;
+	font-family: 'Roboto', sans-serif;
 }
 
 .boot-screen {
 	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
+	inset: 0;
 	background: #000;
 	z-index: 10000;
 	display: flex;
@@ -247,19 +243,8 @@ export default {
 	overflow: hidden;
 }
 
-.matrix-canvas {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	pointer-events: none;
-}
-
 .terminal-container {
 	flex: 1;
-	text-align: left;
 	z-index: 5;
 }
 
@@ -271,8 +256,7 @@ export default {
 	margin-bottom: 8px; 
 	white-space: nowrap;
 	overflow: hidden;
-	width: 0; /* Starts at 0 for typing animation */
-	text-shadow: 0 0 5px rgba(129, 178, 179, 0.4);
+	width: 0;
 }
 
 /* Staggered Typing Animations */
@@ -292,56 +276,73 @@ export default {
 .line-14 { animation: typing 0.3s steps(40) 2.7s forwards; }
 .line-15 { animation: typing 0.6s steps(40) 3.1s forwards; color: #fff; }
 
+/* REFIXED: Centering and Roboto for Login UI */
 .login-ui {
 	position: absolute;
-	top: 60%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Center horizontally */
+	justify-content: center; /* Center vertically */
 	text-align: center;
 	z-index: 20;
 	opacity: 0;
-	animation: fadeIn 1s ease forwards 3.5s; /* Appears after text */
+	width: 100%;
+	animation: fadeIn 1s ease forwards 3.6s;
+}
+
+.logo-wrap {
+	margin-bottom: 20px;
 }
 
 .vigil-logo-img {
 	width: 140px;
-	filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-	margin-bottom: 20px;
+	filter: brightness(0) invert(1);
+	display: block;
+	margin: 0 auto;
 }
 
 .vigil-os-title {
+	font-family: 'Roboto', sans-serif;
 	color: #fff;
 	font-size: 2.2rem;
+	font-weight: 700;
 	letter-spacing: 12px;
-	margin-bottom: 10px;
+	margin: 10px 0;
 	text-transform: uppercase;
 }
 
 .vigil-os-subtitle {
+	font-family: 'Roboto', sans-serif;
 	color: #81B2B3;
 	font-size: 0.9rem;
+	font-weight: 300;
 	letter-spacing: 5px;
 	margin-bottom: 40px;
 	text-transform: uppercase;
-	opacity: 0.8;
 }
 
 .init-button {
-	background: #1a2a2b;
+	font-family: 'Roboto', sans-serif !important;
+	background: transparent;
 	color: #81B2B3;
 	border: 1px solid #81B2B3;
 	padding: 15px 60px;
-	font-size: 1rem;
+	font-size: 1.1rem;
+	font-weight: 400;
 	cursor: pointer;
 	text-transform: uppercase;
-	letter-spacing: 3px;
-	transition: all 0.2s ease;
+	letter-spacing: 4px;
+	transition: all 0.3s ease;
 	clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
 }
 
 .init-button:hover {
 	background: #81B2B3;
 	color: #000;
+	box-shadow: 0 0 20px rgba(129, 178, 179, 0.4);
 }
 
 @keyframes typing { from { width: 0; } to { width: 100%; } }
@@ -349,16 +350,4 @@ export default {
 
 .fade-leave-active { transition: opacity 0.8s ease; }
 .fade-leave-to { opacity: 0; }
-
-.scanline {
-	width: 100%;
-	height: 100%;
-	z-index: 10;
-	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
-	background-size: 100% 4px;
-	pointer-events: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
 </style>
