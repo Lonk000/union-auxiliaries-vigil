@@ -1,1 +1,535 @@
-{"id":"a1a0de73-9c8d-45b4-987b-541158677510","level":0,"callsign":"Fridge","name":"Takeda Shiori","player_name":"Mathew Dixon","status":"Active","dead":false,"text_appearance":"<p><strong>Baseline Physical Assessment:</strong><br>Subject exhibits non-baseline morphology including cranial horn structures, caudal extension, and enhanced muscular density. Skeletal and connective tissues show reinforcement beyond human norms. All adaptations are stable and non-degenerative. No corrective intervention required.</p><p><strong>Neurological &amp; Cognitive Load:</strong><br>OHM interface stability remains exceptional under sustained high-output conditions. Neural response patterns indicate strong resistance to feedback shock and sensory overload. Reaction latency slightly reduced compared to light-frame pilots; performance remains optimal for heavy platforms.</p><p><strong>Psychological Profile:</strong><br>Low emotional volatility. Flat affect with controlled expression. No indicators of dissociation, aggression dysregulation, or identity fragmentation. Subject displays strong self-concept and operational focus.</p><p><strong>OHM Integration Notes:</strong><br>Synchronization remains stable at elevated stress thresholds. Subject demonstrates natural aptitude for battlefield anchoring, threat saturation management, and long-duration engagements. Non-baseline physiology presents no adverse OHM interaction.</p><p><strong>Risk Factors:</strong><br>Low. Subject shows a tendency toward self-reliance and extended operational endurance beyond recommended limits. Enforced rest cycles advised.</p><p><strong>Clearance Status:</strong><br>- <strong>APPROVED FOR ACTIVE DEPLOYMENT</strong><br>- <strong>AUTHORIZED FOR HEAVY FIRE SUPPORT FRAMES</strong></p><p><em>Evaluator’s Note:</em><br>Subject does not destabilize under pressure. Pressure accumulates around her instead.</p>","notes":"SSgt. Omari Garcia - Marine legend\nRio - ship AI\nCpt Bridgid Farris - CO\n1Lt. Alex Kim - XO?\nNilan Bannerjee - Union Ambassador","history":"<p>Takeda Shiori is built like an emplacement and moves like she knows it. Augmented physiology—horns, tail, reinforced musculature—marks her as nonstandard, but she treats it as background noise. Whatever was done to her, it stuck, and she learned how to make it useful.</p><p>Her callsign comes from her spec-ops years: calm, immovable, and reliably cold when things go loud. Shiori doesn’t posture or escalate. She waits, absorbs pressure, and answers with overwhelming force once the field is fully measured.</p><p>In a lancer frame, she favors heavy fire support for the same reason she favored anchoring roles on foot: control. She doesn’t chase momentum. She denies it to everyone else.</p><p>If <em>Fridge</em> is deployed, the engagement will slow down—whether the enemy wants it to or not.</p>","quirks":[],"current_hp":9,"background":"Spec Ops","resistances":[],"mechs":[{"id":"ccce32c5-d792-4774-9432-726a2c37c81a","name":"BT","notes":"<ul><li><p>Subject-authorized exterior markings present on primary chassis plating.</p></li><li><p>Artwork combines <strong>Japanese ink-brush motifs</strong> with <strong>Indigenous Canadian formline-inspired geometry</strong>.</p></li><li><p>Application is <strong>asymmetrical</strong> and limited to select armor surfaces (torso, single shoulder).</p></li><li><p>Pigments are non-reflective and do not interfere with sensor, thermal, or stealth profiles.</p></li><li><p>Motifs appear <strong>symbolic rather than decorative</strong>; interpreted as protective or anchoring in nature.</p></li><li><p>Markings show signs of repeated reapplication following frame repairs.</p></li><li><p>Subject declined cosmetic standardization; request approved due to zero operational impact.</p></li><li><p>No evidence of psychological fixation, ritual dependency, or identity destabilization associated with markings.</p></li><li><p>Presence of artwork correlates with <strong>slightly improved focus during extended engagements</strong>.</p></li></ul><p><em>Addendum:</em><br>Frame markings treated by subject as functional. Removal not recommended.</p>","gm_note":"","frame":"mf_standard_pattern_i_everest","active":false,"current_structure":4,"current_move":4,"boost":0,"current_hp":10,"overshield":0,"current_stress":4,"current_heat":0,"current_repairs":5,"current_overcharge":0,"current_core_energy":1,"statuses":[],"conditions":[],"resistances":[],"reactions":[],"burn":0,"destroyed":false,"defeat":"","activations":1,"meltdown_imminent":false,"reactor_destroyed":false,"core_active":false,"cc_ver":"ERR","lastModified":"Sat Dec 20 2025 13:04:29 GMT-0700 (Mountain Standard Time)","isDeleted":false,"expireTime":"","deleteTime":"","portrait":"","cloud_portrait":"https://d1nurxym97qk9o.cloudfront.net/public/us-east-1:88c19765-1c57-c54d-8d4e-cd0e1dcb6ca4/mech/Screenshot 2025-12-20 110808.png","loadouts":[{"id":"867d9f6e-f0cd-4dba-b96c-3eed714e1e5c","name":"Primary","systems":[{"id":"ms_pattern_a_smoke_charges","uses":3,"destroyed":false,"cascading":false,"flavorName":"","flavorDescription":""},{"id":"ms_pattern_a_jericho_deployable_cover","uses":0,"destroyed":false,"cascading":false,"flavorName":"","flavorDescription":""},{"id":"ms_turret_drones","uses":3,"destroyed":false,"cascading":false,"flavorName":"","flavorDescription":"The use of turret drones is a rather traditional form of force multiplication – one that has remained the backbone of defense in many theaters."}],"integratedSystems":[],"mounts":[{"mount_type":"Main","lock":false,"slots":[{"size":"Main","weapon":{"id":"mw_mortar","destroyed":false,"cascading":false,"loaded":true,"mod":null,"flavorName":"","flavorDescription":"Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-III (T-3) line is made up of heavy weapons, ordnance, and other exotic, specialized, or massive weapons. A broad classification, the T-3 range includes conventional-kinetic anti-materiel rifles, super-rapid cycling pulse rifles, missile racks, cannons, and drone nexuses – “hive”style launchers that serve as miniature factory, hangar, and deployment systems for portable drones. The classification also includes the fearsome “segment knife”, a system that uses flash-printing to produce disposable edged weapons in a vicinity around the user.","customDamageType":null,"maxUseOverride":0,"uses":0,"selectedProfile":0}}],"extra":[],"bonus_effects":[],"modifiable":true},{"mount_type":"Flex","lock":false,"slots":[{"size":"Flex","weapon":{"id":"mw_pistol","destroyed":false,"cascading":false,"loaded":true,"mod":null,"flavorName":"","flavorDescription":"Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-I (T-1) line is defined by powerful, reliable, and conventional-kinetic ranged and melee weapons, including the GMS assault rifle, heavy machine gun, shotgun, pistol, and various light and heavy blades. Reliable galactic standards, the GMS T-1 line is the most widely used mech-scale line of weaponry across the galaxy. Echoing the Everest’s design notes, T-1 weapons are simply designed, with few (if any) moving parts, intended to be used in or adaptable to any environment.","customDamageType":null,"maxUseOverride":0,"uses":0,"selectedProfile":0}}],"extra":[{"size":"Auxiliary","weapon":{"id":"mw_pistol","destroyed":false,"cascading":false,"loaded":true,"mod":null,"flavorName":"","flavorDescription":"Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-I (T-1) line is defined by powerful, reliable, and conventional-kinetic ranged and melee weapons, including the GMS assault rifle, heavy machine gun, shotgun, pistol, and various light and heavy blades. Reliable galactic standards, the GMS T-1 line is the most widely used mech-scale line of weaponry across the galaxy. Echoing the Everest’s design notes, T-1 weapons are simply designed, with few (if any) moving parts, intended to be used in or adaptable to any environment.","customDamageType":null,"maxUseOverride":0,"uses":0,"selectedProfile":0}}],"bonus_effects":[],"modifiable":true},{"mount_type":"Heavy","lock":false,"slots":[{"size":"Heavy","weapon":{"id":"mw_heavy_machine_gun","destroyed":false,"cascading":false,"loaded":true,"mod":null,"flavorName":"","flavorDescription":"Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-I (T-1) line is defined by powerful, reliable, and conventional-kinetic ranged and melee weapons, including the GMS assault rifle, heavy machine gun, shotgun, pistol, and various light and heavy blades. Reliable galactic standards, the GMS T-1 line is the most widely used mech-scale line of weaponry across the galaxy. Echoing the Everest’s design notes, T-1 weapons are simply designed, with few (if any) moving parts, intended to be used in or adaptable to any environment.","customDamageType":null,"maxUseOverride":0,"uses":0,"selectedProfile":0}}],"extra":[],"bonus_effects":[],"modifiable":true}],"integratedMounts":[],"improved_armament":{"mount_type":"Flex","lock":false,"slots":[{"size":"Flex","weapon":null}],"extra":[{"size":"Auxiliary","weapon":null}],"bonus_effects":[],"modifiable":true},"superheavy_mounting":{"mount_type":"Superheavy","lock":false,"slots":[{"size":"Superheavy","weapon":null}],"extra":[],"bonus_effects":[],"modifiable":true},"integratedWeapon":{"mount_type":"Aux","lock":false,"slots":[{"size":"Auxiliary","weapon":null}],"extra":[],"bonus_effects":[],"modifiable":true},"extraMounts":[],"extraIntegratedMounts":[]},{"id":"d342a5c4-1fd2-48c6-8310-f3bea6712242","name":"Primary (Copy)","systems":[{"id":"ms_pattern_a_smoke_charges","uses":3,"destroyed":false,"cascading":false,"flavorName":"","flavorDescription":""},{"id":"ms_pattern_a_jericho_deployable_cover","uses":0,"destroyed":false,"cascading":false,"flavorName":"","flavorDescription":""},{"id":"ms_turret_drones","uses":3,"destroyed":false,"cascading":false,"flavorName":"","flavorDescription":"The use of turret drones is a rather traditional form of force multiplication – one that has remained the backbone of defense in many theaters."}],"integratedSystems":[],"mounts":[{"mount_type":"Main","lock":false,"slots":[{"size":"Main","weapon":{"id":"mw_mortar","destroyed":false,"cascading":false,"loaded":true,"mod":null,"flavorName":"","flavorDescription":"Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-III (T-3) line is made up of heavy weapons, ordnance, and other exotic, specialized, or massive weapons. A broad classification, the T-3 range includes conventional-kinetic anti-materiel rifles, super-rapid cycling pulse rifles, missile racks, cannons, and drone nexuses – “hive”style launchers that serve as miniature factory, hangar, and deployment systems for portable drones. The classification also includes the fearsome “segment knife”, a system that uses flash-printing to produce disposable edged weapons in a vicinity around the user.","customDamageType":null,"maxUseOverride":0,"uses":0,"selectedProfile":0}}],"extra":[],"bonus_effects":[],"modifiable":true},{"mount_type":"Flex","lock":false,"slots":[{"size":"Flex","weapon":{"id":"mw_pistol","destroyed":false,"cascading":false,"loaded":true,"mod":null,"flavorName":"","flavorDescription":"Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-I (T-1) line is defined by powerful, reliable, and conventional-kinetic ranged and melee weapons, including the GMS assault rifle, heavy machine gun, shotgun, pistol, and various light and heavy blades. Reliable galactic standards, the GMS T-1 line is the most widely used mech-scale line of weaponry across the galaxy. Echoing the Everest’s design notes, T-1 weapons are simply designed, with few (if any) moving parts, intended to be used in or adaptable to any environment.","customDamageType":null,"maxUseOverride":0,"uses":0,"selectedProfile":0}}],"extra":[{"size":"Auxiliary","weapon":{"id":"mw_pistol","destroyed":false,"cascading":false,"loaded":true,"mod":null,"flavorName":"","flavorDescription":"Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-I (T-1) line is defined by powerful, reliable, and conventional-kinetic ranged and melee weapons, including the GMS assault rifle, heavy machine gun, shotgun, pistol, and various light and heavy blades. Reliable galactic standards, the GMS T-1 line is the most widely used mech-scale line of weaponry across the galaxy. Echoing the Everest’s design notes, T-1 weapons are simply designed, with few (if any) moving parts, intended to be used in or adaptable to any environment.","customDamageType":null,"maxUseOverride":0,"uses":0,"selectedProfile":0}}],"bonus_effects":[],"modifiable":true},{"mount_type":"Heavy","lock":false,"slots":[{"size":"Heavy","weapon":{"id":"mw_heavy_machine_gun","destroyed":false,"cascading":false,"loaded":true,"mod":null,"flavorName":"","flavorDescription":"Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-I (T-1) line is defined by powerful, reliable, and conventional-kinetic ranged and melee weapons, including the GMS assault rifle, heavy machine gun, shotgun, pistol, and various light and heavy blades. Reliable galactic standards, the GMS T-1 line is the most widely used mech-scale line of weaponry across the galaxy. Echoing the Everest’s design notes, T-1 weapons are simply designed, with few (if any) moving parts, intended to be used in or adaptable to any environment.","customDamageType":null,"maxUseOverride":0,"uses":0,"selectedProfile":0}}],"extra":[],"bonus_effects":[],"modifiable":true}],"integratedMounts":[],"improved_armament":{"mount_type":"Flex","lock":false,"slots":[{"size":"Flex","weapon":null}],"extra":[{"size":"Auxiliary","weapon":null}],"bonus_effects":[],"modifiable":true},"superheavy_mounting":{"mount_type":"Superheavy","lock":false,"slots":[{"size":"Superheavy","weapon":null}],"extra":[],"bonus_effects":[],"modifiable":true},"integratedWeapon":{"mount_type":"Aux","lock":false,"slots":[{"size":"Auxiliary","weapon":null}],"extra":[],"bonus_effects":[],"modifiable":true},"extraMounts":[],"extraIntegratedMounts":[]}],"active_loadout_index":1}],"cc_ver":"","special_equipment":{"PilotGear":[],"Frames":[],"MechWeapons":[],"WeaponMods":[],"MechSystems":[],"SystemMods":[]},"combat_history":{"moves":0,"kills":0,"damage":0,"hp_damage":0,"structure_damage":0,"overshield":0,"heat_damage":0,"reactor_damage":0,"overcharge_uses":0,"core_uses":0},"state":{"active_mech_id":"ccce32c5-d792-4774-9432-726a2c37c81a","remote_mech_id":"","stage":"Narrative","turn":1,"mission":0,"actions":2,"braced":false,"overcharged":false,"prepare":false,"bracedCooldown":false,"redundant":false,"stats":{"moves":0,"kills":0,"damage":0,"hp_damage":0,"structure_damage":0,"overshield":0,"heat_damage":0,"reactor_damage":0,"overcharge_uses":0,"core_uses":0},"deployed":[]},"lastModified":"Sun Feb 01 2026 12:21:16 GMT-0700 (Mountain Standard Time)","isDeleted":false,"expireTime":"","deleteTime":"","lastUpdate_cloud":"Sun Feb 01 2026 12:21:16 GMT-0700 (Mountain Standard Time)","lastSync":"Sun Feb 01 2026 12:21:16 GMT-0700 (Mountain Standard Time)","shareCode":"","shareCodeExpiry":"","isRemoteResource":true,"remoteIID":"us-east-1:88c19765-1c57-c54d-8d4e-cd0e1dcb6ca4","remoteKey":"pilot/Takeda Shiori--a1a0de73-9c8d-45b4-987b-541158677510--active","skills":[{"id":"sk_blow_something_up","rank":1},{"id":"sk_get_somewhere_quickly","rank":1},{"id":"sk_lead_or_inspire","rank":1},{"id":"sk_patch","rank":1}],"talents":[{"id":"t_heavy_gunner","rank":1},{"id":"t_spotter","rank":1},{"id":"t_siege_specialist","rank":1}],"mechSkills":[0,1,0,1],"counter_data":[],"custom_counters":[],"core_bonuses":[],"licenses":[],"reserves":[],"orgs":[],"bondId":"","xp":0,"stress":0,"isBroken":false,"burdens":[],"bondPowers":[],"powerSelections":0,"maxStress":8,"bondAnswers":["",""],"minorIdeal":"","clocks":[],"group":"","sort_index":-1,"portrait":"","cloud_portrait":"https://d2c79xe1p61csc.cloudfront.net/pilots/wampire_6.png","loadout":{"id":"d6b1c5e5-13a7-4efa-ba60-56562d3a2854","name":"Primary","armor":[{"id":"pg_heavy_hardsuit","destroyed":false,"uses":0,"cascading":false,"flavorName":"","flavorDescription":"The heaviest hardsuits. They are always powered and up-armored with thick, composite armor. Heavy hardsuits often feature integrated weapons, powerful mobility suites, and – by augmenting their user’s strength – allow their user to field much heavier weapons than normal infantry can typically carry. Heavy hardsuits are in decline now that half-size chassis are popular, but they are still common among private militaries and middle-tier Diasporan armed forces.","customDamageType":null}],"weapons":[{"id":"pg_heavy_signature","destroyed":false,"uses":0,"cascading":false,"flavorName":"","flavorDescription":"Heavy signature weapons are missile tubes, heavy lasers, light machine gun, or exotic rifles.","customDamageType":null},{"id":"pg_medium_signature","destroyed":false,"uses":0,"cascading":false,"flavorName":"","flavorDescription":"Medium signature weapons are assault rifles, shotguns, pack-fed lasers, or disruption guns.","customDamageType":null}],"gear":[{"id":"pg_handheld_printer","destroyed":false,"uses":0,"cascading":false,"flavorName":"","flavorDescription":"A miniaturized version of Union’s full-scale printers, handheld printers can be used to make simple objects out of flexible and durable plastic – as long as you have the right pattern chip.","customDamageType":null},{"id":"pg_tertiary_arm","destroyed":false,"uses":0,"cascading":false,"flavorName":"","flavorDescription":"A powered third arm mounted on a bracket on the hardsuit. Tertiary arms are powered and controlled using the same neural bridge processes that allow hardsuits to respond to user input. They can be equipped with manipulators to allow for fine motor control, weapons to enhance combat efficacy, or specialty tools.","customDamageType":null},{"id":"pg_personal_drone","destroyed":false,"uses":0,"cascading":false,"flavorName":"","flavorDescription":"Small, non-combat drones are a common sight in the field. They’re fairly noisy but can fly about half a mile with good maneuverability before losing signal, relaying audio and visual information as they go.","customDamageType":null}],"extendedWeapons":[null],"extendedGear":[null,null]},"brews":[]}
+{
+  "id": "a1a0de73-9c8d-45b4-987b-541158677510",
+  "level": 0,
+  "callsign": "Fridge",
+  "name": "Takeda Shiori",
+  "player_name": "Mathew Dixon",
+  "status": "Active",
+  "dead": false,
+  "text_appearance": "<p><strong>Baseline Physical Assessment:</strong><br>Subject exhibits non-baseline morphology including cranial horn structures, caudal extension, and enhanced muscular density. Skeletal and connective tissues show reinforcement beyond human norms. All adaptations are stable and non-degenerative. No corrective intervention required.</p><p><strong>Neurological &amp; Cognitive Load:</strong><br>OHM interface stability remains exceptional under sustained high-output conditions. Neural response patterns indicate strong resistance to feedback shock and sensory overload. Reaction latency slightly reduced compared to light-frame pilots; performance remains optimal for heavy platforms.</p><p><strong>Psychological Profile:</strong><br>Low emotional volatility. Flat affect with controlled expression. No indicators of dissociation, aggression dysregulation, or identity fragmentation. Subject displays strong self-concept and operational focus.</p><p><strong>OHM Integration Notes:</strong><br>Synchronization remains stable at elevated stress thresholds. Subject demonstrates natural aptitude for battlefield anchoring, threat saturation management, and long-duration engagements. Non-baseline physiology presents no adverse OHM interaction.</p><p><strong>Risk Factors:</strong><br>Low. Subject shows a tendency toward self-reliance and extended operational endurance beyond recommended limits. Enforced rest cycles advised.</p><p><strong>Clearance Status:</strong><br>- <strong>APPROVED FOR ACTIVE DEPLOYMENT</strong><br>- <strong>AUTHORIZED FOR HEAVY FIRE SUPPORT FRAMES</strong></p><p><em>Evaluator’s Note:</em><br>Subject does not destabilize under pressure. Pressure accumulates around her instead.</p>",
+  "notes": "SSgt. Omari Garcia - Marine legend\nRio - ship AI\nCpt Bridgid Farris - CO\n1Lt. Alex Kim - XO?\nNilan Bannerjee - Union Ambassador",
+  "history": "<p>Takeda Shiori is built like an emplacement and moves like she knows it. Augmented physiology—horns, tail, reinforced musculature—marks her as nonstandard, but she treats it as background noise. Whatever was done to her, it stuck, and she learned how to make it useful.</p><p>Her callsign comes from her spec-ops years: calm, immovable, and reliably cold when things go loud. Shiori doesn’t posture or escalate. She waits, absorbs pressure, and answers with overwhelming force once the field is fully measured.</p><p>In a lancer frame, she favors heavy fire support for the same reason she favored anchoring roles on foot: control. She doesn’t chase momentum. She denies it to everyone else.</p><p>If <em>Fridge</em> is deployed, the engagement will slow down—whether the enemy wants it to or not.</p>",
+  "quirks": [],
+  "current_hp": 9,
+  "background": "Spec Ops",
+  "resistances": [],
+  "mechs": [
+    {
+      "id": "ccce32c5-d792-4774-9432-726a2c37c81a",
+      "name": "BT",
+      "notes": "<ul><li><p>Subject-authorized exterior markings present on primary chassis plating.</p></li><li><p>Artwork combines <strong>Japanese ink-brush motifs</strong> with <strong>Indigenous Canadian formline-inspired geometry</strong>.</p></li><li><p>Application is <strong>asymmetrical</strong> and limited to select armor surfaces (torso, single shoulder).</p></li><li><p>Pigments are non-reflective and do not interfere with sensor, thermal, or stealth profiles.</p></li><li><p>Motifs appear <strong>symbolic rather than decorative</strong>; interpreted as protective or anchoring in nature.</p></li><li><p>Markings show signs of repeated reapplication following frame repairs.</p></li><li><p>Subject declined cosmetic standardization; request approved due to zero operational impact.</p></li><li><p>No evidence of psychological fixation, ritual dependency, or identity destabilization associated with markings.</p></li><li><p>Presence of artwork correlates with <strong>slightly improved focus during extended engagements</strong>.</p></li></ul><p><em>Addendum:</em><br>Frame markings treated by subject as functional. Removal not recommended.</p>",
+      "gm_note": "",
+      "frame": "mf_standard_pattern_i_everest",
+      "active": false,
+      "current_structure": 4,
+      "current_move": 4,
+      "boost": 0,
+      "current_hp": 10,
+      "overshield": 0,
+      "current_stress": 4,
+      "current_heat": 0,
+      "current_repairs": 5,
+      "current_overcharge": 0,
+      "current_core_energy": 1,
+      "statuses": [],
+      "conditions": [],
+      "resistances": [],
+      "reactions": [],
+      "burn": 0,
+      "destroyed": false,
+      "defeat": "",
+      "activations": 1,
+      "meltdown_imminent": false,
+      "reactor_destroyed": false,
+      "core_active": false,
+      "cc_ver": "ERR",
+      "lastModified": "Sat Dec 20 2025 13:04:29 GMT-0700 (Mountain Standard Time)",
+      "isDeleted": false,
+      "expireTime": "",
+      "deleteTime": "",
+      "portrait": "",
+      "cloud_portrait": "https://d1nurxym97qk9o.cloudfront.net/public/us-east-1:88c19765-1c57-c54d-8d4e-cd0e1dcb6ca4/mech/Screenshot 2025-12-20 110808.png",
+      "loadouts": [
+        {
+          "id": "867d9f6e-f0cd-4dba-b96c-3eed714e1e5c",
+          "name": "Primary",
+          "systems": [
+            {
+              "id": "ms_pattern_a_smoke_charges",
+              "uses": 3,
+              "destroyed": false,
+              "cascading": false,
+              "flavorName": "",
+              "flavorDescription": ""
+            },
+            {
+              "id": "ms_pattern_a_jericho_deployable_cover",
+              "uses": 0,
+              "destroyed": false,
+              "cascading": false,
+              "flavorName": "",
+              "flavorDescription": ""
+            },
+            {
+              "id": "ms_turret_drones",
+              "uses": 3,
+              "destroyed": false,
+              "cascading": false,
+              "flavorName": "",
+              "flavorDescription": "The use of turret drones is a rather traditional form of force multiplication – one that has remained the backbone of defense in many theaters."
+            }
+          ],
+          "integratedSystems": [],
+          "mounts": [
+            {
+              "mount_type": "Main",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Main",
+                  "weapon": {
+                    "id": "mw_mortar",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "flavorName": "",
+                    "flavorDescription": "Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-III (T-3) line is made up of heavy weapons, ordnance, and other exotic, specialized, or massive weapons. A broad classification, the T-3 range includes conventional-kinetic anti-materiel rifles, super-rapid cycling pulse rifles, missile racks, cannons, and drone nexuses – “hive”style launchers that serve as miniature factory, hangar, and deployment systems for portable drones. The classification also includes the fearsome “segment knife”, a system that uses flash-printing to produce disposable edged weapons in a vicinity around the user.",
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "extra": [],
+              "bonus_effects": [],
+              "modifiable": true
+            },
+            {
+              "mount_type": "Flex",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Flex",
+                  "weapon": {
+                    "id": "mw_pistol",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "flavorName": "",
+                    "flavorDescription": "Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-I (T-1) line is defined by powerful, reliable, and conventional-kinetic ranged and melee weapons, including the GMS assault rifle, heavy machine gun, shotgun, pistol, and various light and heavy blades. Reliable galactic standards, the GMS T-1 line is the most widely used mech-scale line of weaponry across the galaxy. Echoing the Everest’s design notes, T-1 weapons are simply designed, with few (if any) moving parts, intended to be used in or adaptable to any environment.",
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "extra": [
+                {
+                  "size": "Auxiliary",
+                  "weapon": {
+                    "id": "mw_pistol",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "flavorName": "",
+                    "flavorDescription": "Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-I (T-1) line is defined by powerful, reliable, and conventional-kinetic ranged and melee weapons, including the GMS assault rifle, heavy machine gun, shotgun, pistol, and various light and heavy blades. Reliable galactic standards, the GMS T-1 line is the most widely used mech-scale line of weaponry across the galaxy. Echoing the Everest’s design notes, T-1 weapons are simply designed, with few (if any) moving parts, intended to be used in or adaptable to any environment.",
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "bonus_effects": [],
+              "modifiable": true
+            },
+            {
+              "mount_type": "Heavy",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Heavy",
+                  "weapon": {
+                    "id": "mw_heavy_machine_gun",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "flavorName": "",
+                    "flavorDescription": "Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-I (T-1) line is defined by powerful, reliable, and conventional-kinetic ranged and melee weapons, including the GMS assault rifle, heavy machine gun, shotgun, pistol, and various light and heavy blades. Reliable galactic standards, the GMS T-1 line is the most widely used mech-scale line of weaponry across the galaxy. Echoing the Everest’s design notes, T-1 weapons are simply designed, with few (if any) moving parts, intended to be used in or adaptable to any environment.",
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "extra": [],
+              "bonus_effects": [],
+              "modifiable": true
+            }
+          ],
+          "integratedMounts": [],
+          "improved_armament": {
+            "mount_type": "Flex",
+            "lock": false,
+            "slots": [
+              { "size": "Flex", "weapon": null }
+            ],
+            "extra": [
+              { "size": "Auxiliary", "weapon": null }
+            ],
+            "bonus_effects": [],
+            "modifiable": true
+          },
+          "superheavy_mounting": {
+            "mount_type": "Superheavy",
+            "lock": false,
+            "slots": [
+              { "size": "Superheavy", "weapon": null }
+            ],
+            "extra": [],
+            "bonus_effects": [],
+            "modifiable": true
+          },
+          "integratedWeapon": {
+            "mount_type": "Aux",
+            "lock": false,
+            "slots": [
+              { "size": "Auxiliary", "weapon": null }
+            ],
+            "extra": [],
+            "bonus_effects": [],
+            "modifiable": true
+          },
+          "extraMounts": [],
+          "extraIntegratedMounts": []
+        },
+        {
+          "id": "d342a5c4-1fd2-48c6-8310-f3bea6712242",
+          "name": "Primary (Copy)",
+          "systems": [
+            {
+              "id": "ms_pattern_a_smoke_charges",
+              "uses": 3,
+              "destroyed": false,
+              "cascading": false,
+              "flavorName": "",
+              "flavorDescription": ""
+            },
+            {
+              "id": "ms_pattern_a_jericho_deployable_cover",
+              "uses": 0,
+              "destroyed": false,
+              "cascading": false,
+              "flavorName": "",
+              "flavorDescription": ""
+            },
+            {
+              "id": "ms_turret_drones",
+              "uses": 3,
+              "destroyed": false,
+              "cascading": false,
+              "flavorName": "",
+              "flavorDescription": "The use of turret drones is a rather traditional form of force multiplication – one that has remained the backbone of defense in many theaters."
+            }
+          ],
+          "integratedSystems": [],
+          "mounts": [
+            {
+              "mount_type": "Main",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Main",
+                  "weapon": {
+                    "id": "mw_mortar",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "flavorName": "",
+                    "flavorDescription": "Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-III (T-3) line is made up of heavy weapons, ordnance, and other exotic, specialized, or massive weapons. A broad classification, the T-3 range includes conventional-kinetic anti-materiel rifles, super-rapid cycling pulse rifles, missile racks, cannons, and drone nexuses – “hive”style launchers that serve as miniature factory, hangar, and deployment systems for portable drones. The classification also includes the fearsome “segment knife”, a system that uses flash-printing to produce disposable edged weapons in a vicinity around the user.",
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "extra": [],
+              "bonus_effects": [],
+              "modifiable": true
+            },
+            {
+              "mount_type": "Flex",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Flex",
+                  "weapon": {
+                    "id": "mw_pistol",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "flavorName": "",
+                    "flavorDescription": "Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-I (T-1) line is defined by powerful, reliable, and conventional-kinetic ranged and melee weapons, including the GMS assault rifle, heavy machine gun, shotgun, pistol, and various light and heavy blades. Reliable galactic standards, the GMS T-1 line is the most widely used mech-scale line of weaponry across the galaxy. Echoing the Everest’s design notes, T-1 weapons are simply designed, with few (if any) moving parts, intended to be used in or adaptable to any environment.",
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "extra": [
+                {
+                  "size": "Auxiliary",
+                  "weapon": {
+                    "id": "mw_pistol",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "flavorName": "",
+                    "flavorDescription": "Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-I (T-1) line is defined by powerful, reliable, and conventional-kinetic ranged and melee weapons, including the GMS assault rifle, heavy machine gun, shotgun, pistol, and various light and heavy blades. Reliable galactic standards, the GMS T-1 line is the most widely used mech-scale line of weaponry across the galaxy. Echoing the Everest’s design notes, T-1 weapons are simply designed, with few (if any) moving parts, intended to be used in or adaptable to any environment.",
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "bonus_effects": [],
+              "modifiable": true
+            },
+            {
+              "mount_type": "Heavy",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Heavy",
+                  "weapon": {
+                    "id": "mw_heavy_machine_gun",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "flavorName": "",
+                    "flavorDescription": "Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-I (T-1) line is defined by powerful, reliable, and conventional-kinetic ranged and melee weapons, including the GMS assault rifle, heavy machine gun, shotgun, pistol, and various light and heavy blades. Reliable galactic standards, the GMS T-1 line is the most widely used mech-scale line of weaponry across the galaxy. Echoing the Everest’s design notes, T-1 weapons are simply designed, with few (if any) moving parts, intended to be used in or adaptable to any environment.",
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "extra": [],
+              "bonus_effects": [],
+              "modifiable": true
+            }
+          ],
+          "integratedMounts": [],
+          "improved_armament": {
+            "mount_type": "Flex",
+            "lock": false,
+            "slots": [
+              { "size": "Flex", "weapon": null }
+            ],
+            "extra": [
+              { "size": "Auxiliary", "weapon": null }
+            ],
+            "bonus_effects": [],
+            "modifiable": true
+          },
+          "superheavy_mounting": {
+            "mount_type": "Superheavy",
+            "lock": false,
+            "slots": [
+              { "size": "Superheavy", "weapon": null }
+            ],
+            "extra": [],
+            "bonus_effects": [],
+            "modifiable": true
+          },
+          "integratedWeapon": {
+            "mount_type": "Aux",
+            "lock": false,
+            "slots": [
+              { "size": "Auxiliary", "weapon": null }
+            ],
+            "extra": [],
+            "bonus_effects": [],
+            "modifiable": true
+          },
+          "extraMounts": [],
+          "extraIntegratedMounts": []
+        }
+      ],
+      "active_loadout_index": 1
+    }
+  ],
+  "cc_ver": "",
+  "special_equipment": {
+    "PilotGear": [],
+    "Frames": [],
+    "MechWeapons": [],
+    "WeaponMods": [],
+    "MechSystems": [],
+    "SystemMods": []
+  },
+  "combat_history": {
+    "moves": 0,
+    "kills": 0,
+    "damage": 0,
+    "hp_damage": 0,
+    "structure_damage": 0,
+    "overshield": 0,
+    "heat_damage": 0,
+    "reactor_damage": 0,
+    "overcharge_uses": 0,
+    "core_uses": 0
+  },
+  "state": {
+    "active_mech_id": "ccce32c5-d792-4774-9432-726a2c37c81a",
+    "remote_mech_id": "",
+    "stage": "Narrative",
+    "turn": 1,
+    "mission": 0,
+    "actions": 2,
+    "braced": false,
+    "overcharged": false,
+    "prepare": false,
+    "bracedCooldown": false,
+    "redundant": false,
+    "stats": {
+      "moves": 0,
+      "kills": 0,
+      "damage": 0,
+      "hp_damage": 0,
+      "structure_damage": 0,
+      "overshield": 0,
+      "heat_damage": 0,
+      "reactor_damage": 0,
+      "overcharge_uses": 0,
+      "core_uses": 0
+    },
+    "deployed": []
+  },
+  "lastModified": "Sun Feb 01 2026 12:21:16 GMT-0700 (Mountain Standard Time)",
+  "isDeleted": false,
+  "expireTime": "",
+  "deleteTime": "",
+  "lastUpdate_cloud": "Sun Feb 01 2026 12:21:16 GMT-0700 (Mountain Standard Time)",
+  "lastSync": "Sun Feb 01 2026 12:21:16 GMT-0700 (Mountain Standard Time)",
+  "shareCode": "",
+  "shareCodeExpiry": "",
+  "isRemoteResource": true,
+  "remoteIID": "us-east-1:88c19765-1c57-c54d-8d4e-cd0e1dcb6ca4",
+  "remoteKey": "pilot/Takeda Shiori--a1a0de73-9c8d-45b4-987b-541158677510--active",
+  "skills": [
+    { "id": "sk_blow_something_up", "rank": 1 },
+    { "id": "sk_get_somewhere_quickly", "rank": 1 },
+    { "id": "sk_lead_or_inspire", "rank": 1 },
+    { "id": "sk_patch", "rank": 1 }
+  ],
+  "talents": [
+    { "id": "t_heavy_gunner", "rank": 1 },
+    { "id": "t_spotter", "rank": 1 },
+    { "id": "t_siege_specialist", "rank": 1 }
+  ],
+  "mechSkills": [0, 1, 0, 1],
+  "counter_data": [],
+  "custom_counters": [],
+  "core_bonuses": [],
+  "licenses": [],
+  "reserves": [],
+  "orgs": [],
+  "bondId": "",
+  "xp": 0,
+  "stress": 0,
+  "isBroken": false,
+  "burdens": [],
+  "bondPowers": [],
+  "powerSelections": 0,
+  "maxStress": 8,
+  "bondAnswers": ["", ""],
+  "minorIdeal": "",
+  "clocks": [],
+  "group": "",
+  "sort_index": -1,
+  "portrait": "",
+  "cloud_portrait": "https://d2c79xe1p61csc.cloudfront.net/pilots/wampire_6.png",
+  "loadout": {
+    "id": "d6b1c5e5-13a7-4efa-ba60-56562d3a2854",
+    "name": "Primary",
+    "armor": [
+      {
+        "id": "pg_heavy_hardsuit",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "",
+        "flavorDescription": "The heaviest hardsuits. They are always powered and up-armored with thick, composite armor. Heavy hardsuits often feature integrated weapons, powerful mobility suites, and – by augmenting their user’s strength – allow their user to field much heavier weapons than normal infantry can typically carry. Heavy hardsuits are in decline now that half-size chassis are popular, but they are still common among private militaries and middle-tier Diasporan armed forces.",
+        "customDamageType": null
+      }
+    ],
+    "weapons": [
+      {
+        "id": "pg_heavy_signature",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "",
+        "flavorDescription": "Heavy signature weapons are missile tubes, heavy lasers, light machine gun, or exotic rifles.",
+        "customDamageType": null
+      },
+      {
+        "id": "pg_medium_signature",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "",
+        "flavorDescription": "Medium signature weapons are assault rifles, shotguns, pack-fed lasers, or disruption guns.",
+        "customDamageType": null
+      }
+    ],
+    "gear": [
+      {
+        "id": "pg_handheld_printer",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "",
+        "flavorDescription": "A miniaturized version of Union’s full-scale printers, handheld printers can be used to make simple objects out of flexible and durable plastic – as long as you have the right pattern chip.",
+        "customDamageType": null
+      },
+      {
+        "id": "pg_tertiary_arm",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "",
+        "flavorDescription": "A powered third arm mounted on a bracket on the hardsuit. Tertiary arms are powered and controlled using the same neural bridge processes that allow hardsuits to respond to user input. They can be equipped with manipulators to allow for fine motor control, weapons to enhance combat efficacy, or specialty tools.",
+        "customDamageType": null
+      },
+      {
+        "id": "pg_personal_drone",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "",
+        "flavorDescription": "Small, non-combat drones are a common sight in the field. They’re fairly noisy but can fly about half a mile with good maneuverability before losing signal, relaying audio and visual information as they go.",
+        "customDamageType": null
+      }
+    ],
+    "extendedWeapons": [null],
+    "extendedGear": [null, null]
+  },
+  "brews": []
+}
