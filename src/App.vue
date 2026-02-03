@@ -44,13 +44,11 @@
 			<router-view :animate="animate" :initial-slug="initialSlug" :missions="missions" :events="events"
 				:pilots="pilots" :clocks="clocks" :reserves="reserves" />
 		</div>
-		<svg style="visibility: hidden; position: absolute" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
-			version="1.1">
+		<svg style="visibility: hidden; position: absolute" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
 			<defs>
 				<filter id="round">
 					<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
-					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -5"
-						result="goo" />
+					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -5" result="goo" />
 					<feComposite in="SourceGraphic" in2="goo" operator="atop" />
 				</filter>
 			</defs>
@@ -151,6 +149,7 @@ export default {
 		async importMissions(files) {
 			let filePromises = Object.keys(files).map(path => files[path]());
 			let fileContents = await Promise.all(filePromises);
+			let missions = [];
 			fileContents.forEach(content => {
 				let mission = {};
 				const lines = content.split("\n");
@@ -158,13 +157,14 @@ export default {
 				mission["name"] = lines[1];
 				mission["status"] = lines[2];
 				mission["content"] = lines.slice(3).join("\n");
-				this.missions = [...this.missions, mission];
+				missions.push(mission);
 			});
-			this.missions = this.missions.sort((a, b) => b["slug"] - a["slug"]);
+			this.missions = missions.sort((a, b) => b["slug"] - a["slug"]);
 		},
 		async importEvents(files) {
 			let filePromises = Object.keys(files).map(path => files[path]());
 			let fileContents = await Promise.all(filePromises);
+			let events = [];
 			fileContents.forEach(content => {
 				let event = {};
 				const lines = content.split("\n");
@@ -173,9 +173,9 @@ export default {
 				event["time"] = lines[2];
 				event["thumbnail"] = lines[3];
 				event["content"] = lines.slice(4).join("\n");
-				this.events = [...this.events, event];
+				events.push(event);
 			});
-			this.events = this.events.reverse();
+			this.events = events.reverse();
 		},
 		async importClocks(files) {
 			let filePromises = Object.keys(files).map(path => files[path]());
@@ -194,13 +194,14 @@ export default {
 		async importPilots(files) {
 			let filePromises = Object.keys(files).map(path => files[path]());
 			let fileContents = await Promise.all(filePromises);
+			let pilots = [];
 			fileContents.forEach(content => {
 				let pilotFromJson = content.default || content;
 				pilotFromJson.name = pilotFromJson.name.replace("※", "");
 				pilotFromJson.callsign = pilotFromJson.callsign.replace("※", "");
 				let pilotFromVue = this.pilotSpecialInfo[pilotFromJson.callsign.toUpperCase()] || {};
 				let pilot = { ...pilotFromJson, ...pilotFromVue };
-				this.pilots = [...this.pilots, pilot];
+				pilots.push(pilot);
 				if (pilot.clocks) {
 					pilot.clocks.forEach(c => {
 						this.clocks = [...this.clocks, {
@@ -214,14 +215,53 @@ export default {
 					});
 				}
 			});
+			this.pilots = pilots;
 		}
 	}
 };
 </script>
 
 <style>
-/* Cleaned up styles and ensured Roboto fallback */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+#app {
+	min-height: 100vh;
+	overflow-y: auto !important;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	background: #000;
+}
+
+.boot-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: #000;
+	z-index: 10000;
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	overflow: hidden;
+}
+
+.matrix-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	pointer-events: none;
+}
+
+.terminal-container {
+	flex: 1;
+	text-align: left;
+	z-index: 5;
+}
 
 .boot-text {
 	font-family: 'Roboto', monospace !important;
@@ -229,28 +269,96 @@ export default {
 	font-size: 1.0rem; 
 	font-weight: 300;
 	margin-bottom: 8px; 
-	overflow: hidden;
 	white-space: nowrap;
-	width: 0;
+	overflow: hidden;
+	width: 0; /* Starts at 0 for typing animation */
 	text-shadow: 0 0 5px rgba(129, 178, 179, 0.4);
 }
 
-/* Re-adding the typewriter animation specifically for the boot sequence */
-.line-1 { animation: typing 0.4s steps(40) 0.2s forwards; }
-.line-2 { animation: typing 0.4s steps(40) 0.6s forwards; }
-.line-3 { animation: typing 0.4s steps(40) 1.0s forwards; }
-.line-4 { animation: typing 0.4s steps(40) 1.4s forwards; }
-.line-5 { animation: typing 0.4s steps(40) 1.8s forwards; }
-.line-6 { animation: typing 0.4s steps(40) 2.2s forwards; }
-.line-7 { animation: typing 0.4s steps(40) 2.6s forwards; }
-.line-8 { animation: typing 0.4s steps(40) 3.0s forwards; }
-.line-9 { animation: typing 0.4s steps(40) 3.4s forwards; }
-.line-10 { animation: typing 0.4s steps(40) 3.8s forwards; }
-.line-11 { animation: typing 0.4s steps(40) 4.2s forwards; }
-.line-12 { animation: typing 0.4s steps(40) 4.6s forwards; }
-.line-13 { animation: typing 0.4s steps(40) 5.0s forwards; }
-.line-14 { animation: typing 0.4s steps(40) 5.4s forwards; }
-.line-15 { animation: typing 0.4s steps(40) 5.8s forwards; }
+/* Staggered Typing Animations */
+.line-1  { animation: typing 0.3s steps(40) 0.1s forwards; }
+.line-2  { animation: typing 0.3s steps(40) 0.3s forwards; }
+.line-3  { animation: typing 0.3s steps(40) 0.5s forwards; }
+.line-4  { animation: typing 0.3s steps(40) 0.7s forwards; }
+.line-5  { animation: typing 0.3s steps(40) 0.9s forwards; }
+.line-6  { animation: typing 0.3s steps(40) 1.1s forwards; }
+.line-7  { animation: typing 0.3s steps(40) 1.3s forwards; }
+.line-8  { animation: typing 0.3s steps(40) 1.5s forwards; }
+.line-9  { animation: typing 0.3s steps(40) 1.7s forwards; }
+.line-10 { animation: typing 0.3s steps(40) 1.9s forwards; }
+.line-11 { animation: typing 0.3s steps(40) 2.1s forwards; }
+.line-12 { animation: typing 0.3s steps(40) 2.3s forwards; }
+.line-13 { animation: typing 0.3s steps(40) 2.5s forwards; }
+.line-14 { animation: typing 0.3s steps(40) 2.7s forwards; }
+.line-15 { animation: typing 0.6s steps(40) 3.1s forwards; color: #fff; }
 
-@keyframes typing { from { width: 0 } to { width: 100% } }
+.login-ui {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 20;
+	opacity: 0;
+	animation: fadeIn 1s ease forwards 3.5s; /* Appears after text */
+}
+
+.vigil-logo-img {
+	width: 140px;
+	filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+	margin-bottom: 20px;
+}
+
+.vigil-os-title {
+	color: #fff;
+	font-size: 2.2rem;
+	letter-spacing: 12px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.vigil-os-subtitle {
+	color: #81B2B3;
+	font-size: 0.9rem;
+	letter-spacing: 5px;
+	margin-bottom: 40px;
+	text-transform: uppercase;
+	opacity: 0.8;
+}
+
+.init-button {
+	background: #1a2a2b;
+	color: #81B2B3;
+	border: 1px solid #81B2B3;
+	padding: 15px 60px;
+	font-size: 1rem;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	transition: all 0.2s ease;
+	clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+}
+
+.init-button:hover {
+	background: #81B2B3;
+	color: #000;
+}
+
+@keyframes typing { from { width: 0; } to { width: 100%; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.fade-leave-active { transition: opacity 0.8s ease; }
+.fade-leave-to { opacity: 0; }
+
+.scanline {
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+	background-size: 100% 4px;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 </style>
