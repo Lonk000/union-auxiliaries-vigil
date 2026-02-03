@@ -161,7 +161,6 @@ export default {
     this.getBond();
   },
   methods: {
-   methods: {
   pilotModal() {
     playAudio('/sounds/click.mp3', 0.5); // This fires the preloaded 'click' singleton
     this.$oruga.modal.open({
