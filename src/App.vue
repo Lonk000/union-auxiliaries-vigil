@@ -30,7 +30,6 @@
 				
 				<h1 class="vigil-os-title">VIGIL OS</h1>
 				<h2 class="vigil-os-subtitle">Vanguard Initiative for Galactic Intervention and Logistics</h2>
-				<p class="vigil-os-slogan">'A Safer Point of View'</p>
 				<button class="init-button" @click="initializeSystem">
 					LOG IN
 				</button>
@@ -351,6 +350,17 @@ export default {
 	letter-spacing: 12px;
 	margin-bottom: 40px;
 	text-transform: uppercase;
+}
+	
+.vigil-os-subtitle {
+    color: #81B2B3; /* Matching your teal theme */
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-top: -30px; /* Pulls it closer to the main title */
+    margin-bottom: 40px; /* Space before the button */
+    text-transform: uppercase;
+    opacity: 0.8;
 }
 
 .init-button {
