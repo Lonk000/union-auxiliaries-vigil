@@ -18,7 +18,7 @@
         <div class="logo-wrap">
           <img src="/faction-logos/vigil.svg" class="vigil-logo-img" alt="Vigil Logo" />
         </div>
-        <h1 class="vigil-os-title">VIGIL OS</h1>
+        <h1 class="vigil-os-title">VIGIL</h1>
         <h2 class="vigil-os-subtitle">Vanguard Initiative for Galactic Intervention and Logistics</h2>
         <button class="init-button" @click="initializeSystem">
           LOG IN
