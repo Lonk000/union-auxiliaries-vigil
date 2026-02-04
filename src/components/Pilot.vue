@@ -115,14 +115,15 @@
 
 <script>
 import 'external-svg-loader'
-// Lancer Data Imports
 import lancerData from '@massif/lancer-data'
 import ktbData from 'lancer-ktb-data'
 import nrfawData from 'lancer-nrfaw-data'
 import longrimData from 'lancer-longrim-data'
+
+
 import wallflowerData from '@/assets/LCPs/wallflower-data-2.0.5'
 import castorPolluxData from '@/assets/LCPs/CASTOR _ POLLUX-2.45'
-import coldcoreColiseumData from '@/assets/LCPs/COLDCORE_COLISEUM_V2.0'
+import coldcoreColiseumData from '@/assets/LCPs/COLDCORE_COLISEUM_V2.0' 
 import fieldGuideToSuldanData from '@/assets/LCPs/Field_Guide_To_Suldan_2.2.6'
 import intercorpData from '@/assets/LCPs/Intercorp 3.2'
 import dustgraveData from '@/assets/LCPs/dustgrave-data-1.4.0'
@@ -132,22 +133,16 @@ import owsData from '@/assets/LCPs/ows-data-1.0.0'
 import sotwData from '@/assets/LCPs/sotw-data-1.0.2'
 import ssmrData from '@/assets/LCPs/ssmr-data-1.7.0'
 
-// Components
 import PilotModal from '@/components/modals/PilotModal.vue'
 import MechModal from '@/components/modals/MechModal.vue'
 import Typer from '@/components/Typer.vue'
 import ProgressBar from '@/components/ProgressBar.vue'
 import Burden from '@/components/Burden.vue'
 
-// Utilities
 import { playAudio } from '@/utils/audio.js'
 
 export default {
-  components: {
-    Burden,
-    ProgressBar,
-    Typer,
-  },
+  components: { Burden, ProgressBar, Typer },
   props: {
     animate: { type: Boolean, required: true },
     pilot: { type: Object, required: true },
@@ -156,26 +151,54 @@ export default {
     return {
       activeMech: {},
       bond: {},
-      // Registry for all LCPs to allow for dynamic computed mapping
-      allPacks: [
-        lancerData, ktbData, nrfawData, longrimData, wallflowerData,
-        castorPolluxData, coldcoreColiseumData, fieldGuideToSuldanData,
-        intercorpData, dustgraveData, gsLcpData, osrData, owsData,
-        sotwData, ssmrData
-      ]
     }
   },
   computed: {
     pilotPortrait() { return `/pilots/${this.pilot.callsign.toUpperCase()}.webp` },
     
-    // Core Dynamic Mappers
-    pilotGear() { return this.allPacks.flatMap(p => p.pilot_gear || []) },
-    mechWeapons() { return this.allPacks.flatMap(p => p.weapons || []) },
-    mechSystems() { return this.allPacks.flatMap(p => p.systems || []) },
-    talents() { return this.allPacks.flatMap(p => p.talents || []) },
-    skills() { return this.allPacks.flatMap(p => p.skills || []) },
-    bonds() { return this.allPacks.flatMap(p => p.bonds || []) },
-    frames() { return this.allPacks.flatMap(p => p.frames || []) },
+    // Manual Concatenation of all loaded LCPs
+    pilotGear() { return [...lancerData.pilot_gear, ...(ktbData.pilot_gear || []), ...(nrfawData.pilot_gear || []), ...(wallflowerData.pilot_gear || [])] },
+    
+    mechWeapons() { 
+      return [
+        ...lancerData.weapons, ...ktbData.weapons, ...nrfawData.weapons, ...longrimData.weapons,
+        ...(wallflowerData.weapons || []), ...(castorPolluxData.weapons || []), ...(coldcoreColiseumData.weapons || []),
+        ...(fieldGuideToSuldanData.weapons || []), ...(intercorpData.weapons || []), ...(dustgraveData.weapons || []),
+        ...(gsLcpData.weapons || []), ...(osrData.weapons || []), ...(owsData.weapons || []), 
+        ...(sotwData.weapons || []), ...(ssmrData.weapons || [])
+      ] 
+    },
+
+    mechSystems() { 
+      return [
+        ...lancerData.systems, ...ktbData.systems, ...nrfawData.systems, ...longrimData.systems,
+        ...(wallflowerData.systems || []), ...(castorPolluxData.systems || []), ...(coldcoreColiseumData.systems || []),
+        ...(fieldGuideToSuldanData.systems || []), ...(intercorpData.systems || []), ...(dustgraveData.systems || []),
+        ...(gsLcpData.systems || []), ...(osrData.systems || []), ...(owsData.systems || []),
+        ...(sotwData.systems || []), ...(ssmrData.systems || [])
+      ] 
+    },
+
+    talents() { 
+      return [
+        ...lancerData.talents, ...ktbData.talents, ...nrfawData.talents, ...longrimData.talents,
+        ...(wallflowerData.talents || []), ...(castorPolluxData.talents || []), ...(fieldGuideToSuldanData.talents || []),
+        ...(dustgraveData.talents || []), ...(osrData.talents || []), ...(sotwData.talents || [])
+      ] 
+    },
+
+    skills() { return [...lancerData.skills, ...(ktbData.skills || [])] },
+    bonds() { return [...(ktbData.bonds || []), ...(sotwData.bonds || [])] },
+
+    frames() { 
+      return [
+        ...lancerData.frames, ...ktbData.frames, ...nrfawData.frames, ...longrimData.frames,
+        ...(wallflowerData.frames || []), ...(castorPolluxData.frames || []), ...(coldcoreColiseumData.frames || []),
+        ...(fieldGuideToSuldanData.frames || []), ...(intercorpData.frames || []), ...(dustgraveData.frames || []),
+        ...(gsLcpData.frames || []), ...(osrData.frames || []), ...(owsData.frames || []),
+        ...(sotwData.frames || []), ...(ssmrData.frames || [])
+      ] 
+    },
   },
   created() {
     this.getActiveMech();
@@ -217,50 +240,40 @@ export default {
         onCancel: () => { playAudio('close', 0.4); }
       })
     },
-    getBond() { 
-      this.bond = this.bonds.find((obj) => obj.id === this.pilot.bondId) || {}
-    },
+    getBond() { this.bond = this.bonds.find((obj) => obj.id === this.pilot.bondId) || {} },
     getActiveMech() {
       const activeMechID = this.pilot.state.active_mech_id;
       const mech = this.pilot.mechs.find((obj) => obj.id === activeMechID);
-      
-      // Fallback logic
-      this.activeMech = mech ? mech : (this.pilot.mechs[0] || { frame: 'missing_frame', name: 'NO MECH DETECTED' });
-      
-      let frame = this.frames.find((obj) => obj.id === this.activeMech.frame) || 
-                  this.frames.find((obj) => obj.id === 'missing_frame') || 
-                  { name: 'Unknown Frame', source: 'GMS', description: '', mechtype: [] };
-
+      this.activeMech = mech ? mech : (this.pilot.mechs[0] || { frame: 'missing_frame' });
+      let frame = this.frames.find((obj) => obj.id === this.activeMech.frame) || lancerData.frames[0];
       this.activeMech.frame_description = frame.description;
       this.activeMech.frame_name = frame.name;
       this.activeMech.manufacturer = frame.source;
-      this.activeMech.mechtype = frame.mechtype ? frame.mechtype.join(' // ') : 'Unknown Type';
+      this.activeMech.mechtype = frame.mechtype ? frame.mechtype.join(' // ') : 'N/A';
     },
     getSkill(skill) {
       let sk = this.skills.find((x) => x.id == skill.id);
-      return sk ? `${sk.name} +${skill.rank * 2}` : 'Unknown Trigger';
+      return sk ? sk.name + " +" + (skill.rank * 2) : 'Unknown Skill';
     },
     getTalent(id, value) {
       let talent = this.talents.find((x) => x.id == id);
-      if (!talent) return "Unknown Talent";
-      return `${talent.name} ${"I".repeat(value)}`;
+      if(!talent) return "Unknown Talent";
+      let response = talent.name + " ";
+      for (let i = 0; i < value; i++) { response += "I" }
+      return response;
     },
     getLicense(id, value) {
       let frame = this.frames.find((x) => x.id == id);
-      if (!frame) return "GMS Unknown License";
-      return `${frame.source} ${frame.name} ${"I".repeat(value)}`;
+      if(!frame) return "Unknown License";
+      let response = frame.source + " " + frame.name + " ";
+      for (let i = 0; i < value; i++) { response += "I" }
+      return response;
     },
-    capitalize(str) { 
-      if (!str) return '';
-      return str.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' '); 
-    },
-    reverse(str) { 
-      if (!str) return '';
-      return str.split(' ').reverse().join('.'); 
-    },
+    capitalize(str) { return str ? str.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ') : ''; },
+    reverse(str) { return str ? str.split(' ').reverse().join('.') : ''; },
     randomNumber(max, min) { return Math.floor((Math.random() * (max - min) + min) * 100) / 100; },
     timeStamp(str) {
-      let date = str ? new Date(str) : new Date();
+      let date = new Date(str);
       let y = date.getFullYear() + 2990;
       return new Date(y, date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds()).toISOString();
     },
