@@ -122,15 +122,7 @@ import longrimData from 'lancer-longrim-data'
 
 
 import wallflowerData from '@/assets/LCPs/wallflower-data-2.0.5'
-import coldcoreColiseumData from '@/assets/LCPs/COLDCORE_COLISEUM_V2.0' 
-import fieldGuideToSuldanData from '@/assets/LCPs/Field_Guide_To_Suldan_2.2.6'
-import intercorpData from '@/assets/LCPs/Intercorp 3.2'
-import dustgraveData from '@/assets/LCPs/dustgrave-data-1.4.0'
-import gsLcpData from '@/assets/LCPs/gs-lcp_1.0.3'
-import osrData from '@/assets/LCPs/osr-data-1.2.0'
-import owsData from '@/assets/LCPs/ows-data-1.0.0'
-import sotwData from '@/assets/LCPs/sotw-data-1.0.2'
-import ssmrData from '@/assets/LCPs/ssmr-data-1.7.0'
+
 
 import PilotModal from '@/components/modals/PilotModal.vue'
 import MechModal from '@/components/modals/MechModal.vue'
