@@ -86,7 +86,7 @@
           <div class="mech-record flex-container-cols" @click="mechModal">
             <div style="width:100%">
               MECHANICAL BLUEPRINT VALID [[{{ randomNumber(14, 22) }}TB]] <br />
-              {{ activeMech.manufacturer.toUpperCase() }}-{{ activeMech.frame_name.toUpperCase() }} :: "{{ activeMech.name.toUpperCase() }}"
+              {{ activeMech.manufacturer ? activeMech.manufacturer.toUpperCase() : 'UNKNOWN' }}-{{ activeMech.frame_name ? activeMech.frame_name.toUpperCase() : 'UNKNOWN' }} :: "{{ activeMech.name ? activeMech.name.toUpperCase() : 'UNNAMED' }}"
             </div>
             <div>
               <i aria-hidden="true"
@@ -115,19 +115,31 @@
 
 <script>
 import 'external-svg-loader'
+// Lancer Data Imports
 import lancerData from '@massif/lancer-data'
 import ktbData from 'lancer-ktb-data'
 import nrfawData from 'lancer-nrfaw-data'
 import longrimData from 'lancer-longrim-data'
 import wallflowerData from '@/assets/LCPs/wallflower-data-2.0.5'
+import castorPolluxData from '@/assets/LCPs/CASTOR _ POLLUX-2.45'
+import coldcoreColiseumData from '@/assets/LCPs/COLDCORE_COLISEUM_V2.0'
+import fieldGuideToSuldanData from '@/assets/LCPs/Field_Guide_To_Suldan_2.2.6'
+import intercorpData from '@/assets/LCPs/Intercorp 3.2'
+import dustgraveData from '@/assets/LCPs/dustgrave-data-1.4.0'
+import gsLcpData from '@/assets/LCPs/gs-lcp_1.0.3'
+import osrData from '@/assets/LCPs/osr-data-1.2.0'
+import owsData from '@/assets/LCPs/ows-data-1.0.0'
+import sotwData from '@/assets/LCPs/sotw-data-1.0.2'
+import ssmrData from '@/assets/LCPs/ssmr-data-1.7.0'
 
+// Components
 import PilotModal from '@/components/modals/PilotModal.vue'
 import MechModal from '@/components/modals/MechModal.vue'
 import Typer from '@/components/Typer.vue'
 import ProgressBar from '@/components/ProgressBar.vue'
 import Burden from '@/components/Burden.vue'
 
-// IMPORT SOUND UTILITY
+// Utilities
 import { playAudio } from '@/utils/audio.js'
 
 export default {
@@ -144,99 +156,111 @@ export default {
     return {
       activeMech: {},
       bond: {},
+      // Registry for all LCPs to allow for dynamic computed mapping
+      allPacks: [
+        lancerData, ktbData, nrfawData, longrimData, wallflowerData,
+        castorPolluxData, coldcoreColiseumData, fieldGuideToSuldanData,
+        intercorpData, dustgraveData, gsLcpData, osrData, owsData,
+        sotwData, ssmrData
+      ]
     }
   },
   computed: {
     pilotPortrait() { return `/pilots/${this.pilot.callsign.toUpperCase()}.webp` },
-    pilotGear() { return [...lancerData.pilot_gear] },
-    mechWeapons() { return [...lancerData.weapons, ...ktbData.weapons, ...nrfawData.weapons, ...longrimData.weapons] },
-    mechSystems() { return [...lancerData.systems, ...ktbData.systems, ...nrfawData.systems, ...longrimData.systems] },
-    talents() { return [...lancerData.talents, ...ktbData.talents, ...nrfawData.talents, ...longrimData.talents] },
-    skills() { return [...lancerData.skills] },
-    bonds() { return [...ktbData.bonds] },
-    frames() { return [...lancerData.frames, ...ktbData.frames, ...nrfawData.frames, ...longrimData.frames] },
+    
+    // Core Dynamic Mappers
+    pilotGear() { return this.allPacks.flatMap(p => p.pilot_gear || []) },
+    mechWeapons() { return this.allPacks.flatMap(p => p.weapons || []) },
+    mechSystems() { return this.allPacks.flatMap(p => p.systems || []) },
+    talents() { return this.allPacks.flatMap(p => p.talents || []) },
+    skills() { return this.allPacks.flatMap(p => p.skills || []) },
+    bonds() { return this.allPacks.flatMap(p => p.bonds || []) },
+    frames() { return this.allPacks.flatMap(p => p.frames || []) },
   },
   created() {
     this.getActiveMech();
     this.getBond();
   },
   methods: {
-  pilotModal() {
-    playAudio('click', 0.5); // Open sound
-    
-    this.$oruga.modal.open({
-      component: PilotModal,
-      custom: true,
-      trapFocus: true,
-      props: {
-        pilot: this.pilot,
-        talents: this.talents,
-        skills: this.skills,
-        frames: this.frames,
-      },
-      class: 'custom-modal',
-      width: 1920,
-      // TRIGGER SOUND ON CLOSE
-      onCancel: () => {
-        playAudio('close', 0.4); 
-      }
-    })
-  },
-
-  mechModal() {
-    playAudio('click', 0.5); // Open sound
-    
-    this.$oruga.modal.open({
-      component: MechModal,
-      custom: true,
-      trapFocus: true,
-      props: {
-        animate: this.animate,
-        mech: this.activeMech,
-        systemsData: this.mechSystems,
-        weaponsData: this.mechWeapons,
-        pilot: this.pilot,
-      },
-      class: 'custom-modal',
-      width: 1920,
-      // TRIGGER SOUND ON CLOSE
-      onCancel: () => {
-        playAudio('close', 0.4);
-      }
-    })
-  },
-    getBond() { this.bond = this.bonds.find((obj) => obj.id === this.pilot.bondId) },
+    pilotModal() {
+      playAudio('click', 0.5);
+      this.$oruga.modal.open({
+        component: PilotModal,
+        custom: true,
+        trapFocus: true,
+        props: {
+          pilot: this.pilot,
+          talents: this.talents,
+          skills: this.skills,
+          frames: this.frames,
+        },
+        class: 'custom-modal',
+        width: 1920,
+        onCancel: () => { playAudio('close', 0.4); }
+      })
+    },
+    mechModal() {
+      playAudio('click', 0.5);
+      this.$oruga.modal.open({
+        component: MechModal,
+        custom: true,
+        trapFocus: true,
+        props: {
+          animate: this.animate,
+          mech: this.activeMech,
+          systemsData: this.mechSystems,
+          weaponsData: this.mechWeapons,
+          pilot: this.pilot,
+        },
+        class: 'custom-modal',
+        width: 1920,
+        onCancel: () => { playAudio('close', 0.4); }
+      })
+    },
+    getBond() { 
+      this.bond = this.bonds.find((obj) => obj.id === this.pilot.bondId) || {}
+    },
     getActiveMech() {
       const activeMechID = this.pilot.state.active_mech_id;
       const mech = this.pilot.mechs.find((obj) => obj.id === activeMechID);
-      this.activeMech = mech ? mech : (this.pilot.mechs[0] || lancerData.frames.find((obj) => obj.id === 'missing_frame'));
-      let frame = this.frames.find((obj) => obj.id === this.activeMech.frame) || lancerData.frames[0];
+      
+      // Fallback logic
+      this.activeMech = mech ? mech : (this.pilot.mechs[0] || { frame: 'missing_frame', name: 'NO MECH DETECTED' });
+      
+      let frame = this.frames.find((obj) => obj.id === this.activeMech.frame) || 
+                  this.frames.find((obj) => obj.id === 'missing_frame') || 
+                  { name: 'Unknown Frame', source: 'GMS', description: '', mechtype: [] };
+
       this.activeMech.frame_description = frame.description;
       this.activeMech.frame_name = frame.name;
       this.activeMech.manufacturer = frame.source;
-      this.activeMech.mechtype = frame.mechtype.join(' // ');
+      this.activeMech.mechtype = frame.mechtype ? frame.mechtype.join(' // ') : 'Unknown Type';
     },
     getSkill(skill) {
       let sk = this.skills.find((x) => x.id == skill.id);
-      return sk.name + " +" + (skill.rank * 2)
+      return sk ? `${sk.name} +${skill.rank * 2}` : 'Unknown Trigger';
     },
     getTalent(id, value) {
       let talent = this.talents.find((x) => x.id == id);
-      let response = talent.name + " ";
-      for (let i = 0; i < value; i++) { response += "I" }
-      return response;
+      if (!talent) return "Unknown Talent";
+      return `${talent.name} ${"I".repeat(value)}`;
     },
     getLicense(id, value) {
       let frame = this.frames.find((x) => x.id == id);
-      let response = frame.source + " " + frame.name + " ";
-      for (let i = 0; i < value; i++) { response += "I" }
-      return response;
+      if (!frame) return "GMS Unknown License";
+      return `${frame.source} ${frame.name} ${"I".repeat(value)}`;
     },
-    capitalize(str) { return str.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' '); },
-    reverse(str) { return str.split(' ').reverse().join('.'); },
+    capitalize(str) { 
+      if (!str) return '';
+      return str.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' '); 
+    },
+    reverse(str) { 
+      if (!str) return '';
+      return str.split(' ').reverse().join('.'); 
+    },
     randomNumber(max, min) { return Math.floor((Math.random() * (max - min) + min) * 100) / 100; },
     timeStamp(str) {
-      let date = new Date(str);
+      let date = str ? new Date(str) : new Date();
       let y = date.getFullYear() + 2990;
       return new Date(y, date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds()).toISOString();
     },
