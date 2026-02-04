@@ -239,7 +239,7 @@ export default {
   align-items: center;
   text-align: center;
   opacity: 0;
-  animation: loginFade 0.6s ease forwards 2s;
+  animation: loginFade 0.8s ease forwards 1.8s;
 }
 
 .vigil-logo-img {
